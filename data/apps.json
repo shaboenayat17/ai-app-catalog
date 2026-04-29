@@ -1,0 +1,4612 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "description": "OpenAI's general-purpose conversational assistant for writing, reasoning, code, and research.",
+    "category": "Text & Writing",
+    "tags": [
+      "free tier",
+      "API available",
+      "mobile app",
+      "voice",
+      "vision"
+    ],
+    "pricing": "Freemium",
+    "url": "https://chat.openai.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "claude",
+      "perplexity",
+      "notion-ai",
+      "grammarly",
+      "midjourney",
+      "dalle",
+      "gamma",
+      "elevenlabs",
+      "suno",
+      "runway",
+      "cursor",
+      "github-copilot",
+      "langchain",
+      "otter",
+      "canva-ai",
+      "jasper",
+      "beautiful-ai",
+      "tome"
+    ],
+    "bestFor": [
+      "writing",
+      "research",
+      "coding",
+      "book writing"
+    ],
+    "workflow": "create",
+    "rating": 4.7,
+    "reviewCount": 5240,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 5,
+        "text": "ChatGPT replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-03-28",
+        "useCase": "Write a Book"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 5,
+        "text": "ChatGPT replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-03-28",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Maria L.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-01-18",
+        "useCase": "Do research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "GPT-4o mini, capped messages",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 565,
+    "trendingDirection": "up",
+    "weeklyViews": 6853,
+    "savedCount": 943,
+    "isNew": false,
+    "pros": [
+      "Most versatile AI assistant \u2014 handles writing, coding, research, image generation, and voice in one app",
+      "Huge library of community Custom GPTs for niche tasks like resume review or D&D campaigns",
+      "Best multimodal support \u2014 understands images, PDFs, voice, and screen content",
+      "Integrates with more third-party tools than any other AI"
+    ],
+    "cons": [
+      "Gets expensive fast \u2014 $20/month for Plus, $200/month for Pro tier",
+      "Free tier switches to a slower model during peak hours and caps your messages",
+      "Can confidently give wrong answers \u2014 always verify important facts",
+      "Smaller context window than Claude when working with very long documents"
+    ],
+    "verdict": "Best all-rounder if you want one tool that does writing, coding, image, and voice reasonably well.",
+    "notGoodFor": "Avoid if you process very long documents \u2014 Claude handles 200K+ tokens better."
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "description": "Anthropic's assistant focused on long-context reasoning, writing, and code.",
+    "category": "Text & Writing",
+    "tags": [
+      "free tier",
+      "API available",
+      "mobile app",
+      "long context",
+      "artifacts"
+    ],
+    "pricing": "Freemium",
+    "url": "https://claude.ai",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "chatgpt",
+      "perplexity",
+      "notion-ai",
+      "grammarly",
+      "cursor",
+      "github-copilot",
+      "langchain",
+      "elicit",
+      "consensus",
+      "gamma",
+      "otter",
+      "fireflies",
+      "hex",
+      "tome",
+      "beautiful-ai",
+      "vercel",
+      "jasper"
+    ],
+    "bestFor": [
+      "writing",
+      "research",
+      "coding",
+      "book writing"
+    ],
+    "workflow": "create",
+    "rating": 4.7,
+    "reviewCount": 3120,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-28",
+        "useCase": "Create social content"
+      },
+      {
+        "author": "Priya S.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-03-09",
+        "useCase": "Write a Book"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Daily message cap on Sonnet",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 358,
+    "trendingDirection": "up",
+    "weeklyViews": 4102,
+    "savedCount": 561,
+    "isNew": false,
+    "pros": [
+      "Largest practical context window \u2014 read whole books or codebases in a single message",
+      "Writing has more nuance and natural rhythm than ChatGPT for long-form prose",
+      "Artifacts let you preview React/HTML/SVG output side-by-side as you iterate",
+      "Strong refusals on safety-edge content without being preachy"
+    ],
+    "cons": [
+      "No native image, voice, or video generation \u2014 text and analysis only",
+      "Smaller third-party integration ecosystem than ChatGPT",
+      "Daily message cap on free tier hits faster than ChatGPT's",
+      "Web app only \u2014 mobile experience trails ChatGPT and Gemini"
+    ],
+    "verdict": "Best for long-document work, careful writing, and code review.",
+    "notGoodFor": "Skip if you need image generation or voice \u2014 Claude doesn't do those natively."
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "description": "Google's multimodal assistant integrated with Workspace, search, and Android.",
+    "category": "Text & Writing",
+    "tags": [
+      "free tier",
+      "API available",
+      "mobile app",
+      "vision",
+      "google integration"
+    ],
+    "pricing": "Freemium",
+    "url": "https://gemini.google.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "notion-ai",
+      "grammarly",
+      "gamma"
+    ],
+    "bestFor": [
+      "writing",
+      "research"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 2210,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-03-28",
+        "useCase": "Create social content"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 3,
+        "text": "Decent for hobby use, not sure I'd pay for it long term.",
+        "date": "2026-03-09",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-02-22",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Workspace integration is limited on free",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "0%",
+      "has_student_discount": true,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$50"
+      }
+    },
+    "trendingScore": 189,
+    "trendingDirection": "stable",
+    "weeklyViews": 2841,
+    "savedCount": 397,
+    "isNew": false,
+    "pros": [
+      "Built into Google Workspace \u2014 drafts emails in Gmail and edits in Docs without copy-paste",
+      "Google Search grounding gives real-time, citation-backed answers",
+      "1M-token context on Gemini 1.5 Pro for entire codebases or video transcripts",
+      "Strong on Android with system-level integration"
+    ],
+    "cons": [
+      "Output quality lags ChatGPT and Claude for nuanced writing",
+      "Free Workspace integration is limited \u2014 full features require Google One AI Premium",
+      "Web UI feels less polished than ChatGPT for complex multi-turn conversations",
+      "Hallucinates more than competitors despite the search grounding"
+    ],
+    "verdict": "Best if you live in Google Workspace and want AI inside the tools you already use.",
+    "notGoodFor": "Skip if you don't use Google Docs or Gmail \u2014 you'll get more from ChatGPT or Claude."
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "description": "AI writing assistant for grammar, tone, clarity, and rewriting across the web.",
+    "category": "Text & Writing",
+    "tags": [
+      "free tier",
+      "browser extension",
+      "desktop app",
+      "editing"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.grammarly.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-05",
+    "compatibleWith": [
+      "chatgpt",
+      "claude",
+      "gemini",
+      "notion-ai",
+      "jasper",
+      "copy-ai",
+      "gamma",
+      "perplexity",
+      "otter"
+    ],
+    "bestFor": [
+      "writing",
+      "book writing"
+    ],
+    "workflow": "edit",
+    "rating": 4.5,
+    "reviewCount": 3870,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-04-12",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Grammarly is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Ethan C.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-01-18",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Basic grammar only",
+      "starting_price": "$12/mo",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "45%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$12",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 306,
+    "trendingDirection": "stable",
+    "weeklyViews": 4950,
+    "savedCount": 696,
+    "isNew": false,
+    "pros": [
+      "Works everywhere \u2014 browser extension, desktop app, mobile keyboard, MS Office add-in",
+      "Catches subtle tone, clarity, and engagement issues most LLMs miss",
+      "Real-time feedback as you type \u2014 no copy-paste loop",
+      "Generative AI features now included on free tier (limited)"
+    ],
+    "cons": [
+      "Premium is $30/month \u2014 pricey for what's now bundled with most LLMs",
+      "Heavy CPU/RAM usage, especially in Chrome with multiple tabs",
+      "Sometimes flags valid stylistic choices and pushes generic corporate tone",
+      "Privacy concerns \u2014 sends everything you type to Grammarly's servers"
+    ],
+    "verdict": "Best for writers who care about tone consistency across email, docs, and Slack.",
+    "notGoodFor": "Skip if you write mostly with ChatGPT or Claude \u2014 they handle grammar inline already."
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "description": "Marketing-focused content platform for brand-consistent copy at scale.",
+    "category": "Text & Writing",
+    "tags": [
+      "paid",
+      "marketing",
+      "team workflow",
+      "brand voice"
+    ],
+    "pricing": "Paid",
+    "url": "https://www.jasper.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-05",
+    "compatibleWith": [
+      "copy-ai",
+      "grammarly",
+      "canva-ai",
+      "notion-ai",
+      "midjourney",
+      "chatgpt",
+      "captions",
+      "ideogram",
+      "elevenlabs",
+      "claude"
+    ],
+    "bestFor": [
+      "writing",
+      "social media",
+      "book writing"
+    ],
+    "workflow": "create",
+    "rating": 4.1,
+    "reviewCount": 1240,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-02-04",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-04-12",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": "none",
+      "starting_price": "$49/mo",
+      "most_popular_plan": "$69/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$49",
+        "regular_user": "$69",
+        "power_user": "$129"
+      }
+    },
+    "trendingScore": 71,
+    "trendingDirection": "down",
+    "weeklyViews": 1559,
+    "savedCount": 223,
+    "isNew": false,
+    "pros": [
+      "Brand Voice feature trains on your tone so output stays on-brand at scale",
+      "Templates for ads, blog posts, and email sequences save setup time",
+      "Team workflows with shared style guides and approval flow",
+      "SEO mode for content optimized to rank on Google"
+    ],
+    "cons": [
+      "Starts at $49/month \u2014 far more expensive than ChatGPT for the same writing tasks",
+      "No free tier, only a 7-day trial",
+      "Output often needs more editing than Claude for long-form content",
+      "Has been losing market share to general LLMs since 2024"
+    ],
+    "verdict": "Best for marketing teams that need brand consistency across many writers.",
+    "notGoodFor": "Skip if you're a solo creator \u2014 ChatGPT plus a custom prompt does the same job for $20."
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "description": "Workflow tool for marketing and sales copy with templates and chat.",
+    "category": "Text & Writing",
+    "tags": [
+      "free tier",
+      "marketing",
+      "templates"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.copy.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-05",
+    "compatibleWith": [
+      "jasper",
+      "grammarly",
+      "canva-ai",
+      "notion-ai",
+      "chatgpt",
+      "ideogram"
+    ],
+    "bestFor": [
+      "writing",
+      "social media",
+      "book writing"
+    ],
+    "workflow": "create",
+    "rating": 4.2,
+    "reviewCount": 980,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 3,
+        "text": "Decent for hobby use, not sure I'd pay for it long term.",
+        "date": "2026-02-04",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "2,000 words/mo",
+      "starting_price": "$49/mo",
+      "most_popular_plan": "$49/mo",
+      "annual_discount": "25%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$49",
+        "power_user": "$249"
+      }
+    },
+    "trendingScore": 102,
+    "trendingDirection": "stable",
+    "weeklyViews": 1278,
+    "savedCount": 176,
+    "isNew": false,
+    "pros": [
+      "Workflow templates string multiple AI steps together (research \u2192 outline \u2192 draft \u2192 polish)",
+      "Strong free tier with 2,000 words/month \u2014 enough to test seriously",
+      "Cleaner UI than Jasper for non-marketing users",
+      "Built-in chat plus templates \u2014 covers both freeform and structured writing"
+    ],
+    "cons": [
+      "Pro plan jumps to $49/month \u2014 same price tier as Jasper",
+      "Output quality similar to ChatGPT but at a higher price",
+      "Workflow builder has a learning curve",
+      "Less polished than Jasper for enterprise team features"
+    ],
+    "verdict": "Best for solopreneurs and small teams that want templates plus chat in one place.",
+    "notGoodFor": "Skip if you mostly write freeform \u2014 ChatGPT or Claude is cheaper and just as good."
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "description": "Premier text-to-image model known for stylized, painterly outputs.",
+    "category": "Image & Art",
+    "tags": [
+      "paid",
+      "discord",
+      "web app",
+      "text-to-image"
+    ],
+    "pricing": "Paid",
+    "url": "https://www.midjourney.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "runway",
+      "pika",
+      "luma-dream-machine",
+      "kling",
+      "sora",
+      "elevenlabs",
+      "suno",
+      "descript",
+      "adobe-firefly",
+      "dalle",
+      "chatgpt",
+      "canva-ai",
+      "gamma",
+      "beautiful-ai",
+      "tome",
+      "spline-ai",
+      "captions",
+      "jasper"
+    ],
+    "bestFor": [
+      "design",
+      "social media",
+      "animation",
+      "cover design"
+    ],
+    "workflow": "create",
+    "rating": 4.6,
+    "reviewCount": 4310,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-04-12",
+        "useCase": "Write a Book"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-03-09",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Midjourney is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-03-09",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": "none",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$10",
+        "regular_user": "$30",
+        "power_user": "$60"
+      }
+    },
+    "trendingScore": 473,
+    "trendingDirection": "up",
+    "weeklyViews": 5645,
+    "savedCount": 775,
+    "isNew": false,
+    "pros": [
+      "Best image quality for artistic and stylized work \u2014 nothing beats it for aesthetic output",
+      "Active Discord community with millions of public examples to learn prompting from",
+      "V6/V7 produces incredibly photorealistic results that fool most viewers",
+      "Style references (--sref) lock a consistent look across an entire project"
+    ],
+    "cons": [
+      "No free tier \u2014 starts at $10/month",
+      "Web app launched late, still feels less mature than the Discord workflow",
+      "Cannot generate readable text inside images \u2014 use Ideogram or DALL\u00b7E 3 for that",
+      "Basic plan only gives Stealth mode and commercial rights at $30/month and up"
+    ],
+    "verdict": "Best if you care deeply about visual quality and artistic style.",
+    "notGoodFor": "Skip if you just need quick functional images \u2014 Canva AI or DALL\u00b7E 3 is cheaper and easier."
+  },
+  {
+    "id": "dalle",
+    "name": "DALL\u00b7E 3",
+    "description": "OpenAI's image generator with strong prompt fidelity, accessible via ChatGPT and API.",
+    "category": "Image & Art",
+    "tags": [
+      "API available",
+      "text-to-image",
+      "in chatgpt"
+    ],
+    "pricing": "Freemium",
+    "url": "https://openai.com/index/dall-e-3",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "chatgpt",
+      "runway",
+      "pika",
+      "luma-dream-machine",
+      "sora",
+      "kling",
+      "elevenlabs",
+      "suno",
+      "descript",
+      "gamma",
+      "canva-ai",
+      "beautiful-ai",
+      "tome",
+      "midjourney",
+      "adobe-firefly"
+    ],
+    "bestFor": [
+      "design",
+      "social media",
+      "presentations",
+      "cover design"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 2840,
+    "reviews": [
+      {
+        "author": "Jin H.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-03-28",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 5,
+        "text": "DALL\u00b7E 3 replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-03-09",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 5,
+        "text": "DALL\u00b7E 3 replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-03-28",
+        "useCase": "Create social content"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": "Bundled with ChatGPT Plus",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$20"
+      }
+    },
+    "trendingScore": 234,
+    "trendingDirection": "stable",
+    "weeklyViews": 3642,
+    "savedCount": 511,
+    "isNew": false,
+    "pros": [
+      "Best at putting readable text inside images \u2014 signs, posters, logos work first try",
+      "Bundled with ChatGPT Plus \u2014 no separate subscription needed",
+      "Strong prompt fidelity \u2014 interprets natural-language instructions accurately",
+      "Easy iteration through ChatGPT \u2014 say 'make it more purple' and it adjusts"
+    ],
+    "cons": [
+      "Image quality lags Midjourney and Stable Diffusion for artistic work",
+      "Slower generation speed than competitors",
+      "Limited stylistic range compared to Midjourney's V6",
+      "Locked to ChatGPT \u2014 can't run via API at the same quality"
+    ],
+    "verdict": "Best if you already pay for ChatGPT and need decent images with text.",
+    "notGoodFor": "Skip for artistic or stylized work \u2014 Midjourney is in a different league."
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "description": "Open-source family of image models from Stability AI, runnable locally or via APIs.",
+    "category": "Image & Art",
+    "tags": [
+      "open source",
+      "API available",
+      "self-hostable",
+      "text-to-image"
+    ],
+    "pricing": "Free",
+    "url": "https://stability.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "replicate",
+      "huggingface",
+      "runway",
+      "pika",
+      "leonardo-ai",
+      "descript"
+    ],
+    "bestFor": [
+      "design",
+      "animation"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 2110,
+    "reviews": [
+      {
+        "author": "Jin H.",
+        "rating": 5,
+        "text": "Use this every day for my work. Genuinely worth the subscription.",
+        "date": "2026-02-04",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Priya S.",
+        "rating": 4,
+        "text": "Stable Diffusion is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-01-18",
+        "useCase": "Write a Book"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Self-host or pay per call",
+      "starting_price": "$0",
+      "most_popular_plan": "$10/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "unlimited",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0\u201310",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 183,
+    "trendingDirection": "stable",
+    "weeklyViews": 2715,
+    "savedCount": 379,
+    "isNew": false,
+    "pros": [
+      "Open source \u2014 run locally with full privacy and zero per-image cost",
+      "Massive ecosystem of fine-tuned models on Civitai and Hugging Face for any style",
+      "Full control over the generation pipeline (sampler, CFG, steps, ControlNet)",
+      "Train custom LoRAs on your own brand or style for consistent output"
+    ],
+    "cons": [
+      "Requires a strong GPU (16GB+ VRAM) for fast local inference",
+      "Steeper learning curve than Midjourney or DALL\u00b7E for non-technical users",
+      "Out-of-the-box quality lower than Midjourney without prompt engineering",
+      "Setup, models, and ControlNet management is real ongoing work"
+    ],
+    "verdict": "Best for technical users who want unlimited generation and full creative control.",
+    "notGoodFor": "Skip if you don't have a beefy GPU and want results in 30 seconds, not 30 minutes of setup."
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "description": "Adobe's commercial-safe image and design model, integrated across Creative Cloud.",
+    "category": "Image & Art",
+    "tags": [
+      "commercial safe",
+      "creative cloud",
+      "text-to-image",
+      "editing"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.adobe.com/products/firefly.html",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "runway",
+      "pika",
+      "kling",
+      "elevenlabs",
+      "suno",
+      "descript",
+      "canva-ai",
+      "gamma",
+      "midjourney",
+      "dalle"
+    ],
+    "bestFor": [
+      "design",
+      "video editing",
+      "animation",
+      "cover design"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 1670,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Adobe Firefly is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-03-09",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 3,
+        "text": "Decent for hobby use, not sure I'd pay for it long term.",
+        "date": "2026-03-28",
+        "useCase": "Write a Book"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 3,
+        "text": "Decent for hobby use, not sure I'd pay for it long term.",
+        "date": "2026-02-22",
+        "useCase": "Make an animation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "25 generative credits/mo",
+      "starting_price": "$5/mo",
+      "most_popular_plan": "$23/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$5",
+        "power_user": "$23"
+      }
+    },
+    "trendingScore": 151,
+    "trendingDirection": "stable",
+    "weeklyViews": 2155,
+    "savedCount": 300,
+    "isNew": false,
+    "pros": [
+      "Trained on licensed content \u2014 outputs are commercial-safe with no copyright risk",
+      "Integrated into Photoshop, Illustrator, and Premiere as Generative Fill and Generative Recolor",
+      "Strong text effects and editable vector output",
+      "Free tier with 25 generations/month is genuinely usable"
+    ],
+    "cons": [
+      "Image quality lags Midjourney for artistic work",
+      "Best features are locked behind a Creative Cloud subscription ($23+/month)",
+      "Less prompt-flexible than Stable Diffusion or Midjourney",
+      "Limited model variety compared to open-source competitors"
+    ],
+    "verdict": "Best if you already use Adobe apps and need legally safe images for commercial work.",
+    "notGoodFor": "Skip if you don't use Creative Cloud \u2014 better tools exist standalone."
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "description": "Image generator with industry-leading typography and in-image text rendering.",
+    "category": "Image & Art",
+    "tags": [
+      "free tier",
+      "typography",
+      "text-to-image"
+    ],
+    "pricing": "Freemium",
+    "url": "https://ideogram.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-12",
+    "compatibleWith": [
+      "canva-ai",
+      "gamma",
+      "runway",
+      "pika",
+      "jasper",
+      "copy-ai"
+    ],
+    "bestFor": [
+      "design",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1240,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 5,
+        "text": "Ideogram replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-02-04",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Ideogram is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-04",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "~25 prompts/day",
+      "starting_price": "$8/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$8",
+        "power_user": "$20"
+      }
+    },
+    "trendingScore": 170,
+    "trendingDirection": "up",
+    "weeklyViews": 1658,
+    "savedCount": 223,
+    "isNew": false,
+    "pros": [
+      "Best in class for typography \u2014 generates posters, logos, and quotes with crisp readable text",
+      "Generous free tier \u2014 about 25 prompts/day at full quality",
+      "Web-based, no Discord required",
+      "Magic Prompt expansion improves vague prompts automatically"
+    ],
+    "cons": [
+      "General artistic quality below Midjourney",
+      "Smaller community and fewer prompt examples",
+      "No advanced features like style references or fine-tuning",
+      "Newer product \u2014 feature set still maturing"
+    ],
+    "verdict": "Best for designers who specifically need text in images \u2014 posters, ads, and quote graphics.",
+    "notGoodFor": "Skip for general image generation \u2014 Midjourney or DALL\u00b7E does it better."
+  },
+  {
+    "id": "leonardo-ai",
+    "name": "Leonardo AI",
+    "description": "Image generator with fine-tuned models for game art, illustration, and product shots.",
+    "category": "Image & Art",
+    "tags": [
+      "free tier",
+      "fine-tuned models",
+      "game art"
+    ],
+    "pricing": "Freemium",
+    "url": "https://leonardo.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-12",
+    "compatibleWith": [
+      "runway",
+      "pika",
+      "spline-ai",
+      "stable-diffusion",
+      "midjourney"
+    ],
+    "bestFor": [
+      "design",
+      "animation"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 1450,
+    "reviews": [
+      {
+        "author": "Maria L.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-03-28",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-04-12",
+        "useCase": "Write a Book"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "150 fast tokens/day",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$24/mo",
+      "annual_discount": "33%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$48"
+      }
+    },
+    "trendingScore": 135,
+    "trendingDirection": "stable",
+    "weeklyViews": 1875,
+    "savedCount": 261,
+    "isNew": false,
+    "pros": [
+      "Tuned models for game art, illustration, and product shots \u2014 stronger out-of-box than SD",
+      "Generous free tier (150 fast tokens/day)",
+      "Image-to-image, inpainting, and ControlNet without local setup",
+      "Style training \u2014 fine-tune on your own portfolio for consistent looks"
+    ],
+    "cons": [
+      "General artistic ceiling lower than Midjourney V6",
+      "UI gets cluttered with the volume of features",
+      "Slower than Midjourney for high-quality outputs",
+      "Subscription tiers can confuse new users (Apprentice/Artisan/Maestro)"
+    ],
+    "verdict": "Best for game devs, illustrators, and product designers who need fine-tuned models.",
+    "notGoodFor": "Skip for general artistic work or photoreal \u2014 Midjourney does that better."
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "description": "Pro video tooling with text-to-video, image-to-video, and motion controls (Gen-3).",
+    "category": "Video",
+    "tags": [
+      "paid",
+      "text-to-video",
+      "editing",
+      "API available"
+    ],
+    "pricing": "Freemium",
+    "url": "https://runwayml.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "midjourney",
+      "dalle",
+      "adobe-firefly",
+      "ideogram",
+      "leonardo-ai",
+      "stable-diffusion",
+      "elevenlabs",
+      "suno",
+      "udio",
+      "descript",
+      "pika",
+      "luma-dream-machine",
+      "kling",
+      "captions",
+      "spline-ai",
+      "chatgpt",
+      "canva-ai",
+      "heygen",
+      "synthesia",
+      "jasper"
+    ],
+    "bestFor": [
+      "animation",
+      "video editing",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 3470,
+    "reviews": [
+      {
+        "author": "Maria L.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-01-18",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-04-12",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Priya S.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-02-22",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "125 credits to start",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$35/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$95"
+      }
+    },
+    "trendingScore": 389,
+    "trendingDirection": "up",
+    "weeklyViews": 4553,
+    "savedCount": 624,
+    "isNew": false,
+    "pros": [
+      "Most comprehensive AI video toolkit \u2014 text-to-video, image-to-video, motion brush, and editing",
+      "Gen-3/Gen-4 produces cinematic motion with directable camera controls",
+      "Pro features like green-screen removal and inpainting work without leaving the app",
+      "API access for custom video pipelines"
+    ],
+    "cons": [
+      "Credits run out fast \u2014 power users hit $95/month plans easily",
+      "Free tier (~125 credits) only good for testing",
+      "Render times can exceed 5 minutes for high-quality clips",
+      "Pika is sometimes cheaper for short, stylized clips"
+    ],
+    "verdict": "Best for serious video creators who need pro tools, not just generation.",
+    "notGoodFor": "Skip if you only need a few short clips \u2014 Pika or Luma is more affordable."
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "description": "Fast text- and image-to-video model from Luma AI with natural motion.",
+    "category": "Video",
+    "tags": [
+      "free tier",
+      "text-to-video",
+      "image-to-video"
+    ],
+    "pricing": "Freemium",
+    "url": "https://lumalabs.ai/dream-machine",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "midjourney",
+      "dalle",
+      "runway",
+      "elevenlabs",
+      "suno",
+      "descript",
+      "pika"
+    ],
+    "bestFor": [
+      "animation",
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1850,
+    "reviews": [
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Luma Dream Machine is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-22",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-02-22",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-04-12",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "30 generations/mo",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$95"
+      }
+    },
+    "trendingScore": 229,
+    "trendingDirection": "up",
+    "weeklyViews": 2449,
+    "savedCount": 333,
+    "isNew": false,
+    "pros": [
+      "Fastest video generation in its class \u2014 clips in under a minute",
+      "Generous free tier \u2014 30 generations/month",
+      "Excellent natural motion \u2014 characters and objects move convincingly",
+      "Image-to-video extends existing stills smoothly"
+    ],
+    "cons": [
+      "Shorter clip length than Runway and Kling",
+      "Less directable motion than Runway's motion brush",
+      "Style range narrower than Pika for stylized output",
+      "Newer product \u2014 fewer pro features than Runway"
+    ],
+    "verdict": "Best for quick image-to-video and natural motion at a low monthly cost.",
+    "notGoodFor": "Skip for long, complex shots \u2014 Kling or Runway handles those better."
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "description": "Creative video generator with fun effects, lip sync, and short-form formats.",
+    "category": "Video",
+    "tags": [
+      "free tier",
+      "text-to-video",
+      "effects"
+    ],
+    "pricing": "Freemium",
+    "url": "https://pika.art",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-15",
+    "compatibleWith": [
+      "midjourney",
+      "dalle",
+      "adobe-firefly",
+      "runway",
+      "elevenlabs",
+      "suno",
+      "descript",
+      "captions",
+      "kling",
+      "canva-ai",
+      "ideogram",
+      "leonardo-ai",
+      "chatgpt",
+      "jasper"
+    ],
+    "bestFor": [
+      "animation",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 1620,
+    "reviews": [
+      {
+        "author": "Marco T.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-02-22",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Maria L.",
+        "rating": 4,
+        "text": "Pika is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 3,
+        "text": "Decent for hobby use, not sure I'd pay for it long term.",
+        "date": "2026-02-22",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "80 credits/mo",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$35/mo",
+      "annual_discount": "40%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$95"
+      }
+    },
+    "trendingScore": 147,
+    "trendingDirection": "stable",
+    "weeklyViews": 2091,
+    "savedCount": 291,
+    "isNew": false,
+    "pros": [
+      "Fun creative effects and Pikaffects (e.g., 'crush it', 'inflate') for stylized clips",
+      "Strong lip-sync for character animation",
+      "Affordable \u2014 $10/month entry tier with 80 credits",
+      "Vibrant Discord community sharing prompts and remixes"
+    ],
+    "cons": [
+      "Quality ceiling lower than Runway Gen-3 for cinematic work",
+      "Clip length capped (~5 seconds at standard quality)",
+      "Credits eat fast on the entry plan",
+      "Less control over camera moves than Runway"
+    ],
+    "verdict": "Best for short, fun, stylized clips and meme-y social posts.",
+    "notGoodFor": "Skip for cinematic or commercial video \u2014 Runway or Kling is the right tool."
+  },
+  {
+    "id": "kling",
+    "name": "Kling",
+    "description": "High-fidelity video model from Kuaishou with strong physics and longer clips.",
+    "category": "Video",
+    "tags": [
+      "free tier",
+      "text-to-video",
+      "long clips"
+    ],
+    "pricing": "Freemium",
+    "url": "https://klingai.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-20",
+    "compatibleWith": [
+      "midjourney",
+      "dalle",
+      "runway",
+      "elevenlabs",
+      "suno",
+      "descript",
+      "pika",
+      "adobe-firefly"
+    ],
+    "bestFor": [
+      "animation",
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1340,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 5,
+        "text": "Use this every day for my work. Genuinely worth the subscription.",
+        "date": "2026-02-04",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-03-09",
+        "useCase": "Do research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "6 daily generations",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$26/mo",
+      "annual_discount": "25%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$66"
+      }
+    },
+    "trendingScore": 180,
+    "trendingDirection": "up",
+    "weeklyViews": 1788,
+    "savedCount": 241,
+    "isNew": false,
+    "pros": [
+      "Best physics simulation in AI video \u2014 fluids, weight, and collisions look real",
+      "Longer clips (up to 2 minutes) than Runway or Pika",
+      "Strong free tier with 6 daily generations",
+      "Photorealistic output competitive with Sora"
+    ],
+    "cons": [
+      "UI partially in Chinese with rough English translations",
+      "Slower generation than Luma Dream Machine",
+      "Less ecosystem documentation than Runway",
+      "Credit pricing can be opaque"
+    ],
+    "verdict": "Best for cinematic shots needing physics, weight, or longer durations.",
+    "notGoodFor": "Skip if you need a polished English UI \u2014 Runway or Pika is friendlier."
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "description": "OpenAI's text-to-video model available to ChatGPT Plus and Pro subscribers.",
+    "category": "Video",
+    "tags": [
+      "paid",
+      "text-to-video",
+      "in chatgpt"
+    ],
+    "pricing": "Paid",
+    "url": "https://sora.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-02-01",
+    "compatibleWith": [
+      "chatgpt",
+      "dalle",
+      "elevenlabs",
+      "suno",
+      "descript",
+      "runway",
+      "midjourney"
+    ],
+    "bestFor": [
+      "animation",
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 2740,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-03-28",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Ethan C.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-28",
+        "useCase": "Create social content"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": "Bundled with ChatGPT Plus/Pro",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$20",
+        "regular_user": "$20",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 317,
+    "trendingDirection": "up",
+    "weeklyViews": 3605,
+    "savedCount": 493,
+    "isNew": false,
+    "pros": [
+      "Bundled with ChatGPT Plus \u2014 no separate subscription",
+      "Storyboard editor for stitching multiple scenes together",
+      "Strong adherence to detailed prompts",
+      "Long clip durations (up to 20 seconds at high quality)"
+    ],
+    "cons": [
+      "Output quality slightly behind Veo 3 and Kling for hyperreal motion",
+      "Locked to ChatGPT subscribers \u2014 no standalone tier",
+      "Pro tier ($200/month) needed for unlimited usage",
+      "Heavy queue times during peak hours"
+    ],
+    "verdict": "Best if you already pay for ChatGPT and want occasional video without a separate sub.",
+    "notGoodFor": "Skip if video is your main use \u2014 Runway or Kling gives more pro features per dollar."
+  },
+  {
+    "id": "captions",
+    "name": "Captions",
+    "description": "AI short-form video studio: captions, eye-contact, voice clones, and clip generation.",
+    "category": "Video",
+    "tags": [
+      "mobile app",
+      "captions",
+      "short-form",
+      "voice cloning"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.captions.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-04-22",
+    "compatibleWith": [
+      "runway",
+      "pika",
+      "elevenlabs",
+      "midjourney",
+      "descript",
+      "heygen",
+      "canva-ai",
+      "chatgpt",
+      "jasper",
+      "suno",
+      "synthesia"
+    ],
+    "bestFor": [
+      "social media",
+      "video editing"
+    ],
+    "workflow": "edit",
+    "rating": 4.4,
+    "reviewCount": 1180,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 3,
+        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "date": "2026-02-04",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-03-28",
+        "useCase": "Create social content"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 minutes of video/mo",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$24/mo",
+      "annual_discount": "50%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$24"
+      }
+    },
+    "trendingScore": 163,
+    "trendingDirection": "up",
+    "weeklyViews": 1579,
+    "savedCount": 212,
+    "isNew": true,
+    "pros": [
+      "Eye Contact AI keeps you facing the camera even when reading notes",
+      "Auto-captions with brand-color styling \u2014 no manual editing",
+      "AI clip extraction pulls highlights from long-form video automatically",
+      "Mobile-first \u2014 best UX on iOS for fast turnaround"
+    ],
+    "cons": [
+      "Free tier limited to 3 minutes/month \u2014 hits fast",
+      "$24/month Pro plan is steep for solo creators",
+      "Eye Contact can look uncanny when poorly lit",
+      "Less powerful as a general video editor than Descript"
+    ],
+    "verdict": "Best for short-form creators on mobile who want polished captions and eye contact fixes.",
+    "notGoodFor": "Skip for long-form podcasts or YouTube \u2014 Descript handles those better."
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "description": "Best-in-class voice cloning, text-to-speech, and dubbing across 30+ languages.",
+    "category": "Audio & Music",
+    "tags": [
+      "free tier",
+      "API available",
+      "voice cloning",
+      "dubbing"
+    ],
+    "pricing": "Freemium",
+    "url": "https://elevenlabs.io",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "runway",
+      "pika",
+      "luma-dream-machine",
+      "kling",
+      "sora",
+      "descript",
+      "otter",
+      "fireflies",
+      "heygen",
+      "synthesia",
+      "tavus",
+      "suno",
+      "midjourney",
+      "chatgpt",
+      "claude",
+      "captions",
+      "assemblyai",
+      "adobe-firefly"
+    ],
+    "bestFor": [
+      "podcasting",
+      "video editing",
+      "animation"
+    ],
+    "workflow": "create",
+    "rating": 4.7,
+    "reviewCount": 3540,
+    "reviews": [
+      {
+        "author": "Marco T.",
+        "rating": 5,
+        "text": "Use this every day for my work. Genuinely worth the subscription.",
+        "date": "2026-02-04",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Priya S.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-04-12",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 5,
+        "text": "Use this every day for my work. Genuinely worth the subscription.",
+        "date": "2026-02-22",
+        "useCase": "Make an animation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10,000 chars/mo",
+      "starting_price": "$5/mo",
+      "most_popular_plan": "$22/mo",
+      "annual_discount": "17%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$5",
+        "power_user": "$99"
+      }
+    },
+    "trendingScore": 399,
+    "trendingDirection": "up",
+    "weeklyViews": 4647,
+    "savedCount": 637,
+    "isNew": false,
+    "pros": [
+      "Most natural-sounding AI voices on the market \u2014 fooled most listeners in blind tests",
+      "30+ language support with native-sounding accents",
+      "Voice cloning from 1 minute of sample audio",
+      "API-first \u2014 drop into apps, games, and IVR systems"
+    ],
+    "cons": [
+      "Free tier only 10,000 characters/month",
+      "Power user plans get pricey ($99/month for Creator)",
+      "Some emotional inflection still misses on dramatic reads",
+      "Voice cloning has ethical concerns and watermarking can be inconsistent"
+    ],
+    "verdict": "Best for any project needing professional voiceover \u2014 podcasts, animation, dubbing.",
+    "notGoodFor": "Skip for casual narration \u2014 built-in OS voices are free and fine for personal projects."
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "description": "Text-to-song generator producing full tracks with vocals from a prompt.",
+    "category": "Audio & Music",
+    "tags": [
+      "free tier",
+      "music",
+      "vocals"
+    ],
+    "pricing": "Freemium",
+    "url": "https://suno.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "udio",
+      "runway",
+      "pika",
+      "luma-dream-machine",
+      "kling",
+      "sora",
+      "descript",
+      "elevenlabs",
+      "midjourney",
+      "chatgpt",
+      "captions",
+      "adobe-firefly",
+      "otter",
+      "assemblyai"
+    ],
+    "bestFor": [
+      "music production",
+      "video editing",
+      "animation"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 2380,
+    "reviews": [
+      {
+        "author": "Jin H.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-03-28",
+        "useCase": "Write a Book"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 5,
+        "text": "Suno replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-02-04",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-03-09",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "50 credits/day",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 282,
+    "trendingDirection": "up",
+    "weeklyViews": 3138,
+    "savedCount": 428,
+    "isNew": false,
+    "pros": [
+      "Generates full songs with lyrics, melody, and vocals from one prompt",
+      "Stem separation lets you mix individual tracks in a DAW",
+      "Free tier (50 credits/day) \u2014 enough to experiment",
+      "Custom Mode lets you supply your own lyrics"
+    ],
+    "cons": [
+      "Vocals occasionally sound auto-tuned or robotic on long notes",
+      "Commercial rights only on Pro and above ($30/month)",
+      "Same prompt produces wildly different results \u2014 hard to iterate",
+      "Active legal questions about training data"
+    ],
+    "verdict": "Best for content creators needing royalty-aware music for video, podcasts, or games.",
+    "notGoodFor": "Skip if you're a serious musician \u2014 DAWs and human players still win for nuance."
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "description": "AI music generator focused on high-quality, controllable song creation.",
+    "category": "Audio & Music",
+    "tags": [
+      "free tier",
+      "music"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.udio.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-04-25",
+    "compatibleWith": [
+      "suno",
+      "runway",
+      "descript",
+      "pika",
+      "elevenlabs"
+    ],
+    "bestFor": [
+      "music production"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 920,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-01-18",
+        "useCase": "Write a Book"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-09",
+        "useCase": "Do research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "600 credits/mo",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 98,
+    "trendingDirection": "stable",
+    "weeklyViews": 1202,
+    "savedCount": 165,
+    "isNew": true,
+    "pros": [
+      "Higher fidelity vocals than Suno on most genres",
+      "Better at long-form arrangements \u2014 bridges, breakdowns, outros",
+      "Free tier with 600 credits/month",
+      "Co-creation tools for editing parts of the song"
+    ],
+    "cons": [
+      "Smaller community than Suno \u2014 fewer remix examples",
+      "Commercial rights also gated behind paid tiers",
+      "UI less polished than Suno",
+      "Same legal training-data concerns as Suno"
+    ],
+    "verdict": "Best for songwriters who care about vocal nuance and arrangement complexity.",
+    "notGoodFor": "Skip for quick jingle generation \u2014 Suno is faster and simpler."
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "description": "OpenAI's open-weight speech-to-text model with strong multilingual support.",
+    "category": "Audio & Music",
+    "tags": [
+      "open source",
+      "API available",
+      "transcription"
+    ],
+    "pricing": "Free",
+    "url": "https://openai.com/research/whisper",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-15",
+    "compatibleWith": [
+      "descript",
+      "assemblyai",
+      "otter",
+      "claude",
+      "chatgpt",
+      "langchain",
+      "replicate",
+      "huggingface"
+    ],
+    "bestFor": [
+      "podcasting"
+    ],
+    "workflow": "edit",
+    "rating": 4.6,
+    "reviewCount": 1810,
+    "reviews": [
+      {
+        "author": "Aisha R.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-03-09",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-02-22",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-09",
+        "useCase": "Teach a class"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Self-host free; API by usage",
+      "starting_price": "$0",
+      "most_popular_plan": "~$6/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "unlimited",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0\u20136",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 163,
+    "trendingDirection": "stable",
+    "weeklyViews": 2335,
+    "savedCount": 325,
+    "isNew": false,
+    "pros": [
+      "Free and open source \u2014 run locally for unlimited transcription",
+      "99 languages supported with strong accuracy",
+      "Multiple model sizes \u2014 pick speed vs accuracy",
+      "API option via OpenAI for cloud use"
+    ],
+    "cons": [
+      "No native diarization (speaker labels) \u2014 needs separate library",
+      "Local large model needs 10GB+ RAM",
+      "Real-time transcription requires custom setup",
+      "Punctuation can be inconsistent on noisy audio"
+    ],
+    "verdict": "Best for developers and privacy-conscious users who want unlimited transcription.",
+    "notGoodFor": "Skip if you need a polished UI with speaker labels \u2014 use Otter or AssemblyAI."
+  },
+  {
+    "id": "assemblyai",
+    "name": "AssemblyAI",
+    "description": "Speech AI platform for transcription, diarization, and audio understanding via API.",
+    "category": "Audio & Music",
+    "tags": [
+      "API available",
+      "transcription",
+      "developer"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.assemblyai.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-15",
+    "compatibleWith": [
+      "whisper",
+      "otter",
+      "descript",
+      "claude",
+      "chatgpt",
+      "langchain",
+      "elevenlabs"
+    ],
+    "bestFor": [
+      "podcasting"
+    ],
+    "workflow": "analyze",
+    "rating": 4.4,
+    "reviewCount": 760,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "AssemblyAI is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-01-18",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-03-09",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "$50 free credit",
+      "starting_price": "Pay-as-you-go",
+      "most_popular_plan": "~$30/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0\u201330",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 88,
+    "trendingDirection": "stable",
+    "weeklyViews": 1000,
+    "savedCount": 136,
+    "isNew": false,
+    "pros": [
+      "Production-grade speech API with diarization, summaries, and sentiment built in",
+      "Strong accuracy on noisy real-world audio",
+      "$50 free credit lets you test seriously",
+      "Good docs and SDKs for fast integration"
+    ],
+    "cons": [
+      "Pure API \u2014 no end-user UI, you build the workflow",
+      "Pay-as-you-go can balloon for high-volume podcasts",
+      "Less open than Whisper",
+      "Speaker labels need clean audio to be reliable"
+    ],
+    "verdict": "Best for developers building voice apps or large-scale podcast pipelines.",
+    "notGoodFor": "Skip if you just need to transcribe occasional meetings \u2014 Otter is plug-and-play."
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "description": "Audio/video editor that lets you edit recordings by editing the transcript.",
+    "category": "Audio & Music",
+    "tags": [
+      "paid",
+      "editing",
+      "podcasting",
+      "screen recording"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.descript.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "elevenlabs",
+      "runway",
+      "pika",
+      "luma-dream-machine",
+      "kling",
+      "sora",
+      "otter",
+      "fireflies",
+      "suno",
+      "udio",
+      "whisper",
+      "midjourney",
+      "dalle",
+      "captions",
+      "heygen",
+      "adobe-firefly",
+      "assemblyai",
+      "stable-diffusion"
+    ],
+    "bestFor": [
+      "podcasting",
+      "video editing"
+    ],
+    "workflow": "edit",
+    "rating": 4.5,
+    "reviewCount": 2160,
+    "reviews": [
+      {
+        "author": "Marco T.",
+        "rating": 5,
+        "text": "Descript replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-03-09",
+        "useCase": "Create social content"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Descript is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-04",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Maria L.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-01-18",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "1 hour transcription/mo",
+      "starting_price": "$12/mo",
+      "most_popular_plan": "$24/mo",
+      "annual_discount": "33%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$12",
+        "power_user": "$24"
+      }
+    },
+    "trendingScore": 261,
+    "trendingDirection": "up",
+    "weeklyViews": 2853,
+    "savedCount": 388,
+    "isNew": false,
+    "pros": [
+      "Edit audio and video by editing the transcript \u2014 game-changing workflow",
+      "Studio Sound removes echo and noise in one click \u2014 sounds like a $300 mic upgrade",
+      "Overdub clones your voice for fixing typos without re-recording",
+      "Multi-track editor and screen recorder included"
+    ],
+    "cons": [
+      "Free tier (1 hour/month) is mostly a teaser",
+      "Heavy app \u2014 Mac fans spin up on long sessions",
+      "Overdub voice cloning quality lags ElevenLabs",
+      "Export queues can be slow on free tier"
+    ],
+    "verdict": "Best for podcasters and YouTubers who want fast, transcript-based editing.",
+    "notGoodFor": "Skip if you're cutting cinematic video \u2014 Premiere or DaVinci is more capable."
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "description": "AI pair programmer in your IDE, with chat, autocomplete, and PR review.",
+    "category": "Coding",
+    "tags": [
+      "paid",
+      "ide",
+      "vscode",
+      "jetbrains",
+      "github"
+    ],
+    "pricing": "Freemium",
+    "url": "https://github.com/features/copilot",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "cursor",
+      "replit",
+      "v0",
+      "bolt",
+      "codeium",
+      "vercel",
+      "langchain",
+      "claude",
+      "chatgpt"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.6,
+    "reviewCount": 4120,
+    "reviews": [
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-03-28",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-09",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-01-18",
+        "useCase": "Make an animation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Free for students/OSS maintainers",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$19/mo",
+      "annual_discount": "17%",
+      "has_student_discount": true,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$39"
+      }
+    },
+    "trendingScore": 325,
+    "trendingDirection": "stable",
+    "weeklyViews": 5269,
+    "savedCount": 741,
+    "isNew": false,
+    "pros": [
+      "Inline autocomplete in nearly every IDE \u2014 VS Code, JetBrains, Vim, Visual Studio",
+      "Free for verified students, teachers, and OSS maintainers",
+      "Chat and PR review now bundled in the same subscription",
+      "GitHub integration is unmatched \u2014 knows your repo context"
+    ],
+    "cons": [
+      "Suggestions less proactive than Cursor's agent mode",
+      "Multi-file edits require Copilot Chat \u2014 not as fluid as Cursor's UX",
+      "$10\u2013$19/month is cheap individually but adds up at company scale",
+      "Privacy mode disables training but still routes through Microsoft servers"
+    ],
+    "verdict": "Best if you stay in VS Code or JetBrains and want reliable inline autocomplete.",
+    "notGoodFor": "Skip if you want full agentic refactors \u2014 Cursor is built for that."
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "description": "AI-first code editor (VS Code fork) with deep multi-file edits and chat.",
+    "category": "Coding",
+    "tags": [
+      "paid",
+      "desktop app",
+      "ide",
+      "agentic"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.cursor.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "github-copilot",
+      "replit",
+      "v0",
+      "bolt",
+      "codeium",
+      "vercel",
+      "claude",
+      "chatgpt",
+      "langchain"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.7,
+    "reviewCount": 3840,
+    "reviews": [
+      {
+        "author": "Marco T.",
+        "rating": 5,
+        "text": "Cursor replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-03-28",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-28",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Hobby tier \u2014 limited fast requests",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "15%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$40"
+      }
+    },
+    "trendingScore": 428,
+    "trendingDirection": "up",
+    "weeklyViews": 5036,
+    "savedCount": 691,
+    "isNew": false,
+    "pros": [
+      "AI-first editor with the cleanest agent UX \u2014 Cmd+K and tab-to-accept change everything",
+      "Multi-file edits and refactors work in one prompt",
+      "Cursor Tab predicts next edits based on what you just typed",
+      "Apply Diff feature shows exact changes before accepting"
+    ],
+    "cons": [
+      "$20/month Pro plan is more than Copilot's $10",
+      "Hobby tier limits fast requests \u2014 power users hit caps",
+      "VS Code fork \u2014 extension ecosystem slightly trails official VS Code",
+      "Doesn't integrate as deeply with GitHub PRs as Copilot"
+    ],
+    "verdict": "Best for engineers who want AI baked into the editor, not bolted on.",
+    "notGoodFor": "Skip if you live in JetBrains \u2014 Copilot supports it natively."
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "description": "Browser IDE with AI agent that builds and deploys full apps from prompts.",
+    "category": "Coding",
+    "tags": [
+      "free tier",
+      "browser ide",
+      "agentic",
+      "deploy"
+    ],
+    "pricing": "Freemium",
+    "url": "https://replit.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-12",
+    "compatibleWith": [
+      "github-copilot",
+      "cursor",
+      "v0",
+      "bolt",
+      "vercel",
+      "chatgpt",
+      "claude",
+      "langchain"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 1530,
+    "reviews": [
+      {
+        "author": "Noah W.",
+        "rating": 3,
+        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "date": "2026-03-28",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-02-22",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-28",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 public Repls + small agent budget",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$25/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$40"
+      }
+    },
+    "trendingScore": 141,
+    "trendingDirection": "stable",
+    "weeklyViews": 1977,
+    "savedCount": 275,
+    "isNew": false,
+    "pros": [
+      "Browser IDE with one-click deploy \u2014 no setup, no laptop",
+      "Replit Agent builds and runs full apps from a prompt",
+      "Generous free tier with 3 public Repls and small agent budget",
+      "Built-in collaboration \u2014 pair-program in real time"
+    ],
+    "cons": [
+      "Performance limited compared to local development for big projects",
+      "Agent burns credits fast on complex apps",
+      "Pricing tiers (Hacker/Core/Teams) can be confusing",
+      "Less powerful than Cursor for fine-grained code edits"
+    ],
+    "verdict": "Best for prototyping, learning, and shipping small full-stack apps without local setup.",
+    "notGoodFor": "Skip for production-scale work or if you have an opinionated local toolchain."
+  },
+  {
+    "id": "v0",
+    "name": "v0",
+    "description": "Vercel's generative UI tool that produces React/Tailwind components from prompts.",
+    "category": "Coding",
+    "tags": [
+      "free tier",
+      "react",
+      "tailwind",
+      "ui generation"
+    ],
+    "pricing": "Freemium",
+    "url": "https://v0.dev",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "cursor",
+      "github-copilot",
+      "bolt",
+      "replit",
+      "vercel",
+      "chatgpt",
+      "claude",
+      "langchain"
+    ],
+    "bestFor": [
+      "coding",
+      "design"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 1980,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-02-22",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-03-09",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-04-12",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "~200 credits/mo",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 243,
+    "trendingDirection": "up",
+    "weeklyViews": 2619,
+    "savedCount": 356,
+    "isNew": false,
+    "pros": [
+      "Generates clean React + Tailwind components from a single prompt",
+      "Output uses shadcn/ui \u2014 actually nice to read and modify",
+      "Fork-and-iterate UX \u2014 'make it more compact' just works",
+      "Free tier (~200 credits/month) is enough to ship a prototype"
+    ],
+    "cons": [
+      "Output is UI-only \u2014 no backend or data layer",
+      "Locked to React + Tailwind + shadcn \u2014 bad fit for Vue or pure CSS",
+      "Credits run out fast on complex screens",
+      "Best results need clear design intent in the prompt"
+    ],
+    "verdict": "Best for engineers and designers who want production-quality React UI fast.",
+    "notGoodFor": "Skip if you don't use React \u2014 output won't translate cleanly."
+  },
+  {
+    "id": "bolt",
+    "name": "Bolt",
+    "description": "StackBlitz's prompt-to-app builder that generates and runs full-stack code in browser.",
+    "category": "Coding",
+    "tags": [
+      "free tier",
+      "browser ide",
+      "full stack"
+    ],
+    "pricing": "Freemium",
+    "url": "https://bolt.new",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-15",
+    "compatibleWith": [
+      "v0",
+      "cursor",
+      "replit",
+      "github-copilot",
+      "vercel",
+      "claude",
+      "chatgpt"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1240,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Bolt is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-22",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-03-09",
+        "useCase": "Make an animation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "~1M tokens/day",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$50/mo",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 170,
+    "trendingDirection": "up",
+    "weeklyViews": 1658,
+    "savedCount": 223,
+    "isNew": false,
+    "pros": [
+      "Generates full-stack apps with backend, database, and frontend in browser",
+      "Live preview while the app is being built \u2014 see it work as it generates",
+      "Imports from StackBlitz Code Sandboxes for fast project starts",
+      "Free tier with ~1M tokens/day is genuinely usable"
+    ],
+    "cons": [
+      "Output reliability lower than Cursor for complex backends",
+      "Token cost adds up \u2014 $50/month tier needed for real builds",
+      "Less control than working in a real editor",
+      "Limited to web apps \u2014 no mobile or desktop targets"
+    ],
+    "verdict": "Best for non-engineers prototyping full-stack apps without setting up a dev env.",
+    "notGoodFor": "Skip if you're a working engineer \u2014 Cursor + a real backend is more reliable."
+  },
+  {
+    "id": "codeium",
+    "name": "Codeium",
+    "description": "Free AI autocomplete and chat for IDEs with strong language coverage (now Windsurf).",
+    "category": "Coding",
+    "tags": [
+      "free tier",
+      "ide",
+      "autocomplete"
+    ],
+    "pricing": "Freemium",
+    "url": "https://codeium.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-20",
+    "compatibleWith": [
+      "cursor",
+      "github-copilot"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1370,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Codeium is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-01-18",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Codeium is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-22",
+        "useCase": "Create social content"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Free for individuals",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$15/mo",
+      "annual_discount": "0%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0",
+        "power_user": "$15"
+      }
+    },
+    "trendingScore": 131,
+    "trendingDirection": "stable",
+    "weeklyViews": 1775,
+    "savedCount": 246,
+    "isNew": false,
+    "pros": [
+      "Free for individuals \u2014 best value of any AI autocomplete",
+      "Wide IDE support including Vim, Emacs, and Neovim",
+      "Now part of Windsurf \u2014 agentic editor option included",
+      "Self-hosted enterprise option for compliance-sensitive teams"
+    ],
+    "cons": [
+      "Suggestion quality lags Copilot and Cursor on complex code",
+      "Less polished UX than Copilot for chat",
+      "Smaller community than Copilot",
+      "Windsurf editor still maturing"
+    ],
+    "verdict": "Best free alternative to Copilot \u2014 especially for hobbyists and Vim/Emacs users.",
+    "notGoodFor": "Skip if you can pay for Copilot or Cursor \u2014 both have higher quality suggestions."
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "description": "Deployment platform for frontend frameworks, with first-class Next.js and AI SDK support.",
+    "category": "Coding",
+    "tags": [
+      "free tier",
+      "deploy",
+      "edge",
+      "github integration"
+    ],
+    "pricing": "Freemium",
+    "url": "https://vercel.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-04-21",
+    "compatibleWith": [
+      "v0",
+      "bolt",
+      "replit",
+      "cursor",
+      "github-copilot",
+      "langchain",
+      "chatgpt",
+      "claude"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "publish",
+    "rating": 4.6,
+    "reviewCount": 2210,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-28",
+        "useCase": "Create social content"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-09",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-01-18",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Hobby tier \u2014 non-commercial",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "0%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 267,
+    "trendingDirection": "up",
+    "weeklyViews": 2919,
+    "savedCount": 397,
+    "isNew": true,
+    "pros": [
+      "Push to Git, get a global URL \u2014 simplest deploy story for Next.js",
+      "First-class AI SDK with streaming, edge runtime, and analytics built in",
+      "Generous Hobby tier for non-commercial projects",
+      "v0 integration ships generated UI straight to production"
+    ],
+    "cons": [
+      "Pro plan jumps to $20/month per seat",
+      "Bandwidth and function execution costs can surprise you at scale",
+      "Hobby tier is non-commercial \u2014 strictly enforced",
+      "Some Cloudflare and Render alternatives are cheaper for static or backend"
+    ],
+    "verdict": "Best for shipping React/Next.js apps with zero ops.",
+    "notGoodFor": "Skip for high-traffic static sites or backend-heavy apps \u2014 Cloudflare is cheaper."
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "description": "AI assistant inside Notion for writing, summarizing, and Q&A across your workspace.",
+    "category": "Productivity",
+    "tags": [
+      "paid add-on",
+      "workspace search",
+      "writing"
+    ],
+    "pricing": "Paid",
+    "url": "https://www.notion.so/product/ai",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "chatgpt",
+      "claude",
+      "gemini",
+      "perplexity",
+      "grammarly",
+      "gamma",
+      "otter",
+      "fireflies",
+      "jasper",
+      "copy-ai",
+      "beautiful-ai",
+      "tome",
+      "elicit",
+      "consensus"
+    ],
+    "bestFor": [
+      "writing",
+      "research",
+      "book writing"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 2730,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 5,
+        "text": "Notion AI replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-02-04",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 5,
+        "text": "Use this every day for my work. Genuinely worth the subscription.",
+        "date": "2026-04-12",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-09",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": "AI is paid add-on",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$10/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$10",
+        "regular_user": "$10",
+        "power_user": "$10"
+      }
+    },
+    "trendingScore": 226,
+    "trendingDirection": "stable",
+    "weeklyViews": 3502,
+    "savedCount": 491,
+    "isNew": false,
+    "pros": [
+      "AI lives inside the workspace where your notes already are \u2014 no copy-paste",
+      "Q&A across your entire Notion knowledge base with citations",
+      "Custom AI Blocks generate content tied to page context",
+      "Strong on summarization and meeting notes"
+    ],
+    "cons": [
+      "Paid add-on at $10/month per user \u2014 adds to your Notion plan",
+      "Output quality below ChatGPT/Claude for general writing",
+      "Locked to Notion \u2014 no API for other apps",
+      "Search across large workspaces can be slow"
+    ],
+    "verdict": "Best for teams already on Notion who want AI inside their wiki and notes.",
+    "notGoodFor": "Skip if you don't use Notion \u2014 better general LLMs exist."
+  },
+  {
+    "id": "reclaim",
+    "name": "Reclaim AI",
+    "description": "Calendar assistant that auto-schedules tasks, habits, and meetings around priorities.",
+    "category": "Productivity",
+    "tags": [
+      "free tier",
+      "calendar",
+      "scheduling"
+    ],
+    "pricing": "Freemium",
+    "url": "https://reclaim.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-22",
+    "compatibleWith": [
+      "motion",
+      "otter",
+      "fireflies",
+      "notion-ai"
+    ],
+    "bestFor": [],
+    "workflow": "automate",
+    "rating": 4.2,
+    "reviewCount": 680,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-09",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 3,
+        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "date": "2026-02-04",
+        "useCase": "Teach a class"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Lite tier \u2014 1 calendar",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$10/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$24"
+      }
+    },
+    "trendingScore": 81,
+    "trendingDirection": "stable",
+    "weeklyViews": 897,
+    "savedCount": 122,
+    "isNew": false,
+    "pros": [
+      "Auto-schedules tasks, habits, and meetings around your priorities",
+      "Defends your focus time \u2014 automatically declines low-priority meetings",
+      "Free tier with 1 calendar is genuinely usable",
+      "Smart 1:1 scheduling with shared availability"
+    ],
+    "cons": [
+      "Google Calendar only \u2014 no Outlook or iCal at full feature parity",
+      "Setup takes time to tune to your real workflow",
+      "Pro plan ($10/month) needed for multiple calendars",
+      "Habits and tasks live separately from your other tools"
+    ],
+    "verdict": "Best for individual contributors and managers drowning in Google Calendar meetings.",
+    "notGoodFor": "Skip if you use Outlook or iCal \u2014 Motion or built-in Outlook handles it better."
+  },
+  {
+    "id": "motion",
+    "name": "Motion",
+    "description": "AI calendar and project tool that builds your day around tasks and deadlines.",
+    "category": "Productivity",
+    "tags": [
+      "paid",
+      "calendar",
+      "project management"
+    ],
+    "pricing": "Paid",
+    "url": "https://www.usemotion.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-22",
+    "compatibleWith": [
+      "reclaim",
+      "notion-ai",
+      "otter",
+      "fireflies"
+    ],
+    "bestFor": [],
+    "workflow": "automate",
+    "rating": 4.0,
+    "reviewCount": 520,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 3,
+        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "date": "2026-02-04",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Sam K.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-02-22",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": "none",
+      "starting_price": "$19/mo",
+      "most_popular_plan": "$19/mo",
+      "annual_discount": "21%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$19",
+        "regular_user": "$19",
+        "power_user": "$34"
+      }
+    },
+    "trendingScore": 40,
+    "trendingDirection": "down",
+    "weeklyViews": 664,
+    "savedCount": 93,
+    "isNew": false,
+    "pros": [
+      "AI rebuilds your day automatically when meetings change",
+      "Calendar + project + task management in one app",
+      "Strong if you have ADHD or many context switches",
+      "Outlook and Google Calendar both first-class"
+    ],
+    "cons": [
+      "$19/month entry tier \u2014 pricier than Reclaim",
+      "No free plan, only a 7-day trial",
+      "Steep learning curve to set up properly",
+      "Project management is lighter than Asana/Linear for teams"
+    ],
+    "verdict": "Best for solo founders and freelancers juggling many short tasks.",
+    "notGoodFor": "Skip if you're already happy with calendar + Todoist \u2014 Motion is overkill."
+  },
+  {
+    "id": "otter",
+    "name": "Otter.ai",
+    "description": "Live meeting transcription with speaker labels, summaries, and action items.",
+    "category": "Avatar & Meetings",
+    "tags": [
+      "free tier",
+      "transcription",
+      "summary",
+      "zoom"
+    ],
+    "pricing": "Freemium",
+    "url": "https://otter.ai",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-05",
+    "compatibleWith": [
+      "fireflies",
+      "descript",
+      "notion-ai",
+      "claude",
+      "chatgpt",
+      "perplexity",
+      "reclaim",
+      "motion",
+      "elevenlabs",
+      "assemblyai",
+      "whisper"
+    ],
+    "bestFor": [
+      "podcasting",
+      "research"
+    ],
+    "workflow": "edit",
+    "rating": 4.5,
+    "reviewCount": 1980,
+    "reviews": [
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-09",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Maria L.",
+        "rating": 4,
+        "text": "Otter.ai is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-01-18",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-03-28",
+        "useCase": "Teach a class"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "300 minutes/mo",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "40%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 174,
+    "trendingDirection": "stable",
+    "weeklyViews": 2550,
+    "savedCount": 356,
+    "isNew": false,
+    "pros": [
+      "Joins Zoom, Google Meet, and Teams calls automatically with no install on guests' side",
+      "Speaker labels and action-item summaries out of the box",
+      "Generous 300-minute free tier",
+      "Mobile app records in-person meetings well"
+    ],
+    "cons": [
+      "Accuracy drops on heavy accents and crosstalk",
+      "Pro plan ($10/month) caps at 1,200 minutes",
+      "AI summaries occasionally invent action items",
+      "Privacy concerns \u2014 always disclose to participants"
+    ],
+    "verdict": "Best for people in a lot of meetings who want clean transcripts and summaries fast.",
+    "notGoodFor": "Skip if you need pure transcription accuracy \u2014 AssemblyAI or Whisper is better."
+  },
+  {
+    "id": "fireflies",
+    "name": "Fireflies.ai",
+    "description": "Meeting recorder and notetaker that joins calls, transcribes, and extracts insights.",
+    "category": "Avatar & Meetings",
+    "tags": [
+      "free tier",
+      "transcription",
+      "summary"
+    ],
+    "pricing": "Freemium",
+    "url": "https://fireflies.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-15",
+    "compatibleWith": [
+      "otter",
+      "notion-ai",
+      "descript",
+      "claude",
+      "chatgpt",
+      "reclaim",
+      "motion",
+      "elevenlabs"
+    ],
+    "bestFor": [
+      "research"
+    ],
+    "workflow": "edit",
+    "rating": 4.3,
+    "reviewCount": 1170,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-02-04",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Fireflies.ai is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-04-12",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "800 minutes of storage",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$19/mo",
+      "annual_discount": "40%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$39"
+      }
+    },
+    "trendingScore": 116,
+    "trendingDirection": "stable",
+    "weeklyViews": 1520,
+    "savedCount": 210,
+    "isNew": false,
+    "pros": [
+      "Generous free plan with 800 minutes of storage",
+      "Strong CRM integrations \u2014 auto-logs calls to HubSpot, Salesforce",
+      "AskFred chat queries across all your meetings",
+      "Multilingual transcription including in real time"
+    ],
+    "cons": [
+      "Joining bots can be intrusive in some meeting cultures",
+      "Pro plan ($19/month) needed for advanced features",
+      "Speaker accuracy below Otter on noisy calls",
+      "Action item extraction less reliable than Otter"
+    ],
+    "verdict": "Best for sales and customer success teams who need calls auto-logged to a CRM.",
+    "notGoodFor": "Skip for solo use \u2014 Otter has better one-person UX."
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "description": "AI avatar and video translation platform for sales, training, and marketing.",
+    "category": "Avatar & Meetings",
+    "tags": [
+      "paid",
+      "avatars",
+      "translation",
+      "lip sync"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.heygen.com",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "elevenlabs",
+      "descript",
+      "synthesia",
+      "runway",
+      "chatgpt",
+      "captions",
+      "tavus"
+    ],
+    "bestFor": [
+      "video editing",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1840,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 4,
+        "text": "HeyGen is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-03-28",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-28",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-01-18",
+        "useCase": "Write a Book"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 short videos/mo",
+      "starting_price": "$24/mo",
+      "most_popular_plan": "$72/mo",
+      "annual_discount": "30%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$24",
+        "power_user": "$165"
+      }
+    },
+    "trendingScore": 229,
+    "trendingDirection": "up",
+    "weeklyViews": 2437,
+    "savedCount": 331,
+    "isNew": false,
+    "pros": [
+      "Best-in-class avatar lip sync \u2014 looks startlingly natural",
+      "Real-time video translation with mouth-sync in 30+ languages",
+      "Custom avatars trained from 2 minutes of footage",
+      "Free tier with 3 short videos/month for testing"
+    ],
+    "cons": [
+      "Pro plan starts at $24/month \u2014 Creator plan is $72/month for serious use",
+      "Avatars still hit uncanny valley on close-ups",
+      "Generation queue can take minutes for long clips",
+      "Background and gestures less natural than real footage"
+    ],
+    "verdict": "Best for sales, training, and marketing teams replacing presenter video at scale.",
+    "notGoodFor": "Skip if you need natural human performance \u2014 real video still wins for emotional reach."
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "description": "Studio for creating presenter-style videos with AI avatars and templates.",
+    "category": "Avatar & Meetings",
+    "tags": [
+      "paid",
+      "avatars",
+      "training videos"
+    ],
+    "pricing": "Paid",
+    "url": "https://www.synthesia.io",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-15",
+    "compatibleWith": [
+      "elevenlabs",
+      "heygen",
+      "descript",
+      "runway",
+      "chatgpt",
+      "captions"
+    ],
+    "bestFor": [
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 1290,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-02-04",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-09",
+        "useCase": "Start a podcast"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 minutes of video/mo",
+      "starting_price": "$22/mo",
+      "most_popular_plan": "$67/mo",
+      "annual_discount": "30%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$22",
+        "power_user": "$67"
+      }
+    },
+    "trendingScore": 124,
+    "trendingDirection": "stable",
+    "weeklyViews": 1672,
+    "savedCount": 232,
+    "isNew": false,
+    "pros": [
+      "Studio-grade avatars and templates targeted at L&D and corporate training",
+      "60+ stock avatars and 130+ languages",
+      "Built-in screen recording for software training videos",
+      "SOC 2 and GDPR compliance for enterprise"
+    ],
+    "cons": [
+      "Stock avatars look more synthetic than HeyGen's",
+      "Pricing starts at $22/month and scales fast for teams",
+      "Limited editing flexibility once a video is generated",
+      "No real-time translation like HeyGen"
+    ],
+    "verdict": "Best for enterprise L&D teams creating training videos at scale.",
+    "notGoodFor": "Skip for short marketing videos \u2014 HeyGen's avatars feel more lifelike."
+  },
+  {
+    "id": "tavus",
+    "name": "Tavus",
+    "description": "Conversational video API for personalized AI avatars in real-time interactions.",
+    "category": "Avatar & Meetings",
+    "tags": [
+      "API available",
+      "avatars",
+      "developer"
+    ],
+    "pricing": "Paid",
+    "url": "https://www.tavus.io",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-04-24",
+    "compatibleWith": [
+      "elevenlabs",
+      "heygen",
+      "chatgpt",
+      "claude",
+      "langchain"
+    ],
+    "bestFor": [
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.2,
+    "reviewCount": 420,
+    "reviews": [
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-02-04",
+        "useCase": "Create social content"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Tavus is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-03-28",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "$10 free credit",
+      "starting_price": "Pay-as-you-go",
+      "most_popular_plan": "$375/mo",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$30",
+        "power_user": "$375"
+      }
+    },
+    "trendingScore": 88,
+    "trendingDirection": "up",
+    "weeklyViews": 592,
+    "savedCount": 75,
+    "isNew": true,
+    "pros": [
+      "Real-time conversational video \u2014 avatars talk back live, not just play prerecorded clips",
+      "API-first \u2014 drop into any app or sales workflow",
+      "Personalized video generation at scale (1,000s per campaign)",
+      "Custom voice cloning paired with avatar"
+    ],
+    "cons": [
+      "Pay-as-you-go pricing can balloon \u2014 $375/month for production usage",
+      "Pure API \u2014 you build the UI yourself",
+      "Smaller avatar library than HeyGen or Synthesia",
+      "Real-time mode requires solid network on user's side"
+    ],
+    "verdict": "Best for developers building live conversational AI experiences with avatars.",
+    "notGoodFor": "Skip for one-off marketing videos \u2014 HeyGen is faster and cheaper for that."
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "description": "Answer engine that searches the web and cites sources for every response.",
+    "category": "Research",
+    "tags": [
+      "free tier",
+      "search",
+      "citations",
+      "mobile app"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.perplexity.ai",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-01",
+    "compatibleWith": [
+      "chatgpt",
+      "claude",
+      "notion-ai",
+      "elicit",
+      "consensus",
+      "you-com",
+      "gamma",
+      "grammarly",
+      "otter"
+    ],
+    "bestFor": [
+      "research",
+      "book writing"
+    ],
+    "workflow": "analyze",
+    "rating": 4.6,
+    "reviewCount": 2940,
+    "reviews": [
+      {
+        "author": "Maria L.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-02-22",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-02-22",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-02-22",
+        "useCase": "Make an animation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 Pro queries/day",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "17%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 338,
+    "trendingDirection": "up",
+    "weeklyViews": 3866,
+    "savedCount": 529,
+    "isNew": false,
+    "pros": [
+      "Every answer comes with numbered citations \u2014 verify in one click",
+      "Live web search beats ChatGPT for current events",
+      "Spaces feature collects sources and threads for ongoing research",
+      "Strong free tier with 5 Pro queries/day"
+    ],
+    "cons": [
+      "Less strong than ChatGPT or Claude for non-research tasks like coding",
+      "Pro plan ($20/month) similar pricing to general LLMs",
+      "Citation links sometimes 404 or paywall",
+      "Limited multimodal support compared to ChatGPT"
+    ],
+    "verdict": "Best for researchers, journalists, and analysts who need cited, current answers.",
+    "notGoodFor": "Skip if you need a general assistant \u2014 ChatGPT or Claude is more flexible."
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "description": "Research assistant that surfaces and summarizes academic papers from 200M+ sources.",
+    "category": "Research",
+    "tags": [
+      "free tier",
+      "academic",
+      "papers"
+    ],
+    "pricing": "Freemium",
+    "url": "https://elicit.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-22",
+    "compatibleWith": [
+      "consensus",
+      "perplexity",
+      "claude",
+      "chatgpt",
+      "notion-ai"
+    ],
+    "bestFor": [
+      "research"
+    ],
+    "workflow": "analyze",
+    "rating": 4.3,
+    "reviewCount": 580,
+    "reviews": [
+      {
+        "author": "Aisha R.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-02-22",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-02-04",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5,000 credits",
+      "starting_price": "$12/mo",
+      "most_popular_plan": "$42/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$12",
+        "power_user": "$42"
+      }
+    },
+    "trendingScore": 75,
+    "trendingDirection": "stable",
+    "weeklyViews": 771,
+    "savedCount": 104,
+    "isNew": false,
+    "pros": [
+      "Searches 200M+ academic papers \u2014 finds peer-reviewed sources you'd miss in Google Scholar",
+      "Structured extraction \u2014 pulls method, sample size, results from each paper",
+      "Saved searches and projects for ongoing literature reviews",
+      "Free tier (5,000 credits) is enough for one literature review"
+    ],
+    "cons": [
+      "Limited to academic content \u2014 won't help for news or web",
+      "Subscription ($12/month) needed for serious research projects",
+      "Smaller dataset than full Google Scholar for niche fields",
+      "Citations need verification \u2014 occasionally surfaces retracted papers"
+    ],
+    "verdict": "Best for grad students and researchers doing systematic literature review.",
+    "notGoodFor": "Skip for general fact-checking \u2014 Perplexity or Consensus is faster."
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "description": "Search tool that pulls evidence-backed answers from peer-reviewed research.",
+    "category": "Research",
+    "tags": [
+      "free tier",
+      "academic",
+      "evidence"
+    ],
+    "pricing": "Freemium",
+    "url": "https://consensus.app",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-22",
+    "compatibleWith": [
+      "elicit",
+      "perplexity",
+      "claude",
+      "chatgpt",
+      "notion-ai"
+    ],
+    "bestFor": [
+      "research"
+    ],
+    "workflow": "analyze",
+    "rating": 4.2,
+    "reviewCount": 410,
+    "reviews": [
+      {
+        "author": "Jin H.",
+        "rating": 5,
+        "text": "Consensus replaced two other tools for me. The latest update is noticeably better.",
+        "date": "2026-04-12",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-02-04",
+        "useCase": "Teach a class"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Unlimited basic search",
+      "starting_price": "$9/mo",
+      "most_popular_plan": "$12/mo",
+      "annual_discount": "50%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$9",
+        "power_user": "$12"
+      }
+    },
+    "trendingScore": 62,
+    "trendingDirection": "stable",
+    "weeklyViews": 554,
+    "savedCount": 73,
+    "isNew": false,
+    "pros": [
+      "Pulls evidence from peer-reviewed papers \u2014 answers say 'yes/no/mixed' with citations",
+      "Strong filters by year, study type, and quality",
+      "Generous free tier with unlimited basic search",
+      "Easy for non-academics to access scientific evidence"
+    ],
+    "cons": [
+      "Only covers academic content \u2014 useless for news or business questions",
+      "Pro plan ($9/month) needed for AI-powered synthesis",
+      "Some claims oversimplify complex research",
+      "Smaller corpus than Elicit"
+    ],
+    "verdict": "Best for journalists, students, and clinicians who want quick evidence-backed answers.",
+    "notGoodFor": "Skip for deep literature reviews \u2014 Elicit's paper extraction is more thorough."
+  },
+  {
+    "id": "you-com",
+    "name": "You.com",
+    "description": "AI search and assistant suite with multi-model chat and web grounding.",
+    "category": "Research",
+    "tags": [
+      "free tier",
+      "search",
+      "multi-model"
+    ],
+    "pricing": "Freemium",
+    "url": "https://you.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-22",
+    "compatibleWith": [
+      "perplexity",
+      "chatgpt",
+      "claude"
+    ],
+    "bestFor": [
+      "research"
+    ],
+    "workflow": "analyze",
+    "rating": 4.0,
+    "reviewCount": 290,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-02-04",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-04-12",
+        "useCase": "Build an app"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited model picker",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$15/mo",
+      "annual_discount": "33%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 31,
+    "trendingDirection": "down",
+    "weeklyViews": 379,
+    "savedCount": 52,
+    "isNew": false,
+    "pros": [
+      "Multi-model chat \u2014 pick GPT, Claude, or Gemini in one interface",
+      "Web grounding on every answer like Perplexity",
+      "Free tier covers most casual queries",
+      "Strong privacy stance \u2014 anonymous mode available"
+    ],
+    "cons": [
+      "Less polished than Perplexity for research-focused workflows",
+      "Mobile app trails competitors",
+      "Pro plan ($15/month) competes against more refined tools",
+      "Smaller community and ecosystem"
+    ],
+    "verdict": "Best if you want one bill but multiple model options for chat.",
+    "notGoodFor": "Skip if you already pay for ChatGPT or Claude \u2014 more is duplicative."
+  },
+  {
+    "id": "pinecone",
+    "name": "Pinecone",
+    "description": "Managed vector database for RAG, semantic search, and AI app memory.",
+    "category": "Data & Analytics",
+    "tags": [
+      "API available",
+      "vector db",
+      "developer",
+      "rag"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.pinecone.io",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-10",
+    "compatibleWith": [
+      "langchain",
+      "huggingface",
+      "replicate",
+      "claude",
+      "chatgpt",
+      "hex"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "automate",
+    "rating": 4.4,
+    "reviewCount": 620,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 3,
+        "text": "It works but feels a bit dated compared to newer alternatives.",
+        "date": "2026-04-12",
+        "useCase": "Write a Book"
+      },
+      {
+        "author": "Maria L.",
+        "rating": 3,
+        "text": "Decent for hobby use, not sure I'd pay for it long term.",
+        "date": "2026-03-09",
+        "useCase": "Do research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "1 pod, ~100k vectors",
+      "starting_price": "$70/mo",
+      "most_popular_plan": "$70/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$70",
+        "power_user": "$300"
+      }
+    },
+    "trendingScore": 78,
+    "trendingDirection": "stable",
+    "weeklyViews": 822,
+    "savedCount": 111,
+    "isNew": false,
+    "pros": [
+      "Production-grade vector database \u2014 handles billions of vectors at low latency",
+      "Serverless option scales to zero so you don't pay during idle time",
+      "Strong SDKs for Python and JavaScript",
+      "Hybrid search (dense + sparse) built in"
+    ],
+    "cons": [
+      "Standard plan starts at $70/month \u2014 pricey for hobby projects",
+      "Free tier limited to one pod with ~100K vectors",
+      "Closed source \u2014 vendor lock-in if you migrate",
+      "Open alternatives like Qdrant or Weaviate are nearly as fast"
+    ],
+    "verdict": "Best for teams building production RAG with predictable scale and SLA.",
+    "notGoodFor": "Skip for hobby projects \u2014 Qdrant local or pgvector is free and good enough."
+  },
+  {
+    "id": "hex",
+    "name": "Hex",
+    "description": "Collaborative data workspace with notebooks, SQL, and an AI copilot for analysis.",
+    "category": "Data & Analytics",
+    "tags": [
+      "paid",
+      "notebooks",
+      "sql",
+      "team"
+    ],
+    "pricing": "Paid",
+    "url": "https://hex.tech",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-02-01",
+    "compatibleWith": [
+      "langchain",
+      "huggingface",
+      "pinecone",
+      "claude",
+      "chatgpt"
+    ],
+    "bestFor": [
+      "research",
+      "coding"
+    ],
+    "workflow": "analyze",
+    "rating": 4.5,
+    "reviewCount": 410,
+    "reviews": [
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-28",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-28",
+        "useCase": "Teach a class"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 users, public projects",
+      "starting_price": "$24/mo",
+      "most_popular_plan": "$45/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$24",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 64,
+    "trendingDirection": "stable",
+    "weeklyViews": 556,
+    "savedCount": 73,
+    "isNew": false,
+    "pros": [
+      "Notebooks + SQL + Python in one collaborative workspace",
+      "AI copilot writes SQL and explains query results",
+      "Public projects work as interactive data apps with no extra dev",
+      "Strong dbt integration"
+    ],
+    "cons": [
+      "Pro plan starts at $24/user/month \u2014 adds up for teams",
+      "Free tier limited to 3 users and public projects",
+      "Notebook performance lags Jupyter for compute-heavy work",
+      "Visualization library less rich than Tableau or Looker"
+    ],
+    "verdict": "Best for data teams who want collaborative analysis with an AI copilot.",
+    "notGoodFor": "Skip for solo data work \u2014 Jupyter or Hex Free is enough."
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "description": "Hub for open ML models, datasets, and spaces \u2014 the GitHub of AI.",
+    "category": "Data & Analytics",
+    "tags": [
+      "free tier",
+      "open source",
+      "models",
+      "developer"
+    ],
+    "pricing": "Freemium",
+    "url": "https://huggingface.co",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-05",
+    "compatibleWith": [
+      "replicate",
+      "pinecone",
+      "langchain",
+      "stable-diffusion",
+      "whisper",
+      "hex",
+      "claude"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.7,
+    "reviewCount": 2310,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-04-12",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Maria L.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-02-22",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Hugging Face is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-03-28",
+        "useCase": "Do research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Inference API w/ rate limits",
+      "starting_price": "$9/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$9",
+        "power_user": "$60"
+      }
+    },
+    "trendingScore": 199,
+    "trendingDirection": "stable",
+    "weeklyViews": 2971,
+    "savedCount": 415,
+    "isNew": false,
+    "pros": [
+      "Largest hub of open ML models, datasets, and Spaces \u2014 the GitHub of AI",
+      "Free model hosting and inference API for thousands of models",
+      "Spaces let you deploy demos in minutes",
+      "Strong Python ecosystem with transformers, datasets, and accelerate"
+    ],
+    "cons": [
+      "Inference API rate limits hit fast on popular models",
+      "Pro plan ($9/month) needed for serious model usage",
+      "Huge model catalog can overwhelm new users",
+      "Some hosted models go offline without warning"
+    ],
+    "verdict": "Best for ML engineers and researchers exploring or hosting open models.",
+    "notGoodFor": "Skip if you only use closed models like GPT \u2014 Hugging Face won't add much."
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "description": "Run any open-source ML model behind an API \u2014 image, video, audio, language.",
+    "category": "Data & Analytics",
+    "tags": [
+      "API available",
+      "developer",
+      "open models"
+    ],
+    "pricing": "Paid",
+    "url": "https://replicate.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-12",
+    "compatibleWith": [
+      "huggingface",
+      "pinecone",
+      "langchain",
+      "stable-diffusion",
+      "whisper"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 910,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Best in class for what it does. Customer support actually responds.",
+        "date": "2026-04-12",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-03-09",
+        "useCase": "Make an animation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "$1 free credit",
+      "starting_price": "Pay-as-you-go",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$30",
+        "power_user": "$300"
+      }
+    },
+    "trendingScore": 99,
+    "trendingDirection": "stable",
+    "weeklyViews": 1191,
+    "savedCount": 163,
+    "isNew": false,
+    "pros": [
+      "Run any open ML model behind an API \u2014 no infra setup",
+      "Pay-per-second pricing \u2014 only pay for what you use",
+      "Push your own custom models with a Dockerfile and Cog",
+      "Strong for image, video, and audio models needing GPU"
+    ],
+    "cons": [
+      "Cold starts can be 30+ seconds on rarely used models",
+      "GPU costs add up for high-volume inference",
+      "Less polished than Hugging Face for general ML exploration",
+      "$1 free credit only enough for testing"
+    ],
+    "verdict": "Best for developers who want to run open models without managing infrastructure.",
+    "notGoodFor": "Skip for high-traffic production \u2014 dedicated GPU instances are cheaper."
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain",
+    "description": "Framework and platform for building, evaluating, and observing LLM applications.",
+    "category": "Data & Analytics",
+    "tags": [
+      "open source",
+      "developer",
+      "framework",
+      "rag"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.langchain.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-12",
+    "compatibleWith": [
+      "pinecone",
+      "huggingface",
+      "replicate",
+      "claude",
+      "chatgpt",
+      "assemblyai",
+      "whisper",
+      "cursor",
+      "github-copilot",
+      "vercel",
+      "tavus"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "automate",
+    "rating": 4.3,
+    "reviewCount": 1240,
+    "reviews": [
+      {
+        "author": "Noah W.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-02-04",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Sam K.",
+        "rating": 3,
+        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "date": "2026-02-22",
+        "useCase": "Do research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "OSS framework; LangSmith free for individuals",
+      "starting_price": "$39/mo",
+      "most_popular_plan": "$39/mo",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$39",
+        "power_user": "$200"
+      }
+    },
+    "trendingScore": 72,
+    "trendingDirection": "down",
+    "weeklyViews": 1560,
+    "savedCount": 223,
+    "isNew": false,
+    "pros": [
+      "Most mature framework for chaining LLMs, tools, and retrieval",
+      "LangSmith dashboard traces every prompt and tool call \u2014 invaluable for debugging",
+      "Huge ecosystem of integrations across vector DBs, model providers, and tools",
+      "OSS framework is free; LangSmith free for individuals"
+    ],
+    "cons": [
+      "API surface is sprawling \u2014 easy to over-abstract simple things",
+      "Frequent breaking changes between versions",
+      "Some teams move to LlamaIndex or raw API calls for simpler stacks",
+      "LangSmith Pro ($39/month) needed for team observability"
+    ],
+    "verdict": "Best for teams building complex agents with many tools and retrieval steps.",
+    "notGoodFor": "Skip for simple chatbots \u2014 direct API calls are clearer and have fewer dependencies."
+  },
+  {
+    "id": "canva-ai",
+    "name": "Canva AI",
+    "description": "Magic Studio inside Canva: generate images, write copy, edit photos, and build decks.",
+    "category": "3D & Design",
+    "tags": [
+      "free tier",
+      "design",
+      "templates",
+      "image editing"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.canva.com/magic-studio",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "gamma",
+      "jasper",
+      "copy-ai",
+      "ideogram",
+      "midjourney",
+      "dalle",
+      "adobe-firefly",
+      "beautiful-ai",
+      "tome",
+      "chatgpt",
+      "captions",
+      "runway",
+      "pika",
+      "elevenlabs"
+    ],
+    "bestFor": [
+      "design",
+      "presentations",
+      "social media",
+      "cover design"
+    ],
+    "workflow": "create",
+    "rating": 4.6,
+    "reviewCount": 4980,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-02-04",
+        "useCase": "Teach a class"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-04-12",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Works well most of the time. Occasionally I have to retry a few times.",
+        "date": "2026-03-28",
+        "useCase": "Write a Book"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Magic Write \u2014 limited generations",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$15/mo",
+      "annual_discount": "22%",
+      "has_student_discount": true,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 539,
+    "trendingDirection": "up",
+    "weeklyViews": 6515,
+    "savedCount": 896,
+    "isNew": false,
+    "pros": [
+      "Magic Studio bundles image, video, copy, and design in one tool \u2014 covers most marketing needs",
+      "Massive template library across every format and brand vertical",
+      "Magic Resize spits out all platform sizes in one click",
+      "Free tier (with Magic Write limits) is genuinely usable"
+    ],
+    "cons": [
+      "AI quality below specialized tools \u2014 Midjourney for images, Runway for video",
+      "Pro plan ($15/month) needed for full Magic Studio access",
+      "Limited control compared to Photoshop or Figma for designers",
+      "Brand kit features are paid-only"
+    ],
+    "verdict": "Best for marketers, small businesses, and creators who want one tool for everything visual.",
+    "notGoodFor": "Skip if you need pro design control \u2014 Figma, Photoshop, and specialized AI tools are better."
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "description": "Generates polished decks, docs, and webpages from a single prompt or outline.",
+    "category": "3D & Design",
+    "tags": [
+      "free tier",
+      "presentations",
+      "docs"
+    ],
+    "pricing": "Freemium",
+    "url": "https://gamma.app",
+    "logoUrl": null,
+    "featured": true,
+    "addedDate": "2025-01-08",
+    "compatibleWith": [
+      "canva-ai",
+      "beautiful-ai",
+      "tome",
+      "notion-ai",
+      "perplexity",
+      "chatgpt",
+      "claude",
+      "midjourney",
+      "dalle",
+      "grammarly",
+      "gemini",
+      "adobe-firefly"
+    ],
+    "bestFor": [
+      "presentations"
+    ],
+    "workflow": "create",
+    "rating": 4.6,
+    "reviewCount": 2140,
+    "reviews": [
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core experience is great.",
+        "date": "2026-01-18",
+        "useCase": "Build an app"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-04-12",
+        "useCase": "Do research"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-02-22",
+        "useCase": "Make a presentation"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "400 AI credits",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$20"
+      }
+    },
+    "trendingScore": 260,
+    "trendingDirection": "up",
+    "weeklyViews": 2828,
+    "savedCount": 385,
+    "isNew": false,
+    "pros": [
+      "Generates polished decks from a one-line prompt \u2014 fastest path from idea to slides",
+      "Card-based layout adapts to any screen size automatically",
+      "Generous free tier (400 AI credits)",
+      "Export to PPT, PDF, or web-publish"
+    ],
+    "cons": [
+      "Default themes can feel samey across decks",
+      "Less control over typography than PowerPoint or Keynote",
+      "Watermark on free tier \u2014 Pro plan ($10\u2013$20/month) removes it",
+      "Custom animations are limited"
+    ],
+    "verdict": "Best for solo creators and small teams who want fast, on-brand decks without slide design skills.",
+    "notGoodFor": "Skip for highly designed decks \u2014 PowerPoint with a designer is more controllable."
+  },
+  {
+    "id": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "description": "Smart slide tool with auto-layout and AI generation for business presentations.",
+    "category": "3D & Design",
+    "tags": [
+      "paid",
+      "presentations",
+      "business"
+    ],
+    "pricing": "Paid",
+    "url": "https://www.beautiful.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-25",
+    "compatibleWith": [
+      "gamma",
+      "canva-ai",
+      "tome",
+      "chatgpt",
+      "claude",
+      "notion-ai",
+      "midjourney",
+      "dalle"
+    ],
+    "bestFor": [
+      "presentations"
+    ],
+    "workflow": "create",
+    "rating": 4.2,
+    "reviewCount": 620,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 5,
+        "text": "Use this every day for my work. Genuinely worth the subscription.",
+        "date": "2026-03-09",
+        "useCase": "Make an animation"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Beautiful.ai is great for the basics. Hits limits on more complex tasks.",
+        "date": "2026-03-09",
+        "useCase": "Do research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": "none",
+      "starting_price": "$12/mo",
+      "most_popular_plan": "$40/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$12",
+        "regular_user": "$40",
+        "power_user": "$40"
+      }
+    },
+    "trendingScore": 77,
+    "trendingDirection": "stable",
+    "weeklyViews": 821,
+    "savedCount": 111,
+    "isNew": false,
+    "pros": [
+      "Smart templates auto-balance text and charts \u2014 spacing always looks intentional",
+      "Built specifically for business and exec presentations",
+      "Strong chart library with auto-formatting",
+      "Team libraries for brand consistency"
+    ],
+    "cons": [
+      "$12/month entry tier \u2014 no free plan",
+      "Less AI generation than Gamma \u2014 more manual editing",
+      "Smaller template library than Canva or PowerPoint",
+      "Outputs feel corporate, not creative"
+    ],
+    "verdict": "Best for sales, finance, and ops teams who need polished decks fast without a designer.",
+    "notGoodFor": "Skip for creative or marketing decks \u2014 Canva and Gamma are more flexible."
+  },
+  {
+    "id": "tome",
+    "name": "Tome",
+    "description": "AI presentation tool now focused on outbound sales workflows for go-to-market teams.",
+    "category": "3D & Design",
+    "tags": [
+      "paid",
+      "sales",
+      "presentations"
+    ],
+    "pricing": "Paid",
+    "url": "https://tome.app",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2025-01-25",
+    "compatibleWith": [
+      "beautiful-ai",
+      "gamma",
+      "canva-ai",
+      "chatgpt",
+      "claude",
+      "notion-ai",
+      "midjourney",
+      "dalle"
+    ],
+    "bestFor": [
+      "presentations"
+    ],
+    "workflow": "create",
+    "rating": 4.0,
+    "reviewCount": 440,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 3,
+        "text": "Decent for hobby use, not sure I'd pay for it long term.",
+        "date": "2026-02-22",
+        "useCase": "Make a presentation"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Good value for the price. The UI could be a bit faster.",
+        "date": "2026-01-18",
+        "useCase": "Create social content"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "500 AI credits/mo",
+      "starting_price": "$16/mo",
+      "most_popular_plan": "$22/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$16",
+        "power_user": "$22"
+      }
+    },
+    "trendingScore": 37,
+    "trendingDirection": "down",
+    "weeklyViews": 565,
+    "savedCount": 79,
+    "isNew": false,
+    "pros": [
+      "Personalized decks per prospect \u2014 pulls from CRM data automatically",
+      "Tracks who opens the deck and how long they spend on each slide",
+      "AI generation on outline + content together",
+      "Free tier with 500 AI credits/month"
+    ],
+    "cons": [
+      "Pivoted to sales-only \u2014 less useful for general presentations now",
+      "Less general-purpose than Gamma since the rebrand",
+      "Pro plan ($16/month) needed for full features",
+      "Slimmer template library than competitors"
+    ],
+    "verdict": "Best for outbound sales teams sending personalized decks at scale.",
+    "notGoodFor": "Skip for internal or creative decks \u2014 Gamma is more flexible."
+  },
+  {
+    "id": "spline-ai",
+    "name": "Spline AI",
+    "description": "Generate and edit 3D scenes, objects, and animations from text prompts in the browser.",
+    "category": "3D & Design",
+    "tags": [
+      "free tier",
+      "3d",
+      "browser app"
+    ],
+    "pricing": "Freemium",
+    "url": "https://spline.design/ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-04-23",
+    "compatibleWith": [
+      "midjourney",
+      "runway",
+      "leonardo-ai"
+    ],
+    "bestFor": [
+      "design",
+      "animation"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 510,
+    "reviews": [
+      {
+        "author": "Lena O.",
+        "rating": 5,
+        "text": "Honestly impressed by how much it can do. I'm getting more done each week.",
+        "date": "2026-02-04",
+        "useCase": "Start a podcast"
+      },
+      {
+        "author": "Priya S.",
+        "rating": 5,
+        "text": "The free tier is generous, paid is great if you need volume.",
+        "date": "2026-03-09",
+        "useCase": "Teach a class"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 editor seats",
+      "starting_price": "$9/mo",
+      "most_popular_plan": "$22/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$9",
+        "power_user": "$30"
+      }
+    },
+    "trendingScore": 98,
+    "trendingDirection": "up",
+    "weeklyViews": 710,
+    "savedCount": 91,
+    "isNew": true,
+    "pros": [
+      "Generates and edits 3D scenes from text prompts in the browser",
+      "Free tier with 3 editor seats \u2014 usable for indie projects",
+      "Export to web, Unity, Blender, and Figma",
+      "Real-time collaboration like Figma"
+    ],
+    "cons": [
+      "Less powerful than Blender for hardcore 3D work",
+      "Output complexity has a ceiling for game-grade assets",
+      "Pro plan ($9/month) for export features",
+      "Smaller community than mainstream 3D tools"
+    ],
+    "verdict": "Best for designers adding 3D elements to web pages without learning Blender.",
+    "notGoodFor": "Skip for serious 3D \u2014 Blender or Cinema 4D handles complex scenes better."
+  }
+]

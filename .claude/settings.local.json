@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -l \"from \\\\\"@/lib/types\\\\\"\" --include=\"*.ts\" --include=\"*.tsx\" -r .)",
+      "Bash(grep -n \"import.*types\" app/news/page.tsx)",
+      "Bash(grep -n \"function CanvasNode\\\\|^}$\" components/WorkflowCanvas.tsx)",
+      "Bash(grep -n \"^  {$\\\\|^export const USE_CASES\\\\|^];\" lib/usecases.ts)"
+    ]
+  }
+}

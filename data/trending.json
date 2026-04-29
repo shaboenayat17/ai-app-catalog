@@ -1,0 +1,59 @@
+{
+  "trending_stacks": [
+    {
+      "id": "social-shorts-2026-w17",
+      "title": "Viral Shorts Stack",
+      "subtitle": "Most-saved this week for short-form video",
+      "apps": ["chatgpt", "midjourney", "runway", "elevenlabs", "captions"],
+      "saves": 1840,
+      "useCase": "social-content",
+      "week": "2026-04-21"
+    },
+    {
+      "id": "indie-app-builder-2026-w17",
+      "title": "Indie App Builder",
+      "subtitle": "Solo founders shipping in a weekend",
+      "apps": ["chatgpt", "v0", "cursor", "vercel"],
+      "saves": 1320,
+      "useCase": "build-app",
+      "week": "2026-04-21"
+    },
+    {
+      "id": "podcast-of-one-2026-w17",
+      "title": "Podcast of One",
+      "subtitle": "Solo show, studio quality",
+      "apps": ["descript", "elevenlabs", "otter", "suno"],
+      "saves": 980,
+      "useCase": "podcast",
+      "week": "2026-04-21"
+    },
+    {
+      "id": "research-to-deck-2026-w17",
+      "title": "Research → Deck",
+      "subtitle": "From question to pitch in a day",
+      "apps": ["perplexity", "claude", "gamma", "midjourney"],
+      "saves": 740,
+      "useCase": "presentation",
+      "week": "2026-04-21"
+    }
+  ],
+  "trending_apps": [
+    "claude",
+    "cursor",
+    "runway",
+    "elevenlabs",
+    "midjourney",
+    "perplexity",
+    "v0",
+    "gamma",
+    "captions",
+    "suno"
+  ],
+  "new_this_week": [
+    "vercel",
+    "captions",
+    "spline-ai",
+    "tavus",
+    "udio"
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "title": "OpenAI ships Sora to ChatGPT Plus and Pro",
+    "summary": "Sora's text-to-video model rolled out to paid ChatGPT users, with longer clip durations and a new storyboard editor for stitching scenes together.",
+    "source": "OpenAI",
+    "url": "https://openai.com/sora",
+    "date": "2026-04-22",
+    "category": "Video"
+  },
+  {
+    "title": "Anthropic releases Claude Opus 4.7 with longer context",
+    "summary": "Claude's flagship model gets stronger long-document reasoning and faster artifact generation, available now in claude.ai and the API.",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com/news",
+    "date": "2026-04-19",
+    "category": "Text & Writing"
+  },
+  {
+    "title": "ElevenLabs launches real-time voice agents",
+    "summary": "Conversational voice agents with sub-500ms latency now ship as a hosted product, targeting customer support and in-app assistants.",
+    "source": "ElevenLabs",
+    "url": "https://elevenlabs.io/blog",
+    "date": "2026-04-17",
+    "category": "Audio & Music"
+  },
+  {
+    "title": "Runway's Gen-4 brings character consistency to video",
+    "summary": "Runway's new model preserves characters and props across shots, closing a key gap with traditional VFX pipelines.",
+    "source": "Runway",
+    "url": "https://runwayml.com/research",
+    "date": "2026-04-14",
+    "category": "Video"
+  },
+  {
+    "title": "Cursor passes 1M paying developers",
+    "summary": "The AI-first editor reports a milestone driven by its multi-file agent and faster apply, with enterprise rollouts now its fastest segment.",
+    "source": "Cursor blog",
+    "url": "https://www.cursor.com/blog",
+    "date": "2026-04-12",
+    "category": "Coding"
+  },
+  {
+    "title": "Google rolls Gemini deeper into Workspace",
+    "summary": "Gemini side panel is now standard in Docs, Sheets, and Gmail for all paid Workspace tiers, with new agentic actions across files.",
+    "source": "Google",
+    "url": "https://workspace.google.com/blog",
+    "date": "2026-04-10",
+    "category": "Productivity"
+  },
+  {
+    "title": "Suno v5 ships with stem separation",
+    "summary": "Suno's latest model produces longer songs and exposes individual stems, making outputs editable in standard DAWs.",
+    "source": "Suno",
+    "url": "https://suno.com/blog",
+    "date": "2026-04-08",
+    "category": "Audio & Music"
+  },
+  {
+    "title": "Midjourney V7 focuses on photorealism and editing",
+    "summary": "V7 introduces in-canvas editing, better hands and text, and a new style library tuned for product and commercial work.",
+    "source": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "date": "2026-04-05",
+    "category": "Image & Art"
+  },
+  {
+    "title": "Perplexity launches Spaces for team research",
+    "summary": "Spaces let teams share collections of sources, prompts, and threads — a research-focused answer to ChatGPT Projects.",
+    "source": "Perplexity",
+    "url": "https://www.perplexity.ai",
+    "date": "2026-04-03",
+    "category": "Research"
+  },
+  {
+    "title": "Hugging Face crosses 2M public models",
+    "summary": "The hub passes a milestone amid a wave of open releases in vision-language and small language models tuned for on-device use.",
+    "source": "Hugging Face",
+    "url": "https://huggingface.co/blog",
+    "date": "2026-04-01",
+    "category": "Data & Analytics"
+  }
+]
