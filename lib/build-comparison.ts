@@ -320,7 +320,7 @@ export function suggestComparisonsForApp(
   // Compatible apps from a different category
   const comp = app.compatibleWith
     .map((id) => apps.find((a) => a.id === id))
-    .filter((a): a is AIApp => Boolean(a) && a.category !== app.category)
+    .filter((a): a is AIApp => a !== undefined && a.category !== app.category)
     .sort((a, b) => b.reviewCount - a.reviewCount)
     .slice(0, compatible);
   for (const c of comp) {
