@@ -1,0 +1,62 @@
+# AI App Catalog
+
+A curated, searchable directory of AI-powered apps with deep comparisons, workflow building, and persona-based recommendations.
+
+## Local development
+
+```bash
+npm install
+npm run dev          # http://localhost:3000
+npm run build        # production build
+```
+
+## Project layout
+
+- `app/` — Next.js App Router pages
+- `components/` — UI components
+- `lib/` — Shared types, data helpers, comparison engine
+- `data/` — Source-of-truth JSON (`apps.json`, `comparisons.json`, `news.json`, `trending.json`)
+- `hooks/` — Client-side hooks
+- `scripts/` — Maintenance scripts (auto-update lives here)
+- `.github/workflows/` — Scheduled jobs
+
+## Auto-Update System
+
+This catalog updates automatically every other day.
+
+### How it works
+
+A GitHub Action runs every 2 days at 09:00 UTC (and on demand). It asks the OpenAI API to research a few new AI apps that aren't already in the catalog, validates the suggestions, appends them to `data/apps.json`, and opens a Pull Request for review. Nothing reaches the live site until you merge the PR.
+
+### One-time setup
+
+1. Add a repository secret named **`OPENAI_API_KEY`** (Settings → Secrets and variables → Actions → New repository secret).
+2. Allow GitHub Actions to open Pull Requests: Settings → Actions → General → Workflow permissions → enable **Allow GitHub Actions to create and approve pull requests**.
+
+### To trigger a manual update
+
+1. Go to the **Actions** tab in GitHub.
+2. Click **Update AI App Catalog** in the sidebar.
+3. Click **Run workflow**.
+4. Wait 2–3 minutes.
+5. Check the **Pull requests** tab for the suggestions.
+
+### To review an update
+
+1. Open the **Pull requests** tab.
+2. Click the auto-update PR (titled `🤖 New AI apps to review (run …)`).
+3. Review the diff under the **Files changed** tab.
+4. Edit anything that looks wrong directly on the branch.
+5. Click **Merge pull request** to accept, or **Close pull request** to reject.
+
+### Safety rails
+
+The update script ([`scripts/update-catalog.js`](scripts/update-catalog.js)) is append-only:
+
+- Never modifies or deletes existing apps.
+- Never adds more than 5 new apps per run.
+- Skips any suggestion that fails validation (bad URL, duplicate id, wrong category, missing fields, etc.) and logs the reason.
+- Exits cleanly with no PR if OpenAI is unreachable or returns invalid JSON — the workflow stays green.
+- Uses `gpt-4o-mini` with `max_tokens: 2000` to keep costs low.
+
+The PR body includes a summary of accepted suggestions and any rejected ones with their reasons. The full Action log shows every accept/skip decision.

@@ -1,0 +1,83 @@
+name: Update AI App Catalog
+
+on:
+  schedule:
+    # Every other day at 09:00 UTC
+    - cron: "0 9 */2 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run catalog update
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/update-catalog.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet -- data/apps.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to data/apps.json"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "data/apps.json changed"
+          fi
+
+      - name: Load summary into env
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          {
+            echo "NEW_APPS_SUMMARY<<__EOF__"
+            if [ -f scripts/last-update-summary.txt ]; then
+              cat scripts/last-update-summary.txt
+            else
+              echo "(no summary written)"
+            fi
+            echo "__EOF__"
+          } >> "$GITHUB_ENV"
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "🤖 Auto-update: new AI apps discovered"
+          title: "🤖 New AI apps to review (run ${{ github.run_id }})"
+          body: |
+            ## AI Catalog Auto-Update
+
+            The robot found some new AI apps to consider adding.
+
+            ### What to do
+            1. Review the changes in `data/apps.json` below
+            2. Edit anything that looks wrong
+            3. Click **Merge pull request** to add them to the site
+            4. Or click **Close pull request** to reject them
+
+            ### Apps proposed for addition
+            ${{ env.NEW_APPS_SUMMARY }}
+
+            ---
+            _Generated automatically by the catalog update robot._
+            Workflow run: [${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          branch: auto-update-${{ github.run_id }}
+          delete-branch: true
+          add-paths: |
+            data/apps.json
+            scripts/last-update-summary.txt
