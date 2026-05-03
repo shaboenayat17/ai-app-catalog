@@ -68,7 +68,7 @@ export async function readPendingCount(): Promise<number> {
 
 /* -------------------- Schedule helpers -------------------- */
 
-/** Cron is "0 9 */2 * *" — every other day at 9am UTC. Compute the next firing in UTC. */
+/** Approximates the workflow cron (every other day at 09:00 UTC). Returns the next firing in UTC. */
 export function nextScheduledRun(now = new Date()): Date {
   // Find the next date where day-of-month is even or odd matching today's parity rule.
   // The cron */2 in day-of-month fires on days 1, 3, 5, ..., 31 (odd days), then resets.
