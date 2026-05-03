@@ -7,7 +7,8 @@
       "Bash(grep -n \"^  {$\\\\|^export const USE_CASES\\\\|^];\" lib/usecases.ts)",
       "Bash(ls README*)",
       "Bash(ls .github)",
-      "Bash(ls scripts *)"
+      "Bash(ls scripts *)",
+      "Bash(python3 /tmp/expand-comparisons.py)"
     ]
   }
 }

@@ -8,16 +8,68 @@
     "verdict": "ChatGPT is the better all-rounder if you want one tool for writing, code, images, and voice. Claude is sharper for long documents, careful prose, and code review. Most pros pay for both.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Writing Quality", "winner": "claude", "app1Score": 4, "app2Score": 5, "explanation": "Claude produces more nuanced, natural prose with fewer stock phrases. ChatGPT is fast and versatile but feels more generic on long-form drafts." },
-      { "name": "Coding Help", "winner": "tie", "app1Score": 5, "app2Score": 5, "explanation": "ChatGPT with Code Interpreter slightly edges out for running and debugging code in-place. Claude wins on multi-file refactors thanks to long context." },
-      { "name": "Long Documents", "winner": "claude", "app1Score": 3, "app2Score": 5, "explanation": "Claude reads 200K+ tokens reliably. ChatGPT's effective context is shorter and degrades faster on full books or codebases." },
-      { "name": "Multimodal", "winner": "chatgpt", "app1Score": 5, "app2Score": 3, "explanation": "ChatGPT handles voice, images, video frames, and even file uploads natively. Claude is text-and-image only." },
-      { "name": "Pricing", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Both cost $20/month at the Plus/Pro tiers. ChatGPT Pro at $200/month is the only big spread." },
-      { "name": "Integrations", "winner": "chatgpt", "app1Score": 5, "app2Score": 3, "explanation": "ChatGPT plugs into thousands of third-party tools and has a Custom GPT marketplace. Claude's MCP ecosystem is younger." }
+      {
+        "name": "Writing Quality",
+        "winner": "claude",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Claude produces more nuanced, natural prose with fewer stock phrases. ChatGPT is fast and versatile but feels more generic on long-form drafts."
+      },
+      {
+        "name": "Coding Help",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "ChatGPT with Code Interpreter slightly edges out for running and debugging code in-place. Claude wins on multi-file refactors thanks to long context."
+      },
+      {
+        "name": "Long Documents",
+        "winner": "claude",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Claude reads 200K+ tokens reliably. ChatGPT's effective context is shorter and degrades faster on full books or codebases."
+      },
+      {
+        "name": "Multimodal",
+        "winner": "chatgpt",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "ChatGPT handles voice, images, video frames, and even file uploads natively. Claude is text-and-image only."
+      },
+      {
+        "name": "Pricing",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both cost $20/month at the Plus/Pro tiers. ChatGPT Pro at $200/month is the only big spread."
+      },
+      {
+        "name": "Integrations",
+        "winner": "chatgpt",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "ChatGPT plugs into thousands of third-party tools and has a Custom GPT marketplace. Claude's MCP ecosystem is younger."
+      }
     ],
     "quickPicks": [
-      { "app": "chatgpt", "label": "Choose ChatGPT if…", "points": ["You want one tool that does writing, code, images, and voice", "You use third-party integrations or build Custom GPTs", "You need fast multimodal understanding (PDFs, screenshots, audio)"] },
-      { "app": "claude", "label": "Choose Claude if…", "points": ["You work with long documents, books, or full codebases", "You want more thoughtful, natural-sounding writing", "Code review and refactoring is your main use case"] }
+      {
+        "app": "chatgpt",
+        "label": "Choose ChatGPT if\u2026",
+        "points": [
+          "You want one tool that does writing, code, images, and voice",
+          "You use third-party integrations or build Custom GPTs",
+          "You need fast multimodal understanding (PDFs, screenshots, audio)"
+        ]
+      },
+      {
+        "app": "claude",
+        "label": "Choose Claude if\u2026",
+        "points": [
+          "You work with long documents, books, or full codebases",
+          "You want more thoughtful, natural-sounding writing",
+          "Code review and refactoring is your main use case"
+        ]
+      }
     ]
   },
   {
@@ -26,19 +78,71 @@
     "app2": "gemini",
     "title": "ChatGPT vs Gemini",
     "subtitle": "OpenAI's all-rounder vs Google's Workspace-native AI",
-    "verdict": "ChatGPT wins on output quality and ecosystem. Gemini wins if you live in Google Docs, Gmail, and Sheets — the integration there is unmatched.",
+    "verdict": "ChatGPT wins on output quality and ecosystem. Gemini wins if you live in Google Docs, Gmail, and Sheets \u2014 the integration there is unmatched.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Output Quality", "winner": "chatgpt", "app1Score": 5, "app2Score": 4, "explanation": "ChatGPT consistently produces sharper, more polished output across writing, coding, and analysis. Gemini still hallucinates more in casual use." },
-      { "name": "Workspace Integration", "winner": "gemini", "app1Score": 3, "app2Score": 5, "explanation": "Gemini lives inside Gmail, Docs, Sheets, and Slides. ChatGPT requires copy-paste or extensions to do the same." },
-      { "name": "Mobile Experience", "winner": "tie", "app1Score": 5, "app2Score": 5, "explanation": "Both have polished mobile apps. Gemini has tighter Android integration; ChatGPT's iOS app is slightly more refined." },
-      { "name": "Pricing", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Both are $20/month at the consumer tier. Google One AI Premium bundles Gemini with 2TB storage which can shift the math." },
-      { "name": "Live Web Search", "winner": "gemini", "app1Score": 4, "app2Score": 5, "explanation": "Gemini's grounding in Google Search returns fresher, more accurate citations. ChatGPT's web mode improved but trails." },
-      { "name": "Custom Models / GPTs", "winner": "chatgpt", "app1Score": 5, "app2Score": 3, "explanation": "Custom GPTs and the Apps SDK make ChatGPT extendable in ways Gemini can't yet match." }
+      {
+        "name": "Output Quality",
+        "winner": "chatgpt",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "ChatGPT consistently produces sharper, more polished output across writing, coding, and analysis. Gemini still hallucinates more in casual use."
+      },
+      {
+        "name": "Workspace Integration",
+        "winner": "gemini",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Gemini lives inside Gmail, Docs, Sheets, and Slides. ChatGPT requires copy-paste or extensions to do the same."
+      },
+      {
+        "name": "Mobile Experience",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "Both have polished mobile apps. Gemini has tighter Android integration; ChatGPT's iOS app is slightly more refined."
+      },
+      {
+        "name": "Pricing",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both are $20/month at the consumer tier. Google One AI Premium bundles Gemini with 2TB storage which can shift the math."
+      },
+      {
+        "name": "Live Web Search",
+        "winner": "gemini",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Gemini's grounding in Google Search returns fresher, more accurate citations. ChatGPT's web mode improved but trails."
+      },
+      {
+        "name": "Custom Models / GPTs",
+        "winner": "chatgpt",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Custom GPTs and the Apps SDK make ChatGPT extendable in ways Gemini can't yet match."
+      }
     ],
     "quickPicks": [
-      { "app": "chatgpt", "label": "Choose ChatGPT if…", "points": ["You want the highest output quality across all tasks", "You build or use Custom GPTs and integrations", "You don't rely on Google Workspace day-to-day"] },
-      { "app": "gemini", "label": "Choose Gemini if…", "points": ["You live in Gmail, Docs, and Sheets", "You're already a Google One subscriber", "You need fresh, citation-backed web answers"] }
+      {
+        "app": "chatgpt",
+        "label": "Choose ChatGPT if\u2026",
+        "points": [
+          "You want the highest output quality across all tasks",
+          "You build or use Custom GPTs and integrations",
+          "You don't rely on Google Workspace day-to-day"
+        ]
+      },
+      {
+        "app": "gemini",
+        "label": "Choose Gemini if\u2026",
+        "points": [
+          "You live in Gmail, Docs, and Sheets",
+          "You're already a Google One subscriber",
+          "You need fresh, citation-backed web answers"
+        ]
+      }
     ]
   },
   {
@@ -50,37 +154,141 @@
     "verdict": "Claude wins on careful writing and long-document reasoning. Gemini wins if Workspace integration matters more than raw quality.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Writing Quality", "winner": "claude", "app1Score": 5, "app2Score": 3, "explanation": "Claude's prose is more natural and less repetitive. Gemini sometimes feels formulaic on long-form writing." },
-      { "name": "Long Documents", "winner": "tie", "app1Score": 5, "app2Score": 5, "explanation": "Both push 1M-token context on top tiers. Claude's recall in long contexts is slightly better in head-to-head needle tests." },
-      { "name": "Workspace Integration", "winner": "gemini", "app1Score": 1, "app2Score": 5, "explanation": "Gemini is native in Google Workspace. Claude is browser-only with no first-party doc/email integration." },
-      { "name": "Pricing", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Both $20/month at consumer tiers; both offer enterprise plans with similar prices." },
-      { "name": "Code Review", "winner": "claude", "app1Score": 5, "app2Score": 3, "explanation": "Claude's long-context reading and Artifacts make code review more productive than Gemini for full-file edits." },
-      { "name": "Mobile Experience", "winner": "gemini", "app1Score": 3, "app2Score": 5, "explanation": "Gemini ships first-class Android integration. Claude's mobile app is functional but less ambitious." }
+      {
+        "name": "Writing Quality",
+        "winner": "claude",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Claude's prose is more natural and less repetitive. Gemini sometimes feels formulaic on long-form writing."
+      },
+      {
+        "name": "Long Documents",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "Both push 1M-token context on top tiers. Claude's recall in long contexts is slightly better in head-to-head needle tests."
+      },
+      {
+        "name": "Workspace Integration",
+        "winner": "gemini",
+        "app1Score": 1,
+        "app2Score": 5,
+        "explanation": "Gemini is native in Google Workspace. Claude is browser-only with no first-party doc/email integration."
+      },
+      {
+        "name": "Pricing",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both $20/month at consumer tiers; both offer enterprise plans with similar prices."
+      },
+      {
+        "name": "Code Review",
+        "winner": "claude",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Claude's long-context reading and Artifacts make code review more productive than Gemini for full-file edits."
+      },
+      {
+        "name": "Mobile Experience",
+        "winner": "gemini",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Gemini ships first-class Android integration. Claude's mobile app is functional but less ambitious."
+      }
     ],
     "quickPicks": [
-      { "app": "claude", "label": "Choose Claude if…", "points": ["You write or review long documents", "You care about prose quality and tone", "You do most of your work in a browser, not Google Workspace"] },
-      { "app": "gemini", "label": "Choose Gemini if…", "points": ["Google Workspace is your daily driver", "You use Android and want OS-level AI", "You want web grounding more than thoughtful writing"] }
+      {
+        "app": "claude",
+        "label": "Choose Claude if\u2026",
+        "points": [
+          "You write or review long documents",
+          "You care about prose quality and tone",
+          "You do most of your work in a browser, not Google Workspace"
+        ]
+      },
+      {
+        "app": "gemini",
+        "label": "Choose Gemini if\u2026",
+        "points": [
+          "Google Workspace is your daily driver",
+          "You use Android and want OS-level AI",
+          "You want web grounding more than thoughtful writing"
+        ]
+      }
     ]
   },
   {
     "id": "midjourney-vs-dalle",
     "app1": "midjourney",
     "app2": "dalle",
-    "title": "Midjourney vs DALL·E 3",
+    "title": "Midjourney vs DALL\u00b7E 3",
     "subtitle": "Best-in-class artistic style vs prompt fidelity (and text in images)",
-    "verdict": "Midjourney wins on artistic quality. DALL·E 3 wins on prompt fidelity, text inside images, and bundling with ChatGPT.",
+    "verdict": "Midjourney wins on artistic quality. DALL\u00b7E 3 wins on prompt fidelity, text inside images, and bundling with ChatGPT.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Artistic Quality", "winner": "midjourney", "app1Score": 5, "app2Score": 3, "explanation": "Midjourney V6/V7 is on a different planet for stylized and aesthetic output. DALL·E results are competent but less striking." },
-      { "name": "Prompt Fidelity", "winner": "dalle", "app1Score": 4, "app2Score": 5, "explanation": "DALL·E 3 follows complex multi-clause prompts more literally. Midjourney sometimes ignores constraints in favor of style." },
-      { "name": "Text in Images", "winner": "dalle", "app1Score": 2, "app2Score": 5, "explanation": "DALL·E renders readable text reliably. Midjourney still struggles with anything beyond a few clean letters." },
-      { "name": "Iteration", "winner": "dalle", "app1Score": 4, "app2Score": 5, "explanation": "Inside ChatGPT you can say 'make it bluer' and DALL·E adjusts. Midjourney requires re-prompting from scratch." },
-      { "name": "Pricing", "winner": "dalle", "app1Score": 3, "app2Score": 5, "explanation": "DALL·E is bundled with ChatGPT Plus at $20/month total. Midjourney is $10 minimum and $30+ for serious commercial use." },
-      { "name": "Style Consistency", "winner": "midjourney", "app1Score": 5, "app2Score": 3, "explanation": "Midjourney's style references (--sref) lock a look across an entire project. DALL·E has no equivalent." }
+      {
+        "name": "Artistic Quality",
+        "winner": "midjourney",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Midjourney V6/V7 is on a different planet for stylized and aesthetic output. DALL\u00b7E results are competent but less striking."
+      },
+      {
+        "name": "Prompt Fidelity",
+        "winner": "dalle",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "DALL\u00b7E 3 follows complex multi-clause prompts more literally. Midjourney sometimes ignores constraints in favor of style."
+      },
+      {
+        "name": "Text in Images",
+        "winner": "dalle",
+        "app1Score": 2,
+        "app2Score": 5,
+        "explanation": "DALL\u00b7E renders readable text reliably. Midjourney still struggles with anything beyond a few clean letters."
+      },
+      {
+        "name": "Iteration",
+        "winner": "dalle",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Inside ChatGPT you can say 'make it bluer' and DALL\u00b7E adjusts. Midjourney requires re-prompting from scratch."
+      },
+      {
+        "name": "Pricing",
+        "winner": "dalle",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "DALL\u00b7E is bundled with ChatGPT Plus at $20/month total. Midjourney is $10 minimum and $30+ for serious commercial use."
+      },
+      {
+        "name": "Style Consistency",
+        "winner": "midjourney",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Midjourney's style references (--sref) lock a look across an entire project. DALL\u00b7E has no equivalent."
+      }
     ],
     "quickPicks": [
-      { "app": "midjourney", "label": "Choose Midjourney if…", "points": ["You care deeply about artistic and stylistic quality", "You want to lock a consistent visual look across a project", "You're producing concept art, mood boards, or marketing visuals"] },
-      { "app": "dalle", "label": "Choose DALL·E 3 if…", "points": ["You need readable text inside images", "You already pay for ChatGPT and don't want a second subscription", "Prompt fidelity matters more than artistic flair"] }
+      {
+        "app": "midjourney",
+        "label": "Choose Midjourney if\u2026",
+        "points": [
+          "You care deeply about artistic and stylistic quality",
+          "You want to lock a consistent visual look across a project",
+          "You're producing concept art, mood boards, or marketing visuals"
+        ]
+      },
+      {
+        "app": "dalle",
+        "label": "Choose DALL\u00b7E 3 if\u2026",
+        "points": [
+          "You need readable text inside images",
+          "You already pay for ChatGPT and don't want a second subscription",
+          "Prompt fidelity matters more than artistic flair"
+        ]
+      }
     ]
   },
   {
@@ -92,16 +300,68 @@
     "verdict": "Midjourney wins out-of-box quality with zero setup. Stable Diffusion wins when you want unlimited generation, full control, or commercial-grade fine-tuning.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Out-of-box Quality", "winner": "midjourney", "app1Score": 5, "app2Score": 3, "explanation": "Midjourney just works — type a prompt, get a stunning image. SD requires prompt engineering and model selection to match it." },
-      { "name": "Cost at Scale", "winner": "stable-diffusion", "app1Score": 2, "app2Score": 5, "explanation": "Stable Diffusion is free to run locally. Midjourney's per-month cost adds up fast for high-volume users." },
-      { "name": "Control & Customization", "winner": "stable-diffusion", "app1Score": 3, "app2Score": 5, "explanation": "SD has ControlNet, LoRAs, custom samplers, fine-tuning, and a vast ecosystem. Midjourney is intentionally locked down." },
-      { "name": "Setup Effort", "winner": "midjourney", "app1Score": 5, "app2Score": 1, "explanation": "Midjourney works in 30 seconds. SD needs a GPU, an interface (ComfyUI/A1111), models, and ongoing maintenance." },
-      { "name": "Privacy", "winner": "stable-diffusion", "app1Score": 2, "app2Score": 5, "explanation": "Run SD fully offline — your prompts never leave your machine. Midjourney logs everything." },
-      { "name": "Community Examples", "winner": "midjourney", "app1Score": 5, "app2Score": 4, "explanation": "Both have huge communities. Midjourney's public Discord makes prompt learning easier; SD's Civitai has more model variety." }
+      {
+        "name": "Out-of-box Quality",
+        "winner": "midjourney",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Midjourney just works \u2014 type a prompt, get a stunning image. SD requires prompt engineering and model selection to match it."
+      },
+      {
+        "name": "Cost at Scale",
+        "winner": "stable-diffusion",
+        "app1Score": 2,
+        "app2Score": 5,
+        "explanation": "Stable Diffusion is free to run locally. Midjourney's per-month cost adds up fast for high-volume users."
+      },
+      {
+        "name": "Control & Customization",
+        "winner": "stable-diffusion",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "SD has ControlNet, LoRAs, custom samplers, fine-tuning, and a vast ecosystem. Midjourney is intentionally locked down."
+      },
+      {
+        "name": "Setup Effort",
+        "winner": "midjourney",
+        "app1Score": 5,
+        "app2Score": 1,
+        "explanation": "Midjourney works in 30 seconds. SD needs a GPU, an interface (ComfyUI/A1111), models, and ongoing maintenance."
+      },
+      {
+        "name": "Privacy",
+        "winner": "stable-diffusion",
+        "app1Score": 2,
+        "app2Score": 5,
+        "explanation": "Run SD fully offline \u2014 your prompts never leave your machine. Midjourney logs everything."
+      },
+      {
+        "name": "Community Examples",
+        "winner": "midjourney",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Both have huge communities. Midjourney's public Discord makes prompt learning easier; SD's Civitai has more model variety."
+      }
     ],
     "quickPicks": [
-      { "app": "midjourney", "label": "Choose Midjourney if…", "points": ["You want stunning results in 30 seconds with no setup", "You don't have a strong GPU or want to fiddle with infrastructure", "You produce moderate volumes (a few hundred images/month)"] },
-      { "app": "stable-diffusion", "label": "Choose Stable Diffusion if…", "points": ["You generate at high volume or need unlimited generation", "You want privacy and on-device control", "You need fine-tunes, ControlNet, or LoRAs for a specific look"] }
+      {
+        "app": "midjourney",
+        "label": "Choose Midjourney if\u2026",
+        "points": [
+          "You want stunning results in 30 seconds with no setup",
+          "You don't have a strong GPU or want to fiddle with infrastructure",
+          "You produce moderate volumes (a few hundred images/month)"
+        ]
+      },
+      {
+        "app": "stable-diffusion",
+        "label": "Choose Stable Diffusion if\u2026",
+        "points": [
+          "You generate at high volume or need unlimited generation",
+          "You want privacy and on-device control",
+          "You need fine-tunes, ControlNet, or LoRAs for a specific look"
+        ]
+      }
     ]
   },
   {
@@ -110,19 +370,71 @@
     "app2": "github-copilot",
     "title": "Cursor vs GitHub Copilot",
     "subtitle": "AI-first editor vs the autocomplete that started it all",
-    "verdict": "Cursor wins on agentic multi-file edits and chat UX. Copilot wins on integration breadth, JetBrains support, and cost — especially if you're a student.",
+    "verdict": "Cursor wins on agentic multi-file edits and chat UX. Copilot wins on integration breadth, JetBrains support, and cost \u2014 especially if you're a student.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Agentic Edits", "winner": "cursor", "app1Score": 5, "app2Score": 4, "explanation": "Cursor's Cmd+K and Composer reliably make multi-file changes in one prompt. Copilot's chat-driven edits are catching up but trail." },
-      { "name": "Inline Autocomplete", "winner": "tie", "app1Score": 5, "app2Score": 5, "explanation": "Both predict your next line confidently. Cursor's Tab edits multiple lines; Copilot's NES (next edit suggestions) closed the gap." },
-      { "name": "IDE Support", "winner": "github-copilot", "app1Score": 3, "app2Score": 5, "explanation": "Copilot supports JetBrains, Visual Studio, Vim, and more. Cursor is a VS Code fork — only one editor option." },
-      { "name": "Pricing", "winner": "github-copilot", "app1Score": 3, "app2Score": 5, "explanation": "Copilot is $10/month and free for students/OSS maintainers. Cursor's Pro tier is $20/month with stricter request caps." },
-      { "name": "GitHub Integration", "winner": "github-copilot", "app1Score": 4, "app2Score": 5, "explanation": "Copilot's PR review, issue summarization, and CLI are deeply tied to GitHub. Cursor handles Git but isn't GitHub-native." },
-      { "name": "Speed", "winner": "cursor", "app1Score": 5, "app2Score": 4, "explanation": "Cursor's Apply Diff and tab-to-accept feel snappier in day-to-day editing. Copilot's chat round-trips can lag." }
+      {
+        "name": "Agentic Edits",
+        "winner": "cursor",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Cursor's Cmd+K and Composer reliably make multi-file changes in one prompt. Copilot's chat-driven edits are catching up but trail."
+      },
+      {
+        "name": "Inline Autocomplete",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "Both predict your next line confidently. Cursor's Tab edits multiple lines; Copilot's NES (next edit suggestions) closed the gap."
+      },
+      {
+        "name": "IDE Support",
+        "winner": "github-copilot",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Copilot supports JetBrains, Visual Studio, Vim, and more. Cursor is a VS Code fork \u2014 only one editor option."
+      },
+      {
+        "name": "Pricing",
+        "winner": "github-copilot",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Copilot is $10/month and free for students/OSS maintainers. Cursor's Pro tier is $20/month with stricter request caps."
+      },
+      {
+        "name": "GitHub Integration",
+        "winner": "github-copilot",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Copilot's PR review, issue summarization, and CLI are deeply tied to GitHub. Cursor handles Git but isn't GitHub-native."
+      },
+      {
+        "name": "Speed",
+        "winner": "cursor",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Cursor's Apply Diff and tab-to-accept feel snappier in day-to-day editing. Copilot's chat round-trips can lag."
+      }
     ],
     "quickPicks": [
-      { "app": "cursor", "label": "Choose Cursor if…", "points": ["You want AI baked into the editor with agent-style multi-file edits", "You're happy in VS Code and want the cleanest AI UX available", "You do a lot of refactoring or new feature work"] },
-      { "app": "github-copilot", "label": "Choose GitHub Copilot if…", "points": ["You use JetBrains, Visual Studio, or Vim", "Cost matters — especially if you qualify for student/OSS free", "You live in GitHub PRs and want AI tied to your repo"] }
+      {
+        "app": "cursor",
+        "label": "Choose Cursor if\u2026",
+        "points": [
+          "You want AI baked into the editor with agent-style multi-file edits",
+          "You're happy in VS Code and want the cleanest AI UX available",
+          "You do a lot of refactoring or new feature work"
+        ]
+      },
+      {
+        "app": "github-copilot",
+        "label": "Choose GitHub Copilot if\u2026",
+        "points": [
+          "You use JetBrains, Visual Studio, or Vim",
+          "Cost matters \u2014 especially if you qualify for student/OSS free",
+          "You live in GitHub PRs and want AI tied to your repo"
+        ]
+      }
     ]
   },
   {
@@ -131,19 +443,71 @@
     "app2": "pika",
     "title": "Runway vs Pika",
     "subtitle": "Pro video toolkit vs short-form effects machine",
-    "verdict": "Runway is the clear pro choice — better quality, more control, and built-in editing. Pika is a fun, cheaper option for short, stylized social clips.",
+    "verdict": "Runway is the clear pro choice \u2014 better quality, more control, and built-in editing. Pika is a fun, cheaper option for short, stylized social clips.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Video Quality", "winner": "runway", "app1Score": 5, "app2Score": 4, "explanation": "Runway Gen-3/Gen-4 produces more cinematic, realistic motion. Pika is solid but plateaus on complex scenes." },
-      { "name": "Motion Control", "winner": "runway", "app1Score": 5, "app2Score": 3, "explanation": "Runway's motion brush and camera controls give precise direction. Pika offers fewer levers." },
-      { "name": "Pricing", "winner": "pika", "app1Score": 3, "app2Score": 5, "explanation": "Pika starts at $10/month with usable credits. Runway's $15 entry runs out fast for serious work." },
-      { "name": "Effects & Fun", "winner": "pika", "app1Score": 4, "app2Score": 5, "explanation": "Pika's Pikaffects (crush, inflate, melt) are uniquely fun for social. Runway is more serious." },
-      { "name": "Editing Tools", "winner": "runway", "app1Score": 5, "app2Score": 3, "explanation": "Runway includes green-screen, inpainting, and a real timeline editor. Pika is generation-only." },
-      { "name": "Lip Sync", "winner": "pika", "app1Score": 3, "app2Score": 5, "explanation": "Pika's lip sync is reliable for character animation. Runway's is improving but less consistent." }
+      {
+        "name": "Video Quality",
+        "winner": "runway",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Runway Gen-3/Gen-4 produces more cinematic, realistic motion. Pika is solid but plateaus on complex scenes."
+      },
+      {
+        "name": "Motion Control",
+        "winner": "runway",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Runway's motion brush and camera controls give precise direction. Pika offers fewer levers."
+      },
+      {
+        "name": "Pricing",
+        "winner": "pika",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Pika starts at $10/month with usable credits. Runway's $15 entry runs out fast for serious work."
+      },
+      {
+        "name": "Effects & Fun",
+        "winner": "pika",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Pika's Pikaffects (crush, inflate, melt) are uniquely fun for social. Runway is more serious."
+      },
+      {
+        "name": "Editing Tools",
+        "winner": "runway",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Runway includes green-screen, inpainting, and a real timeline editor. Pika is generation-only."
+      },
+      {
+        "name": "Lip Sync",
+        "winner": "pika",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Pika's lip sync is reliable for character animation. Runway's is improving but less consistent."
+      }
     ],
     "quickPicks": [
-      { "app": "runway", "label": "Choose Runway if…", "points": ["You're producing professional or cinematic video", "You need editing tools alongside generation", "Quality matters more than per-clip cost"] },
-      { "app": "pika", "label": "Choose Pika if…", "points": ["You make fun, stylized, short-form content", "Lip sync for character animation is core", "You want a low monthly cost with playful effects"] }
+      {
+        "app": "runway",
+        "label": "Choose Runway if\u2026",
+        "points": [
+          "You're producing professional or cinematic video",
+          "You need editing tools alongside generation",
+          "Quality matters more than per-clip cost"
+        ]
+      },
+      {
+        "app": "pika",
+        "label": "Choose Pika if\u2026",
+        "points": [
+          "You make fun, stylized, short-form content",
+          "Lip sync for character animation is core",
+          "You want a low monthly cost with playful effects"
+        ]
+      }
     ]
   },
   {
@@ -155,16 +519,68 @@
     "verdict": "These solve different problems. ElevenLabs makes synthetic voices; Descript is the editor that uses them. Most podcasters end up with both.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Voice Generation Quality", "winner": "elevenlabs", "app1Score": 5, "app2Score": 3, "explanation": "ElevenLabs voices are the most natural in the industry. Descript's Overdub is fine but trails noticeably." },
-      { "name": "Editing Tools", "winner": "descript", "app1Score": 1, "app2Score": 5, "explanation": "Descript has full transcript-based editing, multitrack, and a video editor. ElevenLabs has no editor at all." },
-      { "name": "Voice Cloning", "winner": "elevenlabs", "app1Score": 5, "app2Score": 3, "explanation": "ElevenLabs clones from 1 minute of sample. Descript's Overdub clones too but quality is lower." },
-      { "name": "Multilingual", "winner": "elevenlabs", "app1Score": 5, "app2Score": 3, "explanation": "ElevenLabs supports 30+ languages with native inflection. Descript focuses on English." },
-      { "name": "Podcasting Workflow", "winner": "descript", "app1Score": 2, "app2Score": 5, "explanation": "Descript is built for podcasters end-to-end — record, transcribe, edit, publish. ElevenLabs is one piece of that." },
-      { "name": "Pricing", "winner": "elevenlabs", "app1Score": 5, "app2Score": 4, "explanation": "ElevenLabs starts at $5/month. Descript starts at $12/month. Both have free tiers." }
+      {
+        "name": "Voice Generation Quality",
+        "winner": "elevenlabs",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "ElevenLabs voices are the most natural in the industry. Descript's Overdub is fine but trails noticeably."
+      },
+      {
+        "name": "Editing Tools",
+        "winner": "descript",
+        "app1Score": 1,
+        "app2Score": 5,
+        "explanation": "Descript has full transcript-based editing, multitrack, and a video editor. ElevenLabs has no editor at all."
+      },
+      {
+        "name": "Voice Cloning",
+        "winner": "elevenlabs",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "ElevenLabs clones from 1 minute of sample. Descript's Overdub clones too but quality is lower."
+      },
+      {
+        "name": "Multilingual",
+        "winner": "elevenlabs",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "ElevenLabs supports 30+ languages with native inflection. Descript focuses on English."
+      },
+      {
+        "name": "Podcasting Workflow",
+        "winner": "descript",
+        "app1Score": 2,
+        "app2Score": 5,
+        "explanation": "Descript is built for podcasters end-to-end \u2014 record, transcribe, edit, publish. ElevenLabs is one piece of that."
+      },
+      {
+        "name": "Pricing",
+        "winner": "elevenlabs",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "ElevenLabs starts at $5/month. Descript starts at $12/month. Both have free tiers."
+      }
     ],
     "quickPicks": [
-      { "app": "elevenlabs", "label": "Choose ElevenLabs if…", "points": ["You need professional voiceover for video, animation, or dubbing", "Multi-language voices are required", "You want voice cloning at the highest quality"] },
-      { "app": "descript", "label": "Choose Descript if…", "points": ["You're producing podcasts or YouTube videos", "Editing on the transcript is your main workflow", "You need a single tool for record, transcribe, edit, and publish"] }
+      {
+        "app": "elevenlabs",
+        "label": "Choose ElevenLabs if\u2026",
+        "points": [
+          "You need professional voiceover for video, animation, or dubbing",
+          "Multi-language voices are required",
+          "You want voice cloning at the highest quality"
+        ]
+      },
+      {
+        "app": "descript",
+        "label": "Choose Descript if\u2026",
+        "points": [
+          "You're producing podcasts or YouTube videos",
+          "Editing on the transcript is your main workflow",
+          "You need a single tool for record, transcribe, edit, and publish"
+        ]
+      }
     ]
   },
   {
@@ -176,16 +592,68 @@
     "verdict": "Different tools for different jobs. Notion AI is for generating and querying content inside your workspace. Grammarly is for catching tone and clarity issues across every app you write in.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Writing Generation", "winner": "notion-ai", "app1Score": 4, "app2Score": 3, "explanation": "Notion AI writes and rewrites whole sections inside your docs. Grammarly's gen AI is more limited and bolt-on." },
-      { "name": "Grammar & Tone", "winner": "grammarly", "app1Score": 3, "app2Score": 5, "explanation": "Grammarly catches subtle tone and clarity issues no LLM does as reliably. Notion AI focuses on generation, not polish." },
-      { "name": "Where It Works", "winner": "grammarly", "app1Score": 2, "app2Score": 5, "explanation": "Grammarly works in browsers, MS Office, mobile keyboard — everywhere. Notion AI only works in Notion." },
-      { "name": "Workspace Search", "winner": "notion-ai", "app1Score": 5, "app2Score": 1, "explanation": "Notion AI searches and answers across your whole workspace. Grammarly has no such feature." },
-      { "name": "Pricing", "winner": "notion-ai", "app1Score": 4, "app2Score": 3, "explanation": "Notion AI is a $10/month add-on. Grammarly Premium is $30/month — much pricier for what it does." },
-      { "name": "Privacy", "winner": "notion-ai", "app1Score": 4, "app2Score": 3, "explanation": "Both send content to servers. Notion has clearer enterprise controls; Grammarly has had past privacy concerns." }
+      {
+        "name": "Writing Generation",
+        "winner": "notion-ai",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Notion AI writes and rewrites whole sections inside your docs. Grammarly's gen AI is more limited and bolt-on."
+      },
+      {
+        "name": "Grammar & Tone",
+        "winner": "grammarly",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Grammarly catches subtle tone and clarity issues no LLM does as reliably. Notion AI focuses on generation, not polish."
+      },
+      {
+        "name": "Where It Works",
+        "winner": "grammarly",
+        "app1Score": 2,
+        "app2Score": 5,
+        "explanation": "Grammarly works in browsers, MS Office, mobile keyboard \u2014 everywhere. Notion AI only works in Notion."
+      },
+      {
+        "name": "Workspace Search",
+        "winner": "notion-ai",
+        "app1Score": 5,
+        "app2Score": 1,
+        "explanation": "Notion AI searches and answers across your whole workspace. Grammarly has no such feature."
+      },
+      {
+        "name": "Pricing",
+        "winner": "notion-ai",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Notion AI is a $10/month add-on. Grammarly Premium is $30/month \u2014 much pricier for what it does."
+      },
+      {
+        "name": "Privacy",
+        "winner": "notion-ai",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Both send content to servers. Notion has clearer enterprise controls; Grammarly has had past privacy concerns."
+      }
     ],
     "quickPicks": [
-      { "app": "notion-ai", "label": "Choose Notion AI if…", "points": ["You already use Notion for notes, wiki, or docs", "You want Q&A across your workspace", "You generate and rewrite long content"] },
-      { "app": "grammarly", "label": "Choose Grammarly if…", "points": ["You write in many apps (Gmail, Slack, Word, Docs)", "Tone and clarity matter for your work", "You need real-time corrections as you type"] }
+      {
+        "app": "notion-ai",
+        "label": "Choose Notion AI if\u2026",
+        "points": [
+          "You already use Notion for notes, wiki, or docs",
+          "You want Q&A across your workspace",
+          "You generate and rewrite long content"
+        ]
+      },
+      {
+        "app": "grammarly",
+        "label": "Choose Grammarly if\u2026",
+        "points": [
+          "You write in many apps (Gmail, Slack, Word, Docs)",
+          "Tone and clarity matter for your work",
+          "You need real-time corrections as you type"
+        ]
+      }
     ]
   },
   {
@@ -193,20 +661,72 @@
     "app1": "jasper",
     "app2": "copy-ai",
     "title": "Jasper vs Copy.ai",
-    "subtitle": "Two marketing-focused content tools — which one fits?",
+    "subtitle": "Two marketing-focused content tools \u2014 which one fits?",
     "verdict": "Jasper is the enterprise pick with stronger team and brand-voice features. Copy.ai is friendlier and cheaper to start, with workflow templates that string steps together.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Brand Voice", "winner": "jasper", "app1Score": 5, "app2Score": 3, "explanation": "Jasper's Brand Voice trains on your existing copy and stays on-brand at scale. Copy.ai has a simpler equivalent." },
-      { "name": "Workflow Templates", "winner": "copy-ai", "app1Score": 3, "app2Score": 5, "explanation": "Copy.ai's workflow builder strings multiple AI steps together (research → outline → draft). Jasper is more freeform." },
-      { "name": "Pricing", "winner": "copy-ai", "app1Score": 2, "app2Score": 4, "explanation": "Copy.ai has a real free tier and starts at $49/month. Jasper has no free tier and also starts at $49." },
-      { "name": "Team Features", "winner": "jasper", "app1Score": 5, "app2Score": 3, "explanation": "Jasper's team workflows, approval flows, and SSO are more enterprise-ready. Copy.ai is leaner for teams." },
-      { "name": "Output Quality", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Both produce solid marketing copy that needs editing. Neither matches a senior copywriter, both beat a junior." },
-      { "name": "Vs General LLMs", "winner": "tie", "app1Score": 3, "app2Score": 3, "explanation": "Both face pressure from ChatGPT/Claude with custom prompts. Templates and brand voice are the differentiators." }
+      {
+        "name": "Brand Voice",
+        "winner": "jasper",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Jasper's Brand Voice trains on your existing copy and stays on-brand at scale. Copy.ai has a simpler equivalent."
+      },
+      {
+        "name": "Workflow Templates",
+        "winner": "copy-ai",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Copy.ai's workflow builder strings multiple AI steps together (research \u2192 outline \u2192 draft). Jasper is more freeform."
+      },
+      {
+        "name": "Pricing",
+        "winner": "copy-ai",
+        "app1Score": 2,
+        "app2Score": 4,
+        "explanation": "Copy.ai has a real free tier and starts at $49/month. Jasper has no free tier and also starts at $49."
+      },
+      {
+        "name": "Team Features",
+        "winner": "jasper",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Jasper's team workflows, approval flows, and SSO are more enterprise-ready. Copy.ai is leaner for teams."
+      },
+      {
+        "name": "Output Quality",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both produce solid marketing copy that needs editing. Neither matches a senior copywriter, both beat a junior."
+      },
+      {
+        "name": "Vs General LLMs",
+        "winner": "tie",
+        "app1Score": 3,
+        "app2Score": 3,
+        "explanation": "Both face pressure from ChatGPT/Claude with custom prompts. Templates and brand voice are the differentiators."
+      }
     ],
     "quickPicks": [
-      { "app": "jasper", "label": "Choose Jasper if…", "points": ["You're an agency or marketing team with multiple writers", "Brand consistency at scale is critical", "You need approval workflows and SSO"] },
-      { "app": "copy-ai", "label": "Choose Copy.ai if…", "points": ["You're a solo marketer or small team", "You want templated workflows that handle multi-step tasks", "You want to test for free before committing"] }
+      {
+        "app": "jasper",
+        "label": "Choose Jasper if\u2026",
+        "points": [
+          "You're an agency or marketing team with multiple writers",
+          "Brand consistency at scale is critical",
+          "You need approval workflows and SSO"
+        ]
+      },
+      {
+        "app": "copy-ai",
+        "label": "Choose Copy.ai if\u2026",
+        "points": [
+          "You're a solo marketer or small team",
+          "You want templated workflows that handle multi-step tasks",
+          "You want to test for free before committing"
+        ]
+      }
     ]
   },
   {
@@ -214,20 +734,72 @@
     "app1": "suno",
     "app2": "elevenlabs",
     "title": "Suno vs ElevenLabs",
-    "subtitle": "Music generation vs voice generation — different tools, often paired",
-    "verdict": "Suno generates full songs with lyrics and vocals. ElevenLabs generates spoken voiceover. They're complementary, not competitive — use both for video and animation.",
+    "subtitle": "Music generation vs voice generation \u2014 different tools, often paired",
+    "verdict": "Suno generates full songs with lyrics and vocals. ElevenLabs generates spoken voiceover. They're complementary, not competitive \u2014 use both for video and animation.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Output Type", "winner": "tie", "app1Score": 5, "app2Score": 5, "explanation": "Suno makes songs; ElevenLabs makes spoken voice. Neither does the other's job at all." },
-      { "name": "Music Quality", "winner": "suno", "app1Score": 5, "app2Score": 1, "explanation": "Suno produces full instrumental + vocal songs. ElevenLabs has limited music tools and isn't built for it." },
-      { "name": "Voice Quality", "winner": "elevenlabs", "app1Score": 3, "app2Score": 5, "explanation": "ElevenLabs is best-in-class for natural speech. Suno's vocals are sung, not spoken." },
-      { "name": "Pricing", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Both start free. Pro tiers similar at $10–$22/month range." },
-      { "name": "Commercial Use", "winner": "elevenlabs", "app1Score": 3, "app2Score": 5, "explanation": "ElevenLabs Creator plan covers commercial output cleanly. Suno commercial rights only on Pro and above with active legal questions." },
-      { "name": "Use Together", "winner": "tie", "app1Score": 5, "app2Score": 5, "explanation": "Most video creators use Suno for theme music and ElevenLabs for narration in the same project." }
+      {
+        "name": "Output Type",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "Suno makes songs; ElevenLabs makes spoken voice. Neither does the other's job at all."
+      },
+      {
+        "name": "Music Quality",
+        "winner": "suno",
+        "app1Score": 5,
+        "app2Score": 1,
+        "explanation": "Suno produces full instrumental + vocal songs. ElevenLabs has limited music tools and isn't built for it."
+      },
+      {
+        "name": "Voice Quality",
+        "winner": "elevenlabs",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "ElevenLabs is best-in-class for natural speech. Suno's vocals are sung, not spoken."
+      },
+      {
+        "name": "Pricing",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both start free. Pro tiers similar at $10\u2013$22/month range."
+      },
+      {
+        "name": "Commercial Use",
+        "winner": "elevenlabs",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "ElevenLabs Creator plan covers commercial output cleanly. Suno commercial rights only on Pro and above with active legal questions."
+      },
+      {
+        "name": "Use Together",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "Most video creators use Suno for theme music and ElevenLabs for narration in the same project."
+      }
     ],
     "quickPicks": [
-      { "app": "suno", "label": "Choose Suno if…", "points": ["You need theme music, jingles, or full songs", "You're scoring a video, podcast, or game", "You don't need spoken narration"] },
-      { "app": "elevenlabs", "label": "Choose ElevenLabs if…", "points": ["You need spoken voiceover or narration", "You're dubbing video into other languages", "Voice cloning is part of your workflow"] }
+      {
+        "app": "suno",
+        "label": "Choose Suno if\u2026",
+        "points": [
+          "You need theme music, jingles, or full songs",
+          "You're scoring a video, podcast, or game",
+          "You don't need spoken narration"
+        ]
+      },
+      {
+        "app": "elevenlabs",
+        "label": "Choose ElevenLabs if\u2026",
+        "points": [
+          "You need spoken voiceover or narration",
+          "You're dubbing video into other languages",
+          "Voice cloning is part of your workflow"
+        ]
+      }
     ]
   },
   {
@@ -239,16 +811,68 @@
     "verdict": "Perplexity wins decisively for research tasks where you need cited, current sources. ChatGPT is the better general assistant for everything else.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Citations", "winner": "perplexity", "app1Score": 5, "app2Score": 3, "explanation": "Perplexity numbers every source by default. ChatGPT's web mode has citations but they're less reliable and harder to verify." },
-      { "name": "Live Web Search", "winner": "perplexity", "app1Score": 5, "app2Score": 4, "explanation": "Perplexity is built on real-time search. ChatGPT has it but it's slower and sometimes returns stale results." },
-      { "name": "General Tasks", "winner": "chatgpt", "app1Score": 5, "app2Score": 3, "explanation": "ChatGPT is much better for writing, code, image generation, and conversation. Perplexity is research-first." },
-      { "name": "Pricing", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Both are $20/month at the Pro tier with similar free tiers." },
-      { "name": "Multimodal", "winner": "chatgpt", "app1Score": 5, "app2Score": 3, "explanation": "ChatGPT handles images, voice, files, and PDFs natively. Perplexity is text-and-image focused." },
-      { "name": "Following Up", "winner": "perplexity", "app1Score": 5, "app2Score": 4, "explanation": "Perplexity's threaded follow-ups stay grounded in sources. ChatGPT can drift away from cited evidence." }
+      {
+        "name": "Citations",
+        "winner": "perplexity",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Perplexity numbers every source by default. ChatGPT's web mode has citations but they're less reliable and harder to verify."
+      },
+      {
+        "name": "Live Web Search",
+        "winner": "perplexity",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Perplexity is built on real-time search. ChatGPT has it but it's slower and sometimes returns stale results."
+      },
+      {
+        "name": "General Tasks",
+        "winner": "chatgpt",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "ChatGPT is much better for writing, code, image generation, and conversation. Perplexity is research-first."
+      },
+      {
+        "name": "Pricing",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both are $20/month at the Pro tier with similar free tiers."
+      },
+      {
+        "name": "Multimodal",
+        "winner": "chatgpt",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "ChatGPT handles images, voice, files, and PDFs natively. Perplexity is text-and-image focused."
+      },
+      {
+        "name": "Following Up",
+        "winner": "perplexity",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Perplexity's threaded follow-ups stay grounded in sources. ChatGPT can drift away from cited evidence."
+      }
     ],
     "quickPicks": [
-      { "app": "perplexity", "label": "Choose Perplexity if…", "points": ["Research is your main use case", "Citations and source verification matter", "You need fresh, current information"] },
-      { "app": "chatgpt", "label": "Choose ChatGPT if…", "points": ["You need a general-purpose assistant", "You want image, voice, or code support", "You build with Custom GPTs or third-party tools"] }
+      {
+        "app": "perplexity",
+        "label": "Choose Perplexity if\u2026",
+        "points": [
+          "Research is your main use case",
+          "Citations and source verification matter",
+          "You need fresh, current information"
+        ]
+      },
+      {
+        "app": "chatgpt",
+        "label": "Choose ChatGPT if\u2026",
+        "points": [
+          "You need a general-purpose assistant",
+          "You want image, voice, or code support",
+          "You build with Custom GPTs or third-party tools"
+        ]
+      }
     ]
   },
   {
@@ -260,16 +884,68 @@
     "verdict": "Canva AI is the right pick for marketers and small businesses who want one tool. Firefly is for designers already in Creative Cloud who need legally safe AI in Photoshop and Illustrator.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Design Templates", "winner": "canva-ai", "app1Score": 5, "app2Score": 2, "explanation": "Canva has thousands of templates for every format. Firefly is generation-focused with no template library." },
-      { "name": "Pro Design Tools", "winner": "adobe-firefly", "app1Score": 3, "app2Score": 5, "explanation": "Firefly lives in Photoshop and Illustrator — pixel-level control, layers, and pro typography. Canva is consumer-grade." },
-      { "name": "Image Quality", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Both produce solid images. Firefly trained on licensed Adobe Stock; Canva uses multiple models." },
-      { "name": "Commercial Safety", "winner": "adobe-firefly", "app1Score": 4, "app2Score": 5, "explanation": "Firefly is explicitly trained on licensed content with indemnification on enterprise plans. Canva's outputs are usually safe but with less explicit guarantee." },
-      { "name": "Pricing", "winner": "canva-ai", "app1Score": 5, "app2Score": 3, "explanation": "Canva Pro is $15/month total. Adobe needs Creative Cloud at $23+/month plus Firefly credits." },
-      { "name": "Learning Curve", "winner": "canva-ai", "app1Score": 5, "app2Score": 3, "explanation": "Canva is built for non-designers. Photoshop and Illustrator have a real learning curve." }
+      {
+        "name": "Design Templates",
+        "winner": "canva-ai",
+        "app1Score": 5,
+        "app2Score": 2,
+        "explanation": "Canva has thousands of templates for every format. Firefly is generation-focused with no template library."
+      },
+      {
+        "name": "Pro Design Tools",
+        "winner": "adobe-firefly",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Firefly lives in Photoshop and Illustrator \u2014 pixel-level control, layers, and pro typography. Canva is consumer-grade."
+      },
+      {
+        "name": "Image Quality",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both produce solid images. Firefly trained on licensed Adobe Stock; Canva uses multiple models."
+      },
+      {
+        "name": "Commercial Safety",
+        "winner": "adobe-firefly",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Firefly is explicitly trained on licensed content with indemnification on enterprise plans. Canva's outputs are usually safe but with less explicit guarantee."
+      },
+      {
+        "name": "Pricing",
+        "winner": "canva-ai",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Canva Pro is $15/month total. Adobe needs Creative Cloud at $23+/month plus Firefly credits."
+      },
+      {
+        "name": "Learning Curve",
+        "winner": "canva-ai",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Canva is built for non-designers. Photoshop and Illustrator have a real learning curve."
+      }
     ],
     "quickPicks": [
-      { "app": "canva-ai", "label": "Choose Canva AI if…", "points": ["You're a marketer, small business, or non-designer", "You want one tool for image, video, design, and copy", "You don't already pay for Creative Cloud"] },
-      { "app": "adobe-firefly", "label": "Choose Adobe Firefly if…", "points": ["You already use Photoshop, Illustrator, or Premiere", "Commercial-safe output with indemnification matters", "You need pro design control and pixel-level edits"] }
+      {
+        "app": "canva-ai",
+        "label": "Choose Canva AI if\u2026",
+        "points": [
+          "You're a marketer, small business, or non-designer",
+          "You want one tool for image, video, design, and copy",
+          "You don't already pay for Creative Cloud"
+        ]
+      },
+      {
+        "app": "adobe-firefly",
+        "label": "Choose Adobe Firefly if\u2026",
+        "points": [
+          "You already use Photoshop, Illustrator, or Premiere",
+          "Commercial-safe output with indemnification matters",
+          "You need pro design control and pixel-level edits"
+        ]
+      }
     ]
   },
   {
@@ -281,16 +957,68 @@
     "verdict": "Replit is for non-engineers prototyping full apps without setup. Cursor is for working engineers who want the best AI-in-the-editor experience.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "Setup Time", "winner": "replit", "app1Score": 5, "app2Score": 4, "explanation": "Replit has zero setup — open browser, start building. Cursor needs a download and project setup, but it's still fast." },
-      { "name": "Agent Capabilities", "winner": "replit", "app1Score": 5, "app2Score": 4, "explanation": "Replit Agent builds and deploys whole apps from a prompt. Cursor's Composer is powerful but more granular." },
-      { "name": "Code Editor Power", "winner": "cursor", "app1Score": 3, "app2Score": 5, "explanation": "Cursor is a full VS Code fork with all extensions. Replit's editor is fine but less powerful for complex projects." },
-      { "name": "Deployment", "winner": "replit", "app1Score": 5, "app2Score": 3, "explanation": "Replit deploys with one click. Cursor relies on you using Vercel, Netlify, or similar separately." },
-      { "name": "Pricing", "winner": "cursor", "app1Score": 4, "app2Score": 4, "explanation": "Both have $20/month tiers. Replit's agent burns credits faster on complex projects." },
-      { "name": "Pro Workflows", "winner": "cursor", "app1Score": 3, "app2Score": 5, "explanation": "Cursor handles enterprise codebases, complex Git workflows, and pro debugging better." }
+      {
+        "name": "Setup Time",
+        "winner": "replit",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Replit has zero setup \u2014 open browser, start building. Cursor needs a download and project setup, but it's still fast."
+      },
+      {
+        "name": "Agent Capabilities",
+        "winner": "replit",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Replit Agent builds and deploys whole apps from a prompt. Cursor's Composer is powerful but more granular."
+      },
+      {
+        "name": "Code Editor Power",
+        "winner": "cursor",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Cursor is a full VS Code fork with all extensions. Replit's editor is fine but less powerful for complex projects."
+      },
+      {
+        "name": "Deployment",
+        "winner": "replit",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Replit deploys with one click. Cursor relies on you using Vercel, Netlify, or similar separately."
+      },
+      {
+        "name": "Pricing",
+        "winner": "cursor",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both have $20/month tiers. Replit's agent burns credits faster on complex projects."
+      },
+      {
+        "name": "Pro Workflows",
+        "winner": "cursor",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Cursor handles enterprise codebases, complex Git workflows, and pro debugging better."
+      }
     ],
     "quickPicks": [
-      { "app": "replit", "label": "Choose Replit if…", "points": ["You're learning to code or shipping prototypes", "You want zero setup and one-click deploy", "You prefer a hosted browser environment"] },
-      { "app": "cursor", "label": "Choose Cursor if…", "points": ["You're a working engineer with an existing codebase", "You want pro-grade editor features alongside AI", "You already have a deploy pipeline you like"] }
+      {
+        "app": "replit",
+        "label": "Choose Replit if\u2026",
+        "points": [
+          "You're learning to code or shipping prototypes",
+          "You want zero setup and one-click deploy",
+          "You prefer a hosted browser environment"
+        ]
+      },
+      {
+        "app": "cursor",
+        "label": "Choose Cursor if\u2026",
+        "points": [
+          "You're a working engineer with an existing codebase",
+          "You want pro-grade editor features alongside AI",
+          "You already have a deploy pipeline you like"
+        ]
+      }
     ]
   },
   {
@@ -299,19 +1027,926 @@
     "app2": "beautiful-ai",
     "title": "Gamma vs Beautiful.ai",
     "subtitle": "AI-generated decks vs smart-template auto-layout",
-    "verdict": "Gamma wins on speed of generation — type a prompt, get a deck. Beautiful.ai wins for execs and finance teams who want polished, predictable layouts.",
+    "verdict": "Gamma wins on speed of generation \u2014 type a prompt, get a deck. Beautiful.ai wins for execs and finance teams who want polished, predictable layouts.",
     "updatedDate": "2026-04-01",
     "dimensions": [
-      { "name": "AI Generation", "winner": "gamma", "app1Score": 5, "app2Score": 3, "explanation": "Gamma generates a full deck from one prompt. Beautiful.ai has AI but expects more manual content entry." },
-      { "name": "Template Polish", "winner": "beautiful-ai", "app1Score": 4, "app2Score": 5, "explanation": "Beautiful.ai's smart templates auto-balance text and charts. Gamma's themes feel more samey across decks." },
-      { "name": "Pricing", "winner": "gamma", "app1Score": 5, "app2Score": 3, "explanation": "Gamma has a real free tier with watermarked exports. Beautiful.ai has no free tier, only a 14-day trial." },
-      { "name": "Charts & Data", "winner": "beautiful-ai", "app1Score": 3, "app2Score": 5, "explanation": "Beautiful.ai's chart library is stronger and more business-flavored. Gamma's charts are basic." },
-      { "name": "Web Publishing", "winner": "gamma", "app1Score": 5, "app2Score": 3, "explanation": "Gamma decks publish as responsive web pages. Beautiful.ai exports to PPT but isn't web-native." },
-      { "name": "Best Audience", "winner": "tie", "app1Score": 4, "app2Score": 4, "explanation": "Gamma fits creators and small teams. Beautiful.ai fits sales, finance, and corporate audiences." }
+      {
+        "name": "AI Generation",
+        "winner": "gamma",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Gamma generates a full deck from one prompt. Beautiful.ai has AI but expects more manual content entry."
+      },
+      {
+        "name": "Template Polish",
+        "winner": "beautiful-ai",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Beautiful.ai's smart templates auto-balance text and charts. Gamma's themes feel more samey across decks."
+      },
+      {
+        "name": "Pricing",
+        "winner": "gamma",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Gamma has a real free tier with watermarked exports. Beautiful.ai has no free tier, only a 14-day trial."
+      },
+      {
+        "name": "Charts & Data",
+        "winner": "beautiful-ai",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Beautiful.ai's chart library is stronger and more business-flavored. Gamma's charts are basic."
+      },
+      {
+        "name": "Web Publishing",
+        "winner": "gamma",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Gamma decks publish as responsive web pages. Beautiful.ai exports to PPT but isn't web-native."
+      },
+      {
+        "name": "Best Audience",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Gamma fits creators and small teams. Beautiful.ai fits sales, finance, and corporate audiences."
+      }
     ],
     "quickPicks": [
-      { "app": "gamma", "label": "Choose Gamma if…", "points": ["You want decks generated from a prompt in 30 seconds", "Your decks live on the web or as shareable links", "You need a real free tier"] },
-      { "app": "beautiful-ai", "label": "Choose Beautiful.ai if…", "points": ["You're presenting to execs or finance teams", "Charts and predictable layouts matter", "You want corporate polish over creative flair"] }
+      {
+        "app": "gamma",
+        "label": "Choose Gamma if\u2026",
+        "points": [
+          "You want decks generated from a prompt in 30 seconds",
+          "Your decks live on the web or as shareable links",
+          "You need a real free tier"
+        ]
+      },
+      {
+        "app": "beautiful-ai",
+        "label": "Choose Beautiful.ai if\u2026",
+        "points": [
+          "You're presenting to execs or finance teams",
+          "Charts and predictable layouts matter",
+          "You want corporate polish over creative flair"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quillbot-vs-grammarly",
+    "app1": "quillbot",
+    "app2": "grammarly",
+    "title": "Quillbot vs Grammarly",
+    "subtitle": "Best AI writing assistant in 2026?",
+    "verdict": "Quillbot wins for paraphrasing and academic writing on a budget. Grammarly wins for grammar accuracy and works in more places. Many serious writers pay for both.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Writing Quality",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both produce solid, professional output for everyday writing. Quillbot's paraphrasing modes give more stylistic variety; Grammarly's tone detection is more nuanced."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "grammarly",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Grammarly's browser extension and desktop app are more polished and work in nearly every input box on the web. Quillbot's interface is functional but less seamless."
+      },
+      {
+        "name": "Pricing",
+        "winner": "quillbot",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Quillbot Premium is $9.95/month vs Grammarly Premium at $30/month. With the annual discount, Quillbot drops to $4.17/month \u2014 meaningfully cheaper."
+      },
+      {
+        "name": "Free Tier",
+        "winner": "quillbot",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Quillbot's free tier supports 125-word paraphrasing plus full grammar checking. Grammarly's free tier covers basics but caps generative AI features tightly."
+      },
+      {
+        "name": "Plagiarism Check",
+        "winner": "quillbot",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Quillbot includes plagiarism checking on Premium with an academic-quality engine. Grammarly's plagiarism check is solid but only on Premium and feels slower."
+      },
+      {
+        "name": "Grammar Checking",
+        "winner": "grammarly",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Grammarly's grammar engine remains the gold standard \u2014 catches subtle issues like dangling modifiers and parallel structure that Quillbot misses."
+      },
+      {
+        "name": "Paraphrasing",
+        "winner": "quillbot",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Quillbot ships 7 paraphrasing modes (Standard, Fluency, Formal, Simple, Creative, Expand, Shorten). Grammarly has one rewrite mode that often produces generic output."
+      },
+      {
+        "name": "Integrations",
+        "winner": "grammarly",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Grammarly works in MS Word, Google Docs, Outlook, Slack, and dozens of native apps. Quillbot covers Word and Docs but lags everywhere else."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "quillbot",
+        "label": "Choose Quillbot if\u2026",
+        "points": [
+          "You're a student or ESL writer needing affordable paraphrasing",
+          "You write academic content and need plagiarism checking included",
+          "You want 7 different rewrite modes to play with",
+          "Budget matters \u2014 Quillbot is roughly a third of Grammarly's price"
+        ]
+      },
+      {
+        "app": "grammarly",
+        "label": "Choose Grammarly if\u2026",
+        "points": [
+          "You write across many apps and want one consistent assistant",
+          "Grammar accuracy matters more than rewriting variety",
+          "You're a professional writer or work in business communication",
+          "Tone consistency across email, Slack, and Docs is important"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ideogram-vs-midjourney",
+    "app1": "ideogram",
+    "app2": "midjourney",
+    "title": "Ideogram vs Midjourney",
+    "subtitle": "Which AI image generator is better?",
+    "verdict": "Midjourney wins on artistic quality and is the right pick for most creative work. Ideogram wins decisively when you need readable text inside images \u2014 posters, ads, quote graphics.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Image Quality",
+        "winner": "midjourney",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Midjourney V6/V7 produces visually stunning, painterly results that no other model matches. Ideogram is competent but rarely produces images you'd frame."
+      },
+      {
+        "name": "Text in Images",
+        "winner": "ideogram",
+        "app1Score": 5,
+        "app2Score": 2,
+        "explanation": "Ideogram is the gold standard for legible text in images \u2014 typography, posters, signage. Midjourney still struggles with anything beyond a few clean letters."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "ideogram",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Ideogram is a clean web app with simple controls. Midjourney's web interface launched late and Discord workflow remains clunky for newcomers."
+      },
+      {
+        "name": "Pricing",
+        "winner": "ideogram",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Ideogram Plus is $8/month vs Midjourney's $10 entry. Midjourney's mid-tier ($30/month) gets pricier fast for serious commercial use."
+      },
+      {
+        "name": "Free Tier",
+        "winner": "ideogram",
+        "app1Score": 5,
+        "app2Score": 1,
+        "explanation": "Ideogram's free tier is generous \u2014 about 25 prompts per day at full quality. Midjourney has no free tier at all."
+      },
+      {
+        "name": "Speed",
+        "winner": "midjourney",
+        "app1Score": 3,
+        "app2Score": 4,
+        "explanation": "Midjourney's Fast mode generates in 30\u201360 seconds. Ideogram is comparable for text-heavy work but slower on detailed scenes."
+      },
+      {
+        "name": "Artistic Styles",
+        "winner": "midjourney",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Midjourney excels at stylized art \u2014 concept art, paintings, cinematic photos. Ideogram is improving but still feels limited in stylistic range."
+      },
+      {
+        "name": "Commercial Rights",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both grant commercial rights on paid plans. Midjourney requires Stealth mode ($60/month Pro) for full privacy on commercial work; Ideogram includes private generations starting on Plus."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "ideogram",
+        "label": "Choose Ideogram if\u2026",
+        "points": [
+          "You design posters, ads, or anything with readable text",
+          "You want a generous free tier to experiment with",
+          "You prefer a clean web app over Discord",
+          "Pricing matters and your needs are mostly typography-focused"
+        ]
+      },
+      {
+        "app": "midjourney",
+        "label": "Choose Midjourney if\u2026",
+        "points": [
+          "You care about artistic and stylistic quality above all",
+          "You produce concept art, mood boards, or marketing visuals",
+          "You want a consistent visual look across an entire project (--sref)",
+          "You're willing to pay for the best output quality available"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "murf-vs-elevenlabs",
+    "app1": "murf",
+    "app2": "elevenlabs",
+    "title": "Murf AI vs ElevenLabs",
+    "subtitle": "Best AI voice generator compared",
+    "verdict": "ElevenLabs wins on voice naturalness and cloning quality. Murf wins for L&D, corporate training, and teams that need predictable multilingual output with editing tools.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Voice Quality",
+        "winner": "elevenlabs",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "ElevenLabs voices are the most natural in the industry \u2014 fooled most listeners in blind tests. Murf voices are clean and professional but more obviously synthetic on emotional reads."
+      },
+      {
+        "name": "Voice Variety",
+        "winner": "murf",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Murf ships 200+ voices across 20+ languages. ElevenLabs has fewer stock voices but a community library of cloned voices that's effectively much larger."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "murf",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Murf's editor is built for creators \u2014 pronunciation editor, emphasis, pauses, all visual. ElevenLabs is faster for one-off TTS but has fewer fine-tuning controls in the UI."
+      },
+      {
+        "name": "Pricing",
+        "winner": "elevenlabs",
+        "app1Score": 3,
+        "app2Score": 4,
+        "explanation": "ElevenLabs starts at $5/month for the Starter tier; Murf is $19/month. ElevenLabs scales more predictably for solo creators."
+      },
+      {
+        "name": "Free Tier",
+        "winner": "elevenlabs",
+        "app1Score": 3,
+        "app2Score": 4,
+        "explanation": "ElevenLabs offers 10,000 characters/month free; Murf only 10 minutes/month. ElevenLabs gives you more practical room to evaluate."
+      },
+      {
+        "name": "Languages",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Murf supports 20+ languages, ElevenLabs supports 30+. Both produce native-quality output in major languages; ElevenLabs has slight edge in less-common ones."
+      },
+      {
+        "name": "Custom Voice Cloning",
+        "winner": "elevenlabs",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "ElevenLabs clones voices from 1 minute of sample with industry-leading accuracy. Murf supports voice cloning but quality is one tier below."
+      },
+      {
+        "name": "API Access",
+        "winner": "elevenlabs",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "ElevenLabs is API-first with strong SDKs and developer docs. Murf has an API but it's a secondary product, less polished for production use."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "murf",
+        "label": "Choose Murf if\u2026",
+        "points": [
+          "You build L&D or corporate training videos at scale",
+          "Your team needs visual editing with emphasis and pauses",
+          "You need consistent multilingual voiceover for global content",
+          "Predictability and team workflow matter more than top-tier naturalness"
+        ]
+      },
+      {
+        "app": "elevenlabs",
+        "label": "Choose ElevenLabs if\u2026",
+        "points": [
+          "Voice quality is non-negotiable \u2014 you need the most natural output",
+          "You're cloning your own voice or characters for narration",
+          "You're building a voice product and need the best API",
+          "You want a generous free tier to experiment seriously"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "synthesia-vs-heygen",
+    "app1": "synthesia",
+    "app2": "heygen",
+    "title": "Synthesia vs HeyGen",
+    "subtitle": "Best AI avatar video platform?",
+    "verdict": "HeyGen wins on avatar lip-sync quality and translation. Synthesia wins for enterprise L&D with stronger compliance, templates, and scale features.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Avatar Quality",
+        "winner": "heygen",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "HeyGen's avatars have noticeably more natural lip sync and facial expressions. Synthesia avatars are professional but feel more synthetic on close-ups."
+      },
+      {
+        "name": "Languages",
+        "winner": "synthesia",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Synthesia supports 130+ languages with native-quality voiceovers. HeyGen covers 30+ but offers real-time translation that Synthesia doesn't."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "synthesia",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Synthesia's editor is built specifically for course creators \u2014 templates, screen recording, branching scenarios. HeyGen is simpler but more general-purpose."
+      },
+      {
+        "name": "Pricing",
+        "winner": "synthesia",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Synthesia starts at $22/month; HeyGen Creator is $24/month. HeyGen's Pro tier ($72/mo) is steeper than Synthesia's mid-range plans for similar volume."
+      },
+      {
+        "name": "Templates",
+        "winner": "synthesia",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Synthesia ships hundreds of templates targeted at training, onboarding, and product education. HeyGen has fewer but more focused on marketing and sales."
+      },
+      {
+        "name": "Custom Avatars",
+        "winner": "heygen",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "HeyGen creates custom avatars from 2 minutes of footage with strong likeness. Synthesia's custom avatars require longer training footage and are pricier to commission."
+      },
+      {
+        "name": "API Access",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both have production-ready APIs. HeyGen's real-time translation API is unique; Synthesia has stronger enterprise compliance docs."
+      },
+      {
+        "name": "Output Quality",
+        "winner": "heygen",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "HeyGen's video output looks more lifelike for marketing and sales videos. Synthesia is more polished for training but less engaging for short-form content."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "synthesia",
+        "label": "Choose Synthesia if\u2026",
+        "points": [
+          "You build training, onboarding, or compliance videos at enterprise scale",
+          "You need 130+ languages for global L&D programs",
+          "Templates and scenarios for instructional design matter",
+          "SOC 2 and GDPR compliance is required by your organization"
+        ]
+      },
+      {
+        "app": "heygen",
+        "label": "Choose HeyGen if\u2026",
+        "points": [
+          "You produce marketing or sales videos and want lifelike avatars",
+          "Real-time video translation with mouth-sync is a key feature",
+          "You want a custom avatar of yourself or a spokesperson",
+          "Output engagement matters more than template breadth"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "opus-clip-vs-descript",
+    "app1": "opus-clip",
+    "app2": "descript",
+    "title": "OpusClip vs Descript",
+    "subtitle": "Best AI video repurposing tool?",
+    "verdict": "OpusClip wins for fast long-to-short repurposing and viral clip detection. Descript wins as a full editor \u2014 better for creators who do everything from recording to publishing in one tool.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Clip Quality",
+        "winner": "opus-clip",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "OpusClip's ClipAnything 2.0 picks viral moments based on engagement scoring. Descript can clip but you have to mark moments manually."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "opus-clip",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "OpusClip is single-purpose \u2014 paste a YouTube URL, get clips. Descript is more powerful but has a real learning curve for transcript editing."
+      },
+      {
+        "name": "Pricing",
+        "winner": "opus-clip",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "OpusClip Pro is $19/month with unlimited exports and HD. Descript Creator is $12/month but jumps to $24 for the features podcasters actually need."
+      },
+      {
+        "name": "Speed",
+        "winner": "opus-clip",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "OpusClip processes a 1-hour video into 10+ short clips in under 5 minutes. Descript is fast but you do the editing \u2014 total time longer end-to-end."
+      },
+      {
+        "name": "Caption Quality",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both produce solid captions. OpusClip styles auto-generate to match short-form trends; Descript gives more manual control over typography."
+      },
+      {
+        "name": "Editing Features",
+        "winner": "descript",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Descript is a full multi-track editor with screen recording, voice cloning, and Studio Sound. OpusClip is repurpose-focused with limited deep editing."
+      },
+      {
+        "name": "Platform Support",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "OpusClip exports for TikTok, Reels, Shorts, and Twitter. Descript exports anywhere \u2014 it's an editor first. Different paths to the same destination."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "opus-clip",
+        "label": "Choose OpusClip if\u2026",
+        "points": [
+          "You're repurposing podcasts or long YouTube videos into shorts",
+          "You want AI to pick the most viral moments automatically",
+          "Speed matters \u2014 you need clips in minutes, not hours",
+          "You don't need to record or edit from scratch"
+        ]
+      },
+      {
+        "app": "descript",
+        "label": "Choose Descript if\u2026",
+        "points": [
+          "You record, edit, and publish full long-form video or podcasts",
+          "Transcript-based editing is core to your workflow",
+          "You need a single tool for the full creator pipeline",
+          "Studio Sound and voice cloning are useful for your work"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "notion-vs-mem-ai",
+    "app1": "notion",
+    "app2": "mem-ai",
+    "title": "Notion vs Mem AI",
+    "subtitle": "Best AI note-taking app?",
+    "verdict": "Notion wins for teams, structured projects, and rich documents. Mem AI wins for solo knowledge workers who hate manual organization and want AI to handle filing.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "AI Features",
+        "winner": "mem-ai",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Mem AI is AI-native \u2014 semantic search, auto-tagging, and chat across your notes work without setup. Notion AI is bolted on and requires you to invoke it."
+      },
+      {
+        "name": "Organization",
+        "winner": "notion",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Notion's databases, templates, and nested pages give you real structure. Mem favors a flat, AI-organized model that some users find harder to navigate."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Notion has a steeper learning curve but pays off for power users. Mem is faster to onboard but less flexible once you outgrow basic notes."
+      },
+      {
+        "name": "Pricing",
+        "winner": "notion",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Notion is $10/user/month base + $10/user/month for AI ($20 total). Mem AI is $14.99/month all-in. For solo users Mem is slightly cheaper; for teams Notion wins."
+      },
+      {
+        "name": "Collaboration",
+        "winner": "notion",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Notion's real-time collaboration, comments, and team workspaces are best-in-class. Mem is improving on team features but is fundamentally a personal tool."
+      },
+      {
+        "name": "Search Quality",
+        "winner": "mem-ai",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Mem's semantic search finds notes by meaning, not just keywords. Notion's search is keyword-based with AI as an option, slower in practice."
+      },
+      {
+        "name": "Mobile Experience",
+        "winner": "tie",
+        "app1Score": 3,
+        "app2Score": 3,
+        "explanation": "Neither app has best-in-class mobile. Notion's mobile lags on big workspaces; Mem's mobile capture is fast but editing is constrained."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "notion",
+        "label": "Choose Notion if\u2026",
+        "points": [
+          "You work in a team and need shared docs, wikis, or projects",
+          "You want databases, kanban boards, and structured pages",
+          "Templates and integrations matter for your workflow",
+          "You'll use it for project management, not just notes"
+        ]
+      },
+      {
+        "app": "mem-ai",
+        "label": "Choose Mem AI if\u2026",
+        "points": [
+          "You're a solo knowledge worker drowning in unorganized notes",
+          "You want AI to handle tagging and connections automatically",
+          "Semantic search ('find that thing about X') is more important than structure",
+          "You hate spending time organizing \u2014 you just want to capture and recall"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tabnine-vs-github-copilot",
+    "app1": "tabnine",
+    "app2": "github-copilot",
+    "title": "Tabnine vs GitHub Copilot",
+    "subtitle": "Best AI code completion tool?",
+    "verdict": "GitHub Copilot wins on suggestion quality, integrations, and value for individual developers. Tabnine wins for enterprise teams with strict privacy requirements that need self-hosting.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Code Quality",
+        "winner": "github-copilot",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Copilot's underlying models (GPT-4o, Claude) produce noticeably better suggestions for everyday coding tasks. Tabnine's quality is fine but trails on complex problems."
+      },
+      {
+        "name": "IDE Support",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "Both support VS Code, JetBrains, Vim, Eclipse, and Visual Studio. Copilot has slightly better IntelliJ integration; Tabnine has stronger Eclipse support."
+      },
+      {
+        "name": "Pricing",
+        "winner": "github-copilot",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Copilot is $10/month for individuals, free for verified students. Tabnine Pro is $12/user/month with no individual student pricing."
+      },
+      {
+        "name": "Free Tier",
+        "winner": "github-copilot",
+        "app1Score": 3,
+        "app2Score": 4,
+        "explanation": "Copilot has no general free tier but is free for students and OSS maintainers. Tabnine's free tier limits you to basic completions after 90 days."
+      },
+      {
+        "name": "Privacy",
+        "winner": "tabnine",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Tabnine is the clear winner for privacy \u2014 self-hostable, custom models trained on your code, no data sharing. Copilot routes through Microsoft's infrastructure."
+      },
+      {
+        "name": "Language Support",
+        "winner": "tie",
+        "app1Score": 5,
+        "app2Score": 5,
+        "explanation": "Both support 30+ programming languages with reasonable quality. Copilot edges ahead on TypeScript and Python; Tabnine on legacy languages like COBOL and Fortran."
+      },
+      {
+        "name": "Speed",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Suggestion latency is similar \u2014 both target sub-300ms. Tabnine's local model option is faster offline; Copilot is faster on cold starts."
+      },
+      {
+        "name": "Accuracy",
+        "winner": "github-copilot",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Copilot's suggestions match developer intent more often, especially on framework-specific code. Tabnine improves with custom training but base accuracy is lower."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "tabnine",
+        "label": "Choose Tabnine if\u2026",
+        "points": [
+          "Your company has strict data privacy or compliance requirements",
+          "You need to train AI on your private code without it leaving your network",
+          "You work in regulated industries \u2014 finance, healthcare, defense",
+          "Self-hosting is mandatory for security or sovereignty reasons"
+        ]
+      },
+      {
+        "app": "github-copilot",
+        "label": "Choose GitHub Copilot if\u2026",
+        "points": [
+          "You're an individual developer or small team without privacy constraints",
+          "You want the highest-quality AI suggestions available",
+          "You're a verified student or OSS maintainer (free)",
+          "You live in GitHub PRs and want AI tied tightly to your repo"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "writesonic-vs-jasper",
+    "app1": "writesonic",
+    "app2": "jasper",
+    "title": "Writesonic vs Jasper",
+    "subtitle": "Best AI marketing copy tool?",
+    "verdict": "Jasper wins for enterprise teams and brand voice consistency. Writesonic wins for SEO content marketers who need long-form drafts plus on-page optimization in one tool.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Content Quality",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both produce solid marketing copy that needs editing. Jasper feels more polished for short-form ads; Writesonic edges ahead on long-form articles thanks to its built-in research."
+      },
+      {
+        "name": "Templates",
+        "winner": "jasper",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Jasper ships 50+ marketing templates with strong customization. Writesonic's templates are decent but less brand-flexible."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "writesonic",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Writesonic's UI is cleaner and faster to onboard. Jasper has more features but the workflow can feel overwhelming for new users."
+      },
+      {
+        "name": "Pricing",
+        "winner": "writesonic",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Writesonic starts at $19/month with a free tier. Jasper has no free tier and starts at $49/month \u2014 more than 2x the entry price."
+      },
+      {
+        "name": "SEO Features",
+        "winner": "writesonic",
+        "app1Score": 5,
+        "app2Score": 3,
+        "explanation": "Writesonic includes SEO scoring, keyword optimization, and competitor analysis natively. Jasper requires Surfer SEO integration ($69/mo extra) for the same."
+      },
+      {
+        "name": "Language Support",
+        "winner": "writesonic",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Writesonic supports 25+ languages with native quality. Jasper supports 30+ but quality drops noticeably outside English."
+      },
+      {
+        "name": "Team Features",
+        "winner": "jasper",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Jasper's team workspaces, brand voice training, and SSO/approval workflows are enterprise-ready. Writesonic's team features are basic by comparison."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "writesonic",
+        "label": "Choose Writesonic if\u2026",
+        "points": [
+          "SEO content is core to your strategy \u2014 you need scoring built in",
+          "You publish in multiple languages",
+          "Long-form articles are most of your output",
+          "You want a real free tier and a lower entry price"
+        ]
+      },
+      {
+        "app": "jasper",
+        "label": "Choose Jasper if\u2026",
+        "points": [
+          "You're an agency or large marketing team",
+          "Brand voice consistency across many writers is critical",
+          "You need approval workflows, SSO, and enterprise admin",
+          "Templates and short-form ad copy dominate your work"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "udio-vs-suno",
+    "app1": "udio",
+    "app2": "suno",
+    "title": "Udio vs Suno",
+    "subtitle": "Best AI music generator?",
+    "verdict": "Suno wins for speed, ease, and viral moments \u2014 type a prompt, get a song. Udio wins for songwriters who care about vocal nuance and longer-form arrangement.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Music Quality",
+        "winner": "udio",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Udio produces more polished, dynamic arrangements with realistic vocals. Suno is great but vocals occasionally sound auto-tuned on long held notes."
+      },
+      {
+        "name": "Genre Variety",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both cover the major genres well. Udio is slightly stronger on jazz, soul, and orchestral; Suno wins on pop, electronic, and country."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "suno",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Suno's UI is faster \u2014 type a prompt, get a complete song. Udio offers more controls and section-based editing, which is powerful but slower for casual users."
+      },
+      {
+        "name": "Pricing",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both start free with daily credits and scale to ~$10\u201330/month. Udio gives more credits for the same money on Pro plans."
+      },
+      {
+        "name": "Free Tier",
+        "winner": "udio",
+        "app1Score": 5,
+        "app2Score": 4,
+        "explanation": "Udio offers 600 credits/month free. Suno's free tier is 50 credits/day (~1,500/month) but with stricter commercial limits."
+      },
+      {
+        "name": "Lyric Generation",
+        "winner": "tie",
+        "app1Score": 4,
+        "app2Score": 4,
+        "explanation": "Both can write lyrics from a prompt or accept your own. Suno's are catchier; Udio's are more literary. Pick based on style preference."
+      },
+      {
+        "name": "Commercial Rights",
+        "winner": "tie",
+        "app1Score": 3,
+        "app2Score": 3,
+        "explanation": "Both gate commercial rights behind paid tiers. Both face active legal questions about training data \u2014 neither offers full indemnification yet."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "udio",
+        "label": "Choose Udio if\u2026",
+        "points": [
+          "You're a songwriter who cares about vocal nuance and arrangement",
+          "You want a generous free tier (600 credits/month)",
+          "Section-based editing matters \u2014 you want bridges, breakdowns, outros",
+          "Quality of the final track is more important than speed"
+        ]
+      },
+      {
+        "app": "suno",
+        "label": "Choose Suno if\u2026",
+        "points": [
+          "You want a song from a one-line prompt in 30 seconds",
+          "You're scoring video, podcasts, or content that needs music quickly",
+          "Pop, electronic, and country are your main genres",
+          "Stem separation is important for further mixing in a DAW"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reclaim-vs-motion",
+    "app1": "reclaim",
+    "app2": "motion",
+    "title": "Reclaim AI vs Motion",
+    "subtitle": "Best AI calendar and scheduling app?",
+    "verdict": "Reclaim wins for individual contributors and free tier users who mostly defend focus time. Motion wins for solo founders and freelancers juggling many tasks across multiple calendars.",
+    "updatedDate": "2026-05-02",
+    "dimensions": [
+      {
+        "name": "Scheduling Intelligence",
+        "winner": "motion",
+        "app1Score": 4,
+        "app2Score": 5,
+        "explanation": "Motion's AI rebuilds your day automatically when meetings change \u2014 true 'living calendar.' Reclaim auto-schedules tasks but is less aggressive about rebalancing."
+      },
+      {
+        "name": "Calendar Integration",
+        "winner": "motion",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Motion supports Google Calendar AND Outlook with full feature parity. Reclaim's Outlook support exists but feels secondary to its Google Calendar focus."
+      },
+      {
+        "name": "Task Management",
+        "winner": "motion",
+        "app1Score": 3,
+        "app2Score": 5,
+        "explanation": "Motion combines tasks, projects, and calendar in one app \u2014 replaces Asana for small teams. Reclaim's task features are lighter and best paired with another PM tool."
+      },
+      {
+        "name": "Ease of Use",
+        "winner": "reclaim",
+        "app1Score": 4,
+        "app2Score": 3,
+        "explanation": "Reclaim's setup is simpler \u2014 habits, tasks, 1:1s. Motion has a steeper learning curve to configure properly but rewards the investment."
+      },
+      {
+        "name": "Pricing",
+        "winner": "reclaim",
+        "app1Score": 5,
+        "app2Score": 2,
+        "explanation": "Reclaim has a free tier and starts at $10/month for Pro. Motion has no free plan \u2014 minimum $19/month and pricier for teams."
+      },
+      {
+        "name": "Team Features",
+        "winner": "motion",
+        "app1Score": 3,
+        "app2Score": 4,
+        "explanation": "Motion handles team scheduling, project management, and capacity planning. Reclaim's team features are limited to shared 1:1 scheduling and meeting links."
+      },
+      {
+        "name": "Mobile Experience",
+        "winner": "tie",
+        "app1Score": 3,
+        "app2Score": 3,
+        "explanation": "Neither app has best-in-class mobile. Both work but feel like companions to the desktop experience, not full standalone apps."
+      }
+    ],
+    "quickPicks": [
+      {
+        "app": "reclaim",
+        "label": "Choose Reclaim if\u2026",
+        "points": [
+          "You mostly want to defend focus time and auto-schedule habits",
+          "You're a Google Calendar power user",
+          "You want a real free tier to evaluate before committing",
+          "Your task management lives elsewhere (Todoist, Linear, etc.)"
+        ]
+      },
+      {
+        "app": "motion",
+        "label": "Choose Motion if\u2026",
+        "points": [
+          "You're a solo founder or freelancer juggling many tasks daily",
+          "You want one tool for tasks, projects, and calendar",
+          "You use Outlook OR you switch between Outlook and Google",
+          "You'll pay for AI that aggressively rebuilds your day around changes"
+        ]
+      }
     ]
   }
 ]

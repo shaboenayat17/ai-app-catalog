@@ -34,7 +34,13 @@
       "canva-ai",
       "jasper",
       "beautiful-ai",
-      "tome"
+      "tome",
+      "notion",
+      "sudowrite",
+      "rytr",
+      "writesonic",
+      "mem-ai",
+      "julius-ai"
     ],
     "bestFor": [
       "writing",
@@ -136,7 +142,11 @@
       "tome",
       "beautiful-ai",
       "vercel",
-      "jasper"
+      "jasper",
+      "notion",
+      "sudowrite",
+      "mem-ai",
+      "cody"
     ],
     "bestFor": [
       "writing",
@@ -318,7 +328,12 @@
       "copy-ai",
       "gamma",
       "perplexity",
-      "otter"
+      "otter",
+      "quillbot",
+      "wordtune",
+      "hemingway",
+      "notion",
+      "sudowrite"
     ],
     "bestFor": [
       "writing",
@@ -410,7 +425,9 @@
       "captions",
       "ideogram",
       "elevenlabs",
-      "claude"
+      "claude",
+      "writesonic",
+      "rytr"
     ],
     "bestFor": [
       "writing",
@@ -491,7 +508,9 @@
       "canva-ai",
       "notion-ai",
       "chatgpt",
-      "ideogram"
+      "ideogram",
+      "writesonic",
+      "rytr"
     ],
     "bestFor": [
       "writing",
@@ -585,7 +604,13 @@
       "tome",
       "spline-ai",
       "captions",
-      "jasper"
+      "jasper",
+      "lexica",
+      "nightcafe",
+      "krea-ai",
+      "playground-ai",
+      "magnific",
+      "clipdrop"
     ],
     "bestFor": [
       "design",
@@ -683,7 +708,10 @@
       "beautiful-ai",
       "tome",
       "midjourney",
-      "adobe-firefly"
+      "adobe-firefly",
+      "lexica",
+      "nightcafe",
+      "playground-ai"
     ],
     "bestFor": [
       "design",
@@ -773,7 +801,13 @@
       "runway",
       "pika",
       "leonardo-ai",
-      "descript"
+      "descript",
+      "lexica",
+      "nightcafe",
+      "playground-ai",
+      "krea-ai",
+      "magnific",
+      "clipdrop"
     ],
     "bestFor": [
       "design",
@@ -865,7 +899,10 @@
       "canva-ai",
       "gamma",
       "midjourney",
-      "dalle"
+      "dalle",
+      "adobe-express",
+      "magnific",
+      "clipdrop"
     ],
     "bestFor": [
       "design",
@@ -954,7 +991,10 @@
       "runway",
       "pika",
       "jasper",
-      "copy-ai"
+      "copy-ai",
+      "lexica",
+      "playground-ai",
+      "krea-ai"
     ],
     "bestFor": [
       "design",
@@ -1128,7 +1168,13 @@
       "canva-ai",
       "heygen",
       "synthesia",
-      "jasper"
+      "jasper",
+      "invideo",
+      "pictory",
+      "kapwing",
+      "opus-clip",
+      "veed",
+      "vizard"
     ],
     "bestFor": [
       "animation",
@@ -1217,7 +1263,10 @@
       "elevenlabs",
       "suno",
       "descript",
-      "pika"
+      "pika",
+      "invideo",
+      "kapwing",
+      "veed"
     ],
     "bestFor": [
       "animation",
@@ -1312,7 +1361,11 @@
       "ideogram",
       "leonardo-ai",
       "chatgpt",
-      "jasper"
+      "jasper",
+      "invideo",
+      "kapwing",
+      "opus-clip",
+      "veed"
     ],
     "bestFor": [
       "animation",
@@ -1575,7 +1628,13 @@
       "chatgpt",
       "jasper",
       "suno",
-      "synthesia"
+      "synthesia",
+      "opus-clip",
+      "vizard",
+      "kapwing",
+      "veed",
+      "invideo",
+      "pictory"
     ],
     "bestFor": [
       "social media",
@@ -1668,7 +1727,12 @@
       "claude",
       "captions",
       "assemblyai",
-      "adobe-firefly"
+      "adobe-firefly",
+      "murf",
+      "lovo",
+      "podcastle",
+      "adobe-podcast",
+      "cleanvoice"
     ],
     "bestFor": [
       "podcasting",
@@ -1764,7 +1828,9 @@
       "captions",
       "adobe-firefly",
       "otter",
-      "assemblyai"
+      "assemblyai",
+      "soundraw",
+      "boomy"
     ],
     "bestFor": [
       "music production",
@@ -1850,7 +1916,9 @@
       "runway",
       "descript",
       "pika",
-      "elevenlabs"
+      "elevenlabs",
+      "soundraw",
+      "boomy"
     ],
     "bestFor": [
       "music production"
@@ -2110,7 +2178,16 @@
       "heygen",
       "adobe-firefly",
       "assemblyai",
-      "stable-diffusion"
+      "stable-diffusion",
+      "podcastle",
+      "adobe-podcast",
+      "cleanvoice",
+      "opus-clip",
+      "kapwing",
+      "vizard",
+      "veed",
+      "murf",
+      "lovo"
     ],
     "bestFor": [
       "podcasting",
@@ -2202,7 +2279,12 @@
       "vercel",
       "langchain",
       "claude",
-      "chatgpt"
+      "chatgpt",
+      "tabnine",
+      "windsurf",
+      "pieces",
+      "cody",
+      "sweep"
     ],
     "bestFor": [
       "coding"
@@ -2292,7 +2374,12 @@
       "vercel",
       "claude",
       "chatgpt",
-      "langchain"
+      "langchain",
+      "tabnine",
+      "windsurf",
+      "pieces",
+      "cody",
+      "sweep"
     ],
     "bestFor": [
       "coding"
@@ -2633,7 +2720,10 @@
     "addedDate": "2025-01-20",
     "compatibleWith": [
       "cursor",
-      "github-copilot"
+      "github-copilot",
+      "tabnine",
+      "windsurf",
+      "pieces"
     ],
     "bestFor": [
       "coding"
@@ -2715,7 +2805,9 @@
       "github-copilot",
       "langchain",
       "chatgpt",
-      "claude"
+      "claude",
+      "sweep",
+      "windsurf"
     ],
     "bestFor": [
       "coding"
@@ -2809,7 +2901,10 @@
       "beautiful-ai",
       "tome",
       "elicit",
-      "consensus"
+      "consensus",
+      "notion",
+      "mem-ai",
+      "taskade"
     ],
     "bestFor": [
       "writing",
@@ -2895,7 +2990,11 @@
       "motion",
       "otter",
       "fireflies",
-      "notion-ai"
+      "notion-ai",
+      "taskade",
+      "magical",
+      "superhuman",
+      "notion"
     ],
     "bestFor": [],
     "workflow": "automate",
@@ -2970,7 +3069,11 @@
       "reclaim",
       "notion-ai",
       "otter",
-      "fireflies"
+      "fireflies",
+      "taskade",
+      "magical",
+      "superhuman",
+      "notion"
     ],
     "bestFor": [],
     "workflow": "automate",
@@ -3053,7 +3156,9 @@
       "motion",
       "elevenlabs",
       "assemblyai",
-      "whisper"
+      "whisper",
+      "podcastle",
+      "adobe-podcast"
     ],
     "bestFor": [
       "podcasting",
@@ -3142,7 +3247,8 @@
       "chatgpt",
       "reclaim",
       "motion",
-      "elevenlabs"
+      "elevenlabs",
+      "podcastle"
     ],
     "bestFor": [
       "research"
@@ -3223,7 +3329,9 @@
       "runway",
       "chatgpt",
       "captions",
-      "tavus"
+      "tavus",
+      "murf",
+      "lovo"
     ],
     "bestFor": [
       "video editing",
@@ -3310,7 +3418,9 @@
       "descript",
       "runway",
       "chatgpt",
-      "captions"
+      "captions",
+      "murf",
+      "lovo"
     ],
     "bestFor": [
       "video editing"
@@ -3388,7 +3498,9 @@
       "heygen",
       "chatgpt",
       "claude",
-      "langchain"
+      "langchain",
+      "murf",
+      "lovo"
     ],
     "bestFor": [
       "video editing"
@@ -3471,7 +3583,12 @@
       "you-com",
       "gamma",
       "grammarly",
-      "otter"
+      "otter",
+      "semantic-scholar",
+      "scite",
+      "connected-papers",
+      "notion",
+      "mem-ai"
     ],
     "bestFor": [
       "research",
@@ -3557,7 +3674,10 @@
       "perplexity",
       "claude",
       "chatgpt",
-      "notion-ai"
+      "notion-ai",
+      "semantic-scholar",
+      "scite",
+      "connected-papers"
     ],
     "bestFor": [
       "research"
@@ -3635,7 +3755,10 @@
       "perplexity",
       "claude",
       "chatgpt",
-      "notion-ai"
+      "notion-ai",
+      "semantic-scholar",
+      "scite",
+      "connected-papers"
     ],
     "bestFor": [
       "research"
@@ -3791,7 +3914,9 @@
       "replicate",
       "claude",
       "chatgpt",
-      "hex"
+      "hex",
+      "obviously-ai",
+      "cody"
     ],
     "bestFor": [
       "coding"
@@ -3870,7 +3995,11 @@
       "huggingface",
       "pinecone",
       "claude",
-      "chatgpt"
+      "chatgpt",
+      "julius-ai",
+      "obviously-ai",
+      "akkio",
+      "polymer"
     ],
     "bestFor": [
       "research",
@@ -3952,7 +4081,11 @@
       "stable-diffusion",
       "whisper",
       "hex",
-      "claude"
+      "claude",
+      "obviously-ai",
+      "akkio",
+      "polymer",
+      "julius-ai"
     ],
     "bestFor": [
       "coding"
@@ -4037,7 +4170,9 @@
       "pinecone",
       "langchain",
       "stable-diffusion",
-      "whisper"
+      "whisper",
+      "obviously-ai",
+      "akkio"
     ],
     "bestFor": [
       "coding"
@@ -4122,7 +4257,9 @@
       "cursor",
       "github-copilot",
       "vercel",
-      "tavus"
+      "tavus",
+      "cody",
+      "julius-ai"
     ],
     "bestFor": [
       "coding"
@@ -4210,7 +4347,11 @@
       "captions",
       "runway",
       "pika",
-      "elevenlabs"
+      "elevenlabs",
+      "adobe-express",
+      "clipdrop",
+      "magnific",
+      "playground-ai"
     ],
     "bestFor": [
       "design",
@@ -4305,7 +4446,8 @@
       "dalle",
       "grammarly",
       "gemini",
-      "adobe-firefly"
+      "adobe-firefly",
+      "adobe-express"
     ],
     "bestFor": [
       "presentations"
@@ -4393,7 +4535,8 @@
       "claude",
       "notion-ai",
       "midjourney",
-      "dalle"
+      "dalle",
+      "adobe-express"
     ],
     "bestFor": [
       "presentations"
@@ -4608,5 +4751,3394 @@
     ],
     "verdict": "Best for designers adding 3D elements to web pages without learning Blender.",
     "notGoodFor": "Skip for serious 3D \u2014 Blender or Cinema 4D handles complex scenes better."
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "description": "All-in-one workspace for notes, docs, wiki, and project management \u2014 with AI Q&A across your content.",
+    "category": "Text & Writing",
+    "tags": [
+      "free tier",
+      "workspace",
+      "wiki",
+      "collaboration",
+      "mobile app"
+    ],
+    "pricing": "Freemium",
+    "url": "https://notion.so",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "notion-ai",
+      "chatgpt",
+      "claude",
+      "grammarly",
+      "perplexity"
+    ],
+    "bestFor": [
+      "writing",
+      "research",
+      "book writing"
+    ],
+    "workflow": "create",
+    "rating": 4.2,
+    "reviewCount": 948,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good when it works, occasionally I have to retry.",
+        "date": "2026-01-30",
+        "useCase": "writing"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 4,
+        "text": "Surprised by how much Notion can do. Saves me real time every week.",
+        "date": "2026-01-30",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Unlimited blocks for personal use",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$15/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$25"
+      }
+    },
+    "weeklyViews": 1416,
+    "savedCount": 170,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Most flexible workspace \u2014 pages, databases, and embeds compose into anything",
+      "Strong AI Q&A across your private content with citations",
+      "Generous free tier for personal use",
+      "Best-in-class collaboration with real-time editing and comments"
+    ],
+    "cons": [
+      "Performance lags on large workspaces with hundreds of pages",
+      "AI features cost extra ($10/user/month on top of base plan)",
+      "Mobile app feels clunky compared to native note-taking apps"
+    ],
+    "verdict": "Best for teams and individuals who want one home for notes, docs, and project tracking.",
+    "notGoodFor": "Skip if you want a fast minimal note app \u2014 Bear or Apple Notes is lighter."
+  },
+  {
+    "id": "bear",
+    "name": "Bear",
+    "description": "Minimal markdown writing app for Apple devices with tag-based organization and elegant typography.",
+    "category": "Text & Writing",
+    "tags": [
+      "mobile app",
+      "markdown",
+      "apple",
+      "minimal"
+    ],
+    "pricing": "Freemium",
+    "url": "https://bear.app",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "grammarly",
+      "chatgpt",
+      "claude",
+      "hemingway"
+    ],
+    "bestFor": [
+      "writing",
+      "book writing"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 1033,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Bear and haven't looked back.",
+        "date": "2026-01-30",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Editor only \u2014 sync is paid",
+      "starting_price": "$3/mo",
+      "most_popular_plan": "$3/mo",
+      "annual_discount": "30%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$3",
+        "power_user": "$3"
+      }
+    },
+    "weeklyViews": 1190,
+    "savedCount": 185,
+    "trendingScore": 75,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Beautiful minimal interface \u2014 best typography of any note app",
+      "Native markdown with hashtag-based filing instead of folders",
+      "Fast on Mac, iPad, and iPhone \u2014 opens instantly"
+    ],
+    "cons": [
+      "Apple-only \u2014 no Windows, web, or Android version",
+      "No real-time collaboration",
+      "AI features are minimal compared to Notion or Mem"
+    ],
+    "verdict": "Best for solo writers on Apple devices who want a fast, beautiful markdown experience.",
+    "notGoodFor": "Skip if you collaborate with non-Apple users or need AI Q&A across notes."
+  },
+  {
+    "id": "hemingway",
+    "name": "Hemingway Editor",
+    "description": "Plain-text editor that highlights complex sentences, passive voice, and adverbs to improve clarity.",
+    "category": "Text & Writing",
+    "tags": [
+      "browser app",
+      "editing",
+      "no signup"
+    ],
+    "pricing": "Freemium",
+    "url": "https://hemingwayapp.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "grammarly",
+      "chatgpt",
+      "claude",
+      "notion",
+      "wordtune"
+    ],
+    "bestFor": [
+      "writing",
+      "book writing"
+    ],
+    "workflow": "edit",
+    "rating": 4.5,
+    "reviewCount": 734,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 5,
+        "text": "Surprised by how much Hemingway Editor can do. Saves me real time every week.",
+        "date": "2026-02-18",
+        "useCase": "writing"
+      },
+      {
+        "author": "Sofia G.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Hemingway Editor and haven't looked back.",
+        "date": "2026-02-18",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Online editor free; desktop app paid",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$10/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$10"
+      }
+    },
+    "weeklyViews": 953,
+    "savedCount": 132,
+    "trendingScore": 54,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Color-coded clarity feedback \u2014 see passive voice, adverbs, and complexity at a glance",
+      "Works in browser with no signup required",
+      "Forces you to write tighter, more direct prose"
+    ],
+    "cons": [
+      "Doesn't catch grammar errors as well as Grammarly",
+      "Style suggestions are opinionated \u2014 not always right for fiction",
+      "AI rewrite feature only on paid plan"
+    ],
+    "verdict": "Best for writers who want sharp, clear prose \u2014 especially journalists and bloggers.",
+    "notGoodFor": "Skip if you write fiction \u2014 its 'simpler is better' bias hurts literary voice."
+  },
+  {
+    "id": "wordtune",
+    "name": "Wordtune",
+    "description": "AI rewriting assistant that suggests alternate phrasings to make your writing clearer or more formal.",
+    "category": "Text & Writing",
+    "tags": [
+      "browser extension",
+      "rewriting",
+      "free tier"
+    ],
+    "pricing": "Freemium",
+    "url": "https://wordtune.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "grammarly",
+      "chatgpt",
+      "claude",
+      "notion",
+      "hemingway"
+    ],
+    "bestFor": [
+      "writing"
+    ],
+    "workflow": "edit",
+    "rating": 4.1,
+    "reviewCount": 510,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-04-10",
+        "useCase": "writing"
+      },
+      {
+        "author": "Omar D.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Wordtune and haven't looked back.",
+        "date": "2026-04-10",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10 rewrites/day",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$10/mo",
+      "annual_discount": "33%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$25"
+      }
+    },
+    "weeklyViews": 3930,
+    "savedCount": 91,
+    "trendingScore": 59,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Multiple tone options \u2014 casual, formal, shorter, longer \u2014 in one click",
+      "Browser extension works in Gmail, Docs, LinkedIn, and most web inputs",
+      "Strong free tier with 10 rewrites per day"
+    ],
+    "cons": [
+      "Output sometimes loses the original voice and feels generic",
+      "Premium ($10/mo) needed for unlimited rewrites and tone control",
+      "Less effective on long-form content than ChatGPT"
+    ],
+    "verdict": "Best for ESL writers and professionals who want quick rewrites in their existing tools.",
+    "notGoodFor": "Skip if you write long-form \u2014 Claude or ChatGPT handles full drafts better."
+  },
+  {
+    "id": "quillbot",
+    "name": "Quillbot",
+    "description": "AI paraphrasing tool with 7 rewrite modes, plus grammar checking, summarizer, and citation generator.",
+    "category": "Text & Writing",
+    "tags": [
+      "browser extension",
+      "paraphrasing",
+      "free tier",
+      "academic"
+    ],
+    "pricing": "Freemium",
+    "url": "https://quillbot.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "grammarly",
+      "wordtune",
+      "chatgpt",
+      "notion",
+      "hemingway"
+    ],
+    "bestFor": [
+      "writing",
+      "research",
+      "book writing"
+    ],
+    "workflow": "edit",
+    "rating": 4.6,
+    "reviewCount": 514,
+    "reviews": [
+      {
+        "author": "Marco T.",
+        "rating": 5,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Quillbot is doing exactly what I needed without the bloat.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "125 words per paraphrase",
+      "starting_price": "$9.95/mo",
+      "most_popular_plan": "$9.95/mo",
+      "annual_discount": "58%",
+      "has_student_discount": true,
+      "free_trial": "3 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$20"
+      }
+    },
+    "weeklyViews": 1497,
+    "savedCount": 92,
+    "trendingScore": 48,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Best-in-class paraphrasing with 7 modes (Standard, Fluency, Formal, Simple, Creative, Expand, Shorten)",
+      "Built-in plagiarism checker on premium plans",
+      "Supports academic writing with citation generator and bibliography tools",
+      "Affordable \u2014 $9.95/mo undercuts Grammarly and Wordtune"
+    ],
+    "cons": [
+      "Free tier capped at 125 words per paraphrase",
+      "Grammar checking accuracy lags Grammarly",
+      "Output occasionally drifts from the source meaning on Creative mode"
+    ],
+    "verdict": "Best for students and ESL writers who need affordable, reliable paraphrasing.",
+    "notGoodFor": "Skip if you want the most accurate grammar checking \u2014 Grammarly is still ahead."
+  },
+  {
+    "id": "sudowrite",
+    "name": "Sudowrite",
+    "description": "AI writing assistant built specifically for fiction authors \u2014 handles description, dialogue, plot, and rewrites.",
+    "category": "Text & Writing",
+    "tags": [
+      "fiction",
+      "novel writing",
+      "creative"
+    ],
+    "pricing": "Paid",
+    "url": "https://sudowrite.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "chatgpt",
+      "claude",
+      "grammarly",
+      "notion",
+      "hemingway"
+    ],
+    "bestFor": [
+      "book writing",
+      "writing"
+    ],
+    "workflow": "create",
+    "rating": 4.6,
+    "reviewCount": 694,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 5,
+        "text": "Switched from a clunkier alternative to Sudowrite and haven't looked back.",
+        "date": "2026-01-30",
+        "useCase": "book writing"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Surprised by how much Sudowrite can do. Saves me real time every week.",
+        "date": "2026-01-30",
+        "useCase": "book writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$19/mo",
+      "most_popular_plan": "$29/mo",
+      "annual_discount": "25%",
+      "has_student_discount": false,
+      "free_trial": "limited words",
+      "estimated_monthly_cost": {
+        "light_user": "$19",
+        "regular_user": "$29",
+        "power_user": "$59"
+      }
+    },
+    "weeklyViews": 2521,
+    "savedCount": 124,
+    "trendingScore": 56,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Designed for fiction \u2014 features like Show Don't Tell, Brainstorm, and Canvas plot tools",
+      "Story Bible keeps characters, locations, and lore consistent across long manuscripts",
+      "Handles 1,000+ word generations without losing voice"
+    ],
+    "cons": [
+      "Pricey starting at $19/month, scales fast for prolific writers",
+      "No free tier, only a limited trial",
+      "Not great for non-fiction or business writing"
+    ],
+    "verdict": "Best for novelists and screenwriters who want a fiction-specific AI co-author.",
+    "notGoodFor": "Skip if you write non-fiction or just need a cheap general AI \u2014 ChatGPT is more flexible and cheaper."
+  },
+  {
+    "id": "rytr",
+    "name": "Rytr",
+    "description": "Affordable AI writing assistant with 40+ use cases from blog posts to product descriptions.",
+    "category": "Text & Writing",
+    "tags": [
+      "free tier",
+      "marketing",
+      "templates",
+      "budget"
+    ],
+    "pricing": "Freemium",
+    "url": "https://rytr.me",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "grammarly",
+      "chatgpt",
+      "notion",
+      "canva-ai",
+      "copy-ai"
+    ],
+    "bestFor": [
+      "writing",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.6,
+    "reviewCount": 1272,
+    "reviews": [
+      {
+        "author": "Omar D.",
+        "rating": 5,
+        "text": "Switched from a clunkier alternative to Rytr and haven't looked back.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      },
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Rytr and haven't looked back.",
+        "date": "2026-04-10",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10,000 chars/month",
+      "starting_price": "$9/mo",
+      "most_popular_plan": "$9/mo",
+      "annual_discount": "33%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$9",
+        "power_user": "$29"
+      }
+    },
+    "weeklyViews": 3746,
+    "savedCount": 228,
+    "trendingScore": 35,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Cheapest serious AI writer \u2014 $9/month for unlimited",
+      "Generous free tier with 10,000 characters per month",
+      "40+ pre-built templates cover most common copy needs"
+    ],
+    "cons": [
+      "Output quality below Jasper and Copy.ai for nuanced marketing copy",
+      "Fewer team and brand voice features than competitors",
+      "Templates feel formulaic on longer-form content"
+    ],
+    "verdict": "Best for solo creators and side projects on a tight budget.",
+    "notGoodFor": "Skip if you're an agency needing brand voice at scale \u2014 Jasper is built for that."
+  },
+  {
+    "id": "writesonic",
+    "name": "Writesonic",
+    "description": "Marketing-focused AI writing platform with SEO tools, brand voice, and an AI article writer.",
+    "category": "Text & Writing",
+    "tags": [
+      "seo",
+      "marketing",
+      "templates",
+      "long-form"
+    ],
+    "pricing": "Freemium",
+    "url": "https://writesonic.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "jasper",
+      "copy-ai",
+      "grammarly",
+      "chatgpt",
+      "canva-ai",
+      "notion"
+    ],
+    "bestFor": [
+      "writing",
+      "social media",
+      "research"
+    ],
+    "workflow": "create",
+    "rating": 4.7,
+    "reviewCount": 344,
+    "reviews": [
+      {
+        "author": "Aisha R.",
+        "rating": 5,
+        "text": "Writesonic is doing exactly what I needed without the bloat.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Surprised by how much Writesonic can do. Saves me real time every week.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10,000 words/month",
+      "starting_price": "$19/mo",
+      "most_popular_plan": "$49/mo",
+      "annual_discount": "33%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$19",
+        "power_user": "$99"
+      }
+    },
+    "weeklyViews": 2130,
+    "savedCount": 61,
+    "trendingScore": 62,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Strong SEO mode \u2014 optimizes content with target keywords and competitor analysis",
+      "AI Article Writer 6 produces 3,000+ word drafts with research and citations",
+      "Brand voice training captures your existing copy at $19/mo entry tier"
+    ],
+    "cons": [
+      "Output needs heavy editing for technical or specialized topics",
+      "Free tier capped at 10,000 words per month",
+      "Pricing tiers can be confusing with Chatsonic and AI Article Writer separated"
+    ],
+    "verdict": "Best for content marketers and SEO teams who want long-form drafts plus optimization.",
+    "notGoodFor": "Skip if you only write short-form copy \u2014 Rytr or Copy.ai is cheaper and just as good."
+  },
+  {
+    "id": "adobe-express",
+    "name": "Adobe Express",
+    "description": "Quick design tool from Adobe with templates, AI image generation via Firefly, and brand kits.",
+    "category": "Image & Art",
+    "tags": [
+      "free tier",
+      "design",
+      "templates",
+      "browser app"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.adobe.com/express",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "adobe-firefly",
+      "canva-ai",
+      "midjourney",
+      "ideogram",
+      "gamma"
+    ],
+    "bestFor": [
+      "design",
+      "social media",
+      "presentations"
+    ],
+    "workflow": "create",
+    "rating": 4.2,
+    "reviewCount": 170,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-04-10",
+        "useCase": "design"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Most features free",
+      "starting_price": "$9.99/mo",
+      "most_popular_plan": "$9.99/mo",
+      "annual_discount": "0%",
+      "has_student_discount": true,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$10"
+      }
+    },
+    "weeklyViews": 341,
+    "savedCount": 30,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Strong free tier \u2014 most templates and Firefly generations included",
+      "Adobe-quality typography and brand kit features",
+      "Generative AI built in via Firefly \u2014 commercial safe"
+    ],
+    "cons": [
+      "Less feature-rich than Canva for complex designs",
+      "Premium templates locked behind $9.99/mo subscription",
+      "Mobile app trails Canva on usability"
+    ],
+    "verdict": "Best for marketers and creators who want Adobe-grade output without learning Photoshop.",
+    "notGoodFor": "Skip if you already use Canva \u2014 feature parity isn't there yet."
+  },
+  {
+    "id": "playground-ai",
+    "name": "Playground AI",
+    "description": "Browser-based AI image generator with simple UI and a strong free tier for everyday creators.",
+    "category": "Image & Art",
+    "tags": [
+      "free tier",
+      "browser app",
+      "text-to-image"
+    ],
+    "pricing": "Freemium",
+    "url": "https://playground.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "midjourney",
+      "canva-ai",
+      "adobe-firefly",
+      "lexica",
+      "krea-ai"
+    ],
+    "bestFor": [
+      "design",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 160,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Playground AI works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-04-10",
+        "useCase": "design"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "500 generations/day",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$15/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$30"
+      }
+    },
+    "weeklyViews": 2871,
+    "savedCount": 28,
+    "trendingScore": 27,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Generous free tier \u2014 500 image generations per day",
+      "Cleaner UI than Midjourney's Discord workflow",
+      "Mix-and-match models including Stable Diffusion and Playground v2.5"
+    ],
+    "cons": [
+      "Output quality below Midjourney V6 for stylized work",
+      "Limited control compared to ComfyUI or A1111",
+      "Pro plan required for commercial use ($15/mo)"
+    ],
+    "verdict": "Best for hobbyists and beginners who want a free, easy image generator without Discord.",
+    "notGoodFor": "Skip if you need professional-grade output \u2014 Midjourney still wins on quality."
+  },
+  {
+    "id": "lexica",
+    "name": "Lexica",
+    "description": "Image search engine + Stable Diffusion-based generator with a massive prompt library to learn from.",
+    "category": "Image & Art",
+    "tags": [
+      "free tier",
+      "prompt library",
+      "text-to-image"
+    ],
+    "pricing": "Freemium",
+    "url": "https://lexica.art",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "midjourney",
+      "stable-diffusion",
+      "playground-ai",
+      "canva-ai"
+    ],
+    "bestFor": [
+      "design",
+      "research"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 912,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Lexica and haven't looked back.",
+        "date": "2026-04-10",
+        "useCase": "design"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Surprised by how much Lexica can do. Saves me real time every week.",
+        "date": "2026-01-30",
+        "useCase": "design"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "100 generations to start",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$24/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$60"
+      }
+    },
+    "weeklyViews": 3417,
+    "savedCount": 164,
+    "trendingScore": 36,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Best prompt search engine \u2014 see millions of public AI images and their prompts",
+      "Built-in Stable Diffusion generator at affordable rates",
+      "Great learning tool for AI image prompting"
+    ],
+    "cons": [
+      "Generation quality below Midjourney and SDXL custom models",
+      "Free generations very limited \u2014 basically a teaser",
+      "API access only on enterprise tier"
+    ],
+    "verdict": "Best for prompt engineers learning Stable Diffusion or sourcing inspiration.",
+    "notGoodFor": "Skip for production work \u2014 Midjourney or Stable Diffusion outputs better images."
+  },
+  {
+    "id": "nightcafe",
+    "name": "NightCafe",
+    "description": "AI art creation platform with multiple models, social features, and gamified daily challenges.",
+    "category": "Image & Art",
+    "tags": [
+      "free tier",
+      "community",
+      "multiple models"
+    ],
+    "pricing": "Freemium",
+    "url": "https://nightcafe.studio",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "midjourney",
+      "stable-diffusion",
+      "dalle",
+      "canva-ai",
+      "lexica"
+    ],
+    "bestFor": [
+      "design",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.0,
+    "reviewCount": 1155,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 4,
+        "text": "NightCafe is doing exactly what I needed without the bloat.",
+        "date": "2026-02-18",
+        "useCase": "design"
+      },
+      {
+        "author": "Omar D.",
+        "rating": 4,
+        "text": "NightCafe is doing exactly what I needed without the bloat.",
+        "date": "2026-01-30",
+        "useCase": "design"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Daily free credits",
+      "starting_price": "$5.99/mo",
+      "most_popular_plan": "$24.99/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$6",
+        "power_user": "$50"
+      }
+    },
+    "weeklyViews": 4053,
+    "savedCount": 207,
+    "trendingScore": 73,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Choice of multiple models \u2014 SDXL, DALL-E, Stable Diffusion, and proprietary",
+      "Social platform with daily challenges and prompt remixing",
+      "Free credits regenerate daily for casual users"
+    ],
+    "cons": [
+      "Lower quality ceiling than Midjourney V6",
+      "Credit pricing gets confusing across models",
+      "Community feed is noisy with low-effort posts"
+    ],
+    "verdict": "Best for hobbyists who want to experiment across multiple image models in one place.",
+    "notGoodFor": "Skip if you want consistent style \u2014 NightCafe spreads attention across many models."
+  },
+  {
+    "id": "krea-ai",
+    "name": "Krea AI",
+    "description": "Real-time AI image generation that updates as you type or sketch, with control over style and composition.",
+    "category": "Image & Art",
+    "tags": [
+      "real-time",
+      "free tier",
+      "text-to-image"
+    ],
+    "pricing": "Freemium",
+    "url": "https://krea.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "midjourney",
+      "stable-diffusion",
+      "playground-ai",
+      "magnific",
+      "canva-ai"
+    ],
+    "bestFor": [
+      "design",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.2,
+    "reviewCount": 1428,
+    "reviews": [
+      {
+        "author": "Sofia G.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Krea AI and haven't looked back.",
+        "date": "2026-02-18",
+        "useCase": "design"
+      },
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Krea AI works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-18",
+        "useCase": "design"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Daily free credits",
+      "starting_price": "$10/mo",
+      "most_popular_plan": "$35/mo",
+      "annual_discount": "30%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$60"
+      }
+    },
+    "weeklyViews": 3547,
+    "savedCount": 257,
+    "trendingScore": 45,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Real-time generation \u2014 see results update as you type or doodle",
+      "Strong control with image-to-image, ControlNet, and style references",
+      "Free tier with daily credits is genuinely usable"
+    ],
+    "cons": [
+      "Quality ceiling below Midjourney for stylized output",
+      "Pro plan starts at $35/mo \u2014 pricier than Playground",
+      "Real-time generation needs decent GPU servers, occasional queueing"
+    ],
+    "verdict": "Best for designers who want fast iteration with sketch-to-image control.",
+    "notGoodFor": "Skip if you don't need iteration speed \u2014 Midjourney offers higher quality at similar cost."
+  },
+  {
+    "id": "magnific",
+    "name": "Magnific AI",
+    "description": "AI upscaler and enhancer that adds realistic detail when increasing image resolution.",
+    "category": "Image & Art",
+    "tags": [
+      "upscaling",
+      "enhancement",
+      "professional"
+    ],
+    "pricing": "Paid",
+    "url": "https://magnific.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "midjourney",
+      "adobe-firefly",
+      "stable-diffusion",
+      "krea-ai",
+      "canva-ai"
+    ],
+    "bestFor": [
+      "design"
+    ],
+    "workflow": "edit",
+    "rating": 4.7,
+    "reviewCount": 647,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 5,
+        "text": "Surprised by how much Magnific AI can do. Saves me real time every week.",
+        "date": "2026-04-10",
+        "useCase": "design"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Surprised by how much Magnific AI can do. Saves me real time every week.",
+        "date": "2026-01-30",
+        "useCase": "design"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$39/mo",
+      "most_popular_plan": "$99/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$39",
+        "regular_user": "$99",
+        "power_user": "$299"
+      }
+    },
+    "weeklyViews": 3438,
+    "savedCount": 116,
+    "trendingScore": 76,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Best AI upscaler \u2014 adds plausible detail rather than just smoothing",
+      "Multiple creativity levels from photo-faithful to artistic interpretation",
+      "Handles human faces and fabric textures better than competitors"
+    ],
+    "cons": [
+      "No free tier \u2014 minimum $39/mo entry",
+      "Credits run out fast at high resolutions",
+      "Output sometimes hallucinates wrong details on creative settings"
+    ],
+    "verdict": "Best for designers, photographers, and Midjourney power users who need large-scale outputs.",
+    "notGoodFor": "Skip if you only need basic upscaling \u2014 Topaz Photo AI or free Real-ESRGAN is enough."
+  },
+  {
+    "id": "clipdrop",
+    "name": "Clipdrop",
+    "description": "Suite of AI image-editing tools \u2014 background remove, uncrop, relight, and more \u2014 from Stability AI.",
+    "category": "Image & Art",
+    "tags": [
+      "free tier",
+      "image editing",
+      "browser app"
+    ],
+    "pricing": "Freemium",
+    "url": "https://clipdrop.co",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "adobe-firefly",
+      "canva-ai",
+      "stable-diffusion",
+      "magnific",
+      "midjourney"
+    ],
+    "bestFor": [
+      "design",
+      "social media"
+    ],
+    "workflow": "edit",
+    "rating": 4.6,
+    "reviewCount": 659,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 5,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-01-30",
+        "useCase": "design"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Clipdrop and haven't looked back.",
+        "date": "2026-01-30",
+        "useCase": "design"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited daily uses per tool",
+      "starting_price": "$9/mo",
+      "most_popular_plan": "$9/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$9",
+        "power_user": "$30"
+      }
+    },
+    "weeklyViews": 2560,
+    "savedCount": 118,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Cluster of focused tools \u2014 bg removal, uncrop, relight, cleanup, sketch-to-image",
+      "Free tier covers most casual editing tasks",
+      "Built on Stable Diffusion and SDXL by Stability AI"
+    ],
+    "cons": [
+      "Pro plan ($9/mo) needed for high resolution and bulk processing",
+      "Fewer features than full Photoshop or Affinity Photo",
+      "Tools work standalone \u2014 no unified canvas yet"
+    ],
+    "verdict": "Best for content creators and marketers who need quick AI image edits without learning Photoshop.",
+    "notGoodFor": "Skip if you need pro-level editing \u2014 Photoshop and Firefly are still ahead."
+  },
+  {
+    "id": "invideo",
+    "name": "InVideo AI",
+    "description": "AI video creator that turns text prompts and scripts into full edited videos with stock footage and voiceover.",
+    "category": "Video",
+    "tags": [
+      "free tier",
+      "templates",
+      "browser app"
+    ],
+    "pricing": "Freemium",
+    "url": "https://invideo.io",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "elevenlabs",
+      "runway",
+      "descript",
+      "canva-ai",
+      "captions",
+      "kapwing"
+    ],
+    "bestFor": [
+      "social media",
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.1,
+    "reviewCount": 710,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good when it works, occasionally I have to retry.",
+        "date": "2026-03-22",
+        "useCase": "social media"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to InVideo AI and haven't looked back.",
+        "date": "2026-02-18",
+        "useCase": "social media"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10 min/week, watermarked",
+      "starting_price": "$25/mo",
+      "most_popular_plan": "$50/mo",
+      "annual_discount": "33%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$25",
+        "power_user": "$60"
+      }
+    },
+    "weeklyViews": 2976,
+    "savedCount": 127,
+    "trendingScore": 57,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Generates full videos from a single prompt \u2014 script, footage, voice, and music",
+      "Massive stock library (16M+ clips) included",
+      "Strong template library for marketing and social formats"
+    ],
+    "cons": [
+      "AI-selected stock footage often looks generic",
+      "Free plan watermarks output and limits to 10 minutes/week",
+      "Less editing control than Descript or Kapwing for fine-tuning"
+    ],
+    "verdict": "Best for marketers and social media managers who need high-volume video output fast.",
+    "notGoodFor": "Skip for highly polished or branded content \u2014 Adobe Premiere or Descript wins on control."
+  },
+  {
+    "id": "pictory",
+    "name": "Pictory",
+    "description": "Turns scripts, blog posts, or long videos into short branded clips with captions and voiceover.",
+    "category": "Video",
+    "tags": [
+      "text-to-video",
+      "captions",
+      "long-to-short"
+    ],
+    "pricing": "Paid",
+    "url": "https://pictory.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "runway",
+      "elevenlabs",
+      "descript",
+      "canva-ai",
+      "captions",
+      "opus-clip"
+    ],
+    "bestFor": [
+      "social media",
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1344,
+    "reviews": [
+      {
+        "author": "Omar D.",
+        "rating": 4,
+        "text": "Pictory is doing exactly what I needed without the bloat.",
+        "date": "2026-02-18",
+        "useCase": "social media"
+      },
+      {
+        "author": "Omar D.",
+        "rating": 4,
+        "text": "Surprised by how much Pictory can do. Saves me real time every week.",
+        "date": "2026-02-18",
+        "useCase": "social media"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 video projects (trial)",
+      "starting_price": "$19/mo",
+      "most_popular_plan": "$39/mo",
+      "annual_discount": "25%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$19",
+        "power_user": "$99"
+      }
+    },
+    "weeklyViews": 3867,
+    "savedCount": 241,
+    "trendingScore": 31,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Fast script-to-video with auto-stock footage matching",
+      "Strong long-form to short-form repurposing \u2014 paste a YouTube URL, get clips",
+      "Auto-captions in 29+ languages"
+    ],
+    "cons": [
+      "$19/mo entry has limited monthly minutes",
+      "Output can feel formulaic without manual editing",
+      "Voice options below ElevenLabs in quality"
+    ],
+    "verdict": "Best for content marketers turning blog content and webinars into social video.",
+    "notGoodFor": "Skip if you create video from scratch \u2014 Runway or InVideo offers more creative control."
+  },
+  {
+    "id": "kapwing",
+    "name": "Kapwing",
+    "description": "Browser-based video editor with AI tools for captions, removing silences, dubbing, and resizing.",
+    "category": "Video",
+    "tags": [
+      "free tier",
+      "browser app",
+      "team workflow"
+    ],
+    "pricing": "Freemium",
+    "url": "https://kapwing.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "runway",
+      "elevenlabs",
+      "captions",
+      "opus-clip",
+      "veed"
+    ],
+    "bestFor": [
+      "video editing",
+      "social media"
+    ],
+    "workflow": "edit",
+    "rating": 4.1,
+    "reviewCount": 1743,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Kapwing works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-18",
+        "useCase": "video editing"
+      },
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Kapwing is doing exactly what I needed without the bloat.",
+        "date": "2026-03-22",
+        "useCase": "video editing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "4 min/video, watermarked",
+      "starting_price": "$16/mo",
+      "most_popular_plan": "$24/mo",
+      "annual_discount": "33%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$16",
+        "power_user": "$50"
+      }
+    },
+    "weeklyViews": 3855,
+    "savedCount": 313,
+    "trendingScore": 47,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Full timeline editor in the browser \u2014 no installs needed",
+      "Strong AI tools \u2014 auto subtitles, silence removal, AI dubbing in 30+ languages",
+      "Team workspace with shared assets and commenting"
+    ],
+    "cons": [
+      "Free tier watermarks exports and limits to 4 min videos",
+      "Slower than desktop editors for long projects",
+      "Pro plan jumps to $24/mo \u2014 pricier than Descript Creator"
+    ],
+    "verdict": "Best for collaborative teams editing video in browser \u2014 schools, agencies, marketing teams.",
+    "notGoodFor": "Skip if you edit alone on desktop \u2014 Descript or DaVinci is more powerful."
+  },
+  {
+    "id": "vizard",
+    "name": "Vizard",
+    "description": "AI video repurposing tool that auto-clips long videos into short-form for TikTok, Reels, and Shorts.",
+    "category": "Video",
+    "tags": [
+      "long-to-short",
+      "captions",
+      "social media"
+    ],
+    "pricing": "Freemium",
+    "url": "https://vizard.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "runway",
+      "captions",
+      "opus-clip",
+      "elevenlabs",
+      "kapwing"
+    ],
+    "bestFor": [
+      "social media",
+      "video editing"
+    ],
+    "workflow": "edit",
+    "rating": 4.3,
+    "reviewCount": 1140,
+    "reviews": [
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Vizard works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-18",
+        "useCase": "social media"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-01-30",
+        "useCase": "social media"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "60 min/month, watermarked",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$50"
+      }
+    },
+    "weeklyViews": 2378,
+    "savedCount": 205,
+    "trendingScore": 44,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "AI scoring picks the most engaging moments from long videos",
+      "Auto-resize and caption for TikTok, Reels, and YouTube Shorts in one click",
+      "Free tier with 60 minutes of upload per month"
+    ],
+    "cons": [
+      "Free plan watermarks all clips",
+      "Caption styling less customizable than Captions or OpusClip",
+      "Quality of auto-picks depends heavily on source video clarity"
+    ],
+    "verdict": "Best for podcasters and YouTubers repurposing long content into short clips.",
+    "notGoodFor": "Skip if you need full editing control \u2014 OpusClip handles repurposing too with stronger features."
+  },
+  {
+    "id": "opus-clip",
+    "name": "OpusClip",
+    "description": "AI clipping tool that turns long-form video into viral short-form clips with hooks, captions, and reframing.",
+    "category": "Video",
+    "tags": [
+      "long-to-short",
+      "viral",
+      "captions"
+    ],
+    "pricing": "Freemium",
+    "url": "https://opus.pro",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "runway",
+      "elevenlabs",
+      "captions",
+      "vizard",
+      "kapwing"
+    ],
+    "bestFor": [
+      "social media",
+      "video editing"
+    ],
+    "workflow": "edit",
+    "rating": 4.2,
+    "reviewCount": 766,
+    "reviews": [
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Good when it works, occasionally I have to retry.",
+        "date": "2026-03-22",
+        "useCase": "social media"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to OpusClip and haven't looked back.",
+        "date": "2026-01-30",
+        "useCase": "social media"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "90 min source/month",
+      "starting_price": "$19/mo",
+      "most_popular_plan": "$29/mo",
+      "annual_discount": "50%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$19",
+        "power_user": "$49"
+      }
+    },
+    "weeklyViews": 3003,
+    "savedCount": 137,
+    "trendingScore": 76,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "ClipAnything 2.0 finds compelling moments based on virality scoring",
+      "Auto-reframe with face tracking keeps subjects centered on vertical exports",
+      "Strong free tier \u2014 90 minutes of source video per month"
+    ],
+    "cons": [
+      "Output captions sometimes mistime on heavy accents",
+      "Pro plan ($19/mo) needed for unlimited exports and HD",
+      "Less customizable templates than Kapwing or Captions"
+    ],
+    "verdict": "Best for podcasters, YouTubers, and brands repurposing long content into shorts at scale.",
+    "notGoodFor": "Skip if you create short-form natively \u2014 Captions or InVideo is built for that workflow."
+  },
+  {
+    "id": "veed",
+    "name": "Veed.io",
+    "description": "Online video editor with AI tools for subtitles, translation, eye contact, and avatar generation.",
+    "category": "Video",
+    "tags": [
+      "browser app",
+      "free tier",
+      "subtitles"
+    ],
+    "pricing": "Freemium",
+    "url": "https://veed.io",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "elevenlabs",
+      "captions",
+      "kapwing",
+      "runway",
+      "opus-clip"
+    ],
+    "bestFor": [
+      "video editing",
+      "social media"
+    ],
+    "workflow": "edit",
+    "rating": 4.0,
+    "reviewCount": 1434,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Veed.io is doing exactly what I needed without the bloat.",
+        "date": "2026-04-10",
+        "useCase": "video editing"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Good when it works, occasionally I have to retry.",
+        "date": "2026-01-30",
+        "useCase": "video editing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "1080p watermarked",
+      "starting_price": "$25/mo",
+      "most_popular_plan": "$45/mo",
+      "annual_discount": "44%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$25",
+        "power_user": "$70"
+      }
+    },
+    "weeklyViews": 715,
+    "savedCount": 258,
+    "trendingScore": 70,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Full editor in the browser \u2014 works on Chromebook or any laptop",
+      "Strong subtitle generator with 100+ languages",
+      "AI tools for eye contact, magic cut, and AI avatar generation included"
+    ],
+    "cons": [
+      "Free plan watermarks and caps exports at 720p",
+      "Render times can be slow on busy hours",
+      "Pro plan ($25/mo) is pricier than Kapwing for similar feature set"
+    ],
+    "verdict": "Best for solo creators editing in browser who need an all-in-one with strong subtitles.",
+    "notGoodFor": "Skip if you have a strong editing background \u2014 Premiere and DaVinci offer way more control."
+  },
+  {
+    "id": "murf",
+    "name": "Murf AI",
+    "description": "AI voiceover platform with 200+ voices in 20+ languages, designed for studio-quality narration.",
+    "category": "Audio & Music",
+    "tags": [
+      "voiceover",
+      "20+ languages",
+      "team"
+    ],
+    "pricing": "Freemium",
+    "url": "https://murf.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "elevenlabs",
+      "descript",
+      "runway",
+      "synthesia",
+      "heygen",
+      "captions"
+    ],
+    "bestFor": [
+      "video editing",
+      "podcasting"
+    ],
+    "workflow": "create",
+    "rating": 4.3,
+    "reviewCount": 826,
+    "reviews": [
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Good when it works, occasionally I have to retry.",
+        "date": "2026-04-10",
+        "useCase": "video editing"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-01-30",
+        "useCase": "video editing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10 min voice generation",
+      "starting_price": "$19/mo",
+      "most_popular_plan": "$29/mo",
+      "annual_discount": "50%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$19",
+        "power_user": "$79"
+      }
+    },
+    "weeklyViews": 2638,
+    "savedCount": 148,
+    "trendingScore": 61,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "200+ voice options across 20+ languages with natural inflection",
+      "Pronunciation editor lets you fine-tune any word",
+      "Strong team and enterprise features with brand voice support"
+    ],
+    "cons": [
+      "Voice quality and naturalness lag ElevenLabs on emotional content",
+      "Free plan limited to 10 minutes of voice generation",
+      "Pricing tiers can be confusing across personal/business/enterprise"
+    ],
+    "verdict": "Best for L&D teams and corporate trainers who need predictable, multilingual voiceover.",
+    "notGoodFor": "Skip if you want the most natural voices \u2014 ElevenLabs still leads on quality."
+  },
+  {
+    "id": "lovo",
+    "name": "Lovo AI",
+    "description": "AI voiceover with 500+ voices across 100+ languages, plus a video editor and voice cloning.",
+    "category": "Audio & Music",
+    "tags": [
+      "voice cloning",
+      "free tier",
+      "many languages"
+    ],
+    "pricing": "Freemium",
+    "url": "https://lovo.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "elevenlabs",
+      "descript",
+      "runway",
+      "synthesia",
+      "captions",
+      "murf"
+    ],
+    "bestFor": [
+      "video editing",
+      "podcasting"
+    ],
+    "workflow": "create",
+    "rating": 4.0,
+    "reviewCount": 1073,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Lovo AI is doing exactly what I needed without the bloat.",
+        "date": "2026-04-10",
+        "useCase": "video editing"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-01-30",
+        "useCase": "video editing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 min/month watermarked",
+      "starting_price": "$24/mo",
+      "most_popular_plan": "$48/mo",
+      "annual_discount": "60%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$24",
+        "power_user": "$75"
+      }
+    },
+    "weeklyViews": 1565,
+    "savedCount": 193,
+    "trendingScore": 64,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Largest voice library \u2014 500+ voices in 100+ languages",
+      "Voice cloning with as little as 1 minute of sample",
+      "Built-in video editor lets you add the voiceover to footage in one tool"
+    ],
+    "cons": [
+      "Voice quality variable \u2014 some languages noticeably weaker than English",
+      "Free tier ($0/mo) capped at 5 minutes per month and watermarked",
+      "Pro plan starts at $24/mo \u2014 competitive but not cheap"
+    ],
+    "verdict": "Best for global creators needing voiceover in less-common languages.",
+    "notGoodFor": "Skip if you only need English voiceover \u2014 ElevenLabs gives more polish per dollar."
+  },
+  {
+    "id": "podcastle",
+    "name": "Podcastle",
+    "description": "All-in-one podcast platform \u2014 record, transcribe, edit, host, and distribute podcasts in one tool.",
+    "category": "Audio & Music",
+    "tags": [
+      "podcasting",
+      "recording",
+      "free tier"
+    ],
+    "pricing": "Freemium",
+    "url": "https://podcastle.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "elevenlabs",
+      "otter",
+      "fireflies",
+      "suno",
+      "adobe-podcast"
+    ],
+    "bestFor": [
+      "podcasting"
+    ],
+    "workflow": "create",
+    "rating": 4.2,
+    "reviewCount": 1187,
+    "reviews": [
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-02-18",
+        "useCase": "podcasting"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Good when it works, occasionally I have to retry.",
+        "date": "2026-03-22",
+        "useCase": "podcasting"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 hours/month transcription",
+      "starting_price": "$14/mo",
+      "most_popular_plan": "$24/mo",
+      "annual_discount": "50%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$14",
+        "power_user": "$30"
+      }
+    },
+    "weeklyViews": 3921,
+    "savedCount": 213,
+    "trendingScore": 62,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Recording, editing, AI cleanup, hosting, and RSS distribution in one platform",
+      "Multi-track remote recording with each guest at studio quality",
+      "Strong free tier with 3 hours of monthly transcription"
+    ],
+    "cons": [
+      "Editor less powerful than Descript for transcript-based work",
+      "AI voice quality below ElevenLabs",
+      "Pro plan ($14/mo) caps storage tier"
+    ],
+    "verdict": "Best for new podcasters who want one tool for the entire podcast lifecycle.",
+    "notGoodFor": "Skip if you already use Descript and a separate host \u2014 Podcastle's editor isn't the strongest."
+  },
+  {
+    "id": "adobe-podcast",
+    "name": "Adobe Podcast",
+    "description": "Free AI audio enhancement that removes background noise and reverb, plus mic check and recording tools.",
+    "category": "Audio & Music",
+    "tags": [
+      "free",
+      "audio cleanup",
+      "browser app"
+    ],
+    "pricing": "Free",
+    "url": "https://podcast.adobe.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "podcastle",
+      "elevenlabs",
+      "otter",
+      "fireflies",
+      "cleanvoice"
+    ],
+    "bestFor": [
+      "podcasting"
+    ],
+    "workflow": "edit",
+    "rating": 4.2,
+    "reviewCount": 213,
+    "reviews": [
+      {
+        "author": "Sofia G.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Adobe Podcast and haven't looked back.",
+        "date": "2026-04-10",
+        "useCase": "podcasting"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-04-10",
+        "useCase": "podcasting"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Unlimited free",
+      "starting_price": null,
+      "most_popular_plan": null,
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "unlimited",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0",
+        "power_user": "$0"
+      }
+    },
+    "weeklyViews": 3445,
+    "savedCount": 38,
+    "trendingScore": 61,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Best-in-class AI audio enhancement \u2014 turns laptop mic recordings into studio-grade",
+      "Completely free with no signup limits as of 2026",
+      "Mic check tool diagnoses your recording setup before you start"
+    ],
+    "cons": [
+      "Limited editing \u2014 designed for cleanup, not full production",
+      "Enhance 4-minute file limit (chain multiple files for longer recordings)",
+      "No mobile app"
+    ],
+    "verdict": "Best for podcasters and content creators who need to fix bad audio after recording.",
+    "notGoodFor": "Skip if you need a full editing suite \u2014 Descript or Audition is the right tool."
+  },
+  {
+    "id": "soundraw",
+    "name": "Soundraw",
+    "description": "AI music generator that creates royalty-free instrumental tracks customized to your length and mood.",
+    "category": "Audio & Music",
+    "tags": [
+      "royalty-free",
+      "instrumentals",
+      "video creators"
+    ],
+    "pricing": "Paid",
+    "url": "https://soundraw.io",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "runway",
+      "elevenlabs",
+      "suno",
+      "udio",
+      "kapwing"
+    ],
+    "bestFor": [
+      "music production",
+      "video editing"
+    ],
+    "workflow": "create",
+    "rating": 4.6,
+    "reviewCount": 1046,
+    "reviews": [
+      {
+        "author": "Lena O.",
+        "rating": 5,
+        "text": "Switched from a clunkier alternative to Soundraw and haven't looked back.",
+        "date": "2026-02-18",
+        "useCase": "music production"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-02-18",
+        "useCase": "music production"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$16.99/mo",
+      "most_popular_plan": "$16.99/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$17",
+        "regular_user": "$17",
+        "power_user": "$25"
+      }
+    },
+    "weeklyViews": 4448,
+    "savedCount": 188,
+    "trendingScore": 63,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Royalty-free music with full commercial rights even on personal plan",
+      "Unlimited downloads on $16.99/mo plan",
+      "Customize song length, mood, and instruments before generating"
+    ],
+    "cons": [
+      "Instrumental only \u2014 no vocals like Suno offers",
+      "Music feels formulaic compared to Suno or Udio",
+      "No free tier \u2014 minimum $16.99/mo to download"
+    ],
+    "verdict": "Best for video creators and podcasters who need predictable royalty-free background music.",
+    "notGoodFor": "Skip if you want vocal songs \u2014 Suno and Udio handle that, Soundraw doesn't."
+  },
+  {
+    "id": "boomy",
+    "name": "Boomy",
+    "description": "Instant AI music creation with 30-second song generation, designed for non-musicians and TikTok creators.",
+    "category": "Audio & Music",
+    "tags": [
+      "free tier",
+      "instant",
+      "tiktok"
+    ],
+    "pricing": "Freemium",
+    "url": "https://boomy.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "suno",
+      "udio",
+      "elevenlabs",
+      "soundraw",
+      "descript"
+    ],
+    "bestFor": [
+      "music production",
+      "social media"
+    ],
+    "workflow": "create",
+    "rating": 4.1,
+    "reviewCount": 1656,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-01-30",
+        "useCase": "music production"
+      },
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Boomy works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-18",
+        "useCase": "music production"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 saved songs",
+      "starting_price": "$9.99/mo",
+      "most_popular_plan": "$29.99/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$30"
+      }
+    },
+    "weeklyViews": 555,
+    "savedCount": 298,
+    "trendingScore": 62,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Generates a full song in 30 seconds \u2014 fastest in its class",
+      "Generous free tier with up to 5 saved songs",
+      "Direct release to Spotify, Apple Music, and TikTok in one click"
+    ],
+    "cons": [
+      "Quality and originality below Suno and Udio",
+      "Customization limited compared to Soundraw or Udio",
+      "Pro plan needed for commercial release royalties"
+    ],
+    "verdict": "Best for TikTokers and beginners who want a quick music demo with zero learning curve.",
+    "notGoodFor": "Skip if music quality matters \u2014 Suno and Udio produce more polished tracks."
+  },
+  {
+    "id": "cleanvoice",
+    "name": "Cleanvoice",
+    "description": "AI podcast editing tool that removes filler words, mouth sounds, stutters, and dead air automatically.",
+    "category": "Audio & Music",
+    "tags": [
+      "podcast editing",
+      "automation"
+    ],
+    "pricing": "Paid",
+    "url": "https://cleanvoice.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "descript",
+      "podcastle",
+      "adobe-podcast",
+      "elevenlabs",
+      "otter",
+      "fireflies"
+    ],
+    "bestFor": [
+      "podcasting"
+    ],
+    "workflow": "edit",
+    "rating": 4.1,
+    "reviewCount": 1053,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Decent value for the price. The UI could be a bit faster.",
+        "date": "2026-02-18",
+        "useCase": "podcasting"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-04-10",
+        "useCase": "podcasting"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$9/mo",
+      "most_popular_plan": "$26/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "30 min trial",
+      "estimated_monthly_cost": {
+        "light_user": "$9",
+        "regular_user": "$26",
+        "power_user": "$80"
+      }
+    },
+    "weeklyViews": 2091,
+    "savedCount": 189,
+    "trendingScore": 65,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Removes ums, ahs, mouth clicks, and stutters with one click",
+      "Multi-track support keeps individual speakers clean",
+      "Pay-per-use pricing \u2014 no monthly subscription required"
+    ],
+    "cons": [
+      "No free tier \u2014 $9 minimum monthly or per-hour pricing",
+      "Less editing power than Descript or Podcastle",
+      "Editor focuses on automation \u2014 manual fine-tuning is limited"
+    ],
+    "verdict": "Best for podcasters who hate editing and just want filler words gone fast.",
+    "notGoodFor": "Skip if you want full transcript-based editing \u2014 Descript does cleanup AND editing in one."
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine",
+    "description": "AI code completion focused on enterprise privacy with self-hosting and custom model training.",
+    "category": "Coding",
+    "tags": [
+      "privacy",
+      "enterprise",
+      "self-hostable"
+    ],
+    "pricing": "Freemium",
+    "url": "https://tabnine.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "github-copilot",
+      "cursor",
+      "codeium",
+      "windsurf",
+      "pieces"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.4,
+    "reviewCount": 1614,
+    "reviews": [
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Tabnine and haven't looked back.",
+        "date": "2026-03-22",
+        "useCase": "coding"
+      },
+      {
+        "author": "Sofia G.",
+        "rating": 4,
+        "text": "Tabnine is doing exactly what I needed without the bloat.",
+        "date": "2026-01-30",
+        "useCase": "coding"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "90 days then limited",
+      "starting_price": "$12/user/mo",
+      "most_popular_plan": "$12/user/mo",
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "90 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$12",
+        "power_user": "$25"
+      }
+    },
+    "weeklyViews": 522,
+    "savedCount": 290,
+    "trendingScore": 39,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Self-hostable for enterprises with strict privacy requirements",
+      "Trains custom models on your private code without leaving your network",
+      "Wide IDE support \u2014 VS Code, JetBrains, Vim, Eclipse, Visual Studio"
+    ],
+    "cons": [
+      "Suggestion quality below GitHub Copilot on most languages",
+      "Free tier limited to 90 days, then watermarked basic completions",
+      "Pricing complex \u2014 Pro is $12/user/mo, Enterprise much higher"
+    ],
+    "verdict": "Best for enterprise teams that can't send code to OpenAI or GitHub \u2014 privacy-first AI coding.",
+    "notGoodFor": "Skip if you're a solo developer \u2014 Copilot or Codeium gives better quality at lower cost."
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "description": "AI-first code editor from Codeium with agentic flow that anticipates your next move.",
+    "category": "Coding",
+    "tags": [
+      "agentic",
+      "ide",
+      "free tier"
+    ],
+    "pricing": "Freemium",
+    "url": "https://codeium.com/windsurf",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "github-copilot",
+      "cursor",
+      "codeium",
+      "tabnine",
+      "claude",
+      "chatgpt",
+      "vercel"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 717,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Windsurf is doing exactly what I needed without the bloat.",
+        "date": "2026-01-30",
+        "useCase": "coding"
+      },
+      {
+        "author": "Aisha R.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Windsurf and haven't looked back.",
+        "date": "2026-04-10",
+        "useCase": "coding"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 Cascade flows/month",
+      "starting_price": "$15/mo",
+      "most_popular_plan": "$15/mo",
+      "annual_discount": "33%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$60"
+      }
+    },
+    "weeklyViews": 189,
+    "savedCount": 129,
+    "trendingScore": 83,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Cascade agent edits multiple files autonomously based on goals",
+      "Generous free tier \u2014 5 prompt credits per month plus unlimited basic completions",
+      "Forked from VS Code so all your extensions work"
+    ],
+    "cons": [
+      "Newer than Cursor \u2014 fewer power-user features and integrations",
+      "Pro tier ($15/mo) needed for unlimited Cascade flows",
+      "Smaller community than Cursor \u2014 fewer tutorials available"
+    ],
+    "verdict": "Best for developers who want Cursor's experience at a lower price point with agentic flow.",
+    "notGoodFor": "Skip if you already pay for Cursor \u2014 feature parity isn't quite there yet."
+  },
+  {
+    "id": "pieces",
+    "name": "Pieces",
+    "description": "Long-term memory for developers \u2014 captures snippets, links, and context across IDE, browser, and chat.",
+    "category": "Coding",
+    "tags": [
+      "snippets",
+      "memory",
+      "free tier"
+    ],
+    "pricing": "Freemium",
+    "url": "https://pieces.app",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "github-copilot",
+      "cursor",
+      "tabnine",
+      "windsurf",
+      "codeium"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "automate",
+    "rating": 4.5,
+    "reviewCount": 505,
+    "reviews": [
+      {
+        "author": "Maria L.",
+        "rating": 5,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-03-22",
+        "useCase": "coding"
+      },
+      {
+        "author": "Sofia G.",
+        "rating": 4,
+        "text": "Surprised by how much Pieces can do. Saves me real time every week.",
+        "date": "2026-01-30",
+        "useCase": "coding"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "On-device free",
+      "starting_price": "$8/mo",
+      "most_popular_plan": "$8/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$8",
+        "power_user": "$20"
+      }
+    },
+    "weeklyViews": 2977,
+    "savedCount": 90,
+    "trendingScore": 84,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Captures context across IDE, browser, Slack, and chat into a searchable memory",
+      "On-device AI option keeps everything private",
+      "Strong VS Code, JetBrains, and browser extensions"
+    ],
+    "cons": [
+      "Adds yet another tool to your dev workflow",
+      "Memory feature shines only after weeks of usage",
+      "Pro plan ($8/mo) needed for cloud sync"
+    ],
+    "verdict": "Best for senior devs who context-switch a lot and need a personal memory layer.",
+    "notGoodFor": "Skip if you're solo on a single project \u2014 Pieces' value comes from cross-context memory."
+  },
+  {
+    "id": "sweep",
+    "name": "Sweep AI",
+    "description": "AI code reviewer that opens GitHub PRs to fix bugs, write tests, and address tickets automatically.",
+    "category": "Coding",
+    "tags": [
+      "github",
+      "automation",
+      "code review"
+    ],
+    "pricing": "Freemium",
+    "url": "https://sweep.dev",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "github-copilot",
+      "cursor",
+      "claude",
+      "chatgpt",
+      "vercel"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "automate",
+    "rating": 4.5,
+    "reviewCount": 466,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 5,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-03-22",
+        "useCase": "coding"
+      },
+      {
+        "author": "Priya S.",
+        "rating": 4,
+        "text": "Sweep AI is doing exactly what I needed without the bloat.",
+        "date": "2026-02-18",
+        "useCase": "coding"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 PRs/month",
+      "starting_price": "$120/mo",
+      "most_popular_plan": "$120/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$120",
+        "power_user": "$480"
+      }
+    },
+    "weeklyViews": 3351,
+    "savedCount": 83,
+    "trendingScore": 62,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Opens real PRs based on issues you file \u2014 autonomous bug fixing",
+      "Reads your repo and follows existing patterns and tests",
+      "Generous free tier with 5 PRs per month"
+    ],
+    "cons": [
+      "Quality of generated PRs varies \u2014 needs review every time",
+      "Best on Python and TypeScript; weaker on Rust, Go, mobile",
+      "Pro plan ($120/mo) is steep for individual devs"
+    ],
+    "verdict": "Best for engineering teams who want AI to triage backlog issues into draft PRs.",
+    "notGoodFor": "Skip if you're a solo dev \u2014 review overhead negates time saved."
+  },
+  {
+    "id": "cody",
+    "name": "Cody",
+    "description": "AI coding assistant from Sourcegraph that understands your entire codebase via deep code search.",
+    "category": "Coding",
+    "tags": [
+      "enterprise",
+      "code search",
+      "free tier"
+    ],
+    "pricing": "Freemium",
+    "url": "https://sourcegraph.com/cody",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "github-copilot",
+      "cursor",
+      "claude",
+      "chatgpt",
+      "tabnine",
+      "sweep"
+    ],
+    "bestFor": [
+      "coding"
+    ],
+    "workflow": "create",
+    "rating": 4.5,
+    "reviewCount": 199,
+    "reviews": [
+      {
+        "author": "Priya S.",
+        "rating": 5,
+        "text": "Surprised by how much Cody can do. Saves me real time every week.",
+        "date": "2026-01-30",
+        "useCase": "coding"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Local context only",
+      "starting_price": "$9/user/mo",
+      "most_popular_plan": "$19/user/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$9",
+        "power_user": "$59"
+      }
+    },
+    "weeklyViews": 2168,
+    "savedCount": 35,
+    "trendingScore": 73,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Indexes your full codebase for context-aware suggestions across millions of LOC",
+      "Best for monorepos and large enterprise codebases",
+      "Choice of models \u2014 Claude, GPT, or your own self-hosted"
+    ],
+    "cons": [
+      "Free tier ($0) limited to local context only \u2014 no monorepo benefits",
+      "Pro plan ($9/user/mo) needed to unlock cross-repo context",
+      "Enterprise setup is complex \u2014 requires Sourcegraph deployment"
+    ],
+    "verdict": "Best for engineering teams with large codebases that need AI grounded in their actual code.",
+    "notGoodFor": "Skip if you work on small codebases \u2014 Copilot or Cursor is simpler and just as effective."
+  },
+  {
+    "id": "mem-ai",
+    "name": "Mem AI",
+    "description": "AI-native note-taking app with semantic search, auto-organization, and chat across your notes.",
+    "category": "Productivity",
+    "tags": [
+      "ai-native",
+      "notes",
+      "free tier"
+    ],
+    "pricing": "Freemium",
+    "url": "https://mem.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "notion",
+      "notion-ai",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "grammarly"
+    ],
+    "bestFor": [
+      "writing",
+      "research"
+    ],
+    "workflow": "create",
+    "rating": 4.1,
+    "reviewCount": 1501,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Mem AI works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-01-30",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited features",
+      "starting_price": "$14.99/mo",
+      "most_popular_plan": "$14.99/mo",
+      "annual_discount": "33%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15",
+        "power_user": "$30"
+      }
+    },
+    "weeklyViews": 414,
+    "savedCount": 270,
+    "trendingScore": 45,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "AI-native from the ground up \u2014 semantic search across all your notes",
+      "Auto-tagging and connection suggestions reduce manual organization",
+      "Chat interface lets you ask 'What did I capture about X?' naturally"
+    ],
+    "cons": [
+      "Less flexible than Notion for databases and project pages",
+      "Pro plan ($14.99/mo) feels expensive for a notes app",
+      "Smaller ecosystem than Notion \u2014 fewer templates and integrations"
+    ],
+    "verdict": "Best for knowledge workers who hate manual note organization and want AI to do it.",
+    "notGoodFor": "Skip if you need databases, kanban, or wiki structures \u2014 Notion does those better."
+  },
+  {
+    "id": "taskade",
+    "name": "Taskade",
+    "description": "AI project management with chat, video, and task workflows in one collaborative workspace.",
+    "category": "Productivity",
+    "tags": [
+      "free tier",
+      "project management",
+      "ai agents"
+    ],
+    "pricing": "Freemium",
+    "url": "https://taskade.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "notion",
+      "notion-ai",
+      "reclaim",
+      "motion",
+      "chatgpt",
+      "claude"
+    ],
+    "bestFor": [
+      "writing",
+      "research"
+    ],
+    "workflow": "automate",
+    "rating": 4.5,
+    "reviewCount": 741,
+    "reviews": [
+      {
+        "author": "Sofia G.",
+        "rating": 5,
+        "text": "Taskade is doing exactly what I needed without the bloat.",
+        "date": "2026-02-18",
+        "useCase": "writing"
+      },
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-03-22",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Unlimited basics",
+      "starting_price": "$8/user/mo",
+      "most_popular_plan": "$16/user/mo",
+      "annual_discount": "33%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$8",
+        "power_user": "$20"
+      }
+    },
+    "weeklyViews": 1401,
+    "savedCount": 133,
+    "trendingScore": 36,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "AI agents automate task creation, scheduling, and follow-ups",
+      "Combines tasks, chat, video calls, and docs in one workspace",
+      "Generous free tier with unlimited workspaces and AI assistance"
+    ],
+    "cons": [
+      "Less powerful than Asana or Linear for serious project management",
+      "Pro plan ($8/user/mo) is competitive but team features are basic",
+      "AI agents quality below dedicated tools like Motion or Reclaim"
+    ],
+    "verdict": "Best for small teams and freelancers who want lightweight PM with AI assistance.",
+    "notGoodFor": "Skip if you manage complex engineering projects \u2014 Linear or Asana is the right tool."
+  },
+  {
+    "id": "magical",
+    "name": "Magical",
+    "description": "AI text expansion and automation tool \u2014 type a shortcut, get a templated response with autofill from any data source.",
+    "category": "Productivity",
+    "tags": [
+      "free",
+      "text expansion",
+      "automation"
+    ],
+    "pricing": "Freemium",
+    "url": "https://getmagical.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "chatgpt",
+      "notion",
+      "notion-ai",
+      "grammarly",
+      "superhuman"
+    ],
+    "bestFor": [
+      "writing"
+    ],
+    "workflow": "automate",
+    "rating": 4.5,
+    "reviewCount": 656,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 5,
+        "text": "Surprised by how much Magical can do. Saves me real time every week.",
+        "date": "2026-02-18",
+        "useCase": "writing"
+      },
+      {
+        "author": "Riley M.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-04-10",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Unlimited individual",
+      "starting_price": "$10/user/mo",
+      "most_popular_plan": "$10/user/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$10",
+        "power_user": "$10"
+      }
+    },
+    "weeklyViews": 3246,
+    "savedCount": 118,
+    "trendingScore": 48,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Completely free for individual use",
+      "Autofills from CRM, spreadsheets, and clipboard automatically",
+      "Cross-app shortcuts work in Gmail, LinkedIn, ATS, and CRM tools"
+    ],
+    "cons": [
+      "Less customizable than TextExpander or Espanso",
+      "Limited to text and form filling \u2014 no broader automation",
+      "Team plan ($10/user/mo) needed for shared snippets"
+    ],
+    "verdict": "Best for sales reps, recruiters, and customer support agents who write the same email 50 times a day.",
+    "notGoodFor": "Skip if you need broader automation \u2014 Zapier or Make is more flexible."
+  },
+  {
+    "id": "superhuman",
+    "name": "Superhuman",
+    "description": "AI-powered email client built for speed with keyboard shortcuts, AI compose, and inbox triage.",
+    "category": "Productivity",
+    "tags": [
+      "email",
+      "keyboard-driven",
+      "premium"
+    ],
+    "pricing": "Paid",
+    "url": "https://superhuman.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "chatgpt",
+      "claude",
+      "notion",
+      "notion-ai",
+      "grammarly",
+      "magical"
+    ],
+    "bestFor": [
+      "writing"
+    ],
+    "workflow": "automate",
+    "rating": 4.3,
+    "reviewCount": 1454,
+    "reviews": [
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Superhuman works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-04-10",
+        "useCase": "writing"
+      },
+      {
+        "author": "Lena O.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Superhuman and haven't looked back.",
+        "date": "2026-01-30",
+        "useCase": "writing"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$30/mo",
+      "most_popular_plan": "$30/mo",
+      "annual_discount": "16%",
+      "has_student_discount": false,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$30",
+        "regular_user": "$30",
+        "power_user": "$30"
+      }
+    },
+    "weeklyViews": 2641,
+    "savedCount": 261,
+    "trendingScore": 41,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Fastest email client \u2014 keyboard shortcuts for everything, native iOS app",
+      "AI compose, AI triage, and AI summary save real time on long threads",
+      "Snippets, schedules, and follow-up reminders built in"
+    ],
+    "cons": [
+      "$30/month is steep for an email client",
+      "No free tier \u2014 only a 30-day trial",
+      "Lock-in: leaving means re-learning Gmail or Outlook"
+    ],
+    "verdict": "Best for execs and salespeople processing 100+ emails per day who value speed over price.",
+    "notGoodFor": "Skip if your inbox is light \u2014 Gmail with keyboard shortcuts is free and good enough."
+  },
+  {
+    "id": "semantic-scholar",
+    "name": "Semantic Scholar",
+    "description": "Free academic search engine for 200M+ papers with AI summaries and citation graphs.",
+    "category": "Research",
+    "tags": [
+      "free",
+      "academic",
+      "papers"
+    ],
+    "pricing": "Free",
+    "url": "https://semanticscholar.org",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "perplexity",
+      "elicit",
+      "consensus",
+      "claude",
+      "chatgpt",
+      "notion",
+      "scite"
+    ],
+    "bestFor": [
+      "research",
+      "book writing"
+    ],
+    "workflow": "analyze",
+    "rating": 4.1,
+    "reviewCount": 392,
+    "reviews": [
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Semantic Scholar and haven't looked back.",
+        "date": "2026-04-10",
+        "useCase": "research"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Surprised by how much Semantic Scholar can do. Saves me real time every week.",
+        "date": "2026-01-30",
+        "useCase": "research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Unlimited free",
+      "starting_price": null,
+      "most_popular_plan": null,
+      "annual_discount": "0%",
+      "has_student_discount": false,
+      "free_trial": "unlimited",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0",
+        "power_user": "$0"
+      }
+    },
+    "weeklyViews": 2671,
+    "savedCount": 70,
+    "trendingScore": 49,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Completely free \u2014 no subscription, no signup required for basic use",
+      "200M+ papers with AI-generated TLDR summaries on most",
+      "Strong citation graph showing influential and influenced papers"
+    ],
+    "cons": [
+      "Less polished UX than Elicit or Consensus",
+      "AI summary quality varies \u2014 sometimes misses key findings",
+      "API rate limits hit fast for power users"
+    ],
+    "verdict": "Best for grad students and researchers who want a free, comprehensive paper search.",
+    "notGoodFor": "Skip if you need structured paper extraction \u2014 Elicit pulls method/sample/results better."
+  },
+  {
+    "id": "scite",
+    "name": "Scite",
+    "description": "Smart citations that show whether a paper supports, contrasts, or merely mentions a claim.",
+    "category": "Research",
+    "tags": [
+      "citations",
+      "academic",
+      "free tier"
+    ],
+    "pricing": "Freemium",
+    "url": "https://scite.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "perplexity",
+      "elicit",
+      "consensus",
+      "semantic-scholar",
+      "claude",
+      "notion"
+    ],
+    "bestFor": [
+      "research",
+      "book writing"
+    ],
+    "workflow": "analyze",
+    "rating": 4.6,
+    "reviewCount": 1535,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 5,
+        "text": "Surprised by how much Scite can do. Saves me real time every week.",
+        "date": "2026-03-22",
+        "useCase": "research"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Switched from a clunkier alternative to Scite and haven't looked back.",
+        "date": "2026-04-10",
+        "useCase": "research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited citation context",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$20/mo",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$50"
+      }
+    },
+    "weeklyViews": 3200,
+    "savedCount": 276,
+    "trendingScore": 28,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Smart citations \u2014 see if a paper SUPPORTS, CONTRASTS, or just mentions a claim",
+      "1.2B+ classified citations across 33M papers",
+      "Strong for assessing whether claims are well-supported in the literature"
+    ],
+    "cons": [
+      "Pro plan ($20/mo) needed for full feature access including dashboards",
+      "Coverage skewed toward biomedical and STEM \u2014 humanities sparser",
+      "Free tier shows limited citation context"
+    ],
+    "verdict": "Best for academic researchers and journalists evaluating the strength of cited claims.",
+    "notGoodFor": "Skip if you just need basic paper search \u2014 Semantic Scholar is free and broader."
+  },
+  {
+    "id": "connected-papers",
+    "name": "Connected Papers",
+    "description": "Visual graph of research papers showing how works connect \u2014 find prior work, derivative work, and related themes.",
+    "category": "Research",
+    "tags": [
+      "free tier",
+      "academic",
+      "visualization"
+    ],
+    "pricing": "Freemium",
+    "url": "https://connectedpapers.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "perplexity",
+      "elicit",
+      "consensus",
+      "semantic-scholar",
+      "scite",
+      "notion"
+    ],
+    "bestFor": [
+      "research",
+      "book writing"
+    ],
+    "workflow": "analyze",
+    "rating": 4.0,
+    "reviewCount": 1007,
+    "reviews": [
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Connected Papers works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-18",
+        "useCase": "research"
+      },
+      {
+        "author": "Jin H.",
+        "rating": 4,
+        "text": "Surprised by how much Connected Papers can do. Saves me real time every week.",
+        "date": "2026-04-10",
+        "useCase": "research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 graphs/month",
+      "starting_price": "$6/mo",
+      "most_popular_plan": "$6/mo",
+      "annual_discount": "33%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$6",
+        "power_user": "$10"
+      }
+    },
+    "weeklyViews": 4055,
+    "savedCount": 181,
+    "trendingScore": 75,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Visual citation graph \u2014 see how papers connect at a glance",
+      "Free for 5 graphs per month \u2014 enough for occasional research",
+      "Excellent for literature reviews and finding overlooked related work"
+    ],
+    "cons": [
+      "Pro plan ($6/mo) needed for unlimited graphs and prior/derivative work",
+      "Graph layout can get cluttered with 100+ nodes",
+      "No paper full-text \u2014 links out to publishers"
+    ],
+    "verdict": "Best for grad students mapping a literature review who want to spot adjacent work.",
+    "notGoodFor": "Skip if you just need search \u2014 Semantic Scholar is faster for finding specific papers."
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "description": "ChatGPT-style data analyst that runs on your CSVs, spreadsheets, and databases \u2014 chat with your data.",
+    "category": "Data & Analytics",
+    "tags": [
+      "data analysis",
+      "free tier",
+      "no-code"
+    ],
+    "pricing": "Freemium",
+    "url": "https://julius.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "chatgpt",
+      "claude",
+      "hex",
+      "notion",
+      "notion-ai"
+    ],
+    "bestFor": [
+      "research",
+      "coding"
+    ],
+    "workflow": "analyze",
+    "rating": 4.1,
+    "reviewCount": 855,
+    "reviews": [
+      {
+        "author": "Sam K.",
+        "rating": 4,
+        "text": "Julius AI is doing exactly what I needed without the bloat.",
+        "date": "2026-03-22",
+        "useCase": "research"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Julius AI works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-04-10",
+        "useCase": "research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "15 messages/day",
+      "starting_price": "$20/mo",
+      "most_popular_plan": "$45/mo",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$80"
+      }
+    },
+    "weeklyViews": 615,
+    "savedCount": 153,
+    "trendingScore": 81,
+    "trendingDirection": "up",
+    "isNew": true,
+    "pros": [
+      "Upload CSV or Excel and chat with it \u2014 no SQL or Python needed",
+      "Generates charts, summaries, and statistical analysis on demand",
+      "Strong free tier \u2014 15 messages per day for analysis"
+    ],
+    "cons": [
+      "Less powerful than Hex or Jupyter for complex data work",
+      "Pro plan ($20/mo) needed for unlimited messages and larger files",
+      "Sometimes hallucinates statistics \u2014 verify outputs on important decisions"
+    ],
+    "verdict": "Best for non-technical users and analysts who want to chat with their data quickly.",
+    "notGoodFor": "Skip if you do serious data work \u2014 Jupyter or Hex offers more control."
+  },
+  {
+    "id": "obviously-ai",
+    "name": "Obviously AI",
+    "description": "No-code machine learning \u2014 upload data, predict outcomes, and deploy models without writing code.",
+    "category": "Data & Analytics",
+    "tags": [
+      "no-code",
+      "ml",
+      "predictions"
+    ],
+    "pricing": "Paid",
+    "url": "https://obviously.ai",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "hex",
+      "huggingface",
+      "replicate",
+      "pinecone",
+      "akkio",
+      "polymer"
+    ],
+    "bestFor": [
+      "coding",
+      "research"
+    ],
+    "workflow": "analyze",
+    "rating": 4.0,
+    "reviewCount": 934,
+    "reviews": [
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Decent value for the price. The UI could be a bit faster.",
+        "date": "2026-02-18",
+        "useCase": "coding"
+      },
+      {
+        "author": "Tariq B.",
+        "rating": 4,
+        "text": "Solid tool. Has a few rough edges but the core flow is great.",
+        "date": "2026-03-22",
+        "useCase": "coding"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$49/mo",
+      "most_popular_plan": "$49/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$49",
+        "regular_user": "$49",
+        "power_user": "$399"
+      }
+    },
+    "weeklyViews": 4494,
+    "savedCount": 168,
+    "trendingScore": 25,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Train ML models in minutes from CSVs \u2014 zero code required",
+      "Strong on tabular prediction tasks like churn, conversion, and forecasting",
+      "Auto-deploys models as APIs you can integrate"
+    ],
+    "cons": [
+      "Starting tier $49/mo is steep for small experiments",
+      "Tabular only \u2014 no image, text, or time-series specialty models",
+      "Less control than building with scikit-learn or AutoML services"
+    ],
+    "verdict": "Best for ops and BI teams who need predictive models without an ML engineer.",
+    "notGoodFor": "Skip if you have a data scientist on staff \u2014 they'll get more from cloud AutoML services."
+  },
+  {
+    "id": "akkio",
+    "name": "Akkio",
+    "description": "No-code ML platform for marketing and ops teams \u2014 predictive lead scoring, churn, and forecasting.",
+    "category": "Data & Analytics",
+    "tags": [
+      "no-code",
+      "marketing",
+      "ml"
+    ],
+    "pricing": "Paid",
+    "url": "https://akkio.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "hex",
+      "huggingface",
+      "obviously-ai",
+      "polymer",
+      "julius-ai"
+    ],
+    "bestFor": [
+      "research",
+      "coding"
+    ],
+    "workflow": "analyze",
+    "rating": 4.3,
+    "reviewCount": 1368,
+    "reviews": [
+      {
+        "author": "Ethan C.",
+        "rating": 4,
+        "text": "Akkio is doing exactly what I needed without the bloat.",
+        "date": "2026-02-18",
+        "useCase": "research"
+      },
+      {
+        "author": "Marco T.",
+        "rating": 4,
+        "text": "Decent value for the price. The UI could be a bit faster.",
+        "date": "2026-02-18",
+        "useCase": "research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$49/mo",
+      "most_popular_plan": "$199/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$49",
+        "regular_user": "$199",
+        "power_user": "$999"
+      }
+    },
+    "weeklyViews": 1065,
+    "savedCount": 246,
+    "trendingScore": 72,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Designed for marketers and RevOps \u2014 predictive lead scoring and churn out of the box",
+      "Native integrations with Salesforce, HubSpot, and Snowflake",
+      "Pretty visualizations and reports for non-technical stakeholders"
+    ],
+    "cons": [
+      "$49/month entry tier is pricey for small teams",
+      "Less flexible than DataRobot or H2O for custom ML",
+      "Free trial only 14 days \u2014 not enough to evaluate ROI"
+    ],
+    "verdict": "Best for marketing and revenue teams that need predictive analytics without hiring data scientists.",
+    "notGoodFor": "Skip if you have a data team \u2014 they'll prefer Hex, dbt, or notebooks."
+  },
+  {
+    "id": "polymer",
+    "name": "Polymer",
+    "description": "Auto-builds dashboards from spreadsheets and databases \u2014 no SQL or BI skill required.",
+    "category": "Data & Analytics",
+    "tags": [
+      "free tier",
+      "dashboards",
+      "no-code"
+    ],
+    "pricing": "Freemium",
+    "url": "https://polymersearch.com",
+    "logoUrl": null,
+    "featured": false,
+    "addedDate": "2026-05-02",
+    "compatibleWith": [
+      "hex",
+      "akkio",
+      "julius-ai",
+      "obviously-ai",
+      "huggingface"
+    ],
+    "bestFor": [
+      "research",
+      "coding"
+    ],
+    "workflow": "analyze",
+    "rating": 4.2,
+    "reviewCount": 1318,
+    "reviews": [
+      {
+        "author": "Devon P.",
+        "rating": 4,
+        "text": "Good when it works, occasionally I have to retry.",
+        "date": "2026-02-18",
+        "useCase": "research"
+      },
+      {
+        "author": "Noah W.",
+        "rating": 4,
+        "text": "Polymer works well for the basics. Hits limits on more complex tasks.",
+        "date": "2026-02-18",
+        "useCase": "research"
+      }
+    ],
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "1 board, 1,000 rows",
+      "starting_price": "$25/mo",
+      "most_popular_plan": "$25/mo",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$25",
+        "power_user": "$120"
+      }
+    },
+    "weeklyViews": 1422,
+    "savedCount": 237,
+    "trendingScore": 64,
+    "trendingDirection": "stable",
+    "isNew": true,
+    "pros": [
+      "Connect a spreadsheet, get a dashboard auto-built in seconds",
+      "Free tier with 1 board and 1,000 rows \u2014 usable for small data",
+      "AI Insights surface trends and anomalies without setup"
+    ],
+    "cons": [
+      "Less customizable than Tableau, Looker, or Hex",
+      "Pro plan ($25/mo) needed for larger row limits and team sharing",
+      "Best for simple datasets \u2014 chokes on complex multi-table joins"
+    ],
+    "verdict": "Best for ops and marketing teams who want self-serve dashboards without a BI tool.",
+    "notGoodFor": "Skip if you have data engineers \u2014 Looker or Metabase offers way more control."
   }
 ]
