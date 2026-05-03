@@ -21,7 +21,10 @@ const path = require("path");
 /* -------------------- Config -------------------- */
 
 const APPS_PATH = path.join(__dirname, "..", "data", "apps.json");
+const PENDING_PATH = path.join(__dirname, "..", "data", "pending-apps.json");
+const LAST_RUN_PATH = path.join(__dirname, "..", "data", "last-run.json");
 const SUMMARY_PATH = path.join(__dirname, "last-update-summary.txt");
+const SITE_URL = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "";
 
 const MAX_NEW_APPS = 5;
 const MODEL = "gpt-4o-mini";
@@ -89,9 +92,28 @@ function bailClean(reason) {
     return;
   }
 
-  const existingIds = new Set(apps.map((a) => a.id));
-  const existingNames = apps.map((a) => a.name);
-  log(`Catalog has ${apps.length} apps`);
+  // Pending apps already proposed but not yet approved — exclude from suggestions and
+  // from the IDs we'll consider duplicates.
+  let pending = [];
+  if (fs.existsSync(PENDING_PATH)) {
+    try {
+      const raw = fs.readFileSync(PENDING_PATH, "utf8");
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) pending = parsed;
+    } catch (err) {
+      log(`WARN: could not parse pending-apps.json (${err.message}). Treating as empty.`);
+    }
+  }
+
+  const existingIds = new Set([
+    ...apps.map((a) => a.id),
+    ...pending.map((p) => p.id),
+  ]);
+  const existingNames = [
+    ...apps.map((a) => a.name),
+    ...pending.map((p) => p.name),
+  ];
+  log(`Catalog has ${apps.length} apps; ${pending.length} pending`);
 
   const today = new Date().toISOString().slice(0, 10);
   const prompt = buildPrompt(existingNames, today);
@@ -148,16 +170,25 @@ function bailClean(reason) {
       rejected,
       note: "OpenAI suggested apps but none passed validation.",
     });
+    writeLastRun({ addedCount: 0, rejectedCount: rejected.length });
     process.exit(0);
     return;
   }
 
-  // SAFETY: append-only, never mutate existing entries.
-  const updated = [...apps, ...accepted];
-  fs.writeFileSync(APPS_PATH, JSON.stringify(updated, null, 2) + "\n", "utf8");
-  log(`Wrote ${accepted.length} new app(s) to apps.json (total now ${updated.length})`);
+  // SAFETY: append-only to pending. Nothing reaches the live catalog until the admin
+  // approves it via the /admin panel (or merges directly via PR).
+  const updatedPending = [...pending, ...accepted];
+  fs.writeFileSync(
+    PENDING_PATH,
+    JSON.stringify(updatedPending, null, 2) + "\n",
+    "utf8",
+  );
+  log(
+    `Wrote ${accepted.length} new app(s) to pending-apps.json (total pending now ${updatedPending.length})`,
+  );
 
   writeSummary({ accepted, rejected });
+  writeLastRun({ addedCount: accepted.length, rejectedCount: rejected.length });
 })().catch((err) => {
   // Catch any escaped error and exit cleanly
   log(`FATAL (caught): ${err && err.stack ? err.stack : err}`);
@@ -414,15 +445,22 @@ function writeSummary({ accepted, rejected, note }) {
     lines.push("");
   }
 
-  if (accepted.length === 0) {
-    lines.push("_No new apps were added in this run._");
-  } else {
+  if (accepted.length > 0) {
+    const reviewLine = SITE_URL
+      ? `**${accepted.length} new app${accepted.length === 1 ? "" : "s"} are waiting for your review at [${SITE_URL.replace(/\/$/, "")}/admin](${SITE_URL.replace(/\/$/, "")}/admin).**`
+      : `**${accepted.length} new app${accepted.length === 1 ? "" : "s"} are waiting for your review at \`/admin\` on the live site.**`;
+    lines.push(reviewLine);
+    lines.push("");
+    lines.push("Or review directly in this PR diff and merge to accept.");
+    lines.push("");
     for (const a of accepted) {
       lines.push(`- **${escapeMd(a.name)}** — _${escapeMd(a.category)}_ · ${escapeMd(a.pricing)}`);
       lines.push(`  ${escapeMd(a.description)}`);
       lines.push(`  [${escapeMd(a.url)}](${a.url})`);
       lines.push("");
     }
+  } else {
+    lines.push("_No new apps were added in this run._");
   }
 
   if (rejected.length > 0) {
@@ -435,6 +473,20 @@ function writeSummary({ accepted, rejected, note }) {
 
   fs.writeFileSync(SUMMARY_PATH, lines.join("\n") + "\n", "utf8");
   log(`Wrote summary → ${SUMMARY_PATH}`);
+}
+
+function writeLastRun({ addedCount, rejectedCount }) {
+  try {
+    const meta = {
+      ranAt: new Date().toISOString(),
+      addedCount: addedCount || 0,
+      rejectedCount: rejectedCount || 0,
+    };
+    fs.writeFileSync(LAST_RUN_PATH, JSON.stringify(meta, null, 2) + "\n", "utf8");
+    log(`Wrote last-run metadata → ${LAST_RUN_PATH}`);
+  } catch (err) {
+    log(`WARN: could not write last-run.json: ${err.message}`);
+  }
 }
 
 function escapeMd(s) {

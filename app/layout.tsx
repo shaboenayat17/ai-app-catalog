@@ -8,6 +8,7 @@ import { KeyboardShortcuts } from "@/components/KeyboardShortcuts";
 import { BottomNav } from "@/components/BottomNav";
 import { FAB } from "@/components/FAB";
 import { apps } from "@/lib/data";
+import { adminEnabled, readPendingCount } from "@/lib/admin";
 
 export const metadata: Metadata = {
   title: "AI App Catalog — Find your perfect AI stack",
@@ -21,16 +22,19 @@ export const viewport: Viewport = {
   themeColor: "#0a0e1a",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const showAdmin = adminEnabled();
+  const pendingCount = showAdmin ? await readPendingCount() : 0;
+
   return (
     <html lang="en" className="dark">
       <body className="min-h-screen antialiased pb-[calc(56px+env(safe-area-inset-bottom))] md:pb-0">
         <CompareProvider>
-          <Header />
+          <Header adminEnabled={showAdmin} pendingCount={pendingCount} />
           <main>{children}</main>
           <Footer />
           <CompareDock apps={apps} />

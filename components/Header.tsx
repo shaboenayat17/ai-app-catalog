@@ -7,8 +7,13 @@ import clsx from "clsx";
 const SUGGEST_URL =
   "https://github.com/your-org/ai-app-catalog/issues/new?title=Suggest%3A%20%5BApp%20Name%5D&body=%23%20App%20Name%0A%0A**Category%3A**%20%0A**URL%3A**%20%0A**Pricing%3A**%20Free%20%2F%20Freemium%20%2F%20Paid%0A**One-line%20description%3A**%20%0A**Tags%3A**%20";
 
-export function Header() {
-  const pathname = usePathname();
+interface HeaderProps {
+  adminEnabled?: boolean;
+  pendingCount?: number;
+}
+
+export function Header({ adminEnabled = false, pendingCount = 0 }: HeaderProps) {
+  const pathname = usePathname() ?? "/";
   return (
     <header className="sticky top-0 z-30 border-b border-border/60 bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
@@ -30,6 +35,21 @@ export function Header() {
           </NavLink>
           <NavLink href="/compare" active={pathname.startsWith("/compare")}>Compare</NavLink>
           <NavLink href="/news" active={pathname.startsWith("/news")}>News</NavLink>
+          {adminEnabled && (
+            <NavLink href="/admin" active={pathname.startsWith("/admin")}>
+              <span className="inline-flex items-center gap-1.5">
+                Admin
+                {pendingCount > 0 && (
+                  <span
+                    aria-label={`${pendingCount} pending`}
+                    className="inline-flex min-w-[18px] items-center justify-center rounded-full bg-rose-500 px-1.5 text-[10px] font-bold leading-none text-white"
+                  >
+                    {pendingCount}
+                  </span>
+                )}
+              </span>
+            </NavLink>
+          )}
           <a
             href={SUGGEST_URL}
             target="_blank"

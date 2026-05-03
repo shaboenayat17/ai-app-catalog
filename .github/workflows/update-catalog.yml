@@ -26,17 +26,18 @@ jobs:
       - name: Run catalog update
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SITE_URL: ${{ vars.SITE_URL }}
         run: node scripts/update-catalog.js
 
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet -- data/apps.json; then
+          if git diff --quiet -- data/pending-apps.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No changes to data/apps.json"
+            echo "No changes to data/pending-apps.json"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "data/apps.json changed"
+            echo "data/pending-apps.json changed"
           fi
 
       - name: Load summary into env
@@ -79,5 +80,6 @@ jobs:
           branch: auto-update-${{ github.run_id }}
           delete-branch: true
           add-paths: |
-            data/apps.json
+            data/pending-apps.json
+            data/last-run.json
             scripts/last-update-summary.txt
