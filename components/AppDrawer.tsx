@@ -15,6 +15,7 @@ import {
   type UseCase,
 } from "@/lib/usecases";
 import { StarRating } from "./StarRating";
+import { AppLogo } from "./AppLogo";
 
 interface Props {
   app: AIApp | null;
@@ -147,16 +148,13 @@ export function AppDrawer({
 
             {/* Header */}
             <header className="flex shrink-0 items-start gap-3 border-b border-border/60 px-5 pb-4 pt-3 sm:pt-5">
-              <span
-                aria-hidden
-                className={clsx(
-                  "grid h-12 w-12 shrink-0 place-items-center rounded-lg text-2xl",
-                  meta.badge,
-                  meta.glow,
-                )}
-              >
-                {meta.emoji}
-              </span>
+              <AppLogo
+                logoUrl={shownApp.logoUrl}
+                appName={shownApp.name}
+                category={shownApp.category}
+                size="md"
+                className={meta.glow}
+              />
               <div className="min-w-0 flex-1">
                 <h2 className="truncate text-lg font-semibold leading-tight text-white">
                   {shownApp.name}

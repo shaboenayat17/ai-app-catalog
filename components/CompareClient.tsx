@@ -9,6 +9,7 @@ import {
   type AIApp,
 } from "@/lib/types";
 import { useCompare } from "@/lib/compare-context";
+import { AppLogo } from "./AppLogo";
 
 const SLOTS = 3;
 
@@ -86,7 +87,7 @@ export function CompareClient({ apps }: { apps: AIApp[] }) {
               </select>
               {app && m && (
                 <div className="mt-3 flex items-center gap-2 text-xs text-white">
-                  <span aria-hidden className="text-lg">{m.emoji}</span>
+                  <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
                   <span className="font-medium">{app.name}</span>
                 </div>
               )}
@@ -132,7 +133,7 @@ export function CompareClient({ apps }: { apps: AIApp[] }) {
                     >
                       {app ? (
                         <span className="inline-flex items-center gap-2">
-                          <span aria-hidden>{m!.emoji}</span>
+                          <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
                           {app.name}
                         </span>
                       ) : (

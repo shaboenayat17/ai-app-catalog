@@ -13,6 +13,7 @@ import {
 import { useCompare } from "@/lib/compare-context";
 import { StarRating } from "./StarRating";
 import { TrendArrow } from "./TrendingSection";
+import { AppLogo } from "./AppLogo";
 
 interface Props {
   app: AIApp;
@@ -89,16 +90,13 @@ export function AppCard({ app, apps, draggable = true, onView, isTrending = fals
 
       <div className="mb-3 flex items-start justify-between gap-3">
         <div className="flex items-center gap-3">
-          <div
-            aria-hidden
-            className={clsx(
-              "grid h-11 w-11 place-items-center rounded-lg text-xl",
-              meta.badge,
-              meta.glow,
-            )}
-          >
-            {meta.emoji}
-          </div>
+          <AppLogo
+            logoUrl={app.logoUrl}
+            appName={app.name}
+            category={app.category}
+            size="md"
+            className={meta.glow}
+          />
           <div className="min-w-0">
             <Link
               href={`/app/${app.id}`}

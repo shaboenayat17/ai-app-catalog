@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import clsx from "clsx";
-import { CATEGORY_META, type AIApp, type TrendingStack } from "@/lib/types";
+import { type AIApp, type TrendingStack } from "@/lib/types";
+import { AppLogo } from "./AppLogo";
 
 export function PopularStacksSection({
   stacks,
@@ -41,22 +41,12 @@ export function PopularStacksSection({
                 {s.apps.map((id, i) => {
                   const a = byId.get(id);
                   if (!a) return null;
-                  const m = CATEGORY_META[a.category];
                   return (
                     <span key={id} className="inline-flex items-center gap-1">
                       {i > 0 && (
                         <span aria-hidden className="text-[10px] text-muted">+</span>
                       )}
-                      <span
-                        aria-hidden
-                        title={a.name}
-                        className={clsx(
-                          "grid h-7 w-7 place-items-center rounded-md text-sm",
-                          m.badge,
-                        )}
-                      >
-                        {m.emoji}
-                      </span>
+                      <AppLogo logoUrl={a.logoUrl} appName={a.name} category={a.category} size="sm" />
                     </span>
                   );
                 })}

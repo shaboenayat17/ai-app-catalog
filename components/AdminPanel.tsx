@@ -9,6 +9,7 @@ import {
   PRICING_COLORS,
   type AIApp,
 } from "@/lib/types";
+import { AppLogo } from "./AppLogo";
 
 const ADMIN_TOKEN_KEY = "ai-catalog:admin-pwd";
 
@@ -500,15 +501,7 @@ function PendingTab({
             className="rounded-2xl border border-border bg-bg-card p-4 sm:p-5"
           >
             <div className="flex items-start gap-3">
-              <span
-                aria-hidden
-                className={clsx(
-                  "grid h-12 w-12 shrink-0 place-items-center rounded-lg text-2xl",
-                  m.badge,
-                )}
-              >
-                {m.emoji}
-              </span>
+              <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="md" />
               <div className="min-w-0 flex-1">
                 <h3 className="truncate text-base font-semibold text-white">
                   {app.name}
@@ -660,16 +653,13 @@ function ApprovedTab({ apps }: { apps: AIApp[] }) {
   return (
     <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
       {recent.map((app) => {
-        const m = CATEGORY_META[app.category];
         return (
           <li key={app.id}>
             <Link
               href={`/app/${app.id}`}
               className="press flex min-h-[60px] items-center gap-3 rounded-xl border border-border bg-bg-card p-3 text-sm text-white transition active:bg-bg-hover hover:border-accent/40"
             >
-              <span aria-hidden className={clsx("grid h-9 w-9 shrink-0 place-items-center rounded-md text-base", m.badge)}>
-                {m.emoji}
-              </span>
+              <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
               <span className="min-w-0 flex-1">
                 <span className="block truncate font-semibold">{app.name}</span>
                 <span className="block truncate text-[11px] text-muted">

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import clsx from "clsx";
 import { apps } from "@/lib/data";
-import { CATEGORY_META } from "@/lib/types";
+import { AppLogo } from "./AppLogo";
 
 export function FAB() {
   const router = useRouter();
@@ -87,7 +87,6 @@ export function FAB() {
                 </li>
               )}
               {results.map((a) => {
-                const m = CATEGORY_META[a.category];
                 return (
                   <li key={a.id}>
                     <button
@@ -98,9 +97,7 @@ export function FAB() {
                       }}
                       className="flex min-h-[56px] w-full items-center gap-3 px-4 py-3 text-left transition active:bg-bg-hover"
                     >
-                      <span aria-hidden className={clsx("grid h-9 w-9 shrink-0 place-items-center rounded-md text-lg", m.badge)}>
-                        {m.emoji}
-                      </span>
+                      <AppLogo logoUrl={a.logoUrl} appName={a.name} category={a.category} size="sm" />
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-sm font-medium text-white">{a.name}</span>
                         <span className="block truncate text-[11px] text-muted">{a.category}</span>

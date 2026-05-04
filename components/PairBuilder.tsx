@@ -3,8 +3,9 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
-import { CATEGORY_META, type AIApp } from "@/lib/types";
+import { type AIApp } from "@/lib/types";
 import { pairSlug } from "@/lib/build-comparison";
+import { AppLogo } from "./AppLogo";
 
 export function PairBuilder({ apps }: { apps: AIApp[] }) {
   const router = useRouter();
@@ -82,7 +83,6 @@ function AppPicker({
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
   const selected = apps.find((a) => a.id === value);
-  const meta = selected ? CATEGORY_META[selected.category] : null;
 
   const matches = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -110,9 +110,7 @@ function AppPicker({
           }}
           className="press flex min-h-[44px] w-full items-center gap-2 rounded-md border border-border bg-bg px-3 text-left text-sm text-white"
         >
-          <span aria-hidden className={clsx("grid h-7 w-7 shrink-0 place-items-center rounded text-base", meta!.badge)}>
-            {meta!.emoji}
-          </span>
+          <AppLogo logoUrl={selected.logoUrl} appName={selected.name} category={selected.category} size="sm" />
           <span className="min-w-0 flex-1">
             <span className="block truncate font-semibold">{selected.name}</span>
             <span className="block truncate text-[10px] text-muted">{selected.category}</span>
@@ -139,7 +137,6 @@ function AppPicker({
           className="absolute left-0 right-0 top-full z-30 mt-1 max-h-64 overflow-y-auto rounded-md border border-border bg-bg-elevated shadow-lift"
         >
           {matches.map((a) => {
-            const m = CATEGORY_META[a.category];
             return (
               <li key={a.id}>
                 <button
@@ -152,9 +149,7 @@ function AppPicker({
                   }}
                   className="flex min-h-[44px] w-full items-center gap-2 px-3 text-left text-sm text-white transition hover:bg-bg-hover"
                 >
-                  <span aria-hidden className={clsx("grid h-7 w-7 shrink-0 place-items-center rounded text-base", m.badge)}>
-                    {m.emoji}
-                  </span>
+                  <AppLogo logoUrl={a.logoUrl} appName={a.name} category={a.category} size="sm" />
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-medium">{a.name}</span>
                     <span className="block truncate text-[10px] text-muted">{a.category}</span>

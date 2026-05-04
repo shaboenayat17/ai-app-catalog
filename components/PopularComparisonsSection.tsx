@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import clsx from "clsx";
-import { CATEGORY_META, type AIApp, type Comparison } from "@/lib/types";
+import { type AIApp, type Comparison } from "@/lib/types";
+import { AppLogo } from "./AppLogo";
 
 interface Props {
   comparisons: Comparison[];
@@ -21,21 +21,15 @@ export function PopularComparisonsSection({ comparisons, apps, limit = 6 }: Prop
           const a1 = apps.find((a) => a.id === c.app1);
           const a2 = apps.find((a) => a.id === c.app2);
           if (!a1 || !a2) return null;
-          const m1 = CATEGORY_META[a1.category];
-          const m2 = CATEGORY_META[a2.category];
           return (
             <li key={c.id}>
               <Link
                 href={`/compare/${c.id}`}
                 className="press group flex min-h-[68px] items-center gap-3 rounded-xl border border-border bg-bg-card p-3 transition active:bg-bg-hover hover:border-accent/40"
               >
-                <span aria-hidden className={clsx("grid h-9 w-9 shrink-0 place-items-center rounded-md text-base", m1.badge)}>
-                  {m1.emoji}
-                </span>
+                <AppLogo logoUrl={a1.logoUrl} appName={a1.name} category={a1.category} size="sm" />
                 <span aria-hidden className="text-[10px] font-bold tracking-wider text-muted">VS</span>
-                <span aria-hidden className={clsx("grid h-9 w-9 shrink-0 place-items-center rounded-md text-base", m2.badge)}>
-                  {m2.emoji}
-                </span>
+                <AppLogo logoUrl={a2.logoUrl} appName={a2.name} category={a2.category} size="sm" />
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold text-white">
                     {c.title}

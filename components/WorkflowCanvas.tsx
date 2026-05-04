@@ -37,6 +37,7 @@ import {
 } from "@/lib/usecases";
 import { AppDrawer } from "./AppDrawer";
 import { useSavedStacks } from "@/hooks/useSavedStacks";
+import { AppLogo } from "./AppLogo";
 
 const CANVAS_ID = "workflow-canvas";
 const NODE_W = 168;
@@ -699,21 +700,22 @@ function CanvasNode({
           e.stopPropagation();
           onClick();
         }}
-        className="block w-full text-left"
+        className="flex w-full flex-col items-center text-center"
       >
-        <div className="flex items-center gap-2">
-          <span aria-hidden className={clsx("grid h-7 w-7 place-items-center rounded-md text-sm", m.badge)}>
-            {m.emoji}
-          </span>
-          <span className="text-sm font-semibold leading-tight text-white">
-            {app.name}
-          </span>
-        </div>
-        <p className="mt-1 truncate text-[10px] uppercase tracking-wider text-muted">
+        <AppLogo
+          logoUrl={app.logoUrl}
+          appName={app.name}
+          category={app.category}
+          size="md"
+        />
+        <span className="mt-1.5 line-clamp-2 text-xs font-semibold leading-tight text-white">
+          {app.name}
+        </span>
+        <span className="mt-0.5 truncate text-[10px] uppercase tracking-wider text-muted">
           {app.category}
-        </p>
+        </span>
         {minMode && badges && badges.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1">
+          <div className="mt-2 flex flex-wrap justify-center gap-1">
             {badges.map((b, i) => (
               <span
                 key={i}
@@ -805,9 +807,12 @@ function PaletteItem({
       >
         <DragIcon />
       </button>
-      <span aria-hidden className={clsx("grid h-6 w-6 place-items-center rounded text-sm", m.badge)}>
-        {m.emoji}
-      </span>
+      <AppLogo
+        logoUrl={app.logoUrl}
+        appName={app.name}
+        category={app.category}
+        size="sm"
+      />
       <button
         type="button"
         onClick={() => onAdd(app.id)}
@@ -848,7 +853,7 @@ function DragGhost({ app }: { app: AIApp }) {
   const m = CATEGORY_META[app.category];
   return (
     <div className={clsx("flex items-center gap-2 rounded-xl border bg-bg-elevated px-3 py-2 shadow-lift", m.badge)}>
-      <span aria-hidden>{m.emoji}</span>
+      <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
       <span className="text-sm font-medium text-white">{app.name}</span>
     </div>
   );

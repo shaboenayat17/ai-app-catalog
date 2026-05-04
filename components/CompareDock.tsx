@@ -4,6 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useCompare } from "@/lib/compare-context";
 import { CATEGORY_META, type AIApp } from "@/lib/types";
+import { AppLogo } from "./AppLogo";
 
 export function CompareDock({ apps }: { apps: AIApp[] }) {
   const { ids, remove, clear, max } = useCompare();
@@ -33,11 +34,11 @@ export function CompareDock({ apps }: { apps: AIApp[] }) {
               <span
                 key={app.id}
                 className={clsx(
-                  "inline-flex shrink-0 items-center gap-1.5 rounded-full border bg-bg-card px-2.5 py-1 text-xs",
+                  "inline-flex shrink-0 items-center gap-1.5 rounded-full border bg-bg-card py-0.5 pl-0.5 pr-2.5 text-xs",
                   meta.badge,
                 )}
               >
-                <span aria-hidden>{meta.emoji}</span>
+                <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
                 <span className="font-medium text-white">{app.name}</span>
                 <button
                   onClick={() => remove(app.id)}

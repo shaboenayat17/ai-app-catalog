@@ -15,6 +15,7 @@ import { RatingBreakdown } from "./RatingBreakdown";
 import { PricingCard } from "./PricingCard";
 import { WriteReviewSheet } from "./WriteReviewSheet";
 import { ProsConsBlock } from "./ProsConsBlock";
+import { AppLogo } from "./AppLogo";
 type SortKey = "recent" | "rating" | "helpful";
 
 export interface CompareSuggestion {
@@ -65,16 +66,13 @@ export function AppDetailClient({
 
       {/* Header */}
       <header className="mt-4 flex flex-col gap-4 rounded-2xl border border-border bg-bg-card p-4 sm:flex-row sm:items-start sm:gap-5 sm:p-6">
-        <span
-          aria-hidden
-          className={clsx(
-            "grid h-16 w-16 shrink-0 place-items-center rounded-xl text-3xl",
-            m.badge,
-            m.glow,
-          )}
-        >
-          {m.emoji}
-        </span>
+        <AppLogo
+          logoUrl={app.logoUrl}
+          appName={app.name}
+          category={app.category}
+          size="lg"
+          className={m.glow}
+        />
         <div className="min-w-0 flex-1">
           <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
             {app.name}
@@ -147,13 +145,9 @@ export function AppDetailClient({
                     href={`/compare/${sug.id}`}
                     className="press flex min-h-[56px] items-center gap-2 rounded-md border border-border bg-bg-card p-2 text-sm text-white transition active:bg-bg-hover hover:border-accent/40"
                   >
-                    <span aria-hidden className={clsx("grid h-8 w-8 shrink-0 place-items-center rounded-md text-base", m.badge)}>
-                      {m.emoji}
-                    </span>
+                    <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
                     <span aria-hidden className="text-xs font-bold text-muted">vs</span>
-                    <span aria-hidden className={clsx("grid h-8 w-8 shrink-0 place-items-center rounded-md text-base", om.badge)}>
-                      {om.emoji}
-                    </span>
+                    <AppLogo logoUrl={other.logoUrl} appName={other.name} category={other.category} size="sm" />
                     <span className="min-w-0 flex-1 truncate font-medium">
                       {app.name} vs {other.name}
                     </span>
@@ -198,9 +192,7 @@ export function AppDetailClient({
                     href={`/app/${c.id}`}
                     className="press flex min-h-[56px] items-center gap-2 rounded-md border border-border bg-bg-card p-2 text-sm text-white transition active:bg-bg-hover hover:border-accent/40"
                   >
-                    <span aria-hidden className={clsx("grid h-8 w-8 shrink-0 place-items-center rounded-md text-base", cm.badge)}>
-                      {cm.emoji}
-                    </span>
+                    <AppLogo logoUrl={c.logoUrl} appName={c.name} category={c.category} size="sm" />
                     <span className="min-w-0 flex-1">
                       <span className="block truncate font-medium">{c.name}</span>
                       <span className="block truncate text-[10px] text-muted">{c.category}</span>

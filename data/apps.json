@@ -13,7 +13,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://chat.openai.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/openai.com",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -122,7 +122,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://claude.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/anthropic.com",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -228,7 +228,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://gemini.google.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/google.com",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -316,7 +316,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.grammarly.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/grammarly.com",
     "featured": false,
     "addedDate": "2025-01-05",
     "compatibleWith": [
@@ -412,7 +412,7 @@
     ],
     "pricing": "Paid",
     "url": "https://www.jasper.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/jasper.ai",
     "featured": false,
     "addedDate": "2025-01-05",
     "compatibleWith": [
@@ -499,7 +499,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.copy.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/copy.ai",
     "featured": false,
     "addedDate": "2025-01-05",
     "compatibleWith": [
@@ -583,7 +583,7 @@
     ],
     "pricing": "Paid",
     "url": "https://www.midjourney.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/midjourney.com",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -690,7 +690,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://openai.com/index/dall-e-3",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/openai.com",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -792,7 +792,7 @@
     ],
     "pricing": "Free",
     "url": "https://stability.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/stability.ai",
     "featured": false,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -886,7 +886,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.adobe.com/products/firefly.html",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/adobe.com",
     "featured": false,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -982,7 +982,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://ideogram.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/ideogram.ai",
     "featured": false,
     "addedDate": "2025-01-12",
     "compatibleWith": [
@@ -1065,7 +1065,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://leonardo.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/leonardo.ai",
     "featured": false,
     "addedDate": "2025-01-12",
     "compatibleWith": [
@@ -1145,7 +1145,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://runwayml.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/runwayml.com",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -1253,7 +1253,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://lumalabs.ai/dream-machine",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/lumalabs.ai",
     "featured": true,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -1344,7 +1344,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://pika.art",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/pika.art",
     "featured": false,
     "addedDate": "2025-01-15",
     "compatibleWith": [
@@ -1443,7 +1443,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://klingai.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/klingai.com",
     "featured": false,
     "addedDate": "2025-01-20",
     "compatibleWith": [
@@ -1525,7 +1525,7 @@
     ],
     "pricing": "Paid",
     "url": "https://sora.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/openai.com",
     "featured": true,
     "addedDate": "2025-02-01",
     "compatibleWith": [
@@ -1614,7 +1614,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.captions.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/captions.ai",
     "featured": false,
     "addedDate": "2026-04-22",
     "compatibleWith": [
@@ -1706,7 +1706,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/elevenlabs.io",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -1811,7 +1811,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://suno.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/suno.com",
     "featured": true,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -1908,7 +1908,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.udio.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/udio.com",
     "featured": false,
     "addedDate": "2026-04-25",
     "compatibleWith": [
@@ -1988,7 +1988,7 @@
     ],
     "pricing": "Free",
     "url": "https://openai.com/research/whisper",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/openai.com",
     "featured": false,
     "addedDate": "2025-01-15",
     "compatibleWith": [
@@ -2076,7 +2076,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.assemblyai.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/assemblyai.com",
     "featured": false,
     "addedDate": "2025-01-15",
     "compatibleWith": [
@@ -2157,7 +2157,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.descript.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/descript.com",
     "featured": true,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -2267,7 +2267,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://github.com/features/copilot",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/github.com",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -2362,7 +2362,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.cursor.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/cursor.so",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -2457,7 +2457,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://replit.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/replit.com",
     "featured": false,
     "addedDate": "2025-01-12",
     "compatibleWith": [
@@ -2546,7 +2546,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://v0.dev",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/vercel.com",
     "featured": true,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -2635,7 +2635,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://bolt.new",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/bolt.new",
     "featured": false,
     "addedDate": "2025-01-15",
     "compatibleWith": [
@@ -2715,7 +2715,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://codeium.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/codeium.com",
     "featured": false,
     "addedDate": "2025-01-20",
     "compatibleWith": [
@@ -2794,7 +2794,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://vercel.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/vercel.com",
     "featured": false,
     "addedDate": "2026-04-21",
     "compatibleWith": [
@@ -2884,7 +2884,7 @@
     ],
     "pricing": "Paid",
     "url": "https://www.notion.so/product/ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/notion.so",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -2983,7 +2983,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://reclaim.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/reclaim.ai",
     "featured": false,
     "addedDate": "2025-01-22",
     "compatibleWith": [
@@ -3062,7 +3062,7 @@
     ],
     "pricing": "Paid",
     "url": "https://www.usemotion.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/usemotion.com",
     "featured": false,
     "addedDate": "2025-01-22",
     "compatibleWith": [
@@ -3142,7 +3142,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://otter.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/otter.ai",
     "featured": true,
     "addedDate": "2025-01-05",
     "compatibleWith": [
@@ -3236,7 +3236,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://fireflies.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/fireflies.ai",
     "featured": false,
     "addedDate": "2025-01-15",
     "compatibleWith": [
@@ -3319,7 +3319,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.heygen.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/heygen.com",
     "featured": true,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -3409,7 +3409,7 @@
     ],
     "pricing": "Paid",
     "url": "https://www.synthesia.io",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/synthesia.io",
     "featured": false,
     "addedDate": "2025-01-15",
     "compatibleWith": [
@@ -3490,7 +3490,7 @@
     ],
     "pricing": "Paid",
     "url": "https://www.tavus.io",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/tavus.io",
     "featured": false,
     "addedDate": "2026-04-24",
     "compatibleWith": [
@@ -3571,7 +3571,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.perplexity.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/perplexity.ai",
     "featured": true,
     "addedDate": "2025-01-01",
     "compatibleWith": [
@@ -3666,7 +3666,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://elicit.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/elicit.com",
     "featured": false,
     "addedDate": "2025-01-22",
     "compatibleWith": [
@@ -3747,7 +3747,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://consensus.app",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/consensus.app",
     "featured": false,
     "addedDate": "2025-01-22",
     "compatibleWith": [
@@ -3828,7 +3828,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://you.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/you.com",
     "featured": false,
     "addedDate": "2025-01-22",
     "compatibleWith": [
@@ -3905,7 +3905,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.pinecone.io",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/pinecone.io",
     "featured": false,
     "addedDate": "2025-01-10",
     "compatibleWith": [
@@ -3987,7 +3987,7 @@
     ],
     "pricing": "Paid",
     "url": "https://hex.tech",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/hex.tech",
     "featured": false,
     "addedDate": "2025-02-01",
     "compatibleWith": [
@@ -4071,7 +4071,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://huggingface.co",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/huggingface.co",
     "featured": true,
     "addedDate": "2025-01-05",
     "compatibleWith": [
@@ -4162,7 +4162,7 @@
     ],
     "pricing": "Paid",
     "url": "https://replicate.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/replicate.com",
     "featured": false,
     "addedDate": "2025-01-12",
     "compatibleWith": [
@@ -4243,7 +4243,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.langchain.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/langchain.com",
     "featured": false,
     "addedDate": "2025-01-12",
     "compatibleWith": [
@@ -4330,7 +4330,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.canva.com/magic-studio",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/canva.com",
     "featured": true,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -4431,7 +4431,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://gamma.app",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/gamma.app",
     "featured": true,
     "addedDate": "2025-01-08",
     "compatibleWith": [
@@ -4524,7 +4524,7 @@
     ],
     "pricing": "Paid",
     "url": "https://www.beautiful.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/beautiful.ai",
     "featured": false,
     "addedDate": "2025-01-25",
     "compatibleWith": [
@@ -4606,7 +4606,7 @@
     ],
     "pricing": "Paid",
     "url": "https://tome.app",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/tome.app",
     "featured": false,
     "addedDate": "2025-01-25",
     "compatibleWith": [
@@ -4687,7 +4687,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://spline.design/ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/spline.design",
     "featured": false,
     "addedDate": "2026-04-23",
     "compatibleWith": [
@@ -4766,7 +4766,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://notion.so",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/notion.so",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -4846,7 +4846,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://bear.app",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/bear.app",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -4922,7 +4922,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://hemingwayapp.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/hemingwayapp.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -4999,7 +4999,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://wordtune.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/wordtune.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5076,7 +5076,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://quillbot.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/quillbot.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5155,7 +5155,7 @@
     ],
     "pricing": "Paid",
     "url": "https://sudowrite.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/sudowrite.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5233,7 +5233,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://rytr.me",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/rytr.me",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5311,7 +5311,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://writesonic.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/writesonic.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5391,7 +5391,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://www.adobe.com/express",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/adobe.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5462,7 +5462,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://playground.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/playground.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5532,7 +5532,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://lexica.art",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/lexica.art",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5608,7 +5608,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://nightcafe.studio",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/nightcafe.studio",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5685,7 +5685,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://krea.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/krea.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5762,7 +5762,7 @@
     ],
     "pricing": "Paid",
     "url": "https://magnific.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/magnific.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5838,7 +5838,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://clipdrop.co",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/clipdrop.co",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5915,7 +5915,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://invideo.io",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/invideo.io",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -5993,7 +5993,7 @@
     ],
     "pricing": "Paid",
     "url": "https://pictory.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/pictory.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6071,7 +6071,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://kapwing.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/kapwing.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6149,7 +6149,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://vizard.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/vizard.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6227,7 +6227,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://opus.pro",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/opus.pro",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6305,7 +6305,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://veed.io",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/veed.io",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6383,7 +6383,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://murf.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/murf.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6461,7 +6461,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://lovo.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/lovo.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6539,7 +6539,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://podcastle.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/podcastle.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6616,7 +6616,7 @@
     ],
     "pricing": "Free",
     "url": "https://podcast.adobe.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/adobe.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6693,7 +6693,7 @@
     ],
     "pricing": "Paid",
     "url": "https://soundraw.io",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/soundraw.io",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6771,7 +6771,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://boomy.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/boomy.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6847,7 +6847,7 @@
     ],
     "pricing": "Paid",
     "url": "https://cleanvoice.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/cleanvoice.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -6924,7 +6924,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://tabnine.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/tabnine.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7000,7 +7000,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://codeium.com/windsurf",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/codeium.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7078,7 +7078,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://pieces.app",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/pieces.app",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7154,7 +7154,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://sweep.dev",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/sweep.dev",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7230,7 +7230,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://sourcegraph.com/cody",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/sourcegraph.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7300,7 +7300,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://mem.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/mem.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7378,7 +7378,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://taskade.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/taskade.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7456,7 +7456,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://getmagical.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/getmagical.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7532,7 +7532,7 @@
     ],
     "pricing": "Paid",
     "url": "https://superhuman.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/superhuman.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7609,7 +7609,7 @@
     ],
     "pricing": "Free",
     "url": "https://semanticscholar.org",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/semanticscholar.org",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7688,7 +7688,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://scite.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/scite.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7766,7 +7766,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://connectedpapers.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/connectedpapers.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7844,7 +7844,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://julius.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/julius.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7921,7 +7921,7 @@
     ],
     "pricing": "Paid",
     "url": "https://obviously.ai",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/obviously.ai",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -7999,7 +7999,7 @@
     ],
     "pricing": "Paid",
     "url": "https://akkio.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/akkio.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [
@@ -8076,7 +8076,7 @@
     ],
     "pricing": "Freemium",
     "url": "https://polymersearch.com",
-    "logoUrl": null,
+    "logoUrl": "https://logo.clearbit.com/polymersearch.com",
     "featured": false,
     "addedDate": "2026-05-02",
     "compatibleWith": [

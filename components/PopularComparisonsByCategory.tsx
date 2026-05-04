@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import clsx from "clsx";
-import { CATEGORY_META, type AIApp } from "@/lib/types";
+import { type AIApp } from "@/lib/types";
+import { AppLogo } from "./AppLogo";
 import { pairSlug } from "@/lib/build-comparison";
 
 interface CategorySection {
@@ -95,21 +95,15 @@ export function PopularComparisonsByCategory({ apps }: { apps: AIApp[] }) {
               const a1 = byId.get(id1);
               const a2 = byId.get(id2);
               if (!a1 || !a2) return null;
-              const m1 = CATEGORY_META[a1.category];
-              const m2 = CATEGORY_META[a2.category];
               return (
                 <li key={`${id1}-${id2}`}>
                   <Link
                     href={`/compare/${pairSlug(id1, id2)}`}
                     className="press group flex h-full min-h-[64px] items-center gap-2 rounded-xl border border-border bg-bg-card p-2.5 transition active:bg-bg-hover hover:border-accent/40"
                   >
-                    <span aria-hidden className={clsx("grid h-7 w-7 shrink-0 place-items-center rounded text-sm", m1.badge)}>
-                      {m1.emoji}
-                    </span>
+                    <AppLogo logoUrl={a1.logoUrl} appName={a1.name} category={a1.category} size="sm" />
                     <span aria-hidden className="text-[9px] font-bold tracking-wider text-muted">VS</span>
-                    <span aria-hidden className={clsx("grid h-7 w-7 shrink-0 place-items-center rounded text-sm", m2.badge)}>
-                      {m2.emoji}
-                    </span>
+                    <AppLogo logoUrl={a2.logoUrl} appName={a2.name} category={a2.category} size="sm" />
                     <span className="min-w-0 flex-1 text-[12px] font-medium leading-tight text-white">
                       <span className="block truncate">{a1.name}</span>
                       <span className="block truncate text-muted">vs {a2.name}</span>

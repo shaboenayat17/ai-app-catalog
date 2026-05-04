@@ -8,7 +8,8 @@
       "Bash(ls README*)",
       "Bash(ls .github)",
       "Bash(ls scripts *)",
-      "Bash(python3 /tmp/expand-comparisons.py)"
+      "Bash(python3 /tmp/expand-comparisons.py)",
+      "Bash(python3)"
     ]
   }
 }

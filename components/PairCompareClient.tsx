@@ -11,6 +11,7 @@ import {
   type ComparisonDimension,
 } from "@/lib/types";
 import { ProsConsBlock } from "./ProsConsBlock";
+import { AppLogo } from "./AppLogo";
 
 interface Props {
   comparison: Comparison;
@@ -303,16 +304,13 @@ function AppTile({ app, side }: { app: AIApp; side: "left" | "right" }) {
       )}
       style={{ borderColor: `${m.hex}55` }}
     >
-      <span
-        aria-hidden
-        className={clsx(
-          "grid h-14 w-14 place-items-center rounded-xl text-2xl",
-          m.badge,
-          m.glow,
-        )}
-      >
-        {m.emoji}
-      </span>
+      <AppLogo
+        logoUrl={app.logoUrl}
+        appName={app.name}
+        category={app.category}
+        size="lg"
+        className={m.glow}
+      />
       <h2 className="text-base font-bold leading-tight text-white sm:text-lg">
         {app.name}
       </h2>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { CATEGORY_META, PRICING_COLORS, type AIApp } from "@/lib/types";
 import { storage, STORAGE_KEYS } from "@/lib/storage";
+import { AppLogo } from "./AppLogo";
 
 export function NewThisWeekSection({ apps }: { apps: AIApp[] }) {
   const [email, setEmail] = useState("");
@@ -46,9 +47,7 @@ export function NewThisWeekSection({ apps }: { apps: AIApp[] }) {
                   <span className="absolute right-3 top-3 inline-flex items-center rounded-full border border-emerald-400/50 bg-emerald-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-200">
                     NEW
                   </span>
-                  <span aria-hidden className={clsx("grid h-11 w-11 place-items-center rounded-lg text-xl", m.badge, m.glow)}>
-                    {m.emoji}
-                  </span>
+                  <AppLogo logoUrl={a.logoUrl} appName={a.name} category={a.category} size="md" className={m.glow} />
                   <h3 className="mt-3 truncate text-base font-semibold text-white">
                     {a.name}
                   </h3>

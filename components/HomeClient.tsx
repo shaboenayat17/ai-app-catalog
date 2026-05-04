@@ -33,6 +33,7 @@ import { NewThisWeekSection } from "./NewThisWeekSection";
 import { TrendingSection } from "./TrendingSection";
 import { PopularStacksSection } from "./PopularStacksSection";
 import type { TrendingData } from "@/lib/types";
+import { AppLogo } from "./AppLogo";
 
 type SortKey = "featured" | "newest" | "alpha";
 
@@ -337,9 +338,7 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
                         href={`/app/${a.id}`}
                         className="press flex min-h-[64px] items-center gap-2 rounded-lg border border-border bg-bg-card p-2 transition active:bg-bg-hover hover:border-accent/40"
                       >
-                        <span aria-hidden className={clsx("grid h-8 w-8 shrink-0 place-items-center rounded-md text-base", m.badge)}>
-                          {m.emoji}
-                        </span>
+                        <AppLogo logoUrl={a.logoUrl} appName={a.name} category={a.category} size="sm" />
                         <span className="min-w-0 flex-1">
                           <span className="block truncate text-sm font-medium text-white">{a.name}</span>
                           <span className="block truncate text-[10px] text-muted">{a.category}</span>
@@ -402,11 +401,12 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
                   <span
                     key={id}
                     className={clsx(
-                      "inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs",
+                      "inline-flex items-center gap-1.5 rounded-full border bg-bg-card/40 py-0.5 pl-0.5 pr-2.5 text-xs",
                       m.badge,
                     )}
                   >
-                    <span aria-hidden>{m.emoji}</span> {app.name}
+                    <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
+                    {app.name}
                   </span>
                 );
               })}
@@ -448,7 +448,7 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
                     "border-border",
                   )}
                 >
-                  <span aria-hidden className={clsx("grid h-7 w-7 place-items-center rounded-md", m.badge)}>{m.emoji}</span>
+                  <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
                   <span className="font-medium">{app.name}</span>
                   <span className="text-[10px] text-muted">{app.category}</span>
                 </a>
@@ -634,7 +634,7 @@ function DragGhost({ app }: { app: AIApp }) {
   const m = CATEGORY_META[app.category];
   return (
     <div className={clsx("flex items-center gap-2 rounded-xl border bg-bg-elevated px-3 py-2 shadow-lift", m.badge)}>
-      <span aria-hidden>{m.emoji}</span>
+      <AppLogo logoUrl={app.logoUrl} appName={app.name} category={app.category} size="sm" />
       <span className="text-sm font-medium text-white">{app.name}</span>
     </div>
   );

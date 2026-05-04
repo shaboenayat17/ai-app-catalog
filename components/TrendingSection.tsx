@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import clsx from "clsx";
-import { CATEGORY_META, type AIApp, type TrendingDirection } from "@/lib/types";
+import { type AIApp, type TrendingDirection } from "@/lib/types";
 import { StarRating } from "./StarRating";
+import { AppLogo } from "./AppLogo";
 
 export function TrendingSection({ apps }: { apps: AIApp[] }) {
   if (apps.length === 0) return null;
@@ -17,7 +17,6 @@ export function TrendingSection({ apps }: { apps: AIApp[] }) {
       </div>
       <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
         {apps.slice(0, 6).map((a, i) => {
-          const m = CATEGORY_META[a.category];
           return (
             <li key={a.id}>
               <Link
@@ -28,9 +27,7 @@ export function TrendingSection({ apps }: { apps: AIApp[] }) {
                   <span aria-hidden>🔥</span>
                   {i + 1}
                 </span>
-                <span aria-hidden className={clsx("grid h-9 w-9 place-items-center rounded-md text-base", m.badge)}>
-                  {m.emoji}
-                </span>
+                <AppLogo logoUrl={a.logoUrl} appName={a.name} category={a.category} size="sm" />
                 <h3 className="mt-2 truncate text-sm font-semibold text-white">
                   {a.name}
                 </h3>
