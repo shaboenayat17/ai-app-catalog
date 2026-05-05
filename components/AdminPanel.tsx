@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import { storage } from "@/lib/storage";
+import { haptic } from "@/lib/haptics";
 import {
   CATEGORY_META,
   PRICING_COLORS,
@@ -257,11 +258,13 @@ function Authed({
       if (data.ok) {
         if (data.app) setApps((prev) => [...prev, data.app]);
         setPending((prev) => prev.filter((p) => p.id !== id));
+        haptic("success");
         showToast({
           kind: "success",
           text: data.warning ? data.warning : "Added to catalog!",
         });
       } else {
+        haptic("error");
         showToast({ kind: "error", text: data.error || "Failed" });
       }
     },
@@ -278,8 +281,10 @@ function Authed({
       const data = await res.json();
       if (data.ok) {
         setPending((prev) => prev.filter((p) => p.id !== id));
+        haptic("error");
         showToast({ kind: "info", text: "Suggestion rejected" });
       } else {
+        haptic("error");
         showToast({ kind: "error", text: data.error || "Failed" });
       }
     },

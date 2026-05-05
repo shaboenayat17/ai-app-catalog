@@ -42,4 +42,5 @@ export const STORAGE_KEYS = {
   notifyEmail: "ai-catalog:notify-email",
   reviewHelpful: "ai-catalog:review-helpful",
   persona: "ai-catalog:persona",
+  lastRefresh: "ai-catalog:last-refresh",
 } as const;

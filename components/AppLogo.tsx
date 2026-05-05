@@ -13,6 +13,8 @@ interface Props {
   category: Category;
   size?: Size;
   className?: string;
+  /** Eager-load the image (above-the-fold logos). Default false → loading="lazy". */
+  priority?: boolean;
 }
 
 const SIZE_PX: Record<Size, number> = {
@@ -39,6 +41,7 @@ export function AppLogo({
   category,
   size = "md",
   className,
+  priority = false,
 }: Props) {
   const px = SIZE_PX[size];
   // 0 = primary, 1 = google favicon, 2 = letter fallback
@@ -91,6 +94,8 @@ export function AppLogo({
         width={px}
         height={px}
         unoptimized
+        priority={priority}
+        loading={priority ? "eager" : "lazy"}
         className="h-full w-full object-contain p-1"
         onError={() => {
           // Step to the next tier; if we're at primary and no favicon domain, jump to letter.

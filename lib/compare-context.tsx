@@ -7,6 +7,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { haptic } from "./haptics";
 
 const MAX_COMPARE = 3;
 
@@ -33,11 +34,13 @@ export function CompareProvider({ children }: { children: React.ReactNode }) {
       added = true;
       return [...prev, id];
     });
+    if (added) haptic("light");
     return added;
   }, []);
 
   const remove = useCallback((id: string) => {
     setIds((prev) => prev.filter((x) => x !== id));
+    haptic("light");
   }, []);
 
   const clear = useCallback(() => setIds([]), []);

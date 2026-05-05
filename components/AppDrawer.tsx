@@ -16,6 +16,7 @@ import {
 } from "@/lib/usecases";
 import { StarRating } from "./StarRating";
 import { AppLogo } from "./AppLogo";
+import { haptic } from "@/lib/haptics";
 
 interface Props {
   app: AIApp | null;
@@ -387,6 +388,7 @@ export function AppDrawer({
                           <button
                             type="button"
                             onClick={() => {
+                              haptic("light");
                               if (onCanvas) {
                                 onSwitchTo(cid);
                                 onPulse(cid);

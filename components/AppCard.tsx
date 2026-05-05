@@ -21,9 +21,18 @@ interface Props {
   draggable?: boolean;
   onView?: (id: string) => void;
   isTrending?: boolean;
+  /** When true, the logo loads eagerly (above the fold). */
+  priority?: boolean;
 }
 
-export function AppCard({ app, apps, draggable = true, onView, isTrending = false }: Props) {
+export function AppCard({
+  app,
+  apps,
+  draggable = true,
+  onView,
+  isTrending = false,
+  priority = false,
+}: Props) {
   const meta = CATEGORY_META[app.category];
   const compare = useCompare();
   const inCompare = compare.has(app.id);
@@ -96,6 +105,7 @@ export function AppCard({ app, apps, draggable = true, onView, isTrending = fals
             category={app.category}
             size="md"
             className={meta.glow}
+            priority={priority}
           />
           <div className="min-w-0">
             <Link

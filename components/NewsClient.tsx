@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import clsx from "clsx";
 import type { NewsItem } from "@/lib/types";
+import { SkeletonNews } from "./SkeletonNews";
 
 interface LiveArticle {
   title: string;
@@ -96,7 +97,7 @@ export function NewsClient({ fallback }: { fallback: NewsItem[] }) {
         </button>
       </header>
 
-      {loading && <NewsSkeleton />}
+      {loading && <SkeletonNews />}
 
       {!loading && usingFallback && (
         <FallbackList items={fallback} />

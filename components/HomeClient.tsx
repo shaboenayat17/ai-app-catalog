@@ -34,6 +34,7 @@ import { TrendingSection } from "./TrendingSection";
 import { PopularStacksSection } from "./PopularStacksSection";
 import type { TrendingData } from "@/lib/types";
 import { AppLogo } from "./AppLogo";
+import { usePullToRefresh } from "@/hooks/usePullToRefresh";
 
 type SortKey = "featured" | "newest" | "alpha";
 
@@ -93,6 +94,8 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
   );
   const [copied, setCopied] = useState(false);
   const [activeDragId, setActiveDragId] = useState<string | null>(null);
+  const [displayedCount, setDisplayedCount] = useState(24);
+  const PAGE_SIZE = 24;
 
   // Sync state to URL
   useEffect(() => {
@@ -105,6 +108,11 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
     const qs = params.toString();
     router.replace(qs ? `/?${qs}` : "/", { scroll: false });
   }, [query, categories, pricing, tags, sort, router]);
+
+  // Reset pagination when filters change so users always see page 1.
+  useEffect(() => {
+    setDisplayedCount(PAGE_SIZE);
+  }, [query, categories, pricing, tags, sort, persona]);
 
   // Smart search detection
   const intent = useMemo(() => detectIntent(query), [query]);
@@ -230,8 +238,36 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
     suggestedUseCase.appIds.slice(0, compare.max).forEach((id) => compare.add(id));
   };
 
+  const ptr = usePullToRefresh({
+    onRefresh: () => {
+      // Soft refresh — re-fetch the server component for fresh apps.json data.
+      router.refresh();
+    },
+  });
+
   return (
     <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd}>
+      {/* Pull-to-refresh indicator */}
+      {(ptr.pulling || ptr.refreshing) && (
+        <div
+          aria-hidden
+          className="pointer-events-none fixed inset-x-0 top-0 z-20 flex justify-center"
+          style={{
+            transform: `translateY(${Math.max(0, ptr.distance - 20)}px)`,
+            opacity: ptr.refreshing ? 1 : Math.min(1, ptr.distance / 80),
+          }}
+        >
+          <span
+            className={clsx(
+              "mt-2 grid h-9 w-9 place-items-center rounded-full bg-bg-elevated/95 text-accent shadow-lift",
+              ptr.refreshing && "animate-spin",
+            )}
+          >
+            ↻
+          </span>
+        </div>
+      )}
+
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border/60">
         <FloatingIcons />
@@ -612,11 +648,44 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {filtered.map((app) => (
-                  <AppCard key={app.id} app={app} apps={apps} onView={onView} isTrending={trendingSet.has(app.id)} />
-                ))}
-              </div>
+              <>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {filtered.slice(0, displayedCount).map((app, idx) => (
+                    <AppCard
+                      key={app.id}
+                      app={app}
+                      apps={apps}
+                      onView={onView}
+                      isTrending={trendingSet.has(app.id)}
+                      priority={idx < 8}
+                    />
+                  ))}
+                </div>
+                <div className="mt-8 flex flex-col items-center gap-2">
+                  {displayedCount < filtered.length ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setDisplayedCount((c) =>
+                            Math.min(c + PAGE_SIZE, filtered.length),
+                          )
+                        }
+                        className="press min-h-[44px] rounded-lg border border-accent/60 bg-accent/10 px-5 text-sm font-semibold text-accent transition hover:bg-accent/20"
+                      >
+                        Show {Math.min(PAGE_SIZE, filtered.length - displayedCount)} more
+                      </button>
+                      <p className="text-xs text-muted">
+                        Showing {displayedCount} of {filtered.length} apps
+                      </p>
+                    </>
+                  ) : filtered.length > PAGE_SIZE ? (
+                    <p className="text-sm text-muted-strong">
+                      You've seen all {filtered.length} apps! 🎉
+                    </p>
+                  ) : null}
+                </div>
+              </>
             )}
           </div>
         </div>
