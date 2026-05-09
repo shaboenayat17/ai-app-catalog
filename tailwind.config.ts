@@ -60,6 +60,7 @@ const config: Config = {
         "pulse-ring": "pulseRing 1.4s ease-out 2",
         "drawer-in-right": "drawerInRight 0.32s cubic-bezier(0.22, 1, 0.36, 1) both",
         "drawer-in-bottom": "drawerInBottom 0.32s cubic-bezier(0.22, 1, 0.36, 1) both",
+        "menu-in": "menuIn 0.2s ease-out both",
       },
       keyframes: {
         "gradient-x": {
@@ -109,6 +110,10 @@ const config: Config = {
         drawerInBottom: {
           "0%": { transform: "translateY(100%)", opacity: "0.6" },
           "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        menuIn: {
+          "0%": { opacity: "0", transform: "scale(0.97)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
     },

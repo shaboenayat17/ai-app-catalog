@@ -710,24 +710,33 @@ function DragGhost({ app }: { app: AIApp }) {
 }
 
 function FloatingIcons() {
-  const items = [
-    { e: "✍️", x: "8%", y: "20%", a: "animate-float-slow" },
-    { e: "🎨", x: "82%", y: "18%", a: "animate-float-medium" },
-    { e: "🎬", x: "12%", y: "70%", a: "animate-float-fast" },
-    { e: "🎵", x: "70%", y: "65%", a: "animate-float-slow" },
-    { e: "💻", x: "55%", y: "12%", a: "animate-float-medium" },
-    { e: "🔬", x: "30%", y: "45%", a: "animate-float-fast" },
-    { e: "📊", x: "88%", y: "45%", a: "animate-float-medium" },
-    { e: "🧊", x: "45%", y: "78%", a: "animate-float-slow" },
-    { e: "⚡", x: "62%", y: "40%", a: "animate-float-fast" },
+  // mobilePos values: tl, tr, bl, br => mapped to corners on mobile via globals.css.
+  // "hide" hides the emoji on mobile so we don't crowd the hero text.
+  const items: Array<{
+    e: string;
+    x: string;
+    y: string;
+    a: string;
+    mobilePos: "tl" | "tr" | "bl" | "br" | "hide";
+  }> = [
+    { e: "✍️", x: "8%",  y: "20%", a: "animate-float-slow",   mobilePos: "tl" },
+    { e: "🎨", x: "82%", y: "18%", a: "animate-float-medium", mobilePos: "tr" },
+    { e: "🎬", x: "12%", y: "70%", a: "animate-float-fast",   mobilePos: "bl" },
+    { e: "🎵", x: "70%", y: "65%", a: "animate-float-slow",   mobilePos: "br" },
+    { e: "💻", x: "55%", y: "12%", a: "animate-float-medium", mobilePos: "hide" },
+    { e: "🔬", x: "30%", y: "45%", a: "animate-float-fast",   mobilePos: "hide" },
+    { e: "📊", x: "88%", y: "45%", a: "animate-float-medium", mobilePos: "hide" },
+    { e: "🧊", x: "45%", y: "78%", a: "animate-float-slow",   mobilePos: "hide" },
+    { e: "⚡", x: "62%", y: "40%", a: "animate-float-fast",   mobilePos: "hide" },
   ];
   return (
-    <div aria-hidden className="absolute inset-0 -z-0 overflow-hidden bg-hero-mesh">
+    <div aria-hidden className="pointer-events-none absolute inset-0 -z-0 overflow-hidden bg-hero-mesh">
       {items.map((it, i) => (
         <span
           key={i}
+          data-mobile-pos={it.mobilePos}
           className={clsx(
-            "absolute text-3xl opacity-40 sm:text-4xl",
+            "floating-emoji absolute text-3xl opacity-40 sm:text-4xl",
             it.a,
           )}
           style={{ left: it.x, top: it.y }}

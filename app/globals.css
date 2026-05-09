@@ -4,6 +4,11 @@
 
 :root {
   color-scheme: dark;
+  /* Safe-area variables exposed for components to compose with. */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
 }
 
 html,
@@ -137,4 +142,64 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------------------------------------------------------
+   Mobile chrome: safe areas + PWA standalone + landscape
+   These rules target the .header / .bottom-nav class hooks the components add.
+   ----------------------------------------------------------------------------*/
+
+/* Header — content sits below the iPhone notch; background extends into it. */
+.header {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Bottom nav — sits above the home indicator. */
+.bottom-nav {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* PWA standalone gets a slightly larger fallback so cropped iOS UA strings still
+   leave room for the notch/home indicator if env() returns 0. */
+@media all and (display-mode: standalone) {
+  .header {
+    padding-top: env(safe-area-inset-top, 44px);
+  }
+  .bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom, 34px);
+  }
+}
+
+/* Landscape — pad the left/right edges so the rounded display corners
+   don't clip nav targets. */
+@media (orientation: landscape) {
+  .header,
+  .bottom-nav {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Hero floating emojis — mobile reposition to corners only.
+   Desktop keeps their original inline left/top coordinates.
+   ----------------------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .floating-emoji {
+    transform: scale(0.6);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .floating-emoji[data-mobile-pos] {
+    /* Override the inline positions only when a corner slot is assigned. */
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+  .floating-emoji[data-mobile-pos="tl"] { top: 6%; left: 4%; }
+  .floating-emoji[data-mobile-pos="tr"] { top: 6%; right: 4%; }
+  .floating-emoji[data-mobile-pos="bl"] { bottom: 8%; left: 4%; }
+  .floating-emoji[data-mobile-pos="br"] { bottom: 8%; right: 4%; }
+  .floating-emoji[data-mobile-pos="hide"] { display: none; }
 }
