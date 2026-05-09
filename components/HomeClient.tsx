@@ -34,6 +34,7 @@ import { TrendingSection } from "./TrendingSection";
 import { PopularStacksSection } from "./PopularStacksSection";
 import type { TrendingData } from "@/lib/types";
 import { AppLogo } from "./AppLogo";
+import { useIsAdmin } from "@/hooks/useIsAdmin";
 import { usePullToRefresh } from "@/hooks/usePullToRefresh";
 
 type SortKey = "featured" | "newest" | "alpha";
@@ -57,6 +58,7 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const compare = useCompare();
+  const isAdmin = useIsAdmin();
   const { persona, setPersonaId } = usePersona();
 
   const trendingSet = useMemo(
@@ -451,19 +453,21 @@ export function HomeClient({ apps, allTags, lastUpdated, trending }: Props) {
         </section>
       )}
 
-      {/* Stats bar */}
-      <section className="border-b border-border/60 bg-bg/60 mt-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 divide-x divide-border/60">
-            <Stat label="Apps" value={apps.length.toString()} />
-            <Stat label="Categories" value={CATEGORIES.length.toString()} />
-            <Stat label="Last updated" value={lastUpdated} />
+      {/* Stats bar — admin-only */}
+      {isAdmin && (
+        <section className="border-b border-border/60 bg-bg/60 mt-10">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-3 divide-x divide-border/60">
+              <Stat label="Apps" value={apps.length.toString()} />
+              <Stat label="Categories" value={CATEGORIES.length.toString()} />
+              <Stat label="Last updated" value={lastUpdated} />
+            </div>
+            <p className="border-t border-border/60 py-2 text-center text-[11px] text-muted">
+              <span aria-hidden>🤖</span> Auto-updated every 2 days · Admin view
+            </p>
           </div>
-          <p className="border-t border-border/60 py-2 text-center text-[11px] text-muted">
-            <span aria-hidden>🤖</span> Auto-updated every 2 days
-          </p>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Recently viewed */}
       {recentApps.length > 0 && (

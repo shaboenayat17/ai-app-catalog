@@ -156,7 +156,7 @@ body {
 
 /* Bottom nav — sits above the home indicator. */
 .bottom-nav {
-  padding-bottom: env(safe-area-inset-bottom, 16px);
+  padding-bottom: env(safe-area-inset-bottom, 8px);
 }
 
 /* PWA standalone gets a slightly larger fallback so cropped iOS UA strings still
@@ -184,10 +184,26 @@ body {
    Hero floating emojis — mobile reposition to corners only.
    Desktop keeps their original inline left/top coordinates.
    ----------------------------------------------------------------------------*/
+/* Step indicator — single line, hide scrollbar across browsers. */
+.step-indicator-scroller {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.step-indicator-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .step-indicator .step-pill {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 767px) {
   .floating-emoji {
-    transform: scale(0.6);
-    opacity: 0.5;
+    transform: scale(0.5);
+    opacity: 0.4;
     pointer-events: none;
   }
   .floating-emoji[data-mobile-pos] {
@@ -197,9 +213,9 @@ body {
     right: auto;
     bottom: auto;
   }
-  .floating-emoji[data-mobile-pos="tl"] { top: 6%; left: 4%; }
-  .floating-emoji[data-mobile-pos="tr"] { top: 6%; right: 4%; }
-  .floating-emoji[data-mobile-pos="bl"] { bottom: 8%; left: 4%; }
-  .floating-emoji[data-mobile-pos="br"] { bottom: 8%; right: 4%; }
+  .floating-emoji[data-mobile-pos="tl"] { top: 4%; left: 3%; }
+  .floating-emoji[data-mobile-pos="tr"] { top: 4%; right: 3%; }
+  .floating-emoji[data-mobile-pos="bl"] { bottom: 6%; left: 3%; }
+  .floating-emoji[data-mobile-pos="br"] { bottom: 6%; right: 3%; }
   .floating-emoji[data-mobile-pos="hide"] { display: none; }
 }

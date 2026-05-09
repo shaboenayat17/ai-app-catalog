@@ -5,6 +5,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { storage } from "@/lib/storage";
 import { haptic } from "@/lib/haptics";
+import { setAdminAuthenticated } from "@/hooks/useIsAdmin";
 import {
   CATEGORY_META,
   PRICING_COLORS,
@@ -47,6 +48,7 @@ export function AdminPanel({ initialApps, githubRepo, siteUrl }: Props) {
   useEffect(() => {
     const stored = storage.get<string | null>(ADMIN_TOKEN_KEY, null);
     if (!stored) {
+      setAdminAuthenticated(false);
       setBootChecked(true);
       return;
     }
@@ -54,6 +56,10 @@ export function AdminPanel({ initialApps, githubRepo, siteUrl }: Props) {
       if (ok) {
         setPwdState(stored);
         setAuthed(true);
+        setAdminAuthenticated(true);
+      } else {
+        // Stored password no longer valid (env changed) — clear the public flag.
+        setAdminAuthenticated(false);
       }
       setBootChecked(true);
     });
@@ -63,12 +69,14 @@ export function AdminPanel({ initialApps, githubRepo, siteUrl }: Props) {
     storage.set(ADMIN_TOKEN_KEY, password);
     setPwdState(password);
     setAuthed(true);
+    setAdminAuthenticated(true);
   }, []);
 
   const onLogout = useCallback(() => {
     storage.remove(ADMIN_TOKEN_KEY);
     setPwdState(null);
     setAuthed(false);
+    setAdminAuthenticated(false);
   }, []);
 
   if (!bootChecked) {

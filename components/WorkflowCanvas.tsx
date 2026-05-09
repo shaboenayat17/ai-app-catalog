@@ -157,6 +157,21 @@ export function WorkflowCanvas({ apps }: Props) {
     return layoutForUseCase(uc);
   });
 
+  // Mobile detection — drives node sizing, drawer visibility, and scroll offset on drop.
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  const nodeW = isMobile ? 120 : NODE_W;
+  const nodeH = isMobile ? 78 : NODE_H;
+
+  // Mobile bottom-drawer state: 0 = collapsed, 1 = half, 2 = full.
+  const [drawerState, setDrawerState] = useState<0 | 1 | 2>(0);
+
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null);
   const [pulse, setPulse] = useState<{ id: string; key: number } | null>(null);
   const [paletteQuery, setPaletteQuery] = useState("");
@@ -273,9 +288,14 @@ export function WorkflowCanvas({ apps }: Props) {
       if (e.over?.id === CANVAS_ID) {
         const overRect = e.over.rect;
         const draggedRect = e.active.rect.current.translated;
+        // Account for canvas scroll on mobile so the drop lands where the user released.
+        const scrollLeft = canvasRef.current?.scrollLeft ?? 0;
+        const scrollTop = canvasRef.current?.scrollTop ?? 0;
         if (overRect && draggedRect) {
-          const x = draggedRect.left - overRect.left + draggedRect.width / 2 - NODE_W / 2;
-          const y = draggedRect.top - overRect.top + draggedRect.height / 2 - NODE_H / 2;
+          const x =
+            scrollLeft + draggedRect.left - overRect.left + draggedRect.width / 2 - nodeW / 2;
+          const y =
+            scrollTop + draggedRect.top - overRect.top + draggedRect.height / 2 - nodeH / 2;
           setNodes((prev) => {
             if (prev.some((n) => n.appId === appId)) return prev;
             return [...prev, { appId, x: Math.max(8, x), y: Math.max(8, y) }];
@@ -283,6 +303,8 @@ export function WorkflowCanvas({ apps }: Props) {
         } else {
           addNodeAtCenter(appId);
         }
+        // Successful drop on canvas → auto-collapse the mobile drawer.
+        if (isMobile) setDrawerState(0);
       }
     } else if (id.startsWith("node:")) {
       const appId = id.slice("node:".length);
@@ -429,8 +451,8 @@ export function WorkflowCanvas({ apps }: Props) {
       </div>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
-        {/* Palette */}
-        <aside className="rounded-xl border border-border bg-bg-card/70 p-3">
+        {/* Palette — desktop/tablet only; mobile uses the bottom drawer instead. */}
+        <aside className="hidden rounded-xl border border-border bg-bg-card/70 p-3 md:block">
           <input
             type="search"
             value={paletteQuery}
@@ -499,10 +521,10 @@ export function WorkflowCanvas({ apps }: Props) {
               {lines.map(({ a, b, color }, i) => {
                 const aSize = stackAppMap.has(a.appId)
                   ? { w: MIN_NODE_W, h: MIN_NODE_H }
-                  : { w: NODE_W, h: NODE_H };
+                  : { w: nodeW, h: nodeH };
                 const bSize = stackAppMap.has(b.appId)
                   ? { w: MIN_NODE_W, h: MIN_NODE_H }
-                  : { w: NODE_W, h: NODE_H };
+                  : { w: nodeW, h: nodeH };
                 const x1 = a.x + aSize.w / 2;
                 const y1 = a.y + aSize.h / 2;
                 const x2 = b.x + bSize.w / 2;
@@ -542,6 +564,9 @@ export function WorkflowCanvas({ apps }: Props) {
                   pulseKey={pulse?.id === node.appId ? pulse.key : null}
                   minMode={minStackMode && stackApp !== null}
                   badges={stackApp?.badges ?? null}
+                  defaultW={nodeW}
+                  defaultH={nodeH}
+                  isMobile={isMobile}
                   onClick={() => setSelectedAppId(node.appId)}
                   onRemove={() => removeNode(node.appId)}
                 />
@@ -583,6 +608,21 @@ export function WorkflowCanvas({ apps }: Props) {
         onAddToCanvas={(id) => addNodeAtCenter(id)}
         onPulse={(id) => triggerPulse(id)}
       />
+
+      {/* Mobile-only bottom drawer for the app library */}
+      {isMobile && (
+        <MobileAppDrawer
+          state={drawerState}
+          setState={setDrawerState}
+          query={paletteQuery}
+          setQuery={setPaletteQuery}
+          paletteCat={paletteCat}
+          setPaletteCat={setPaletteCat}
+          filteredPalette={filteredPalette}
+          totalApps={apps.length}
+          onAdd={addNodeAtCenter}
+        />
+      )}
     </DndContext>
   );
 }
@@ -597,19 +637,66 @@ function CanvasDroppable({
   onBackgroundClick?: () => void;
 }) {
   const { setNodeRef, isOver } = useDroppable({ id: CANVAS_ID });
+  const [showScrollHint, setShowScrollHint] = useState(false);
+
+  // First-visit scroll hint (mobile only). One per session.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!window.matchMedia("(max-width: 767px)").matches) return;
+    try {
+      if (window.sessionStorage.getItem("wf-scroll-hint-seen") === "1") return;
+      window.sessionStorage.setItem("wf-scroll-hint-seen", "1");
+    } catch {
+      /* private mode — show anyway, harmless */
+    }
+    setShowScrollHint(true);
+    const t = window.setTimeout(() => setShowScrollHint(false), 3000);
+    return () => window.clearTimeout(t);
+  }, []);
+
   return (
-    <div
-      ref={(el) => {
-        setNodeRef(el);
-        canvasRef.current = el;
-      }}
-      onClick={onBackgroundClick}
-      className={clsx(
-        "relative h-[640px] overflow-hidden rounded-xl border bg-bg/60 transition",
-        isOver ? "border-accent/60 shadow-glow" : "border-border",
+    <div className="relative">
+      {/* Scrollable + droppable canvas viewport. */}
+      <div
+        ref={(el) => {
+          setNodeRef(el);
+          canvasRef.current = el;
+        }}
+        onClick={onBackgroundClick}
+        style={{
+          WebkitOverflowScrolling: "touch",
+          touchAction: "pan-x pan-y",
+        }}
+        className={clsx(
+          "relative h-[calc(50vh-120px)] min-h-[420px] overflow-auto rounded-xl border bg-bg/60 transition md:h-[640px] md:overflow-hidden",
+          isOver ? "border-accent/60 shadow-glow" : "border-border",
+        )}
+      >
+        {/* Scrollable content layer — explicit min-size on mobile so absolute children
+            get a real coordinate space larger than the viewport. */}
+        <div className="relative h-full min-h-[600px] w-full min-w-[800px] md:min-h-0 md:min-w-0">
+          {children}
+        </div>
+      </div>
+
+      {/* Mobile-only right-edge fade gradient (hints that more lives off-screen). */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute right-0 top-0 h-full w-10 rounded-r-xl md:hidden"
+        style={{
+          background: "linear-gradient(to right, transparent, rgba(15,17,23,0.8))",
+        }}
+      />
+
+      {/* Mobile-only first-visit scroll hint. Auto-fades after 3s. */}
+      {showScrollHint && (
+        <div
+          aria-live="polite"
+          className="pointer-events-none absolute left-1/2 top-3 z-10 -translate-x-1/2 rounded-full border border-border bg-bg-elevated/90 px-3 py-1 text-[10px] text-muted-strong backdrop-blur animate-fade-in-up md:hidden"
+        >
+          ← scroll to explore →
+        </div>
       )}
-    >
-      {children}
     </div>
   );
 }
@@ -621,6 +708,9 @@ function CanvasNode({
   pulseKey,
   minMode,
   badges,
+  defaultW = NODE_W,
+  defaultH = NODE_H,
+  isMobile = false,
   onClick,
   onRemove,
 }: {
@@ -630,14 +720,17 @@ function CanvasNode({
   pulseKey: number | null;
   minMode: boolean;
   badges: StackBadge[] | null;
+  defaultW?: number;
+  defaultH?: number;
+  isMobile?: boolean;
   onClick: () => void;
   onRemove: () => void;
 }) {
   const { attributes, listeners, setNodeRef, transform, isDragging } =
     useDraggable({ id: `node:${app.id}` });
   const m = CATEGORY_META[app.category];
-  const w = minMode ? MIN_NODE_W : NODE_W;
-  const h = minMode ? MIN_NODE_H : NODE_H;
+  const w = minMode ? MIN_NODE_W : defaultW;
+  const h = minMode ? MIN_NODE_H : defaultH;
   const showLoop = minMode && badges !== null && badges.length > 1;
 
   return (
@@ -657,7 +750,8 @@ function CanvasNode({
           : {}),
       }}
       className={clsx(
-        "rounded-xl border bg-bg-elevated p-3 text-left shadow-lift animate-fade-in-up",
+        "rounded-xl border bg-bg-elevated text-left shadow-lift animate-fade-in-up",
+        isMobile ? "p-2" : "p-3",
         !isDragging && "transition-all duration-300 ease-out",
         selected ? "border-transparent" : "border-border hover:border-accent/40",
         isDragging && "opacity-80 cursor-grabbing",
@@ -706,12 +800,22 @@ function CanvasNode({
           logoUrl={app.logoUrl}
           appName={app.name}
           category={app.category}
-          size="md"
+          size={isMobile && !minMode ? "sm" : "md"}
         />
-        <span className="mt-1.5 line-clamp-2 text-xs font-semibold leading-tight text-white">
+        <span
+          className={clsx(
+            "mt-1.5 line-clamp-2 font-semibold leading-tight text-white",
+            isMobile && !minMode ? "text-[11px]" : "text-xs",
+          )}
+        >
           {app.name}
         </span>
-        <span className="mt-0.5 truncate text-[10px] uppercase tracking-wider text-muted">
+        <span
+          className={clsx(
+            "mt-0.5 truncate uppercase tracking-wider text-muted",
+            isMobile && !minMode ? "text-[9px]" : "text-[10px]",
+          )}
+        >
           {app.category}
         </span>
         {minMode && badges && badges.length > 0 && (
@@ -960,40 +1064,193 @@ function SavingsBanner({
 function StepIndicator({ useCase }: { useCase: UseCase }) {
   const steps = useCase.steps ?? [];
   return (
-    <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-accent/30 bg-gradient-to-r from-accent/10 via-bg-card to-cyan-500/10 px-3 py-2 animate-fade-in-up">
-      <span className="flex items-center gap-1.5 pr-2 text-[11px] font-semibold uppercase tracking-wider text-muted">
-        <span aria-hidden>{useCase.emoji}</span>
-        {useCase.label}
-      </span>
-      <div className="h-3 w-px bg-border" />
-      <ol className="flex flex-wrap items-center gap-x-1 gap-y-1.5">
-        {steps.map((step, i) => (
-          <li key={i} className="flex items-center gap-1">
-            {i > 0 && (
-              <svg
-                aria-hidden
-                width="10"
-                height="10"
-                viewBox="0 0 10 10"
-                className="text-muted"
-              >
-                <path
-                  d="M3 1l4 4-4 4"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg-card/80 px-2.5 py-0.5 text-xs">
-              <span className="font-mono text-[10px] text-accent">{i + 1}</span>
-              <span className="text-white">{step}</span>
-            </span>
-          </li>
-        ))}
-      </ol>
+    <div className="step-indicator mb-3 relative rounded-xl border border-accent/30 bg-gradient-to-r from-accent/10 via-bg-card to-cyan-500/10 px-3 py-2 animate-fade-in-up">
+      <div className="step-indicator-scroller flex items-center gap-2 overflow-x-auto whitespace-nowrap pr-5">
+        <span className="flex shrink-0 items-center gap-1.5 pr-2 text-[11px] font-semibold uppercase tracking-wider text-muted">
+          <span aria-hidden>{useCase.emoji}</span>
+          {useCase.label}
+        </span>
+        <div className="h-3 w-px shrink-0 bg-border" />
+        <ol className="flex shrink-0 items-center gap-1">
+          {steps.map((step, i) => (
+            <li key={i} className="flex shrink-0 items-center gap-1">
+              {i > 0 && (
+                <svg
+                  aria-hidden
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  className="shrink-0 text-muted"
+                >
+                  <path
+                    d="M3 1l4 4-4 4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              )}
+              <span className="step-pill inline-flex shrink-0 items-center gap-1.5 rounded-full border border-border bg-bg-card/80 px-2.5 py-0.5 text-xs">
+                <span className="font-mono text-[10px] text-accent">{i + 1}</span>
+                <span className="text-white">{step}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+      {/* Right-edge fade hint when content overflows. */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-y-0 right-0 w-8 rounded-r-xl bg-gradient-to-r from-transparent to-bg-card"
+      />
     </div>
+  );
+}
+
+/* -------------------- Mobile bottom drawer (app library) -------------------- */
+
+interface MobileAppDrawerProps {
+  state: 0 | 1 | 2;
+  setState: (s: 0 | 1 | 2) => void;
+  query: string;
+  setQuery: (s: string) => void;
+  paletteCat: Category | "all";
+  setPaletteCat: (c: Category | "all") => void;
+  filteredPalette: AIApp[];
+  totalApps: number;
+  onAdd: (id: string) => void;
+}
+
+function MobileAppDrawer({
+  state,
+  setState,
+  query,
+  setQuery,
+  paletteCat,
+  setPaletteCat,
+  filteredPalette,
+  totalApps,
+  onAdd,
+}: MobileAppDrawerProps) {
+  // Heights (approx) — used for translate math from the bottom of the screen.
+  // 0=collapsed shows handle + label only. 1=half. 2=full. We position the drawer
+  // at bottom: calc(env(safe-area-inset-bottom) + 56px) so it sits above the bottom nav.
+  const heights = ["48px", "40vh", "85vh"] as const;
+  const startY = useRef<number | null>(null);
+  const startState = useRef<0 | 1 | 2>(state);
+  const [dragOffset, setDragOffset] = useState(0);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    startY.current = e.clientY;
+    startState.current = state;
+    e.currentTarget.setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (startY.current === null) return;
+    setDragOffset(e.clientY - startY.current);
+  };
+  const onPointerUp = (e: React.PointerEvent) => {
+    if (startY.current === null) return;
+    const delta = e.clientY - startY.current;
+    startY.current = null;
+    setDragOffset(0);
+    // Drag up (negative delta) → grow; drag down (positive) → shrink. ~80px per snap.
+    let next: 0 | 1 | 2 = startState.current;
+    if (delta < -60) next = Math.min(2, startState.current + 1) as 0 | 1 | 2;
+    else if (delta > 60) next = Math.max(0, startState.current - 1) as 0 | 1 | 2;
+    setState(next);
+  };
+
+  const expand = () => setState(state === 0 ? 1 : state);
+
+  return (
+    <aside
+      role="region"
+      aria-label="App library"
+      className="fixed inset-x-0 z-40 rounded-t-2xl border-t-2 border-border bg-bg-elevated md:hidden"
+      style={{
+        bottom: "calc(env(safe-area-inset-bottom, 0px) + 56px)",
+        height: heights[state],
+        transform: dragOffset !== 0 ? `translateY(${dragOffset}px)` : undefined,
+        transition: dragOffset !== 0 ? "none" : "height 240ms cubic-bezier(0.22,1,0.36,1)",
+        boxShadow: "0 -4px 20px rgba(0,0,0,0.5)",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      {/* Drag handle row — also acts as collapsed-state header */}
+      <div
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+        onClick={(e) => {
+          // Tap-only (not a drag) toggles collapsed → half.
+          if (Math.abs(dragOffset) < 4 && state === 0) expand();
+        }}
+        className="flex shrink-0 cursor-grab touch-none flex-col items-center pt-3 active:cursor-grabbing"
+      >
+        <span className="block h-1 w-10 rounded-full bg-border-strong" />
+        {state === 0 && (
+          <p className="mt-2 mb-2 text-xs font-medium text-muted-strong">
+            ➕ Add apps · {totalApps}
+          </p>
+        )}
+      </div>
+
+      {state > 0 && (
+        <>
+          <div className="flex shrink-0 items-center justify-between px-4 pb-2 pt-1">
+            <h2 className="text-sm font-bold text-white">App Library</h2>
+            <span className="text-xs text-muted">{totalApps} apps</span>
+          </div>
+          <div className="shrink-0 px-4">
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search apps to drag…"
+              className="min-h-[40px] w-full rounded-md border border-border bg-bg px-3 text-sm text-white placeholder:text-muted outline-none focus:border-accent/60"
+            />
+            <div className="step-indicator-scroller mt-2 flex gap-1.5 overflow-x-auto pb-1">
+              <CatChip
+                label="all"
+                active={paletteCat === "all"}
+                onClick={() => setPaletteCat("all")}
+              />
+              {CATEGORIES.map((c) => {
+                const m = CATEGORY_META[c];
+                return (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => setPaletteCat(c)}
+                    className={clsx(
+                      "press inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] transition",
+                      paletteCat === c ? m.pillActive : m.pillIdle,
+                    )}
+                    title={c}
+                  >
+                    <span aria-hidden>{m.emoji}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <ul className="mt-2 flex-1 space-y-1.5 overflow-y-auto px-4 pb-4">
+            {filteredPalette.map((a) => (
+              <PaletteItem key={a.id} app={a} onAdd={onAdd} />
+            ))}
+            {filteredPalette.length === 0 && (
+              <li className="px-2 py-4 text-center text-xs text-muted">
+                No apps match.
+              </li>
+            )}
+          </ul>
+        </>
+      )}
+    </aside>
   );
 }
