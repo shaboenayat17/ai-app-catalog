@@ -9,8 +9,9 @@ export const metadata = {
 
 export default function WorkflowPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <header className="mb-6">
+    <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6 sm:py-10 lg:px-8">
+      {/* Title hidden on mobile to maximize canvas room — desktop unchanged. */}
+      <header className="mb-6 hidden md:block">
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Build your AI stack

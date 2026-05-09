@@ -193,6 +193,43 @@ body {
   display: none;
 }
 
+/* ----------------------------------------------------------------------------
+   Mobile workflow page layout — drawer never overlaps the canvas.
+   The container exposes CSS variables; the canvas + drawer read them so they
+   stay in sync as the panel toggles between collapsed/expanded.
+   Desktop styles are untouched (rules only apply at < 768px).
+   ---------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .workflow-page-mobile {
+    --header-h: calc(52px + env(safe-area-inset-top, 0px));
+    --controls-h: 120px;
+    --tabbar-h: calc(56px + env(safe-area-inset-bottom, 0px));
+    --panel-collapsed-h: 56px;
+    --panel-expanded-h: 280px;
+    --panel-h: var(--panel-collapsed-h);
+  }
+  .workflow-page-mobile[data-panel-state="expanded"] {
+    --panel-h: var(--panel-expanded-h);
+  }
+  .workflow-canvas-mobile {
+    height: calc(
+      100dvh - var(--header-h) - var(--controls-h) - var(--panel-h) -
+        var(--tabbar-h)
+    );
+    min-height: 220px;
+    transition: height 300ms ease;
+  }
+  .app-library-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: var(--tabbar-h);
+    height: var(--panel-h);
+    transition: height 300ms ease;
+    z-index: 35;
+  }
+}
+
 @media (max-width: 767px) {
   .step-indicator .step-pill {
     padding: 4px 8px;

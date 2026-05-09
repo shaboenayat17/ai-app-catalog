@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  useCallback,
   useEffect,
   useMemo,
   useRef,
@@ -74,6 +75,77 @@ function decodeNodes(raw: string | null, apps: AIApp[]): Node[] {
       return { appId, x: xn, y: yn };
     })
     .filter((n): n is Node => n !== null);
+}
+
+/* ----- Mobile auto-fit grid layout ---------------------------------------- */
+
+/** Pick the grid (cols × rows) that fits all nodes nicely. */
+function pickGrid(n: number): { cols: number; rows: number } {
+  if (n <= 1) return { cols: 1, rows: 1 };
+  if (n === 2) return { cols: 2, rows: 1 };
+  if (n === 3) return { cols: 3, rows: 1 };
+  if (n === 4) return { cols: 2, rows: 2 };
+  if (n === 5 || n === 6) return { cols: 3, rows: 2 };
+  if (n <= 8) return { cols: 4, rows: 2 };
+  if (n === 9) return { cols: 3, rows: 3 };
+  if (n <= 12) return { cols: 4, rows: 3 };
+  const cols = Math.ceil(Math.sqrt(n));
+  return { cols, rows: Math.ceil(n / cols) };
+}
+
+/**
+ * Compute auto-fit positions + node size for a list of nodes inside the given canvas.
+ * Distributes nodes evenly in the grid; centers any short final row.
+ * Returns positions in the same node order plus the chosen node size.
+ */
+export function autoFitLayout(
+  nodes: Node[],
+  canvasW: number,
+  canvasH: number,
+): { nodes: Node[]; nodeW: number; nodeH: number } {
+  const n = nodes.length;
+  if (n === 0) return { nodes: [], nodeW: 110, nodeH: 82 };
+
+  const { cols, rows } = pickGrid(n);
+  // 10% padding each edge; cells share 80% of canvas.
+  const padX = canvasW * 0.1;
+  const padY = canvasH * 0.1;
+  const usableW = Math.max(canvasW - 2 * padX, 240);
+  const usableH = Math.max(canvasH - 2 * padY, 200);
+
+  const gapX = 14;
+  const gapY = 18;
+  const cellW = (usableW - gapX * (cols - 1)) / cols;
+  const cellH = (usableH - gapY * (rows - 1)) / rows;
+
+  // Node = ~92% of cell; constrained to the [80, 140] band per spec.
+  let nodeW = Math.max(80, Math.min(140, cellW * 0.92));
+  let nodeH = nodeW * 0.75;
+  if (nodeH > cellH) {
+    nodeH = cellH;
+    nodeW = Math.max(80, Math.min(140, nodeH / 0.75));
+  }
+
+  // Total grid bounding box (uniform cell width including gap).
+  const gridStartY = padY + (cellH - nodeH) / 2;
+
+  const out: Node[] = [];
+  for (let r = 0; r < rows; r++) {
+    const itemsInRow = Math.min(cols, n - r * cols);
+    if (itemsInRow <= 0) break;
+    // Center each row independently so a partial last row looks balanced.
+    const rowW = itemsInRow * nodeW + (itemsInRow - 1) * gapX;
+    const rowStartX = (canvasW - rowW) / 2;
+    for (let c = 0; c < itemsInRow; c++) {
+      const idx = r * cols + c;
+      out.push({
+        ...nodes[idx],
+        x: rowStartX + c * (nodeW + gapX),
+        y: gridStartY + r * (cellH + gapY),
+      });
+    }
+  }
+  return { nodes: out, nodeW: Math.round(nodeW), nodeH: Math.round(nodeH) };
 }
 
 function defaultLayout(appIds: string[]): Node[] {
@@ -169,8 +241,24 @@ export function WorkflowCanvas({ apps }: Props) {
   const nodeW = isMobile ? 120 : NODE_W;
   const nodeH = isMobile ? 78 : NODE_H;
 
-  // Mobile bottom-drawer state: 0 = collapsed, 1 = half, 2 = full.
-  const [drawerState, setDrawerState] = useState<0 | 1 | 2>(0);
+  // Mobile bottom-drawer state — two snap points per spec.
+  const [panelState, setPanelState] = useState<"collapsed" | "expanded">(
+    "collapsed",
+  );
+
+  // Mobile auto-fit node size + recently-moved tooltip flag.
+  const [autoFitSize, setAutoFitSize] = useState<{ w: number; h: number }>({
+    w: 110,
+    h: 82,
+  });
+  const [showFitHint, setShowFitHint] = useState(false);
+  const fitHintTimer = useRef<number | null>(null);
+  // Skip the next auto-fit pass after a manual drag so we don't fight the user.
+  const skipNextAutoFit = useRef(false);
+  // Tracks the rendered canvas viewport size (mobile) for layout calcs.
+  const [canvasSize, setCanvasSize] = useState<{ w: number; h: number } | null>(
+    null,
+  );
 
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null);
   const [pulse, setPulse] = useState<{ id: string; key: number } | null>(null);
@@ -278,6 +366,53 @@ export function WorkflowCanvas({ apps }: Props) {
 
   const canvasRef = useRef<HTMLDivElement | null>(null);
 
+  // Mobile-only: track the canvas viewport size so auto-fit knows the real space.
+  useEffect(() => {
+    if (!isMobile) {
+      setCanvasSize(null);
+      return;
+    }
+    const el = canvasRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const measure = () =>
+      setCanvasSize({ w: el.clientWidth, h: el.clientHeight });
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [isMobile]);
+
+  // Run an auto-fit pass against the current canvas size.
+  const runAutoFit = useCallback(() => {
+    if (!isMobile || !canvasSize || canvasSize.w < 100) return;
+    setNodes((prev) => {
+      if (prev.length === 0) return prev;
+      const fit = autoFitLayout(prev, canvasSize.w, canvasSize.h);
+      setAutoFitSize({ w: fit.nodeW, h: fit.nodeH });
+      return fit.nodes;
+    });
+    // After programmatic fit, hide the "tap fit" hint.
+    setShowFitHint(false);
+    if (fitHintTimer.current) {
+      window.clearTimeout(fitHintTimer.current);
+      fitHintTimer.current = null;
+    }
+  }, [isMobile, canvasSize]);
+
+  // Re-fit on relevant triggers: canvas size changes (panel toggle / orientation),
+  // node count changes, or mobile-mode flip. Skip the next pass once a manual drag fires.
+  useEffect(() => {
+    if (skipNextAutoFit.current) {
+      skipNextAutoFit.current = false;
+      return;
+    }
+    runAutoFit();
+  }, [runAutoFit, nodes.length]);
+
+  // Effective node size on mobile uses the auto-fit values; desktop unchanged.
+  const effectiveNodeW = isMobile ? autoFitSize.w : nodeW;
+  const effectiveNodeH = isMobile ? autoFitSize.h : nodeH;
+
   const onDragStart = (e: DragStartEvent) => setActiveDragId(String(e.active.id));
 
   const onDragEnd = (e: DragEndEvent) => {
@@ -293,9 +428,11 @@ export function WorkflowCanvas({ apps }: Props) {
         const scrollTop = canvasRef.current?.scrollTop ?? 0;
         if (overRect && draggedRect) {
           const x =
-            scrollLeft + draggedRect.left - overRect.left + draggedRect.width / 2 - nodeW / 2;
+            scrollLeft + draggedRect.left - overRect.left + draggedRect.width / 2 -
+            effectiveNodeW / 2;
           const y =
-            scrollTop + draggedRect.top - overRect.top + draggedRect.height / 2 - nodeH / 2;
+            scrollTop + draggedRect.top - overRect.top + draggedRect.height / 2 -
+            effectiveNodeH / 2;
           setNodes((prev) => {
             if (prev.some((n) => n.appId === appId)) return prev;
             return [...prev, { appId, x: Math.max(8, x), y: Math.max(8, y) }];
@@ -304,17 +441,33 @@ export function WorkflowCanvas({ apps }: Props) {
           addNodeAtCenter(appId);
         }
         // Successful drop on canvas → auto-collapse the mobile drawer.
-        if (isMobile) setDrawerState(0);
+        if (isMobile) setPanelState("collapsed");
       }
     } else if (id.startsWith("node:")) {
       const appId = id.slice("node:".length);
+      // Mobile: clamp inside the canvas viewport so nothing escapes off-screen.
+      const maxX =
+        isMobile && canvasSize ? Math.max(0, canvasSize.w - effectiveNodeW) : Infinity;
+      const maxY =
+        isMobile && canvasSize ? Math.max(0, canvasSize.h - effectiveNodeH) : Infinity;
       setNodes((prev) =>
         prev.map((n) =>
           n.appId === appId
-            ? { ...n, x: Math.max(0, n.x + e.delta.x), y: Math.max(0, n.y + e.delta.y) }
+            ? {
+                ...n,
+                x: Math.min(maxX, Math.max(0, n.x + e.delta.x)),
+                y: Math.min(maxY, Math.max(0, n.y + e.delta.y)),
+              }
             : n,
         ),
       );
+      // Don't auto-fit immediately after a manual drag; instead surface the Fit hint.
+      if (isMobile) {
+        skipNextAutoFit.current = true;
+        setShowFitHint(true);
+        if (fitHintTimer.current) window.clearTimeout(fitHintTimer.current);
+        fitHintTimer.current = window.setTimeout(() => setShowFitHint(false), 3000);
+      }
     }
   };
 
@@ -379,6 +532,10 @@ export function WorkflowCanvas({ apps }: Props) {
 
   return (
     <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd}>
+    <div
+      className="workflow-page-mobile"
+      data-panel-state={panelState}
+    >
       {/* Top toolbar */}
       <div className="mb-4 flex flex-wrap items-center gap-3 rounded-xl border border-border bg-bg-card/70 px-3 py-3 backdrop-blur sm:px-4">
         <label className="flex items-center gap-2 text-xs text-muted">
@@ -511,6 +668,36 @@ export function WorkflowCanvas({ apps }: Props) {
           <CanvasDroppable
             canvasRef={canvasRef}
             onBackgroundClick={() => setSelectedAppId(null)}
+            fitButton={
+              isMobile && nodes.length > 0 ? (
+                <button
+                  type="button"
+                  onClick={runAutoFit}
+                  aria-label="Fit nodes to canvas"
+                  className="press absolute right-2 top-2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full text-white shadow-lift backdrop-blur"
+                  style={{ backgroundColor: "rgba(99,102,241,0.85)" }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+                    <path
+                      d="M2 6V3a1 1 0 0 1 1-1h3M14 6V3a1 1 0 0 0-1-1h-3M2 10v3a1 1 0 0 0 1 1h3M14 10v3a1 1 0 0 1-1 1h-3"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
+              ) : null
+            }
+            hint={
+              isMobile && showFitHint ? (
+                <div
+                  role="status"
+                  className="pointer-events-none absolute left-1/2 top-2 z-20 -translate-x-1/2 rounded-full border border-accent/40 bg-bg-elevated/90 px-3 py-1 text-[10px] text-white backdrop-blur animate-fade-in-up"
+                >
+                  You moved a node — tap ⊡ to re-fit
+                </div>
+              ) : null
+            }
           >
             <div className="absolute inset-0 canvas-grid" />
             {/* SVG lines layer */}
@@ -521,10 +708,10 @@ export function WorkflowCanvas({ apps }: Props) {
               {lines.map(({ a, b, color }, i) => {
                 const aSize = stackAppMap.has(a.appId)
                   ? { w: MIN_NODE_W, h: MIN_NODE_H }
-                  : { w: nodeW, h: nodeH };
+                  : { w: effectiveNodeW, h: effectiveNodeH };
                 const bSize = stackAppMap.has(b.appId)
                   ? { w: MIN_NODE_W, h: MIN_NODE_H }
-                  : { w: nodeW, h: nodeH };
+                  : { w: effectiveNodeW, h: effectiveNodeH };
                 const x1 = a.x + aSize.w / 2;
                 const y1 = a.y + aSize.h / 2;
                 const x2 = b.x + bSize.w / 2;
@@ -564,8 +751,8 @@ export function WorkflowCanvas({ apps }: Props) {
                   pulseKey={pulse?.id === node.appId ? pulse.key : null}
                   minMode={minStackMode && stackApp !== null}
                   badges={stackApp?.badges ?? null}
-                  defaultW={nodeW}
-                  defaultH={nodeH}
+                  defaultW={effectiveNodeW}
+                  defaultH={effectiveNodeH}
                   isMobile={isMobile}
                   onClick={() => setSelectedAppId(node.appId)}
                   onRemove={() => removeNode(node.appId)}
@@ -612,8 +799,8 @@ export function WorkflowCanvas({ apps }: Props) {
       {/* Mobile-only bottom drawer for the app library */}
       {isMobile && (
         <MobileAppDrawer
-          state={drawerState}
-          setState={setDrawerState}
+          state={panelState}
+          setState={setPanelState}
           query={paletteQuery}
           setQuery={setPaletteQuery}
           paletteCat={paletteCat}
@@ -623,6 +810,7 @@ export function WorkflowCanvas({ apps }: Props) {
           onAdd={addNodeAtCenter}
         />
       )}
+    </div>
     </DndContext>
   );
 }
@@ -631,72 +819,38 @@ function CanvasDroppable({
   children,
   canvasRef,
   onBackgroundClick,
+  fitButton,
+  hint,
 }: {
   children: React.ReactNode;
   canvasRef: React.MutableRefObject<HTMLDivElement | null>;
   onBackgroundClick?: () => void;
+  fitButton?: React.ReactNode;
+  hint?: React.ReactNode;
 }) {
   const { setNodeRef, isOver } = useDroppable({ id: CANVAS_ID });
-  const [showScrollHint, setShowScrollHint] = useState(false);
-
-  // First-visit scroll hint (mobile only). One per session.
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (!window.matchMedia("(max-width: 767px)").matches) return;
-    try {
-      if (window.sessionStorage.getItem("wf-scroll-hint-seen") === "1") return;
-      window.sessionStorage.setItem("wf-scroll-hint-seen", "1");
-    } catch {
-      /* private mode — show anyway, harmless */
-    }
-    setShowScrollHint(true);
-    const t = window.setTimeout(() => setShowScrollHint(false), 3000);
-    return () => window.clearTimeout(t);
-  }, []);
-
   return (
     <div className="relative">
-      {/* Scrollable + droppable canvas viewport. */}
       <div
         ref={(el) => {
           setNodeRef(el);
           canvasRef.current = el;
         }}
         onClick={onBackgroundClick}
-        style={{
-          WebkitOverflowScrolling: "touch",
-          touchAction: "pan-x pan-y",
-        }}
         className={clsx(
-          "relative h-[calc(50vh-120px)] min-h-[420px] overflow-auto rounded-xl border bg-bg/60 transition md:h-[640px] md:overflow-hidden",
+          // Mobile: height comes from .workflow-canvas-mobile via CSS variables.
+          // Desktop: keep the existing fixed 640px viewport.
+          "workflow-canvas-mobile relative overflow-hidden rounded-xl border bg-bg/60 transition md:h-[640px]",
           isOver ? "border-accent/60 shadow-glow" : "border-border",
         )}
       >
-        {/* Scrollable content layer — explicit min-size on mobile so absolute children
-            get a real coordinate space larger than the viewport. */}
-        <div className="relative h-full min-h-[600px] w-full min-w-[800px] md:min-h-0 md:min-w-0">
-          {children}
-        </div>
+        <div className="relative h-full w-full">{children}</div>
       </div>
 
-      {/* Mobile-only right-edge fade gradient (hints that more lives off-screen). */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute right-0 top-0 h-full w-10 rounded-r-xl md:hidden"
-        style={{
-          background: "linear-gradient(to right, transparent, rgba(15,17,23,0.8))",
-        }}
-      />
-
-      {/* Mobile-only first-visit scroll hint. Auto-fades after 3s. */}
-      {showScrollHint && (
-        <div
-          aria-live="polite"
-          className="pointer-events-none absolute left-1/2 top-3 z-10 -translate-x-1/2 rounded-full border border-border bg-bg-elevated/90 px-3 py-1 text-[10px] text-muted-strong backdrop-blur animate-fade-in-up md:hidden"
-        >
-          ← scroll to explore →
-        </div>
-      )}
+      {/* Mobile-only Fit button + hint live OUTSIDE the canvas viewport so they
+          never get clipped by the canvas's own overflow:hidden. */}
+      {fitButton}
+      {hint}
     </div>
   );
 }
@@ -750,8 +904,8 @@ function CanvasNode({
           : {}),
       }}
       className={clsx(
-        "rounded-xl border bg-bg-elevated text-left shadow-lift animate-fade-in-up",
-        isMobile ? "p-2" : "p-3",
+        "border bg-bg-elevated text-left shadow-lift animate-fade-in-up",
+        isMobile ? "rounded-[10px] p-1.5" : "rounded-xl p-3",
         !isDragging && "transition-all duration-300 ease-out",
         selected ? "border-transparent" : "border-border hover:border-accent/40",
         isDragging && "opacity-80 cursor-grabbing",
@@ -810,14 +964,12 @@ function CanvasNode({
         >
           {app.name}
         </span>
-        <span
-          className={clsx(
-            "mt-0.5 truncate uppercase tracking-wider text-muted",
-            isMobile && !minMode ? "text-[9px]" : "text-[10px]",
-          )}
-        >
-          {app.category}
-        </span>
+        {/* Category label hidden on mobile to save vertical room. */}
+        {!(isMobile && !minMode) && (
+          <span className="mt-0.5 truncate text-[10px] uppercase tracking-wider text-muted">
+            {app.category}
+          </span>
+        )}
         {minMode && badges && badges.length > 0 && (
           <div className="mt-2 flex flex-wrap justify-center gap-1">
             {badges.map((b, i) => (
@@ -1112,8 +1264,8 @@ function StepIndicator({ useCase }: { useCase: UseCase }) {
 /* -------------------- Mobile bottom drawer (app library) -------------------- */
 
 interface MobileAppDrawerProps {
-  state: 0 | 1 | 2;
-  setState: (s: 0 | 1 | 2) => void;
+  state: "collapsed" | "expanded";
+  setState: (s: "collapsed" | "expanded") => void;
   query: string;
   setQuery: (s: string) => void;
   paletteCat: Category | "all";
@@ -1134,77 +1286,74 @@ function MobileAppDrawer({
   totalApps,
   onAdd,
 }: MobileAppDrawerProps) {
-  // Heights (approx) — used for translate math from the bottom of the screen.
-  // 0=collapsed shows handle + label only. 1=half. 2=full. We position the drawer
-  // at bottom: calc(env(safe-area-inset-bottom) + 56px) so it sits above the bottom nav.
-  const heights = ["48px", "40vh", "85vh"] as const;
+  // Position + height come from .app-library-panel CSS (driven by panel-state attr).
+  // Drag handle: ≥50px swipe up → expand, ≥50px down → collapse.
   const startY = useRef<number | null>(null);
-  const startState = useRef<0 | 1 | 2>(state);
-  const [dragOffset, setDragOffset] = useState(0);
+  const dragMoved = useRef(false);
 
   const onPointerDown = (e: React.PointerEvent) => {
     startY.current = e.clientY;
-    startState.current = state;
+    dragMoved.current = false;
     e.currentTarget.setPointerCapture(e.pointerId);
   };
   const onPointerMove = (e: React.PointerEvent) => {
     if (startY.current === null) return;
-    setDragOffset(e.clientY - startY.current);
+    if (Math.abs(e.clientY - startY.current) > 4) dragMoved.current = true;
   };
   const onPointerUp = (e: React.PointerEvent) => {
     if (startY.current === null) return;
     const delta = e.clientY - startY.current;
     startY.current = null;
-    setDragOffset(0);
-    // Drag up (negative delta) → grow; drag down (positive) → shrink. ~80px per snap.
-    let next: 0 | 1 | 2 = startState.current;
-    if (delta < -60) next = Math.min(2, startState.current + 1) as 0 | 1 | 2;
-    else if (delta > 60) next = Math.max(0, startState.current - 1) as 0 | 1 | 2;
-    setState(next);
+    if (delta < -50) setState("expanded");
+    else if (delta > 50) setState("collapsed");
   };
-
-  const expand = () => setState(state === 0 ? 1 : state);
 
   return (
     <aside
       role="region"
       aria-label="App library"
-      className="fixed inset-x-0 z-40 rounded-t-2xl border-t-2 border-border bg-bg-elevated md:hidden"
-      style={{
-        bottom: "calc(env(safe-area-inset-bottom, 0px) + 56px)",
-        height: heights[state],
-        transform: dragOffset !== 0 ? `translateY(${dragOffset}px)` : undefined,
-        transition: dragOffset !== 0 ? "none" : "height 240ms cubic-bezier(0.22,1,0.36,1)",
-        boxShadow: "0 -4px 20px rgba(0,0,0,0.5)",
-        display: "flex",
-        flexDirection: "column",
-      }}
+      className="app-library-panel flex flex-col rounded-t-2xl border-t border-white/10 bg-bg-elevated md:hidden"
+      style={{ boxShadow: "0 -4px 20px rgba(0,0,0,0.5)" }}
     >
-      {/* Drag handle row — also acts as collapsed-state header */}
+      {/* Drag handle / collapsed-state row */}
       <div
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
-        onClick={(e) => {
-          // Tap-only (not a drag) toggles collapsed → half.
-          if (Math.abs(dragOffset) < 4 && state === 0) expand();
+        onClick={() => {
+          if (!dragMoved.current && state === "collapsed") setState("expanded");
         }}
-        className="flex shrink-0 cursor-grab touch-none flex-col items-center pt-3 active:cursor-grabbing"
+        className={clsx(
+          "flex shrink-0 cursor-grab touch-none items-center justify-between px-4 active:cursor-grabbing",
+          state === "collapsed" ? "h-14" : "h-7",
+        )}
       >
-        <span className="block h-1 w-10 rounded-full bg-border-strong" />
-        {state === 0 && (
-          <p className="mt-2 mb-2 text-xs font-medium text-muted-strong">
-            ➕ Add apps · {totalApps}
-          </p>
+        {state === "collapsed" ? (
+          <>
+            <span className="text-[13px] font-medium text-white">
+              <span aria-hidden className="mr-1">➕</span>
+              App Library · {totalApps} apps
+            </span>
+            <span aria-hidden className="block h-1 w-10 shrink-0 rounded-full bg-border-strong" />
+            <span className="text-[13px] font-medium text-accent">↑ Open</span>
+          </>
+        ) : (
+          <span aria-hidden className="mx-auto block h-1 w-10 rounded-full bg-border-strong" />
         )}
       </div>
 
-      {state > 0 && (
+      {state === "expanded" && (
         <>
-          <div className="flex shrink-0 items-center justify-between px-4 pb-2 pt-1">
+          <div className="flex shrink-0 items-center justify-between px-4 pb-2">
             <h2 className="text-sm font-bold text-white">App Library</h2>
-            <span className="text-xs text-muted">{totalApps} apps</span>
+            <button
+              type="button"
+              onClick={() => setState("collapsed")}
+              className="press text-[13px] font-medium text-accent"
+            >
+              ↓ Close
+            </button>
           </div>
           <div className="shrink-0 px-4">
             <input
@@ -1214,7 +1363,7 @@ function MobileAppDrawer({
               placeholder="Search apps to drag…"
               className="min-h-[40px] w-full rounded-md border border-border bg-bg px-3 text-sm text-white placeholder:text-muted outline-none focus:border-accent/60"
             />
-            <div className="step-indicator-scroller mt-2 flex gap-1.5 overflow-x-auto pb-1">
+            <div className="step-indicator-scroller mt-2 flex h-9 items-center gap-1.5 overflow-x-auto pb-1">
               <CatChip
                 label="all"
                 active={paletteCat === "all"}
@@ -1239,7 +1388,7 @@ function MobileAppDrawer({
               })}
             </div>
           </div>
-          <ul className="mt-2 flex-1 space-y-1.5 overflow-y-auto px-4 pb-4">
+          <ul className="mt-2 flex-1 space-y-1 overflow-y-auto px-4 pb-3">
             {filteredPalette.map((a) => (
               <PaletteItem key={a.id} app={a} onAdd={onAdd} />
             ))}
