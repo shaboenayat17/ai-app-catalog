@@ -715,12 +715,16 @@ export function WorkflowCanvas({ apps }: Props) {
               aria-hidden
             >
               {lines.map(({ a, b, color }, i) => {
-                const aSize = stackAppMap.has(a.appId)
-                  ? { w: MIN_NODE_W, h: MIN_NODE_H }
-                  : { w: effectiveNodeW, h: effectiveNodeH };
-                const bSize = stackAppMap.has(b.appId)
-                  ? { w: MIN_NODE_W, h: MIN_NODE_H }
-                  : { w: effectiveNodeW, h: effectiveNodeH };
+                // On mobile the min-stack nodes also use the auto-fit size
+                // (see CanvasNode), so lines must connect to those centers.
+                const aSize =
+                  stackAppMap.has(a.appId) && !isMobile
+                    ? { w: MIN_NODE_W, h: MIN_NODE_H }
+                    : { w: effectiveNodeW, h: effectiveNodeH };
+                const bSize =
+                  stackAppMap.has(b.appId) && !isMobile
+                    ? { w: MIN_NODE_W, h: MIN_NODE_H }
+                    : { w: effectiveNodeW, h: effectiveNodeH };
                 const x1 = a.x + aSize.w / 2;
                 const y1 = a.y + aSize.h / 2;
                 const x2 = b.x + bSize.w / 2;
@@ -892,8 +896,11 @@ function CanvasNode({
   const { attributes, listeners, setNodeRef, transform, isDragging } =
     useDraggable({ id: `node:${app.id}` });
   const m = CATEGORY_META[app.category];
-  const w = minMode ? MIN_NODE_W : defaultW;
-  const h = minMode ? MIN_NODE_H : defaultH;
+  // On mobile in min-stack mode, the role badges are hidden via CSS, so the
+  // larger desktop min-stack dimensions overflow the canvas. Fall through to
+  // the auto-fit size (defaultW/H) instead.
+  const w = minMode && !isMobile ? MIN_NODE_W : defaultW;
+  const h = minMode && !isMobile ? MIN_NODE_H : defaultH;
   const showLoop = minMode && badges !== null && badges.length > 1;
 
   return (
