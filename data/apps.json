@@ -94,19 +94,19 @@
     "savedCount": 943,
     "isNew": false,
     "pros": [
-      "Most versatile AI assistant \u2014 handles writing, coding, research, image generation, and voice in one app",
+      "Most versatile AI assistant — handles writing, coding, research, image generation, and voice in one app",
       "Huge library of community Custom GPTs for niche tasks like resume review or D&D campaigns",
-      "Best multimodal support \u2014 understands images, PDFs, voice, and screen content",
+      "Best multimodal support — understands images, PDFs, voice, and screen content",
       "Integrates with more third-party tools than any other AI"
     ],
     "cons": [
-      "Gets expensive fast \u2014 $20/month for Plus, $200/month for Pro tier",
+      "Gets expensive fast — $20/month for Plus, $200/month for Pro tier",
       "Free tier switches to a slower model during peak hours and caps your messages",
-      "Can confidently give wrong answers \u2014 always verify important facts",
+      "Can confidently give wrong answers — always verify important facts",
       "Smaller context window than Claude when working with very long documents"
     ],
     "verdict": "Best all-rounder if you want one tool that does writing, coding, image, and voice reasonably well.",
-    "notGoodFor": "Avoid if you process very long documents \u2014 Claude handles 200K+ tokens better."
+    "notGoodFor": "Avoid if you process very long documents — Claude handles 200K+ tokens better."
   },
   {
     "id": "claude",
@@ -200,19 +200,19 @@
     "savedCount": 561,
     "isNew": false,
     "pros": [
-      "Largest practical context window \u2014 read whole books or codebases in a single message",
+      "Largest practical context window — read whole books or codebases in a single message",
       "Writing has more nuance and natural rhythm than ChatGPT for long-form prose",
       "Artifacts let you preview React/HTML/SVG output side-by-side as you iterate",
       "Strong refusals on safety-edge content without being preachy"
     ],
     "cons": [
-      "No native image, voice, or video generation \u2014 text and analysis only",
+      "No native image, voice, or video generation — text and analysis only",
       "Smaller third-party integration ecosystem than ChatGPT",
       "Daily message cap on free tier hits faster than ChatGPT's",
-      "Web app only \u2014 mobile experience trails ChatGPT and Gemini"
+      "Web app only — mobile experience trails ChatGPT and Gemini"
     ],
     "verdict": "Best for long-document work, careful writing, and code review.",
-    "notGoodFor": "Skip if you need image generation or voice \u2014 Claude doesn't do those natively."
+    "notGoodFor": "Skip if you need image generation or voice — Claude doesn't do those natively."
   },
   {
     "id": "gemini",
@@ -289,19 +289,19 @@
     "savedCount": 397,
     "isNew": false,
     "pros": [
-      "Built into Google Workspace \u2014 drafts emails in Gmail and edits in Docs without copy-paste",
+      "Built into Google Workspace — drafts emails in Gmail and edits in Docs without copy-paste",
       "Google Search grounding gives real-time, citation-backed answers",
       "1M-token context on Gemini 1.5 Pro for entire codebases or video transcripts",
       "Strong on Android with system-level integration"
     ],
     "cons": [
       "Output quality lags ChatGPT and Claude for nuanced writing",
-      "Free Workspace integration is limited \u2014 full features require Google One AI Premium",
+      "Free Workspace integration is limited — full features require Google One AI Premium",
       "Web UI feels less polished than ChatGPT for complex multi-turn conversations",
       "Hallucinates more than competitors despite the search grounding"
     ],
     "verdict": "Best if you live in Google Workspace and want AI inside the tools you already use.",
-    "notGoodFor": "Skip if you don't use Google Docs or Gmail \u2014 you'll get more from ChatGPT or Claude."
+    "notGoodFor": "Skip if you don't use Google Docs or Gmail — you'll get more from ChatGPT or Claude."
   },
   {
     "id": "grammarly",
@@ -385,19 +385,19 @@
     "savedCount": 696,
     "isNew": false,
     "pros": [
-      "Works everywhere \u2014 browser extension, desktop app, mobile keyboard, MS Office add-in",
+      "Works everywhere — browser extension, desktop app, mobile keyboard, MS Office add-in",
       "Catches subtle tone, clarity, and engagement issues most LLMs miss",
-      "Real-time feedback as you type \u2014 no copy-paste loop",
+      "Real-time feedback as you type — no copy-paste loop",
       "Generative AI features now included on free tier (limited)"
     ],
     "cons": [
-      "Premium is $30/month \u2014 pricey for what's now bundled with most LLMs",
+      "Premium is $30/month — pricey for what's now bundled with most LLMs",
       "Heavy CPU/RAM usage, especially in Chrome with multiple tabs",
       "Sometimes flags valid stylistic choices and pushes generic corporate tone",
-      "Privacy concerns \u2014 sends everything you type to Grammarly's servers"
+      "Privacy concerns — sends everything you type to Grammarly's servers"
     ],
     "verdict": "Best for writers who care about tone consistency across email, docs, and Slack.",
-    "notGoodFor": "Skip if you write mostly with ChatGPT or Claude \u2014 they handle grammar inline already."
+    "notGoodFor": "Skip if you write mostly with ChatGPT or Claude — they handle grammar inline already."
   },
   {
     "id": "jasper",
@@ -479,13 +479,13 @@
       "SEO mode for content optimized to rank on Google"
     ],
     "cons": [
-      "Starts at $49/month \u2014 far more expensive than ChatGPT for the same writing tasks",
+      "Starts at $49/month — far more expensive than ChatGPT for the same writing tasks",
       "No free tier, only a 7-day trial",
       "Output often needs more editing than Claude for long-form content",
       "Has been losing market share to general LLMs since 2024"
     ],
     "verdict": "Best for marketing teams that need brand consistency across many writers.",
-    "notGoodFor": "Skip if you're a solo creator \u2014 ChatGPT plus a custom prompt does the same job for $20."
+    "notGoodFor": "Skip if you're a solo creator — ChatGPT plus a custom prompt does the same job for $20."
   },
   {
     "id": "copy-ai",
@@ -556,19 +556,19 @@
     "savedCount": 176,
     "isNew": false,
     "pros": [
-      "Workflow templates string multiple AI steps together (research \u2192 outline \u2192 draft \u2192 polish)",
-      "Strong free tier with 2,000 words/month \u2014 enough to test seriously",
+      "Workflow templates string multiple AI steps together (research → outline → draft → polish)",
+      "Strong free tier with 2,000 words/month — enough to test seriously",
       "Cleaner UI than Jasper for non-marketing users",
-      "Built-in chat plus templates \u2014 covers both freeform and structured writing"
+      "Built-in chat plus templates — covers both freeform and structured writing"
     ],
     "cons": [
-      "Pro plan jumps to $49/month \u2014 same price tier as Jasper",
+      "Pro plan jumps to $49/month — same price tier as Jasper",
       "Output quality similar to ChatGPT but at a higher price",
       "Workflow builder has a learning curve",
       "Less polished than Jasper for enterprise team features"
     ],
     "verdict": "Best for solopreneurs and small teams that want templates plus chat in one place.",
-    "notGoodFor": "Skip if you mostly write freeform \u2014 ChatGPT or Claude is cheaper and just as good."
+    "notGoodFor": "Skip if you mostly write freeform — ChatGPT or Claude is cheaper and just as good."
   },
   {
     "id": "midjourney",
@@ -664,23 +664,23 @@
     "savedCount": 775,
     "isNew": false,
     "pros": [
-      "Best image quality for artistic and stylized work \u2014 nothing beats it for aesthetic output",
+      "Best image quality for artistic and stylized work — nothing beats it for aesthetic output",
       "Active Discord community with millions of public examples to learn prompting from",
       "V6/V7 produces incredibly photorealistic results that fool most viewers",
       "Style references (--sref) lock a consistent look across an entire project"
     ],
     "cons": [
-      "No free tier \u2014 starts at $10/month",
+      "No free tier — starts at $10/month",
       "Web app launched late, still feels less mature than the Discord workflow",
-      "Cannot generate readable text inside images \u2014 use Ideogram or DALL\u00b7E 3 for that",
+      "Cannot generate readable text inside images — use Ideogram or DALL·E 3 for that",
       "Basic plan only gives Stealth mode and commercial rights at $30/month and up"
     ],
     "verdict": "Best if you care deeply about visual quality and artistic style.",
-    "notGoodFor": "Skip if you just need quick functional images \u2014 Canva AI or DALL\u00b7E 3 is cheaper and easier."
+    "notGoodFor": "Skip if you just need quick functional images — Canva AI or DALL·E 3 is cheaper and easier."
   },
   {
     "id": "dalle",
-    "name": "DALL\u00b7E 3",
+    "name": "DALL·E 3",
     "description": "OpenAI's image generator with strong prompt fidelity, accessible via ChatGPT and API.",
     "category": "Image & Art",
     "tags": [
@@ -733,14 +733,14 @@
       {
         "author": "Noah W.",
         "rating": 5,
-        "text": "DALL\u00b7E 3 replaced two other tools for me. The latest update is noticeably better.",
+        "text": "DALL·E 3 replaced two other tools for me. The latest update is noticeably better.",
         "date": "2026-03-09",
         "useCase": "Start a podcast"
       },
       {
         "author": "Jin H.",
         "rating": 5,
-        "text": "DALL\u00b7E 3 replaced two other tools for me. The latest update is noticeably better.",
+        "text": "DALL·E 3 replaced two other tools for me. The latest update is noticeably better.",
         "date": "2026-03-28",
         "useCase": "Create social content"
       }
@@ -765,19 +765,19 @@
     "savedCount": 511,
     "isNew": false,
     "pros": [
-      "Best at putting readable text inside images \u2014 signs, posters, logos work first try",
-      "Bundled with ChatGPT Plus \u2014 no separate subscription needed",
-      "Strong prompt fidelity \u2014 interprets natural-language instructions accurately",
-      "Easy iteration through ChatGPT \u2014 say 'make it more purple' and it adjusts"
+      "Best at putting readable text inside images — signs, posters, logos work first try",
+      "Bundled with ChatGPT Plus — no separate subscription needed",
+      "Strong prompt fidelity — interprets natural-language instructions accurately",
+      "Easy iteration through ChatGPT — say 'make it more purple' and it adjusts"
     ],
     "cons": [
       "Image quality lags Midjourney and Stable Diffusion for artistic work",
       "Slower generation speed than competitors",
       "Limited stylistic range compared to Midjourney's V6",
-      "Locked to ChatGPT \u2014 can't run via API at the same quality"
+      "Locked to ChatGPT — can't run via API at the same quality"
     ],
     "verdict": "Best if you already pay for ChatGPT and need decent images with text.",
-    "notGoodFor": "Skip for artistic or stylized work \u2014 Midjourney is in a different league."
+    "notGoodFor": "Skip for artistic or stylized work — Midjourney is in a different league."
   },
   {
     "id": "stable-diffusion",
@@ -849,7 +849,7 @@
       "free_trial": "unlimited",
       "estimated_monthly_cost": {
         "light_user": "$0",
-        "regular_user": "$0\u201310",
+        "regular_user": "$0–10",
         "power_user": "$30"
       }
     },
@@ -859,14 +859,14 @@
     "savedCount": 379,
     "isNew": false,
     "pros": [
-      "Open source \u2014 run locally with full privacy and zero per-image cost",
+      "Open source — run locally with full privacy and zero per-image cost",
       "Massive ecosystem of fine-tuned models on Civitai and Hugging Face for any style",
       "Full control over the generation pipeline (sampler, CFG, steps, ControlNet)",
       "Train custom LoRAs on your own brand or style for consistent output"
     ],
     "cons": [
       "Requires a strong GPU (16GB+ VRAM) for fast local inference",
-      "Steeper learning curve than Midjourney or DALL\u00b7E for non-technical users",
+      "Steeper learning curve than Midjourney or DALL·E for non-technical users",
       "Out-of-the-box quality lower than Midjourney without prompt engineering",
       "Setup, models, and ControlNet management is real ongoing work"
     ],
@@ -956,7 +956,7 @@
     "savedCount": 300,
     "isNew": false,
     "pros": [
-      "Trained on licensed content \u2014 outputs are commercial-safe with no copyright risk",
+      "Trained on licensed content — outputs are commercial-safe with no copyright risk",
       "Integrated into Photoshop, Illustrator, and Premiere as Generative Fill and Generative Recolor",
       "Strong text effects and editable vector output",
       "Free tier with 25 generations/month is genuinely usable"
@@ -968,7 +968,7 @@
       "Limited model variety compared to open-source competitors"
     ],
     "verdict": "Best if you already use Adobe apps and need legally safe images for commercial work.",
-    "notGoodFor": "Skip if you don't use Creative Cloud \u2014 better tools exist standalone."
+    "notGoodFor": "Skip if you don't use Creative Cloud — better tools exist standalone."
   },
   {
     "id": "ideogram",
@@ -1039,8 +1039,8 @@
     "savedCount": 223,
     "isNew": false,
     "pros": [
-      "Best in class for typography \u2014 generates posters, logos, and quotes with crisp readable text",
-      "Generous free tier \u2014 about 25 prompts/day at full quality",
+      "Best in class for typography — generates posters, logos, and quotes with crisp readable text",
+      "Generous free tier — about 25 prompts/day at full quality",
       "Web-based, no Discord required",
       "Magic Prompt expansion improves vague prompts automatically"
     ],
@@ -1048,10 +1048,10 @@
       "General artistic quality below Midjourney",
       "Smaller community and fewer prompt examples",
       "No advanced features like style references or fine-tuning",
-      "Newer product \u2014 feature set still maturing"
+      "Newer product — feature set still maturing"
     ],
-    "verdict": "Best for designers who specifically need text in images \u2014 posters, ads, and quote graphics.",
-    "notGoodFor": "Skip for general image generation \u2014 Midjourney or DALL\u00b7E does it better."
+    "verdict": "Best for designers who specifically need text in images — posters, ads, and quote graphics.",
+    "notGoodFor": "Skip for general image generation — Midjourney or DALL·E does it better."
   },
   {
     "id": "leonardo-ai",
@@ -1118,10 +1118,10 @@
     "savedCount": 261,
     "isNew": false,
     "pros": [
-      "Tuned models for game art, illustration, and product shots \u2014 stronger out-of-box than SD",
+      "Tuned models for game art, illustration, and product shots — stronger out-of-box than SD",
       "Generous free tier (150 fast tokens/day)",
       "Image-to-image, inpainting, and ControlNet without local setup",
-      "Style training \u2014 fine-tune on your own portfolio for consistent looks"
+      "Style training — fine-tune on your own portfolio for consistent looks"
     ],
     "cons": [
       "General artistic ceiling lower than Midjourney V6",
@@ -1130,7 +1130,7 @@
       "Subscription tiers can confuse new users (Apprentice/Artisan/Maestro)"
     ],
     "verdict": "Best for game devs, illustrators, and product designers who need fine-tuned models.",
-    "notGoodFor": "Skip for general artistic work or photoreal \u2014 Midjourney does that better."
+    "notGoodFor": "Skip for general artistic work or photoreal — Midjourney does that better."
   },
   {
     "id": "runway",
@@ -1227,19 +1227,19 @@
     "savedCount": 624,
     "isNew": false,
     "pros": [
-      "Most comprehensive AI video toolkit \u2014 text-to-video, image-to-video, motion brush, and editing",
+      "Most comprehensive AI video toolkit — text-to-video, image-to-video, motion brush, and editing",
       "Gen-3/Gen-4 produces cinematic motion with directable camera controls",
       "Pro features like green-screen removal and inpainting work without leaving the app",
       "API access for custom video pipelines"
     ],
     "cons": [
-      "Credits run out fast \u2014 power users hit $95/month plans easily",
+      "Credits run out fast — power users hit $95/month plans easily",
       "Free tier (~125 credits) only good for testing",
       "Render times can exceed 5 minutes for high-quality clips",
       "Pika is sometimes cheaper for short, stylized clips"
     ],
     "verdict": "Best for serious video creators who need pro tools, not just generation.",
-    "notGoodFor": "Skip if you only need a few short clips \u2014 Pika or Luma is more affordable."
+    "notGoodFor": "Skip if you only need a few short clips — Pika or Luma is more affordable."
   },
   {
     "id": "luma-dream-machine",
@@ -1318,19 +1318,19 @@
     "savedCount": 333,
     "isNew": false,
     "pros": [
-      "Fastest video generation in its class \u2014 clips in under a minute",
-      "Generous free tier \u2014 30 generations/month",
-      "Excellent natural motion \u2014 characters and objects move convincingly",
+      "Fastest video generation in its class — clips in under a minute",
+      "Generous free tier — 30 generations/month",
+      "Excellent natural motion — characters and objects move convincingly",
       "Image-to-video extends existing stills smoothly"
     ],
     "cons": [
       "Shorter clip length than Runway and Kling",
       "Less directable motion than Runway's motion brush",
       "Style range narrower than Pika for stylized output",
-      "Newer product \u2014 fewer pro features than Runway"
+      "Newer product — fewer pro features than Runway"
     ],
     "verdict": "Best for quick image-to-video and natural motion at a low monthly cost.",
-    "notGoodFor": "Skip for long, complex shots \u2014 Kling or Runway handles those better."
+    "notGoodFor": "Skip for long, complex shots — Kling or Runway handles those better."
   },
   {
     "id": "pika",
@@ -1419,7 +1419,7 @@
     "pros": [
       "Fun creative effects and Pikaffects (e.g., 'crush it', 'inflate') for stylized clips",
       "Strong lip-sync for character animation",
-      "Affordable \u2014 $10/month entry tier with 80 credits",
+      "Affordable — $10/month entry tier with 80 credits",
       "Vibrant Discord community sharing prompts and remixes"
     ],
     "cons": [
@@ -1429,7 +1429,7 @@
       "Less control over camera moves than Runway"
     ],
     "verdict": "Best for short, fun, stylized clips and meme-y social posts.",
-    "notGoodFor": "Skip for cinematic or commercial video \u2014 Runway or Kling is the right tool."
+    "notGoodFor": "Skip for cinematic or commercial video — Runway or Kling is the right tool."
   },
   {
     "id": "kling",
@@ -1499,7 +1499,7 @@
     "savedCount": 241,
     "isNew": false,
     "pros": [
-      "Best physics simulation in AI video \u2014 fluids, weight, and collisions look real",
+      "Best physics simulation in AI video — fluids, weight, and collisions look real",
       "Longer clips (up to 2 minutes) than Runway or Pika",
       "Strong free tier with 6 daily generations",
       "Photorealistic output competitive with Sora"
@@ -1511,7 +1511,7 @@
       "Credit pricing can be opaque"
     ],
     "verdict": "Best for cinematic shots needing physics, weight, or longer durations.",
-    "notGoodFor": "Skip if you need a polished English UI \u2014 Runway or Pika is friendlier."
+    "notGoodFor": "Skip if you need a polished English UI — Runway or Pika is friendlier."
   },
   {
     "id": "sora",
@@ -1587,19 +1587,19 @@
     "savedCount": 493,
     "isNew": false,
     "pros": [
-      "Bundled with ChatGPT Plus \u2014 no separate subscription",
+      "Bundled with ChatGPT Plus — no separate subscription",
       "Storyboard editor for stitching multiple scenes together",
       "Strong adherence to detailed prompts",
       "Long clip durations (up to 20 seconds at high quality)"
     ],
     "cons": [
       "Output quality slightly behind Veo 3 and Kling for hyperreal motion",
-      "Locked to ChatGPT subscribers \u2014 no standalone tier",
+      "Locked to ChatGPT subscribers — no standalone tier",
       "Pro tier ($200/month) needed for unlimited usage",
       "Heavy queue times during peak hours"
     ],
     "verdict": "Best if you already pay for ChatGPT and want occasional video without a separate sub.",
-    "notGoodFor": "Skip if video is your main use \u2014 Runway or Kling gives more pro features per dollar."
+    "notGoodFor": "Skip if video is your main use — Runway or Kling gives more pro features per dollar."
   },
   {
     "id": "captions",
@@ -1647,7 +1647,7 @@
       {
         "author": "Priya S.",
         "rating": 3,
-        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "text": "Hit-or-miss results — sometimes brilliant, sometimes off.",
         "date": "2026-02-04",
         "useCase": "Start a podcast"
       },
@@ -1680,18 +1680,18 @@
     "isNew": true,
     "pros": [
       "Eye Contact AI keeps you facing the camera even when reading notes",
-      "Auto-captions with brand-color styling \u2014 no manual editing",
+      "Auto-captions with brand-color styling — no manual editing",
       "AI clip extraction pulls highlights from long-form video automatically",
-      "Mobile-first \u2014 best UX on iOS for fast turnaround"
+      "Mobile-first — best UX on iOS for fast turnaround"
     ],
     "cons": [
-      "Free tier limited to 3 minutes/month \u2014 hits fast",
+      "Free tier limited to 3 minutes/month — hits fast",
       "$24/month Pro plan is steep for solo creators",
       "Eye Contact can look uncanny when poorly lit",
       "Less powerful as a general video editor than Descript"
     ],
     "verdict": "Best for short-form creators on mobile who want polished captions and eye contact fixes.",
-    "notGoodFor": "Skip for long-form podcasts or YouTube \u2014 Descript handles those better."
+    "notGoodFor": "Skip for long-form podcasts or YouTube — Descript handles those better."
   },
   {
     "id": "elevenlabs",
@@ -1785,10 +1785,10 @@
     "savedCount": 637,
     "isNew": false,
     "pros": [
-      "Most natural-sounding AI voices on the market \u2014 fooled most listeners in blind tests",
+      "Most natural-sounding AI voices on the market — fooled most listeners in blind tests",
       "30+ language support with native-sounding accents",
       "Voice cloning from 1 minute of sample audio",
-      "API-first \u2014 drop into apps, games, and IVR systems"
+      "API-first — drop into apps, games, and IVR systems"
     ],
     "cons": [
       "Free tier only 10,000 characters/month",
@@ -1796,8 +1796,8 @@
       "Some emotional inflection still misses on dramatic reads",
       "Voice cloning has ethical concerns and watermarking can be inconsistent"
     ],
-    "verdict": "Best for any project needing professional voiceover \u2014 podcasts, animation, dubbing.",
-    "notGoodFor": "Skip for casual narration \u2014 built-in OS voices are free and fine for personal projects."
+    "verdict": "Best for any project needing professional voiceover — podcasts, animation, dubbing.",
+    "notGoodFor": "Skip for casual narration — built-in OS voices are free and fine for personal projects."
   },
   {
     "id": "suno",
@@ -1885,17 +1885,17 @@
     "pros": [
       "Generates full songs with lyrics, melody, and vocals from one prompt",
       "Stem separation lets you mix individual tracks in a DAW",
-      "Free tier (50 credits/day) \u2014 enough to experiment",
+      "Free tier (50 credits/day) — enough to experiment",
       "Custom Mode lets you supply your own lyrics"
     ],
     "cons": [
       "Vocals occasionally sound auto-tuned or robotic on long notes",
       "Commercial rights only on Pro and above ($30/month)",
-      "Same prompt produces wildly different results \u2014 hard to iterate",
+      "Same prompt produces wildly different results — hard to iterate",
       "Active legal questions about training data"
     ],
     "verdict": "Best for content creators needing royalty-aware music for video, podcasts, or games.",
-    "notGoodFor": "Skip if you're a serious musician \u2014 DAWs and human players still win for nuance."
+    "notGoodFor": "Skip if you're a serious musician — DAWs and human players still win for nuance."
   },
   {
     "id": "udio",
@@ -1963,18 +1963,18 @@
     "isNew": true,
     "pros": [
       "Higher fidelity vocals than Suno on most genres",
-      "Better at long-form arrangements \u2014 bridges, breakdowns, outros",
+      "Better at long-form arrangements — bridges, breakdowns, outros",
       "Free tier with 600 credits/month",
       "Co-creation tools for editing parts of the song"
     ],
     "cons": [
-      "Smaller community than Suno \u2014 fewer remix examples",
+      "Smaller community than Suno — fewer remix examples",
       "Commercial rights also gated behind paid tiers",
       "UI less polished than Suno",
       "Same legal training-data concerns as Suno"
     ],
     "verdict": "Best for songwriters who care about vocal nuance and arrangement complexity.",
-    "notGoodFor": "Skip for quick jingle generation \u2014 Suno is faster and simpler."
+    "notGoodFor": "Skip for quick jingle generation — Suno is faster and simpler."
   },
   {
     "id": "whisper",
@@ -2040,7 +2040,7 @@
       "free_trial": "unlimited",
       "estimated_monthly_cost": {
         "light_user": "$0",
-        "regular_user": "$0\u20136",
+        "regular_user": "$0–6",
         "power_user": "$30"
       }
     },
@@ -2050,19 +2050,19 @@
     "savedCount": 325,
     "isNew": false,
     "pros": [
-      "Free and open source \u2014 run locally for unlimited transcription",
+      "Free and open source — run locally for unlimited transcription",
       "99 languages supported with strong accuracy",
-      "Multiple model sizes \u2014 pick speed vs accuracy",
+      "Multiple model sizes — pick speed vs accuracy",
       "API option via OpenAI for cloud use"
     ],
     "cons": [
-      "No native diarization (speaker labels) \u2014 needs separate library",
+      "No native diarization (speaker labels) — needs separate library",
       "Local large model needs 10GB+ RAM",
       "Real-time transcription requires custom setup",
       "Punctuation can be inconsistent on noisy audio"
     ],
     "verdict": "Best for developers and privacy-conscious users who want unlimited transcription.",
-    "notGoodFor": "Skip if you need a polished UI with speaker labels \u2014 use Otter or AssemblyAI."
+    "notGoodFor": "Skip if you need a polished UI with speaker labels — use Otter or AssemblyAI."
   },
   {
     "id": "assemblyai",
@@ -2120,7 +2120,7 @@
       "free_trial": "none",
       "estimated_monthly_cost": {
         "light_user": "$0",
-        "regular_user": "$0\u201330",
+        "regular_user": "$0–30",
         "power_user": "$200"
       }
     },
@@ -2136,13 +2136,13 @@
       "Good docs and SDKs for fast integration"
     ],
     "cons": [
-      "Pure API \u2014 no end-user UI, you build the workflow",
+      "Pure API — no end-user UI, you build the workflow",
       "Pay-as-you-go can balloon for high-volume podcasts",
       "Less open than Whisper",
       "Speaker labels need clean audio to be reliable"
     ],
     "verdict": "Best for developers building voice apps or large-scale podcast pipelines.",
-    "notGoodFor": "Skip if you just need to transcribe occasional meetings \u2014 Otter is plug-and-play."
+    "notGoodFor": "Skip if you just need to transcribe occasional meetings — Otter is plug-and-play."
   },
   {
     "id": "descript",
@@ -2239,19 +2239,19 @@
     "savedCount": 388,
     "isNew": false,
     "pros": [
-      "Edit audio and video by editing the transcript \u2014 game-changing workflow",
-      "Studio Sound removes echo and noise in one click \u2014 sounds like a $300 mic upgrade",
+      "Edit audio and video by editing the transcript — game-changing workflow",
+      "Studio Sound removes echo and noise in one click — sounds like a $300 mic upgrade",
       "Overdub clones your voice for fixing typos without re-recording",
       "Multi-track editor and screen recorder included"
     ],
     "cons": [
       "Free tier (1 hour/month) is mostly a teaser",
-      "Heavy app \u2014 Mac fans spin up on long sessions",
+      "Heavy app — Mac fans spin up on long sessions",
       "Overdub voice cloning quality lags ElevenLabs",
       "Export queues can be slow on free tier"
     ],
     "verdict": "Best for podcasters and YouTubers who want fast, transcript-based editing.",
-    "notGoodFor": "Skip if you're cutting cinematic video \u2014 Premiere or DaVinci is more capable."
+    "notGoodFor": "Skip if you're cutting cinematic video — Premiere or DaVinci is more capable."
   },
   {
     "id": "github-copilot",
@@ -2335,19 +2335,19 @@
     "savedCount": 741,
     "isNew": false,
     "pros": [
-      "Inline autocomplete in nearly every IDE \u2014 VS Code, JetBrains, Vim, Visual Studio",
+      "Inline autocomplete in nearly every IDE — VS Code, JetBrains, Vim, Visual Studio",
       "Free for verified students, teachers, and OSS maintainers",
       "Chat and PR review now bundled in the same subscription",
-      "GitHub integration is unmatched \u2014 knows your repo context"
+      "GitHub integration is unmatched — knows your repo context"
     ],
     "cons": [
       "Suggestions less proactive than Cursor's agent mode",
-      "Multi-file edits require Copilot Chat \u2014 not as fluid as Cursor's UX",
-      "$10\u2013$19/month is cheap individually but adds up at company scale",
+      "Multi-file edits require Copilot Chat — not as fluid as Cursor's UX",
+      "$10–$19/month is cheap individually but adds up at company scale",
       "Privacy mode disables training but still routes through Microsoft servers"
     ],
     "verdict": "Best if you stay in VS Code or JetBrains and want reliable inline autocomplete.",
-    "notGoodFor": "Skip if you want full agentic refactors \u2014 Cursor is built for that."
+    "notGoodFor": "Skip if you want full agentic refactors — Cursor is built for that."
   },
   {
     "id": "cursor",
@@ -2412,7 +2412,7 @@
     ],
     "pricing_details": {
       "free_tier": true,
-      "free_tier_limits": "Hobby tier \u2014 limited fast requests",
+      "free_tier_limits": "Hobby tier — limited fast requests",
       "starting_price": "$20/mo",
       "most_popular_plan": "$20/mo",
       "annual_discount": "15%",
@@ -2430,19 +2430,19 @@
     "savedCount": 691,
     "isNew": false,
     "pros": [
-      "AI-first editor with the cleanest agent UX \u2014 Cmd+K and tab-to-accept change everything",
+      "AI-first editor with the cleanest agent UX — Cmd+K and tab-to-accept change everything",
       "Multi-file edits and refactors work in one prompt",
       "Cursor Tab predicts next edits based on what you just typed",
       "Apply Diff feature shows exact changes before accepting"
     ],
     "cons": [
       "$20/month Pro plan is more than Copilot's $10",
-      "Hobby tier limits fast requests \u2014 power users hit caps",
-      "VS Code fork \u2014 extension ecosystem slightly trails official VS Code",
+      "Hobby tier limits fast requests — power users hit caps",
+      "VS Code fork — extension ecosystem slightly trails official VS Code",
       "Doesn't integrate as deeply with GitHub PRs as Copilot"
     ],
     "verdict": "Best for engineers who want AI baked into the editor, not bolted on.",
-    "notGoodFor": "Skip if you live in JetBrains \u2014 Copilot supports it natively."
+    "notGoodFor": "Skip if you live in JetBrains — Copilot supports it natively."
   },
   {
     "id": "replit",
@@ -2480,7 +2480,7 @@
       {
         "author": "Noah W.",
         "rating": 3,
-        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "text": "Hit-or-miss results — sometimes brilliant, sometimes off.",
         "date": "2026-03-28",
         "useCase": "Make an animation"
       },
@@ -2519,10 +2519,10 @@
     "savedCount": 275,
     "isNew": false,
     "pros": [
-      "Browser IDE with one-click deploy \u2014 no setup, no laptop",
+      "Browser IDE with one-click deploy — no setup, no laptop",
       "Replit Agent builds and runs full apps from a prompt",
       "Generous free tier with 3 public Repls and small agent budget",
-      "Built-in collaboration \u2014 pair-program in real time"
+      "Built-in collaboration — pair-program in real time"
     ],
     "cons": [
       "Performance limited compared to local development for big projects",
@@ -2610,18 +2610,18 @@
     "isNew": false,
     "pros": [
       "Generates clean React + Tailwind components from a single prompt",
-      "Output uses shadcn/ui \u2014 actually nice to read and modify",
-      "Fork-and-iterate UX \u2014 'make it more compact' just works",
+      "Output uses shadcn/ui — actually nice to read and modify",
+      "Fork-and-iterate UX — 'make it more compact' just works",
       "Free tier (~200 credits/month) is enough to ship a prototype"
     ],
     "cons": [
-      "Output is UI-only \u2014 no backend or data layer",
-      "Locked to React + Tailwind + shadcn \u2014 bad fit for Vue or pure CSS",
+      "Output is UI-only — no backend or data layer",
+      "Locked to React + Tailwind + shadcn — bad fit for Vue or pure CSS",
       "Credits run out fast on complex screens",
       "Best results need clear design intent in the prompt"
     ],
     "verdict": "Best for engineers and designers who want production-quality React UI fast.",
-    "notGoodFor": "Skip if you don't use React \u2014 output won't translate cleanly."
+    "notGoodFor": "Skip if you don't use React — output won't translate cleanly."
   },
   {
     "id": "bolt",
@@ -2690,18 +2690,18 @@
     "isNew": false,
     "pros": [
       "Generates full-stack apps with backend, database, and frontend in browser",
-      "Live preview while the app is being built \u2014 see it work as it generates",
+      "Live preview while the app is being built — see it work as it generates",
       "Imports from StackBlitz Code Sandboxes for fast project starts",
       "Free tier with ~1M tokens/day is genuinely usable"
     ],
     "cons": [
       "Output reliability lower than Cursor for complex backends",
-      "Token cost adds up \u2014 $50/month tier needed for real builds",
+      "Token cost adds up — $50/month tier needed for real builds",
       "Less control than working in a real editor",
-      "Limited to web apps \u2014 no mobile or desktop targets"
+      "Limited to web apps — no mobile or desktop targets"
     ],
     "verdict": "Best for non-engineers prototyping full-stack apps without setting up a dev env.",
-    "notGoodFor": "Skip if you're a working engineer \u2014 Cursor + a real backend is more reliable."
+    "notGoodFor": "Skip if you're a working engineer — Cursor + a real backend is more reliable."
   },
   {
     "id": "codeium",
@@ -2767,9 +2767,9 @@
     "savedCount": 246,
     "isNew": false,
     "pros": [
-      "Free for individuals \u2014 best value of any AI autocomplete",
+      "Free for individuals — best value of any AI autocomplete",
       "Wide IDE support including Vim, Emacs, and Neovim",
-      "Now part of Windsurf \u2014 agentic editor option included",
+      "Now part of Windsurf — agentic editor option included",
       "Self-hosted enterprise option for compliance-sensitive teams"
     ],
     "cons": [
@@ -2778,8 +2778,8 @@
       "Smaller community than Copilot",
       "Windsurf editor still maturing"
     ],
-    "verdict": "Best free alternative to Copilot \u2014 especially for hobbyists and Vim/Emacs users.",
-    "notGoodFor": "Skip if you can pay for Copilot or Cursor \u2014 both have higher quality suggestions."
+    "verdict": "Best free alternative to Copilot — especially for hobbyists and Vim/Emacs users.",
+    "notGoodFor": "Skip if you can pay for Copilot or Cursor — both have higher quality suggestions."
   },
   {
     "id": "vercel",
@@ -2840,7 +2840,7 @@
     ],
     "pricing_details": {
       "free_tier": true,
-      "free_tier_limits": "Hobby tier \u2014 non-commercial",
+      "free_tier_limits": "Hobby tier — non-commercial",
       "starting_price": "$20/mo",
       "most_popular_plan": "$20/mo",
       "annual_discount": "0%",
@@ -2858,7 +2858,7 @@
     "savedCount": 397,
     "isNew": true,
     "pros": [
-      "Push to Git, get a global URL \u2014 simplest deploy story for Next.js",
+      "Push to Git, get a global URL — simplest deploy story for Next.js",
       "First-class AI SDK with streaming, edge runtime, and analytics built in",
       "Generous Hobby tier for non-commercial projects",
       "v0 integration ships generated UI straight to production"
@@ -2866,11 +2866,11 @@
     "cons": [
       "Pro plan jumps to $20/month per seat",
       "Bandwidth and function execution costs can surprise you at scale",
-      "Hobby tier is non-commercial \u2014 strictly enforced",
+      "Hobby tier is non-commercial — strictly enforced",
       "Some Cloudflare and Render alternatives are cheaper for static or backend"
     ],
     "verdict": "Best for shipping React/Next.js apps with zero ops.",
-    "notGoodFor": "Skip for high-traffic static sites or backend-heavy apps \u2014 Cloudflare is cheaper."
+    "notGoodFor": "Skip for high-traffic static sites or backend-heavy apps — Cloudflare is cheaper."
   },
   {
     "id": "notion-ai",
@@ -2957,19 +2957,19 @@
     "savedCount": 491,
     "isNew": false,
     "pros": [
-      "AI lives inside the workspace where your notes already are \u2014 no copy-paste",
+      "AI lives inside the workspace where your notes already are — no copy-paste",
       "Q&A across your entire Notion knowledge base with citations",
       "Custom AI Blocks generate content tied to page context",
       "Strong on summarization and meeting notes"
     ],
     "cons": [
-      "Paid add-on at $10/month per user \u2014 adds to your Notion plan",
+      "Paid add-on at $10/month per user — adds to your Notion plan",
       "Output quality below ChatGPT/Claude for general writing",
-      "Locked to Notion \u2014 no API for other apps",
+      "Locked to Notion — no API for other apps",
       "Search across large workspaces can be slow"
     ],
     "verdict": "Best for teams already on Notion who want AI inside their wiki and notes.",
-    "notGoodFor": "Skip if you don't use Notion \u2014 better general LLMs exist."
+    "notGoodFor": "Skip if you don't use Notion — better general LLMs exist."
   },
   {
     "id": "reclaim",
@@ -3011,14 +3011,14 @@
       {
         "author": "Marco T.",
         "rating": 3,
-        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "text": "Hit-or-miss results — sometimes brilliant, sometimes off.",
         "date": "2026-02-04",
         "useCase": "Teach a class"
       }
     ],
     "pricing_details": {
       "free_tier": true,
-      "free_tier_limits": "Lite tier \u2014 1 calendar",
+      "free_tier_limits": "Lite tier — 1 calendar",
       "starting_price": "$10/mo",
       "most_popular_plan": "$10/mo",
       "annual_discount": "20%",
@@ -3037,18 +3037,18 @@
     "isNew": false,
     "pros": [
       "Auto-schedules tasks, habits, and meetings around your priorities",
-      "Defends your focus time \u2014 automatically declines low-priority meetings",
+      "Defends your focus time — automatically declines low-priority meetings",
       "Free tier with 1 calendar is genuinely usable",
       "Smart 1:1 scheduling with shared availability"
     ],
     "cons": [
-      "Google Calendar only \u2014 no Outlook or iCal at full feature parity",
+      "Google Calendar only — no Outlook or iCal at full feature parity",
       "Setup takes time to tune to your real workflow",
       "Pro plan ($10/month) needed for multiple calendars",
       "Habits and tasks live separately from your other tools"
     ],
     "verdict": "Best for individual contributors and managers drowning in Google Calendar meetings.",
-    "notGoodFor": "Skip if you use Outlook or iCal \u2014 Motion or built-in Outlook handles it better."
+    "notGoodFor": "Skip if you use Outlook or iCal — Motion or built-in Outlook handles it better."
   },
   {
     "id": "motion",
@@ -3077,13 +3077,13 @@
     ],
     "bestFor": [],
     "workflow": "automate",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 520,
     "reviews": [
       {
         "author": "Tariq B.",
         "rating": 3,
-        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "text": "Hit-or-miss results — sometimes brilliant, sometimes off.",
         "date": "2026-02-04",
         "useCase": "Start a podcast"
       },
@@ -3121,13 +3121,13 @@
       "Outlook and Google Calendar both first-class"
     ],
     "cons": [
-      "$19/month entry tier \u2014 pricier than Reclaim",
+      "$19/month entry tier — pricier than Reclaim",
       "No free plan, only a 7-day trial",
       "Steep learning curve to set up properly",
       "Project management is lighter than Asana/Linear for teams"
     ],
     "verdict": "Best for solo founders and freelancers juggling many short tasks.",
-    "notGoodFor": "Skip if you're already happy with calendar + Todoist \u2014 Motion is overkill."
+    "notGoodFor": "Skip if you're already happy with calendar + Todoist — Motion is overkill."
   },
   {
     "id": "otter",
@@ -3219,10 +3219,10 @@
       "Accuracy drops on heavy accents and crosstalk",
       "Pro plan ($10/month) caps at 1,200 minutes",
       "AI summaries occasionally invent action items",
-      "Privacy concerns \u2014 always disclose to participants"
+      "Privacy concerns — always disclose to participants"
     ],
     "verdict": "Best for people in a lot of meetings who want clean transcripts and summaries fast.",
-    "notGoodFor": "Skip if you need pure transcription accuracy \u2014 AssemblyAI or Whisper is better."
+    "notGoodFor": "Skip if you need pure transcription accuracy — AssemblyAI or Whisper is better."
   },
   {
     "id": "fireflies",
@@ -3293,7 +3293,7 @@
     "isNew": false,
     "pros": [
       "Generous free plan with 800 minutes of storage",
-      "Strong CRM integrations \u2014 auto-logs calls to HubSpot, Salesforce",
+      "Strong CRM integrations — auto-logs calls to HubSpot, Salesforce",
       "AskFred chat queries across all your meetings",
       "Multilingual transcription including in real time"
     ],
@@ -3304,7 +3304,7 @@
       "Action item extraction less reliable than Otter"
     ],
     "verdict": "Best for sales and customer success teams who need calls auto-logged to a CRM.",
-    "notGoodFor": "Skip for solo use \u2014 Otter has better one-person UX."
+    "notGoodFor": "Skip for solo use — Otter has better one-person UX."
   },
   {
     "id": "heygen",
@@ -3383,19 +3383,19 @@
     "savedCount": 331,
     "isNew": false,
     "pros": [
-      "Best-in-class avatar lip sync \u2014 looks startlingly natural",
+      "Best-in-class avatar lip sync — looks startlingly natural",
       "Real-time video translation with mouth-sync in 30+ languages",
       "Custom avatars trained from 2 minutes of footage",
       "Free tier with 3 short videos/month for testing"
     ],
     "cons": [
-      "Pro plan starts at $24/month \u2014 Creator plan is $72/month for serious use",
+      "Pro plan starts at $24/month — Creator plan is $72/month for serious use",
       "Avatars still hit uncanny valley on close-ups",
       "Generation queue can take minutes for long clips",
       "Background and gestures less natural than real footage"
     ],
     "verdict": "Best for sales, training, and marketing teams replacing presenter video at scale.",
-    "notGoodFor": "Skip if you need natural human performance \u2014 real video still wins for emotional reach."
+    "notGoodFor": "Skip if you need natural human performance — real video still wins for emotional reach."
   },
   {
     "id": "synthesia",
@@ -3476,7 +3476,7 @@
       "No real-time translation like HeyGen"
     ],
     "verdict": "Best for enterprise L&D teams creating training videos at scale.",
-    "notGoodFor": "Skip for short marketing videos \u2014 HeyGen's avatars feel more lifelike."
+    "notGoodFor": "Skip for short marketing videos — HeyGen's avatars feel more lifelike."
   },
   {
     "id": "tavus",
@@ -3544,19 +3544,19 @@
     "savedCount": 75,
     "isNew": true,
     "pros": [
-      "Real-time conversational video \u2014 avatars talk back live, not just play prerecorded clips",
-      "API-first \u2014 drop into any app or sales workflow",
+      "Real-time conversational video — avatars talk back live, not just play prerecorded clips",
+      "API-first — drop into any app or sales workflow",
       "Personalized video generation at scale (1,000s per campaign)",
       "Custom voice cloning paired with avatar"
     ],
     "cons": [
-      "Pay-as-you-go pricing can balloon \u2014 $375/month for production usage",
-      "Pure API \u2014 you build the UI yourself",
+      "Pay-as-you-go pricing can balloon — $375/month for production usage",
+      "Pure API — you build the UI yourself",
       "Smaller avatar library than HeyGen or Synthesia",
       "Real-time mode requires solid network on user's side"
     ],
     "verdict": "Best for developers building live conversational AI experiences with avatars.",
-    "notGoodFor": "Skip for one-off marketing videos \u2014 HeyGen is faster and cheaper for that."
+    "notGoodFor": "Skip for one-off marketing videos — HeyGen is faster and cheaper for that."
   },
   {
     "id": "perplexity",
@@ -3640,7 +3640,7 @@
     "savedCount": 529,
     "isNew": false,
     "pros": [
-      "Every answer comes with numbered citations \u2014 verify in one click",
+      "Every answer comes with numbered citations — verify in one click",
       "Live web search beats ChatGPT for current events",
       "Spaces feature collects sources and threads for ongoing research",
       "Strong free tier with 5 Pro queries/day"
@@ -3652,7 +3652,7 @@
       "Limited multimodal support compared to ChatGPT"
     ],
     "verdict": "Best for researchers, journalists, and analysts who need cited, current answers.",
-    "notGoodFor": "Skip if you need a general assistant \u2014 ChatGPT or Claude is more flexible."
+    "notGoodFor": "Skip if you need a general assistant — ChatGPT or Claude is more flexible."
   },
   {
     "id": "elicit",
@@ -3721,19 +3721,19 @@
     "savedCount": 104,
     "isNew": false,
     "pros": [
-      "Searches 200M+ academic papers \u2014 finds peer-reviewed sources you'd miss in Google Scholar",
-      "Structured extraction \u2014 pulls method, sample size, results from each paper",
+      "Searches 200M+ academic papers — finds peer-reviewed sources you'd miss in Google Scholar",
+      "Structured extraction — pulls method, sample size, results from each paper",
       "Saved searches and projects for ongoing literature reviews",
       "Free tier (5,000 credits) is enough for one literature review"
     ],
     "cons": [
-      "Limited to academic content \u2014 won't help for news or web",
+      "Limited to academic content — won't help for news or web",
       "Subscription ($12/month) needed for serious research projects",
       "Smaller dataset than full Google Scholar for niche fields",
-      "Citations need verification \u2014 occasionally surfaces retracted papers"
+      "Citations need verification — occasionally surfaces retracted papers"
     ],
     "verdict": "Best for grad students and researchers doing systematic literature review.",
-    "notGoodFor": "Skip for general fact-checking \u2014 Perplexity or Consensus is faster."
+    "notGoodFor": "Skip for general fact-checking — Perplexity or Consensus is faster."
   },
   {
     "id": "consensus",
@@ -3802,19 +3802,19 @@
     "savedCount": 73,
     "isNew": false,
     "pros": [
-      "Pulls evidence from peer-reviewed papers \u2014 answers say 'yes/no/mixed' with citations",
+      "Pulls evidence from peer-reviewed papers — answers say 'yes/no/mixed' with citations",
       "Strong filters by year, study type, and quality",
       "Generous free tier with unlimited basic search",
       "Easy for non-academics to access scientific evidence"
     ],
     "cons": [
-      "Only covers academic content \u2014 useless for news or business questions",
+      "Only covers academic content — useless for news or business questions",
       "Pro plan ($9/month) needed for AI-powered synthesis",
       "Some claims oversimplify complex research",
       "Smaller corpus than Elicit"
     ],
     "verdict": "Best for journalists, students, and clinicians who want quick evidence-backed answers.",
-    "notGoodFor": "Skip for deep literature reviews \u2014 Elicit's paper extraction is more thorough."
+    "notGoodFor": "Skip for deep literature reviews — Elicit's paper extraction is more thorough."
   },
   {
     "id": "you-com",
@@ -3840,7 +3840,7 @@
       "research"
     ],
     "workflow": "analyze",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 290,
     "reviews": [
       {
@@ -3878,10 +3878,10 @@
     "savedCount": 52,
     "isNew": false,
     "pros": [
-      "Multi-model chat \u2014 pick GPT, Claude, or Gemini in one interface",
+      "Multi-model chat — pick GPT, Claude, or Gemini in one interface",
       "Web grounding on every answer like Perplexity",
       "Free tier covers most casual queries",
-      "Strong privacy stance \u2014 anonymous mode available"
+      "Strong privacy stance — anonymous mode available"
     ],
     "cons": [
       "Less polished than Perplexity for research-focused workflows",
@@ -3890,7 +3890,7 @@
       "Smaller community and ecosystem"
     ],
     "verdict": "Best if you want one bill but multiple model options for chat.",
-    "notGoodFor": "Skip if you already pay for ChatGPT or Claude \u2014 more is duplicative."
+    "notGoodFor": "Skip if you already pay for ChatGPT or Claude — more is duplicative."
   },
   {
     "id": "pinecone",
@@ -3960,19 +3960,19 @@
     "savedCount": 111,
     "isNew": false,
     "pros": [
-      "Production-grade vector database \u2014 handles billions of vectors at low latency",
+      "Production-grade vector database — handles billions of vectors at low latency",
       "Serverless option scales to zero so you don't pay during idle time",
       "Strong SDKs for Python and JavaScript",
       "Hybrid search (dense + sparse) built in"
     ],
     "cons": [
-      "Standard plan starts at $70/month \u2014 pricey for hobby projects",
+      "Standard plan starts at $70/month — pricey for hobby projects",
       "Free tier limited to one pod with ~100K vectors",
-      "Closed source \u2014 vendor lock-in if you migrate",
+      "Closed source — vendor lock-in if you migrate",
       "Open alternatives like Qdrant or Weaviate are nearly as fast"
     ],
     "verdict": "Best for teams building production RAG with predictable scale and SLA.",
-    "notGoodFor": "Skip for hobby projects \u2014 Qdrant local or pgvector is free and good enough."
+    "notGoodFor": "Skip for hobby projects — Qdrant local or pgvector is free and good enough."
   },
   {
     "id": "hex",
@@ -4050,18 +4050,18 @@
       "Strong dbt integration"
     ],
     "cons": [
-      "Pro plan starts at $24/user/month \u2014 adds up for teams",
+      "Pro plan starts at $24/user/month — adds up for teams",
       "Free tier limited to 3 users and public projects",
       "Notebook performance lags Jupyter for compute-heavy work",
       "Visualization library less rich than Tableau or Looker"
     ],
     "verdict": "Best for data teams who want collaborative analysis with an AI copilot.",
-    "notGoodFor": "Skip for solo data work \u2014 Jupyter or Hex Free is enough."
+    "notGoodFor": "Skip for solo data work — Jupyter or Hex Free is enough."
   },
   {
     "id": "huggingface",
     "name": "Hugging Face",
-    "description": "Hub for open ML models, datasets, and spaces \u2014 the GitHub of AI.",
+    "description": "Hub for open ML models, datasets, and spaces — the GitHub of AI.",
     "category": "Data & Analytics",
     "tags": [
       "free tier",
@@ -4136,7 +4136,7 @@
     "savedCount": 415,
     "isNew": false,
     "pros": [
-      "Largest hub of open ML models, datasets, and Spaces \u2014 the GitHub of AI",
+      "Largest hub of open ML models, datasets, and Spaces — the GitHub of AI",
       "Free model hosting and inference API for thousands of models",
       "Spaces let you deploy demos in minutes",
       "Strong Python ecosystem with transformers, datasets, and accelerate"
@@ -4148,12 +4148,12 @@
       "Some hosted models go offline without warning"
     ],
     "verdict": "Best for ML engineers and researchers exploring or hosting open models.",
-    "notGoodFor": "Skip if you only use closed models like GPT \u2014 Hugging Face won't add much."
+    "notGoodFor": "Skip if you only use closed models like GPT — Hugging Face won't add much."
   },
   {
     "id": "replicate",
     "name": "Replicate",
-    "description": "Run any open-source ML model behind an API \u2014 image, video, audio, language.",
+    "description": "Run any open-source ML model behind an API — image, video, audio, language.",
     "category": "Data & Analytics",
     "tags": [
       "API available",
@@ -4216,8 +4216,8 @@
     "savedCount": 163,
     "isNew": false,
     "pros": [
-      "Run any open ML model behind an API \u2014 no infra setup",
-      "Pay-per-second pricing \u2014 only pay for what you use",
+      "Run any open ML model behind an API — no infra setup",
+      "Pay-per-second pricing — only pay for what you use",
       "Push your own custom models with a Dockerfile and Cog",
       "Strong for image, video, and audio models needing GPU"
     ],
@@ -4228,7 +4228,7 @@
       "$1 free credit only enough for testing"
     ],
     "verdict": "Best for developers who want to run open models without managing infrastructure.",
-    "notGoodFor": "Skip for high-traffic production \u2014 dedicated GPU instances are cheaper."
+    "notGoodFor": "Skip for high-traffic production — dedicated GPU instances are cheaper."
   },
   {
     "id": "langchain",
@@ -4278,7 +4278,7 @@
       {
         "author": "Sam K.",
         "rating": 3,
-        "text": "Hit-or-miss results \u2014 sometimes brilliant, sometimes off.",
+        "text": "Hit-or-miss results — sometimes brilliant, sometimes off.",
         "date": "2026-02-22",
         "useCase": "Do research"
       }
@@ -4304,18 +4304,18 @@
     "isNew": false,
     "pros": [
       "Most mature framework for chaining LLMs, tools, and retrieval",
-      "LangSmith dashboard traces every prompt and tool call \u2014 invaluable for debugging",
+      "LangSmith dashboard traces every prompt and tool call — invaluable for debugging",
       "Huge ecosystem of integrations across vector DBs, model providers, and tools",
       "OSS framework is free; LangSmith free for individuals"
     ],
     "cons": [
-      "API surface is sprawling \u2014 easy to over-abstract simple things",
+      "API surface is sprawling — easy to over-abstract simple things",
       "Frequent breaking changes between versions",
       "Some teams move to LlamaIndex or raw API calls for simpler stacks",
       "LangSmith Pro ($39/month) needed for team observability"
     ],
     "verdict": "Best for teams building complex agents with many tools and retrieval steps.",
-    "notGoodFor": "Skip for simple chatbots \u2014 direct API calls are clearer and have fewer dependencies."
+    "notGoodFor": "Skip for simple chatbots — direct API calls are clearer and have fewer dependencies."
   },
   {
     "id": "canva-ai",
@@ -4387,7 +4387,7 @@
     ],
     "pricing_details": {
       "free_tier": true,
-      "free_tier_limits": "Magic Write \u2014 limited generations",
+      "free_tier_limits": "Magic Write — limited generations",
       "starting_price": "$15/mo",
       "most_popular_plan": "$15/mo",
       "annual_discount": "22%",
@@ -4405,19 +4405,19 @@
     "savedCount": 896,
     "isNew": false,
     "pros": [
-      "Magic Studio bundles image, video, copy, and design in one tool \u2014 covers most marketing needs",
+      "Magic Studio bundles image, video, copy, and design in one tool — covers most marketing needs",
       "Massive template library across every format and brand vertical",
       "Magic Resize spits out all platform sizes in one click",
       "Free tier (with Magic Write limits) is genuinely usable"
     ],
     "cons": [
-      "AI quality below specialized tools \u2014 Midjourney for images, Runway for video",
+      "AI quality below specialized tools — Midjourney for images, Runway for video",
       "Pro plan ($15/month) needed for full Magic Studio access",
       "Limited control compared to Photoshop or Figma for designers",
       "Brand kit features are paid-only"
     ],
     "verdict": "Best for marketers, small businesses, and creators who want one tool for everything visual.",
-    "notGoodFor": "Skip if you need pro design control \u2014 Figma, Photoshop, and specialized AI tools are better."
+    "notGoodFor": "Skip if you need pro design control — Figma, Photoshop, and specialized AI tools are better."
   },
   {
     "id": "gamma",
@@ -4498,7 +4498,7 @@
     "savedCount": 385,
     "isNew": false,
     "pros": [
-      "Generates polished decks from a one-line prompt \u2014 fastest path from idea to slides",
+      "Generates polished decks from a one-line prompt — fastest path from idea to slides",
       "Card-based layout adapts to any screen size automatically",
       "Generous free tier (400 AI credits)",
       "Export to PPT, PDF, or web-publish"
@@ -4506,11 +4506,11 @@
     "cons": [
       "Default themes can feel samey across decks",
       "Less control over typography than PowerPoint or Keynote",
-      "Watermark on free tier \u2014 Pro plan ($10\u2013$20/month) removes it",
+      "Watermark on free tier — Pro plan ($10–$20/month) removes it",
       "Custom animations are limited"
     ],
     "verdict": "Best for solo creators and small teams who want fast, on-brand decks without slide design skills.",
-    "notGoodFor": "Skip for highly designed decks \u2014 PowerPoint with a designer is more controllable."
+    "notGoodFor": "Skip for highly designed decks — PowerPoint with a designer is more controllable."
   },
   {
     "id": "beautiful-ai",
@@ -4580,19 +4580,19 @@
     "savedCount": 111,
     "isNew": false,
     "pros": [
-      "Smart templates auto-balance text and charts \u2014 spacing always looks intentional",
+      "Smart templates auto-balance text and charts — spacing always looks intentional",
       "Built specifically for business and exec presentations",
       "Strong chart library with auto-formatting",
       "Team libraries for brand consistency"
     ],
     "cons": [
-      "$12/month entry tier \u2014 no free plan",
-      "Less AI generation than Gamma \u2014 more manual editing",
+      "$12/month entry tier — no free plan",
+      "Less AI generation than Gamma — more manual editing",
       "Smaller template library than Canva or PowerPoint",
       "Outputs feel corporate, not creative"
     ],
     "verdict": "Best for sales, finance, and ops teams who need polished decks fast without a designer.",
-    "notGoodFor": "Skip for creative or marketing decks \u2014 Canva and Gamma are more flexible."
+    "notGoodFor": "Skip for creative or marketing decks — Canva and Gamma are more flexible."
   },
   {
     "id": "tome",
@@ -4623,7 +4623,7 @@
       "presentations"
     ],
     "workflow": "create",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 440,
     "reviews": [
       {
@@ -4661,19 +4661,19 @@
     "savedCount": 79,
     "isNew": false,
     "pros": [
-      "Personalized decks per prospect \u2014 pulls from CRM data automatically",
+      "Personalized decks per prospect — pulls from CRM data automatically",
       "Tracks who opens the deck and how long they spend on each slide",
       "AI generation on outline + content together",
       "Free tier with 500 AI credits/month"
     ],
     "cons": [
-      "Pivoted to sales-only \u2014 less useful for general presentations now",
+      "Pivoted to sales-only — less useful for general presentations now",
       "Less general-purpose than Gamma since the rebrand",
       "Pro plan ($16/month) needed for full features",
       "Slimmer template library than competitors"
     ],
     "verdict": "Best for outbound sales teams sending personalized decks at scale.",
-    "notGoodFor": "Skip for internal or creative decks \u2014 Gamma is more flexible."
+    "notGoodFor": "Skip for internal or creative decks — Gamma is more flexible."
   },
   {
     "id": "spline-ai",
@@ -4739,7 +4739,7 @@
     "isNew": true,
     "pros": [
       "Generates and edits 3D scenes from text prompts in the browser",
-      "Free tier with 3 editor seats \u2014 usable for indie projects",
+      "Free tier with 3 editor seats — usable for indie projects",
       "Export to web, Unity, Blender, and Figma",
       "Real-time collaboration like Figma"
     ],
@@ -4750,12 +4750,12 @@
       "Smaller community than mainstream 3D tools"
     ],
     "verdict": "Best for designers adding 3D elements to web pages without learning Blender.",
-    "notGoodFor": "Skip for serious 3D \u2014 Blender or Cinema 4D handles complex scenes better."
+    "notGoodFor": "Skip for serious 3D — Blender or Cinema 4D handles complex scenes better."
   },
   {
     "id": "notion",
     "name": "Notion",
-    "description": "All-in-one workspace for notes, docs, wiki, and project management \u2014 with AI Q&A across your content.",
+    "description": "All-in-one workspace for notes, docs, wiki, and project management — with AI Q&A across your content.",
     "category": "Text & Writing",
     "tags": [
       "free tier",
@@ -4820,7 +4820,7 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Most flexible workspace \u2014 pages, databases, and embeds compose into anything",
+      "Most flexible workspace — pages, databases, and embeds compose into anything",
       "Strong AI Q&A across your private content with citations",
       "Generous free tier for personal use",
       "Best-in-class collaboration with real-time editing and comments"
@@ -4831,7 +4831,7 @@
       "Mobile app feels clunky compared to native note-taking apps"
     ],
     "verdict": "Best for teams and individuals who want one home for notes, docs, and project tracking.",
-    "notGoodFor": "Skip if you want a fast minimal note app \u2014 Bear or Apple Notes is lighter."
+    "notGoodFor": "Skip if you want a fast minimal note app — Bear or Apple Notes is lighter."
   },
   {
     "id": "bear",
@@ -4880,7 +4880,7 @@
     ],
     "pricing_details": {
       "free_tier": true,
-      "free_tier_limits": "Editor only \u2014 sync is paid",
+      "free_tier_limits": "Editor only — sync is paid",
       "starting_price": "$3/mo",
       "most_popular_plan": "$3/mo",
       "annual_discount": "30%",
@@ -4898,12 +4898,12 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Beautiful minimal interface \u2014 best typography of any note app",
+      "Beautiful minimal interface — best typography of any note app",
       "Native markdown with hashtag-based filing instead of folders",
-      "Fast on Mac, iPad, and iPhone \u2014 opens instantly"
+      "Fast on Mac, iPad, and iPhone — opens instantly"
     ],
     "cons": [
-      "Apple-only \u2014 no Windows, web, or Android version",
+      "Apple-only — no Windows, web, or Android version",
       "No real-time collaboration",
       "AI features are minimal compared to Notion or Mem"
     ],
@@ -4975,17 +4975,17 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Color-coded clarity feedback \u2014 see passive voice, adverbs, and complexity at a glance",
+      "Color-coded clarity feedback — see passive voice, adverbs, and complexity at a glance",
       "Works in browser with no signup required",
       "Forces you to write tighter, more direct prose"
     ],
     "cons": [
       "Doesn't catch grammar errors as well as Grammarly",
-      "Style suggestions are opinionated \u2014 not always right for fiction",
+      "Style suggestions are opinionated — not always right for fiction",
       "AI rewrite feature only on paid plan"
     ],
-    "verdict": "Best for writers who want sharp, clear prose \u2014 especially journalists and bloggers.",
-    "notGoodFor": "Skip if you write fiction \u2014 its 'simpler is better' bias hurts literary voice."
+    "verdict": "Best for writers who want sharp, clear prose — especially journalists and bloggers.",
+    "notGoodFor": "Skip if you write fiction — its 'simpler is better' bias hurts literary voice."
   },
   {
     "id": "wordtune",
@@ -5051,7 +5051,7 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Multiple tone options \u2014 casual, formal, shorter, longer \u2014 in one click",
+      "Multiple tone options — casual, formal, shorter, longer — in one click",
       "Browser extension works in Gmail, Docs, LinkedIn, and most web inputs",
       "Strong free tier with 10 rewrites per day"
     ],
@@ -5061,7 +5061,7 @@
       "Less effective on long-form content than ChatGPT"
     ],
     "verdict": "Best for ESL writers and professionals who want quick rewrites in their existing tools.",
-    "notGoodFor": "Skip if you write long-form \u2014 Claude or ChatGPT handles full drafts better."
+    "notGoodFor": "Skip if you write long-form — Claude or ChatGPT handles full drafts better."
   },
   {
     "id": "quillbot",
@@ -5133,7 +5133,7 @@
       "Best-in-class paraphrasing with 7 modes (Standard, Fluency, Formal, Simple, Creative, Expand, Shorten)",
       "Built-in plagiarism checker on premium plans",
       "Supports academic writing with citation generator and bibliography tools",
-      "Affordable \u2014 $9.95/mo undercuts Grammarly and Wordtune"
+      "Affordable — $9.95/mo undercuts Grammarly and Wordtune"
     ],
     "cons": [
       "Free tier capped at 125 words per paraphrase",
@@ -5141,12 +5141,12 @@
       "Output occasionally drifts from the source meaning on Creative mode"
     ],
     "verdict": "Best for students and ESL writers who need affordable, reliable paraphrasing.",
-    "notGoodFor": "Skip if you want the most accurate grammar checking \u2014 Grammarly is still ahead."
+    "notGoodFor": "Skip if you want the most accurate grammar checking — Grammarly is still ahead."
   },
   {
     "id": "sudowrite",
     "name": "Sudowrite",
-    "description": "AI writing assistant built specifically for fiction authors \u2014 handles description, dialogue, plot, and rewrites.",
+    "description": "AI writing assistant built specifically for fiction authors — handles description, dialogue, plot, and rewrites.",
     "category": "Text & Writing",
     "tags": [
       "fiction",
@@ -5208,7 +5208,7 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Designed for fiction \u2014 features like Show Don't Tell, Brainstorm, and Canvas plot tools",
+      "Designed for fiction — features like Show Don't Tell, Brainstorm, and Canvas plot tools",
       "Story Bible keeps characters, locations, and lore consistent across long manuscripts",
       "Handles 1,000+ word generations without losing voice"
     ],
@@ -5218,7 +5218,7 @@
       "Not great for non-fiction or business writing"
     ],
     "verdict": "Best for novelists and screenwriters who want a fiction-specific AI co-author.",
-    "notGoodFor": "Skip if you write non-fiction or just need a cheap general AI \u2014 ChatGPT is more flexible and cheaper."
+    "notGoodFor": "Skip if you write non-fiction or just need a cheap general AI — ChatGPT is more flexible and cheaper."
   },
   {
     "id": "rytr",
@@ -5286,7 +5286,7 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Cheapest serious AI writer \u2014 $9/month for unlimited",
+      "Cheapest serious AI writer — $9/month for unlimited",
       "Generous free tier with 10,000 characters per month",
       "40+ pre-built templates cover most common copy needs"
     ],
@@ -5296,7 +5296,7 @@
       "Templates feel formulaic on longer-form content"
     ],
     "verdict": "Best for solo creators and side projects on a tight budget.",
-    "notGoodFor": "Skip if you're an agency needing brand voice at scale \u2014 Jasper is built for that."
+    "notGoodFor": "Skip if you're an agency needing brand voice at scale — Jasper is built for that."
   },
   {
     "id": "writesonic",
@@ -5366,7 +5366,7 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Strong SEO mode \u2014 optimizes content with target keywords and competitor analysis",
+      "Strong SEO mode — optimizes content with target keywords and competitor analysis",
       "AI Article Writer 6 produces 3,000+ word drafts with research and citations",
       "Brand voice training captures your existing copy at $19/mo entry tier"
     ],
@@ -5376,7 +5376,7 @@
       "Pricing tiers can be confusing with Chatsonic and AI Article Writer separated"
     ],
     "verdict": "Best for content marketers and SEO teams who want long-form drafts plus optimization.",
-    "notGoodFor": "Skip if you only write short-form copy \u2014 Rytr or Copy.ai is cheaper and just as good."
+    "notGoodFor": "Skip if you only write short-form copy — Rytr or Copy.ai is cheaper and just as good."
   },
   {
     "id": "adobe-express",
@@ -5438,9 +5438,9 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Strong free tier \u2014 most templates and Firefly generations included",
+      "Strong free tier — most templates and Firefly generations included",
       "Adobe-quality typography and brand kit features",
-      "Generative AI built in via Firefly \u2014 commercial safe"
+      "Generative AI built in via Firefly — commercial safe"
     ],
     "cons": [
       "Less feature-rich than Canva for complex designs",
@@ -5448,7 +5448,7 @@
       "Mobile app trails Canva on usability"
     ],
     "verdict": "Best for marketers and creators who want Adobe-grade output without learning Photoshop.",
-    "notGoodFor": "Skip if you already use Canva \u2014 feature parity isn't there yet."
+    "notGoodFor": "Skip if you already use Canva — feature parity isn't there yet."
   },
   {
     "id": "playground-ai",
@@ -5508,7 +5508,7 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Generous free tier \u2014 500 image generations per day",
+      "Generous free tier — 500 image generations per day",
       "Cleaner UI than Midjourney's Discord workflow",
       "Mix-and-match models including Stable Diffusion and Playground v2.5"
     ],
@@ -5518,7 +5518,7 @@
       "Pro plan required for commercial use ($15/mo)"
     ],
     "verdict": "Best for hobbyists and beginners who want a free, easy image generator without Discord.",
-    "notGoodFor": "Skip if you need professional-grade output \u2014 Midjourney still wins on quality."
+    "notGoodFor": "Skip if you need professional-grade output — Midjourney still wins on quality."
   },
   {
     "id": "lexica",
@@ -5584,17 +5584,17 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Best prompt search engine \u2014 see millions of public AI images and their prompts",
+      "Best prompt search engine — see millions of public AI images and their prompts",
       "Built-in Stable Diffusion generator at affordable rates",
       "Great learning tool for AI image prompting"
     ],
     "cons": [
       "Generation quality below Midjourney and SDXL custom models",
-      "Free generations very limited \u2014 basically a teaser",
+      "Free generations very limited — basically a teaser",
       "API access only on enterprise tier"
     ],
     "verdict": "Best for prompt engineers learning Stable Diffusion or sourcing inspiration.",
-    "notGoodFor": "Skip for production work \u2014 Midjourney or Stable Diffusion outputs better images."
+    "notGoodFor": "Skip for production work — Midjourney or Stable Diffusion outputs better images."
   },
   {
     "id": "nightcafe",
@@ -5623,7 +5623,7 @@
       "social media"
     ],
     "workflow": "create",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 1155,
     "reviews": [
       {
@@ -5661,7 +5661,7 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Choice of multiple models \u2014 SDXL, DALL-E, Stable Diffusion, and proprietary",
+      "Choice of multiple models — SDXL, DALL-E, Stable Diffusion, and proprietary",
       "Social platform with daily challenges and prompt remixing",
       "Free credits regenerate daily for casual users"
     ],
@@ -5671,7 +5671,7 @@
       "Community feed is noisy with low-effort posts"
     ],
     "verdict": "Best for hobbyists who want to experiment across multiple image models in one place.",
-    "notGoodFor": "Skip if you want consistent style \u2014 NightCafe spreads attention across many models."
+    "notGoodFor": "Skip if you want consistent style — NightCafe spreads attention across many models."
   },
   {
     "id": "krea-ai",
@@ -5738,17 +5738,17 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Real-time generation \u2014 see results update as you type or doodle",
+      "Real-time generation — see results update as you type or doodle",
       "Strong control with image-to-image, ControlNet, and style references",
       "Free tier with daily credits is genuinely usable"
     ],
     "cons": [
       "Quality ceiling below Midjourney for stylized output",
-      "Pro plan starts at $35/mo \u2014 pricier than Playground",
+      "Pro plan starts at $35/mo — pricier than Playground",
       "Real-time generation needs decent GPU servers, occasional queueing"
     ],
     "verdict": "Best for designers who want fast iteration with sketch-to-image control.",
-    "notGoodFor": "Skip if you don't need iteration speed \u2014 Midjourney offers higher quality at similar cost."
+    "notGoodFor": "Skip if you don't need iteration speed — Midjourney offers higher quality at similar cost."
   },
   {
     "id": "magnific",
@@ -5814,22 +5814,22 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Best AI upscaler \u2014 adds plausible detail rather than just smoothing",
+      "Best AI upscaler — adds plausible detail rather than just smoothing",
       "Multiple creativity levels from photo-faithful to artistic interpretation",
       "Handles human faces and fabric textures better than competitors"
     ],
     "cons": [
-      "No free tier \u2014 minimum $39/mo entry",
+      "No free tier — minimum $39/mo entry",
       "Credits run out fast at high resolutions",
       "Output sometimes hallucinates wrong details on creative settings"
     ],
     "verdict": "Best for designers, photographers, and Midjourney power users who need large-scale outputs.",
-    "notGoodFor": "Skip if you only need basic upscaling \u2014 Topaz Photo AI or free Real-ESRGAN is enough."
+    "notGoodFor": "Skip if you only need basic upscaling — Topaz Photo AI or free Real-ESRGAN is enough."
   },
   {
     "id": "clipdrop",
     "name": "Clipdrop",
-    "description": "Suite of AI image-editing tools \u2014 background remove, uncrop, relight, and more \u2014 from Stability AI.",
+    "description": "Suite of AI image-editing tools — background remove, uncrop, relight, and more — from Stability AI.",
     "category": "Image & Art",
     "tags": [
       "free tier",
@@ -5891,17 +5891,17 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Cluster of focused tools \u2014 bg removal, uncrop, relight, cleanup, sketch-to-image",
+      "Cluster of focused tools — bg removal, uncrop, relight, cleanup, sketch-to-image",
       "Free tier covers most casual editing tasks",
       "Built on Stable Diffusion and SDXL by Stability AI"
     ],
     "cons": [
       "Pro plan ($9/mo) needed for high resolution and bulk processing",
       "Fewer features than full Photoshop or Affinity Photo",
-      "Tools work standalone \u2014 no unified canvas yet"
+      "Tools work standalone — no unified canvas yet"
     ],
     "verdict": "Best for content creators and marketers who need quick AI image edits without learning Photoshop.",
-    "notGoodFor": "Skip if you need pro-level editing \u2014 Photoshop and Firefly are still ahead."
+    "notGoodFor": "Skip if you need pro-level editing — Photoshop and Firefly are still ahead."
   },
   {
     "id": "invideo",
@@ -5969,7 +5969,7 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Generates full videos from a single prompt \u2014 script, footage, voice, and music",
+      "Generates full videos from a single prompt — script, footage, voice, and music",
       "Massive stock library (16M+ clips) included",
       "Strong template library for marketing and social formats"
     ],
@@ -5979,7 +5979,7 @@
       "Less editing control than Descript or Kapwing for fine-tuning"
     ],
     "verdict": "Best for marketers and social media managers who need high-volume video output fast.",
-    "notGoodFor": "Skip for highly polished or branded content \u2014 Adobe Premiere or Descript wins on control."
+    "notGoodFor": "Skip for highly polished or branded content — Adobe Premiere or Descript wins on control."
   },
   {
     "id": "pictory",
@@ -6048,7 +6048,7 @@
     "isNew": true,
     "pros": [
       "Fast script-to-video with auto-stock footage matching",
-      "Strong long-form to short-form repurposing \u2014 paste a YouTube URL, get clips",
+      "Strong long-form to short-form repurposing — paste a YouTube URL, get clips",
       "Auto-captions in 29+ languages"
     ],
     "cons": [
@@ -6057,7 +6057,7 @@
       "Voice options below ElevenLabs in quality"
     ],
     "verdict": "Best for content marketers turning blog content and webinars into social video.",
-    "notGoodFor": "Skip if you create video from scratch \u2014 Runway or InVideo offers more creative control."
+    "notGoodFor": "Skip if you create video from scratch — Runway or InVideo offers more creative control."
   },
   {
     "id": "kapwing",
@@ -6125,17 +6125,17 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Full timeline editor in the browser \u2014 no installs needed",
-      "Strong AI tools \u2014 auto subtitles, silence removal, AI dubbing in 30+ languages",
+      "Full timeline editor in the browser — no installs needed",
+      "Strong AI tools — auto subtitles, silence removal, AI dubbing in 30+ languages",
       "Team workspace with shared assets and commenting"
     ],
     "cons": [
       "Free tier watermarks exports and limits to 4 min videos",
       "Slower than desktop editors for long projects",
-      "Pro plan jumps to $24/mo \u2014 pricier than Descript Creator"
+      "Pro plan jumps to $24/mo — pricier than Descript Creator"
     ],
-    "verdict": "Best for collaborative teams editing video in browser \u2014 schools, agencies, marketing teams.",
-    "notGoodFor": "Skip if you edit alone on desktop \u2014 Descript or DaVinci is more powerful."
+    "verdict": "Best for collaborative teams editing video in browser — schools, agencies, marketing teams.",
+    "notGoodFor": "Skip if you edit alone on desktop — Descript or DaVinci is more powerful."
   },
   {
     "id": "vizard",
@@ -6213,7 +6213,7 @@
       "Quality of auto-picks depends heavily on source video clarity"
     ],
     "verdict": "Best for podcasters and YouTubers repurposing long content into short clips.",
-    "notGoodFor": "Skip if you need full editing control \u2014 OpusClip handles repurposing too with stronger features."
+    "notGoodFor": "Skip if you need full editing control — OpusClip handles repurposing too with stronger features."
   },
   {
     "id": "opus-clip",
@@ -6283,7 +6283,7 @@
     "pros": [
       "ClipAnything 2.0 finds compelling moments based on virality scoring",
       "Auto-reframe with face tracking keeps subjects centered on vertical exports",
-      "Strong free tier \u2014 90 minutes of source video per month"
+      "Strong free tier — 90 minutes of source video per month"
     ],
     "cons": [
       "Output captions sometimes mistime on heavy accents",
@@ -6291,7 +6291,7 @@
       "Less customizable templates than Kapwing or Captions"
     ],
     "verdict": "Best for podcasters, YouTubers, and brands repurposing long content into shorts at scale.",
-    "notGoodFor": "Skip if you create short-form natively \u2014 Captions or InVideo is built for that workflow."
+    "notGoodFor": "Skip if you create short-form natively — Captions or InVideo is built for that workflow."
   },
   {
     "id": "veed",
@@ -6321,7 +6321,7 @@
       "social media"
     ],
     "workflow": "edit",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 1434,
     "reviews": [
       {
@@ -6359,7 +6359,7 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Full editor in the browser \u2014 works on Chromebook or any laptop",
+      "Full editor in the browser — works on Chromebook or any laptop",
       "Strong subtitle generator with 100+ languages",
       "AI tools for eye contact, magic cut, and AI avatar generation included"
     ],
@@ -6369,7 +6369,7 @@
       "Pro plan ($25/mo) is pricier than Kapwing for similar feature set"
     ],
     "verdict": "Best for solo creators editing in browser who need an all-in-one with strong subtitles.",
-    "notGoodFor": "Skip if you have a strong editing background \u2014 Premiere and DaVinci offer way more control."
+    "notGoodFor": "Skip if you have a strong editing background — Premiere and DaVinci offer way more control."
   },
   {
     "id": "murf",
@@ -6447,7 +6447,7 @@
       "Pricing tiers can be confusing across personal/business/enterprise"
     ],
     "verdict": "Best for L&D teams and corporate trainers who need predictable, multilingual voiceover.",
-    "notGoodFor": "Skip if you want the most natural voices \u2014 ElevenLabs still leads on quality."
+    "notGoodFor": "Skip if you want the most natural voices — ElevenLabs still leads on quality."
   },
   {
     "id": "lovo",
@@ -6477,7 +6477,7 @@
       "podcasting"
     ],
     "workflow": "create",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 1073,
     "reviews": [
       {
@@ -6515,22 +6515,22 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Largest voice library \u2014 500+ voices in 100+ languages",
+      "Largest voice library — 500+ voices in 100+ languages",
       "Voice cloning with as little as 1 minute of sample",
       "Built-in video editor lets you add the voiceover to footage in one tool"
     ],
     "cons": [
-      "Voice quality variable \u2014 some languages noticeably weaker than English",
+      "Voice quality variable — some languages noticeably weaker than English",
       "Free tier ($0/mo) capped at 5 minutes per month and watermarked",
-      "Pro plan starts at $24/mo \u2014 competitive but not cheap"
+      "Pro plan starts at $24/mo — competitive but not cheap"
     ],
     "verdict": "Best for global creators needing voiceover in less-common languages.",
-    "notGoodFor": "Skip if you only need English voiceover \u2014 ElevenLabs gives more polish per dollar."
+    "notGoodFor": "Skip if you only need English voiceover — ElevenLabs gives more polish per dollar."
   },
   {
     "id": "podcastle",
     "name": "Podcastle",
-    "description": "All-in-one podcast platform \u2014 record, transcribe, edit, host, and distribute podcasts in one tool.",
+    "description": "All-in-one podcast platform — record, transcribe, edit, host, and distribute podcasts in one tool.",
     "category": "Audio & Music",
     "tags": [
       "podcasting",
@@ -6602,7 +6602,7 @@
       "Pro plan ($14/mo) caps storage tier"
     ],
     "verdict": "Best for new podcasters who want one tool for the entire podcast lifecycle.",
-    "notGoodFor": "Skip if you already use Descript and a separate host \u2014 Podcastle's editor isn't the strongest."
+    "notGoodFor": "Skip if you already use Descript and a separate host — Podcastle's editor isn't the strongest."
   },
   {
     "id": "adobe-podcast",
@@ -6669,17 +6669,17 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Best-in-class AI audio enhancement \u2014 turns laptop mic recordings into studio-grade",
+      "Best-in-class AI audio enhancement — turns laptop mic recordings into studio-grade",
       "Completely free with no signup limits as of 2026",
       "Mic check tool diagnoses your recording setup before you start"
     ],
     "cons": [
-      "Limited editing \u2014 designed for cleanup, not full production",
+      "Limited editing — designed for cleanup, not full production",
       "Enhance 4-minute file limit (chain multiple files for longer recordings)",
       "No mobile app"
     ],
     "verdict": "Best for podcasters and content creators who need to fix bad audio after recording.",
-    "notGoodFor": "Skip if you need a full editing suite \u2014 Descript or Audition is the right tool."
+    "notGoodFor": "Skip if you need a full editing suite — Descript or Audition is the right tool."
   },
   {
     "id": "soundraw",
@@ -6752,12 +6752,12 @@
       "Customize song length, mood, and instruments before generating"
     ],
     "cons": [
-      "Instrumental only \u2014 no vocals like Suno offers",
+      "Instrumental only — no vocals like Suno offers",
       "Music feels formulaic compared to Suno or Udio",
-      "No free tier \u2014 minimum $16.99/mo to download"
+      "No free tier — minimum $16.99/mo to download"
     ],
     "verdict": "Best for video creators and podcasters who need predictable royalty-free background music.",
-    "notGoodFor": "Skip if you want vocal songs \u2014 Suno and Udio handle that, Soundraw doesn't."
+    "notGoodFor": "Skip if you want vocal songs — Suno and Udio handle that, Soundraw doesn't."
   },
   {
     "id": "boomy",
@@ -6824,7 +6824,7 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Generates a full song in 30 seconds \u2014 fastest in its class",
+      "Generates a full song in 30 seconds — fastest in its class",
       "Generous free tier with up to 5 saved songs",
       "Direct release to Spotify, Apple Music, and TikTok in one click"
     ],
@@ -6834,7 +6834,7 @@
       "Pro plan needed for commercial release royalties"
     ],
     "verdict": "Best for TikTokers and beginners who want a quick music demo with zero learning curve.",
-    "notGoodFor": "Skip if music quality matters \u2014 Suno and Udio produce more polished tracks."
+    "notGoodFor": "Skip if music quality matters — Suno and Udio produce more polished tracks."
   },
   {
     "id": "cleanvoice",
@@ -6902,15 +6902,15 @@
     "pros": [
       "Removes ums, ahs, mouth clicks, and stutters with one click",
       "Multi-track support keeps individual speakers clean",
-      "Pay-per-use pricing \u2014 no monthly subscription required"
+      "Pay-per-use pricing — no monthly subscription required"
     ],
     "cons": [
-      "No free tier \u2014 $9 minimum monthly or per-hour pricing",
+      "No free tier — $9 minimum monthly or per-hour pricing",
       "Less editing power than Descript or Podcastle",
-      "Editor focuses on automation \u2014 manual fine-tuning is limited"
+      "Editor focuses on automation — manual fine-tuning is limited"
     ],
     "verdict": "Best for podcasters who hate editing and just want filler words gone fast.",
-    "notGoodFor": "Skip if you want full transcript-based editing \u2014 Descript does cleanup AND editing in one."
+    "notGoodFor": "Skip if you want full transcript-based editing — Descript does cleanup AND editing in one."
   },
   {
     "id": "tabnine",
@@ -6978,15 +6978,15 @@
     "pros": [
       "Self-hostable for enterprises with strict privacy requirements",
       "Trains custom models on your private code without leaving your network",
-      "Wide IDE support \u2014 VS Code, JetBrains, Vim, Eclipse, Visual Studio"
+      "Wide IDE support — VS Code, JetBrains, Vim, Eclipse, Visual Studio"
     ],
     "cons": [
       "Suggestion quality below GitHub Copilot on most languages",
       "Free tier limited to 90 days, then watermarked basic completions",
-      "Pricing complex \u2014 Pro is $12/user/mo, Enterprise much higher"
+      "Pricing complex — Pro is $12/user/mo, Enterprise much higher"
     ],
-    "verdict": "Best for enterprise teams that can't send code to OpenAI or GitHub \u2014 privacy-first AI coding.",
-    "notGoodFor": "Skip if you're a solo developer \u2014 Copilot or Codeium gives better quality at lower cost."
+    "verdict": "Best for enterprise teams that can't send code to OpenAI or GitHub — privacy-first AI coding.",
+    "notGoodFor": "Skip if you're a solo developer — Copilot or Codeium gives better quality at lower cost."
   },
   {
     "id": "windsurf",
@@ -7055,21 +7055,21 @@
     "isNew": true,
     "pros": [
       "Cascade agent edits multiple files autonomously based on goals",
-      "Generous free tier \u2014 5 prompt credits per month plus unlimited basic completions",
+      "Generous free tier — 5 prompt credits per month plus unlimited basic completions",
       "Forked from VS Code so all your extensions work"
     ],
     "cons": [
-      "Newer than Cursor \u2014 fewer power-user features and integrations",
+      "Newer than Cursor — fewer power-user features and integrations",
       "Pro tier ($15/mo) needed for unlimited Cascade flows",
-      "Smaller community than Cursor \u2014 fewer tutorials available"
+      "Smaller community than Cursor — fewer tutorials available"
     ],
     "verdict": "Best for developers who want Cursor's experience at a lower price point with agentic flow.",
-    "notGoodFor": "Skip if you already pay for Cursor \u2014 feature parity isn't quite there yet."
+    "notGoodFor": "Skip if you already pay for Cursor — feature parity isn't quite there yet."
   },
   {
     "id": "pieces",
     "name": "Pieces",
-    "description": "Long-term memory for developers \u2014 captures snippets, links, and context across IDE, browser, and chat.",
+    "description": "Long-term memory for developers — captures snippets, links, and context across IDE, browser, and chat.",
     "category": "Coding",
     "tags": [
       "snippets",
@@ -7140,7 +7140,7 @@
       "Pro plan ($8/mo) needed for cloud sync"
     ],
     "verdict": "Best for senior devs who context-switch a lot and need a personal memory layer.",
-    "notGoodFor": "Skip if you're solo on a single project \u2014 Pieces' value comes from cross-context memory."
+    "notGoodFor": "Skip if you're solo on a single project — Pieces' value comes from cross-context memory."
   },
   {
     "id": "sweep",
@@ -7206,17 +7206,17 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Opens real PRs based on issues you file \u2014 autonomous bug fixing",
+      "Opens real PRs based on issues you file — autonomous bug fixing",
       "Reads your repo and follows existing patterns and tests",
       "Generous free tier with 5 PRs per month"
     ],
     "cons": [
-      "Quality of generated PRs varies \u2014 needs review every time",
+      "Quality of generated PRs varies — needs review every time",
       "Best on Python and TypeScript; weaker on Rust, Go, mobile",
       "Pro plan ($120/mo) is steep for individual devs"
     ],
     "verdict": "Best for engineering teams who want AI to triage backlog issues into draft PRs.",
-    "notGoodFor": "Skip if you're a solo dev \u2014 review overhead negates time saved."
+    "notGoodFor": "Skip if you're a solo dev — review overhead negates time saved."
   },
   {
     "id": "cody",
@@ -7278,15 +7278,15 @@
     "pros": [
       "Indexes your full codebase for context-aware suggestions across millions of LOC",
       "Best for monorepos and large enterprise codebases",
-      "Choice of models \u2014 Claude, GPT, or your own self-hosted"
+      "Choice of models — Claude, GPT, or your own self-hosted"
     ],
     "cons": [
-      "Free tier ($0) limited to local context only \u2014 no monorepo benefits",
+      "Free tier ($0) limited to local context only — no monorepo benefits",
       "Pro plan ($9/user/mo) needed to unlock cross-repo context",
-      "Enterprise setup is complex \u2014 requires Sourcegraph deployment"
+      "Enterprise setup is complex — requires Sourcegraph deployment"
     ],
     "verdict": "Best for engineering teams with large codebases that need AI grounded in their actual code.",
-    "notGoodFor": "Skip if you work on small codebases \u2014 Copilot or Cursor is simpler and just as effective."
+    "notGoodFor": "Skip if you work on small codebases — Copilot or Cursor is simpler and just as effective."
   },
   {
     "id": "mem-ai",
@@ -7354,17 +7354,17 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "AI-native from the ground up \u2014 semantic search across all your notes",
+      "AI-native from the ground up — semantic search across all your notes",
       "Auto-tagging and connection suggestions reduce manual organization",
       "Chat interface lets you ask 'What did I capture about X?' naturally"
     ],
     "cons": [
       "Less flexible than Notion for databases and project pages",
       "Pro plan ($14.99/mo) feels expensive for a notes app",
-      "Smaller ecosystem than Notion \u2014 fewer templates and integrations"
+      "Smaller ecosystem than Notion — fewer templates and integrations"
     ],
     "verdict": "Best for knowledge workers who hate manual note organization and want AI to do it.",
-    "notGoodFor": "Skip if you need databases, kanban, or wiki structures \u2014 Notion does those better."
+    "notGoodFor": "Skip if you need databases, kanban, or wiki structures — Notion does those better."
   },
   {
     "id": "taskade",
@@ -7442,12 +7442,12 @@
       "AI agents quality below dedicated tools like Motion or Reclaim"
     ],
     "verdict": "Best for small teams and freelancers who want lightweight PM with AI assistance.",
-    "notGoodFor": "Skip if you manage complex engineering projects \u2014 Linear or Asana is the right tool."
+    "notGoodFor": "Skip if you manage complex engineering projects — Linear or Asana is the right tool."
   },
   {
     "id": "magical",
     "name": "Magical",
-    "description": "AI text expansion and automation tool \u2014 type a shortcut, get a templated response with autofill from any data source.",
+    "description": "AI text expansion and automation tool — type a shortcut, get a templated response with autofill from any data source.",
     "category": "Productivity",
     "tags": [
       "free",
@@ -7514,11 +7514,11 @@
     ],
     "cons": [
       "Less customizable than TextExpander or Espanso",
-      "Limited to text and form filling \u2014 no broader automation",
+      "Limited to text and form filling — no broader automation",
       "Team plan ($10/user/mo) needed for shared snippets"
     ],
     "verdict": "Best for sales reps, recruiters, and customer support agents who write the same email 50 times a day.",
-    "notGoodFor": "Skip if you need broader automation \u2014 Zapier or Make is more flexible."
+    "notGoodFor": "Skip if you need broader automation — Zapier or Make is more flexible."
   },
   {
     "id": "superhuman",
@@ -7585,17 +7585,17 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Fastest email client \u2014 keyboard shortcuts for everything, native iOS app",
+      "Fastest email client — keyboard shortcuts for everything, native iOS app",
       "AI compose, AI triage, and AI summary save real time on long threads",
       "Snippets, schedules, and follow-up reminders built in"
     ],
     "cons": [
       "$30/month is steep for an email client",
-      "No free tier \u2014 only a 30-day trial",
+      "No free tier — only a 30-day trial",
       "Lock-in: leaving means re-learning Gmail or Outlook"
     ],
     "verdict": "Best for execs and salespeople processing 100+ emails per day who value speed over price.",
-    "notGoodFor": "Skip if your inbox is light \u2014 Gmail with keyboard shortcuts is free and good enough."
+    "notGoodFor": "Skip if your inbox is light — Gmail with keyboard shortcuts is free and good enough."
   },
   {
     "id": "semantic-scholar",
@@ -7664,17 +7664,17 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Completely free \u2014 no subscription, no signup required for basic use",
+      "Completely free — no subscription, no signup required for basic use",
       "200M+ papers with AI-generated TLDR summaries on most",
       "Strong citation graph showing influential and influenced papers"
     ],
     "cons": [
       "Less polished UX than Elicit or Consensus",
-      "AI summary quality varies \u2014 sometimes misses key findings",
+      "AI summary quality varies — sometimes misses key findings",
       "API rate limits hit fast for power users"
     ],
     "verdict": "Best for grad students and researchers who want a free, comprehensive paper search.",
-    "notGoodFor": "Skip if you need structured paper extraction \u2014 Elicit pulls method/sample/results better."
+    "notGoodFor": "Skip if you need structured paper extraction — Elicit pulls method/sample/results better."
   },
   {
     "id": "scite",
@@ -7742,22 +7742,22 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Smart citations \u2014 see if a paper SUPPORTS, CONTRASTS, or just mentions a claim",
+      "Smart citations — see if a paper SUPPORTS, CONTRASTS, or just mentions a claim",
       "1.2B+ classified citations across 33M papers",
       "Strong for assessing whether claims are well-supported in the literature"
     ],
     "cons": [
       "Pro plan ($20/mo) needed for full feature access including dashboards",
-      "Coverage skewed toward biomedical and STEM \u2014 humanities sparser",
+      "Coverage skewed toward biomedical and STEM — humanities sparser",
       "Free tier shows limited citation context"
     ],
     "verdict": "Best for academic researchers and journalists evaluating the strength of cited claims.",
-    "notGoodFor": "Skip if you just need basic paper search \u2014 Semantic Scholar is free and broader."
+    "notGoodFor": "Skip if you just need basic paper search — Semantic Scholar is free and broader."
   },
   {
     "id": "connected-papers",
     "name": "Connected Papers",
-    "description": "Visual graph of research papers showing how works connect \u2014 find prior work, derivative work, and related themes.",
+    "description": "Visual graph of research papers showing how works connect — find prior work, derivative work, and related themes.",
     "category": "Research",
     "tags": [
       "free tier",
@@ -7782,7 +7782,7 @@
       "book writing"
     ],
     "workflow": "analyze",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 1007,
     "reviews": [
       {
@@ -7820,22 +7820,22 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Visual citation graph \u2014 see how papers connect at a glance",
-      "Free for 5 graphs per month \u2014 enough for occasional research",
+      "Visual citation graph — see how papers connect at a glance",
+      "Free for 5 graphs per month — enough for occasional research",
       "Excellent for literature reviews and finding overlooked related work"
     ],
     "cons": [
       "Pro plan ($6/mo) needed for unlimited graphs and prior/derivative work",
       "Graph layout can get cluttered with 100+ nodes",
-      "No paper full-text \u2014 links out to publishers"
+      "No paper full-text — links out to publishers"
     ],
     "verdict": "Best for grad students mapping a literature review who want to spot adjacent work.",
-    "notGoodFor": "Skip if you just need search \u2014 Semantic Scholar is faster for finding specific papers."
+    "notGoodFor": "Skip if you just need search — Semantic Scholar is faster for finding specific papers."
   },
   {
     "id": "julius-ai",
     "name": "Julius AI",
-    "description": "ChatGPT-style data analyst that runs on your CSVs, spreadsheets, and databases \u2014 chat with your data.",
+    "description": "ChatGPT-style data analyst that runs on your CSVs, spreadsheets, and databases — chat with your data.",
     "category": "Data & Analytics",
     "tags": [
       "data analysis",
@@ -7897,22 +7897,22 @@
     "trendingDirection": "up",
     "isNew": true,
     "pros": [
-      "Upload CSV or Excel and chat with it \u2014 no SQL or Python needed",
+      "Upload CSV or Excel and chat with it — no SQL or Python needed",
       "Generates charts, summaries, and statistical analysis on demand",
-      "Strong free tier \u2014 15 messages per day for analysis"
+      "Strong free tier — 15 messages per day for analysis"
     ],
     "cons": [
       "Less powerful than Hex or Jupyter for complex data work",
       "Pro plan ($20/mo) needed for unlimited messages and larger files",
-      "Sometimes hallucinates statistics \u2014 verify outputs on important decisions"
+      "Sometimes hallucinates statistics — verify outputs on important decisions"
     ],
     "verdict": "Best for non-technical users and analysts who want to chat with their data quickly.",
-    "notGoodFor": "Skip if you do serious data work \u2014 Jupyter or Hex offers more control."
+    "notGoodFor": "Skip if you do serious data work — Jupyter or Hex offers more control."
   },
   {
     "id": "obviously-ai",
     "name": "Obviously AI",
-    "description": "No-code machine learning \u2014 upload data, predict outcomes, and deploy models without writing code.",
+    "description": "No-code machine learning — upload data, predict outcomes, and deploy models without writing code.",
     "category": "Data & Analytics",
     "tags": [
       "no-code",
@@ -7937,7 +7937,7 @@
       "research"
     ],
     "workflow": "analyze",
-    "rating": 4.0,
+    "rating": 4,
     "reviewCount": 934,
     "reviews": [
       {
@@ -7975,22 +7975,22 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Train ML models in minutes from CSVs \u2014 zero code required",
+      "Train ML models in minutes from CSVs — zero code required",
       "Strong on tabular prediction tasks like churn, conversion, and forecasting",
       "Auto-deploys models as APIs you can integrate"
     ],
     "cons": [
       "Starting tier $49/mo is steep for small experiments",
-      "Tabular only \u2014 no image, text, or time-series specialty models",
+      "Tabular only — no image, text, or time-series specialty models",
       "Less control than building with scikit-learn or AutoML services"
     ],
     "verdict": "Best for ops and BI teams who need predictive models without an ML engineer.",
-    "notGoodFor": "Skip if you have a data scientist on staff \u2014 they'll get more from cloud AutoML services."
+    "notGoodFor": "Skip if you have a data scientist on staff — they'll get more from cloud AutoML services."
   },
   {
     "id": "akkio",
     "name": "Akkio",
-    "description": "No-code ML platform for marketing and ops teams \u2014 predictive lead scoring, churn, and forecasting.",
+    "description": "No-code ML platform for marketing and ops teams — predictive lead scoring, churn, and forecasting.",
     "category": "Data & Analytics",
     "tags": [
       "no-code",
@@ -8052,22 +8052,22 @@
     "trendingDirection": "stable",
     "isNew": true,
     "pros": [
-      "Designed for marketers and RevOps \u2014 predictive lead scoring and churn out of the box",
+      "Designed for marketers and RevOps — predictive lead scoring and churn out of the box",
       "Native integrations with Salesforce, HubSpot, and Snowflake",
       "Pretty visualizations and reports for non-technical stakeholders"
     ],
     "cons": [
       "$49/month entry tier is pricey for small teams",
       "Less flexible than DataRobot or H2O for custom ML",
-      "Free trial only 14 days \u2014 not enough to evaluate ROI"
+      "Free trial only 14 days — not enough to evaluate ROI"
     ],
     "verdict": "Best for marketing and revenue teams that need predictive analytics without hiring data scientists.",
-    "notGoodFor": "Skip if you have a data team \u2014 they'll prefer Hex, dbt, or notebooks."
+    "notGoodFor": "Skip if you have a data team — they'll prefer Hex, dbt, or notebooks."
   },
   {
     "id": "polymer",
     "name": "Polymer",
-    "description": "Auto-builds dashboards from spreadsheets and databases \u2014 no SQL or BI skill required.",
+    "description": "Auto-builds dashboards from spreadsheets and databases — no SQL or BI skill required.",
     "category": "Data & Analytics",
     "tags": [
       "free tier",
@@ -8130,15 +8130,259 @@
     "isNew": true,
     "pros": [
       "Connect a spreadsheet, get a dashboard auto-built in seconds",
-      "Free tier with 1 board and 1,000 rows \u2014 usable for small data",
+      "Free tier with 1 board and 1,000 rows — usable for small data",
       "AI Insights surface trends and anomalies without setup"
     ],
     "cons": [
       "Less customizable than Tableau, Looker, or Hex",
       "Pro plan ($25/mo) needed for larger row limits and team sharing",
-      "Best for simple datasets \u2014 chokes on complex multi-table joins"
+      "Best for simple datasets — chokes on complex multi-table joins"
     ],
     "verdict": "Best for ops and marketing teams who want self-serve dashboards without a BI tool.",
-    "notGoodFor": "Skip if you have data engineers \u2014 Looker or Metabase offers way more control."
+    "notGoodFor": "Skip if you have data engineers — Looker or Metabase offers way more control."
+  },
+  {
+    "id": "vidu",
+    "name": "Vidu",
+    "description": "AI video generation tool that creates high-quality videos from text prompts and images with realistic motion and effects.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "ai video",
+      "text-to-video",
+      "motion"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.vidu.ai",
+    "logoUrl": "https://logo.clearbit.com/vidu.ai",
+    "featured": false,
+    "addedDate": "2025-03-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 150,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "marketing videos",
+      "social media content",
+      "product demonstrations",
+      "creative projects"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Fast rendering times",
+      "Natural motion synthesis",
+      "Easy-to-use interface",
+      "Affordable compared to competitors"
+    ],
+    "cons": [
+      "Limited customization options",
+      "Watermark on free tier",
+      "Occasional quality inconsistencies"
+    ],
+    "verdict": "Best for content creators and marketers needing quick, high-quality video generation without complexity.",
+    "notGoodFor": "Enterprise production studios requiring extensive post-production control",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited videos per month, watermarked outputs",
+      "starting_price": "$9.99/month",
+      "most_popular_plan": "$29.99/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20-30",
+        "power_user": "$50-100"
+      }
+    }
+  },
+  {
+    "id": "recraft",
+    "name": "Recraft",
+    "description": "AI image generation and editing platform that specializes in creating brand-consistent, high-quality images with vector and raster support.",
+    "category": "Image & Art",
+    "tags": [
+      "image generation",
+      "ai art",
+      "vector design",
+      "brand consistency"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.recraft.ai",
+    "logoUrl": "https://logo.clearbit.com/recraft.ai",
+    "featured": false,
+    "addedDate": "2025-02-20",
+    "isNew": true,
+    "weeklyViews": 950,
+    "savedCount": 120,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "brand design",
+      "marketing materials",
+      "product imagery",
+      "graphic design"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Vector and raster exports",
+      "Brand consistency tools",
+      "User-friendly editor",
+      "High-resolution outputs"
+    ],
+    "cons": [
+      "Smaller community than competitors",
+      "Limited preset templates",
+      "Premium features unlock slowly"
+    ],
+    "verdict": "Best for brands and designers who need consistent, professional imagery with vector export capabilities.",
+    "notGoodFor": "Photorealistic 3D rendering or highly complex compositing",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 images per month, basic features only",
+      "starting_price": "$14.99/month",
+      "most_popular_plan": "$49.99/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-15",
+        "regular_user": "$30-50",
+        "power_user": "$75-150"
+      }
+    }
+  },
+  {
+    "id": "neets",
+    "name": "Neets",
+    "description": "Neural text-to-speech platform offering natural-sounding voices for creators with API and web interface access.",
+    "category": "Audio & Music",
+    "tags": [
+      "text-to-speech",
+      "tts",
+      "voiceover",
+      "ai voice"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.neets.ai",
+    "logoUrl": "https://logo.clearbit.com/neets.ai",
+    "featured": false,
+    "addedDate": "2025-01-10",
+    "isNew": true,
+    "weeklyViews": 820,
+    "savedCount": 95,
+    "trendingScore": 75,
+    "trendingDirection": "up",
+    "rating": 4.2,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "video voiceovers",
+      "podcasts",
+      "audiobooks",
+      "content creation"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Natural-sounding voices",
+      "Quick processing",
+      "Affordable pricing",
+      "API available"
+    ],
+    "cons": [
+      "Limited voice variety initially",
+      "Occasional pronunciation errors",
+      "Learning curve for API integration"
+    ],
+    "verdict": "Best for content creators seeking affordable, natural-sounding text-to-speech without ElevenLabs' premium pricing.",
+    "notGoodFor": "Highly specialized industry dialects or rare languages",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "500 characters per month",
+      "starting_price": "$4.99/month",
+      "most_popular_plan": "$19.99/month",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-5",
+        "regular_user": "$10-20",
+        "power_user": "$40-80"
+      }
+    }
+  },
+  {
+    "id": "granola",
+    "name": "Granola",
+    "description": "AI-powered meeting assistant that automatically generates summaries, action items, and highlights from video calls and recordings.",
+    "category": "Productivity",
+    "tags": [
+      "meeting notes",
+      "transcription",
+      "productivity",
+      "ai assistant"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.granola.ai",
+    "logoUrl": "https://logo.clearbit.com/granola.ai",
+    "featured": false,
+    "addedDate": "2025-04-05",
+    "isNew": true,
+    "weeklyViews": 1100,
+    "savedCount": 140,
+    "trendingScore": 81,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "remote teams",
+      "sales calls",
+      "client meetings",
+      "knowledge management"
+    ],
+    "workflow": "optimize",
+    "compatibleWith": [
+      "Zoom",
+      "Google Meet",
+      "Slack"
+    ],
+    "pros": [
+      "Automatic meeting capture",
+      "Smart summarization",
+      "Action item tracking",
+      "Integration with Slack"
+    ],
+    "cons": [
+      "Privacy concerns for some users",
+      "Accuracy varies with audio quality",
+      "Limited customization"
+    ],
+    "verdict": "Best for remote teams wanting automated meeting intelligence without manual note-taking.",
+    "notGoodFor": "Highly confidential meetings requiring on-premise solutions",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 meetings per month",
+      "starting_price": "$12/month",
+      "most_popular_plan": "$29/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-12",
+        "regular_user": "$20-30",
+        "power_user": "$50-100"
+      }
+    }
   }
 ]
