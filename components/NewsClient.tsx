@@ -102,7 +102,7 @@ export function NewsClient({ fallback }: { fallback: NewsItem[] }) {
           <p className="mt-2 text-sm text-muted-strong">
             {usingFallback
               ? "Showing cached news — live feed temporarily unavailable."
-              : "Updated hourly from TechCrunch, The Verge, VentureBeat, and MIT Tech Review."}
+              : "Updated every 30 minutes from TechCrunch, The Verge, NVIDIA, OpenAI, Anthropic, and 10 more sources."}
           </p>
         </div>
         <button

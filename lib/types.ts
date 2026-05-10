@@ -114,6 +114,8 @@ export interface NewsItem {
   title: string;
   summary: string;
   source: string;
+  /** Optional color key for the source badge. Matches the live news API shape. */
+  sourceColor?: string;
   url: string;
   date: string;
   category: string;

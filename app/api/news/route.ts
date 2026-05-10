@@ -1,326 +1,404 @@
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
-// ISR: cache for 1 hour, then refresh in the background.
-export const revalidate = 3600;
+// ISR: cache for 30 minutes.
+export const revalidate = 1800;
 
 interface FeedSource {
   url: string;
   source: string;
   color: string;
-  /** 1 = official AI lab blogs (always included), 2 = top tech news, 3 = product blogs. */
-  priority: 1 | 2 | 3;
 }
-
-const FEEDS: FeedSource[] = [
-  // TIER 1 — Official AI Company Blogs
-  {
-    url: "https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_news_rss.xml",
-    source: "Anthropic",
-    color: "orange",
-    priority: 1,
-  },
-  {
-    url: "https://openai.com/news/rss.xml",
-    source: "OpenAI",
-    color: "green",
-    priority: 1,
-  },
-  {
-    url: "https://deepmind.google/blog/rss/feed/",
-    source: "Google DeepMind",
-    color: "blue",
-    priority: 1,
-  },
-  {
-    url: "https://ai.meta.com/blog/rss/",
-    source: "Meta AI",
-    color: "blue",
-    priority: 1,
-  },
-  {
-    url: "https://huggingface.co/blog/feed.xml",
-    source: "Hugging Face",
-    color: "yellow",
-    priority: 1,
-  },
-  {
-    url: "https://mistral.ai/news/rss",
-    source: "Mistral AI",
-    color: "purple",
-    priority: 1,
-  },
-
-  // TIER 2 — Top Tech News
-  {
-    url: "https://techcrunch.com/category/artificial-intelligence/feed/",
-    source: "TechCrunch",
-    color: "orange",
-    priority: 2,
-  },
-  {
-    url: "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml",
-    source: "The Verge",
-    color: "purple",
-    priority: 2,
-  },
-  {
-    url: "https://venturebeat.com/category/ai/feed/",
-    source: "VentureBeat",
-    color: "blue",
-    priority: 2,
-  },
-  {
-    url: "https://www.technologyreview.com/topic/artificial-intelligence/feed",
-    source: "MIT Tech Review",
-    color: "green",
-    priority: 2,
-  },
-  {
-    url: "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss",
-    source: "Wired",
-    color: "gray",
-    priority: 2,
-  },
-
-  // TIER 3 — AI Tool and Product News
-  {
-    url: "https://research.google/blog/rss/",
-    source: "Google Research",
-    color: "blue",
-    priority: 3,
-  },
-  {
-    url: "https://blogs.microsoft.com/ai/feed/",
-    source: "Microsoft AI",
-    color: "blue",
-    priority: 3,
-  },
-  {
-    url: "https://stability.ai/news/rss.xml",
-    source: "Stability AI",
-    color: "purple",
-    priority: 3,
-  },
-];
-
-// When two sources publish near-identical headlines, prefer the higher-rank one.
-const SOURCE_RANK: Record<string, number> = {
-  Anthropic: 10,
-  OpenAI: 10,
-  "Google DeepMind": 10,
-  "Meta AI": 9,
-  "Hugging Face": 9,
-  "Mistral AI": 9,
-  "MIT Tech Review": 7,
-  TechCrunch: 6,
-  "The Verge": 5,
-  VentureBeat: 4,
-  Wired: 4,
-  "Google Research": 3,
-  "Microsoft AI": 3,
-  "Stability AI": 3,
-};
-
-// Quick lookup of priority by source name (used for tier-1-first ordering).
-const PRIORITY_BY_SOURCE: Record<string, 1 | 2 | 3> = Object.fromEntries(
-  FEEDS.map((f) => [f.source, f.priority]),
-);
 
 interface NewsArticle {
   title: string;
   summary: string;
   url: string;
-  date: string; // ISO
+  date: string;
   source: string;
   sourceColor: string;
   category: string;
 }
 
+/* -------------------- Feed list -------------------- */
+
+const FEEDS: FeedSource[] = [
+  {
+    url: "https://techcrunch.com/category/artificial-intelligence/feed/",
+    source: "TechCrunch",
+    color: "orange",
+  },
+  {
+    url: "https://feeds.feedburner.com/venturebeat/SZYF",
+    source: "VentureBeat",
+    color: "blue",
+  },
+  {
+    url: "https://www.artificialintelligence-news.com/feed/",
+    source: "AI News",
+    color: "purple",
+  },
+  {
+    url: "https://www.theverge.com/rss/index.xml",
+    source: "The Verge",
+    color: "purple",
+  },
+  {
+    url: "https://thenextweb.com/feed/",
+    source: "The Next Web",
+    color: "red",
+  },
+  {
+    url: "https://feeds.arstechnica.com/arstechnica/technology-lab",
+    source: "Ars Technica",
+    color: "orange",
+  },
+  {
+    url: "https://www.wired.com/feed/rss",
+    source: "Wired",
+    color: "gray",
+  },
+  {
+    url: "https://huggingface.co/blog/feed.xml",
+    source: "Hugging Face",
+    color: "yellow",
+  },
+  {
+    url: "https://openai.com/news/rss.xml",
+    source: "OpenAI",
+    color: "green",
+  },
+  {
+    url: "https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_news_rss.xml",
+    source: "Anthropic",
+    color: "orange",
+  },
+  {
+    url: "https://deepmind.google/blog/rss/feed/",
+    source: "Google DeepMind",
+    color: "blue",
+  },
+  {
+    url: "https://blogs.microsoft.com/ai/feed/",
+    source: "Microsoft AI",
+    color: "blue",
+  },
+  {
+    url: "https://nvidianews.nvidia.com/rss/all.rss",
+    source: "NVIDIA",
+    color: "green",
+  },
+  {
+    url: "https://news.mit.edu/rss/topic/artificial-intelligence2",
+    source: "MIT News",
+    color: "red",
+  },
+  {
+    url: "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+    source: "MIT Tech Review",
+    color: "green",
+  },
+];
+
+// Sources that publish only AI content. We never apply the AI keyword filter to
+// them — every article they ship is on-topic by definition.
+const AI_SPECIFIC_SOURCES = new Set<string>([
+  "OpenAI",
+  "Anthropic",
+  "Google DeepMind",
+  "Hugging Face",
+  "Microsoft AI",
+  "NVIDIA",
+  "MIT News",
+  "AI News",
+  "MIT Tech Review",
+]);
+
+// Keywords used to keep only AI-adjacent stories from general tech outlets.
+const AI_KEYWORDS = [
+  "ai",
+  "artificial intelligence",
+  "machine learning",
+  "chatgpt",
+  "claude",
+  "gemini",
+  "openai",
+  "anthropic",
+  "llm",
+  "gpt",
+  "neural",
+  "deep learning",
+  "model",
+  "nvidia",
+  "automation",
+  "robot",
+  "agent",
+  "copilot",
+  "midjourney",
+  "stable diffusion",
+  "generative",
+];
+
+/* -------------------- Route -------------------- */
+
 export async function GET() {
-  // Fetch every feed in parallel — one failure never blocks the rest.
-  const results = await Promise.allSettled(FEEDS.map(fetchFeed));
-  const articles: NewsArticle[] = [];
-  for (const r of results) {
-    if (r.status === "fulfilled") articles.push(...r.value);
+  const articles = await fetchAllFeeds();
+
+  if (articles.length === 0) {
+    // Every live feed failed — serve the static fallback so users never see
+    // an empty page.
+    const fallback = await getStaticFallback();
+    return NextResponse.json(
+      {
+        ok: true,
+        articles: fallback,
+        source: "fallback",
+        fetchedAt: new Date().toISOString(),
+      },
+      { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=86400" } },
+    );
   }
-
-  // Dedupe by normalized title prefix, then sort newest first.
-  const deduped = dedupe(articles);
-  deduped.sort((a, b) => b.date.localeCompare(a.date));
-
-  // Tier-1 sources (official AI lab blogs) always come first, then fill with
-  // tier-2+ (general tech news) up to a 30-article cap.
-  const tier1 = deduped.filter(
-    (a) => PRIORITY_BY_SOURCE[a.source] === 1,
-  );
-  const tier2plus = deduped.filter(
-    (a) => PRIORITY_BY_SOURCE[a.source] !== 1,
-  );
-  const final = [...tier1, ...tier2plus].slice(0, 30);
 
   return NextResponse.json(
     {
       ok: true,
-      articles: final,
+      articles,
+      source: "live",
       fetchedAt: new Date().toISOString(),
     },
-    { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } },
+    { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=86400" } },
   );
 }
 
-/* -------------------- Feed fetching -------------------- */
+/* -------------------- Fetch -------------------- */
 
 async function fetchFeed(feed: FeedSource): Promise<NewsArticle[]> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
   try {
-    const res = await fetch(feed.url, {
-      // Identify ourselves; some feeds reject fetches without a UA.
-      headers: { "User-Agent": "AI-App-Catalog/1.0 (news aggregator)" },
-      // Native fetch revalidation — Next.js will dedupe identical URLs across requests.
-      next: { revalidate: 3600 },
+    const response = await fetch(feed.url, {
+      signal: controller.signal,
+      headers: {
+        // Some publishers reject the default Node fetch UA — a browser-shaped
+        // UA gets through far more reliably.
+        "User-Agent":
+          "Mozilla/5.0 (compatible; RSS Reader Bot/1.0)",
+        Accept:
+          "application/rss+xml, application/xml, text/xml, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "no-cache",
+      },
+      // Let Next.js dedupe identical concurrent fetches and revalidate on a 30-min cadence.
+      next: { revalidate: 1800 },
     });
-    if (!res.ok) return [];
-    const xml = await res.text();
-    return parseFeed(xml, feed).slice(0, 10);
-  } catch {
+    clearTimeout(timeout);
+
+    if (!response.ok) {
+      console.warn(`Feed ${feed.source} returned ${response.status}`);
+      return [];
+    }
+
+    const text = await response.text();
+    if (!text || text.length < 100) {
+      console.warn(`Feed ${feed.source} returned empty response`);
+      return [];
+    }
+
+    return parseRSS(text, feed);
+  } catch (err) {
+    clearTimeout(timeout);
+    const msg = err instanceof Error ? err.message : "unknown";
+    console.warn(`Feed ${feed.source} failed: ${msg}`);
     return [];
   }
 }
 
-/* -------------------- Parsing -------------------- */
+async function fetchAllFeeds(): Promise<NewsArticle[]> {
+  console.log("Fetching all news feeds...");
 
-/**
- * Minimal RSS 2.0 + Atom parser. Only pulls the fields we need.
- * Avoids any XML parser dependency to keep the bundle clean.
- */
-function parseFeed(xml: string, feed: FeedSource): NewsArticle[] {
-  const isAtom = /<feed[\s>][^]*?xmlns=["']http:\/\/www\.w3\.org\/2005\/Atom["']/i.test(xml);
-  const entryTag = isAtom ? "entry" : "item";
-  const items: NewsArticle[] = [];
-  const itemRegex = new RegExp(`<${entryTag}[\\s\\S]*?</${entryTag}>`, "gi");
-  const matches = xml.match(itemRegex) ?? [];
+  const results = await Promise.allSettled(FEEDS.map((f) => fetchFeed(f)));
 
-  for (const block of matches) {
-    const title = stripTags(decode(matchTag(block, "title") ?? "")).trim();
-    if (!title) continue;
+  const allArticles: NewsArticle[] = results
+    .filter(
+      (r): r is PromiseFulfilledResult<NewsArticle[]> =>
+        r.status === "fulfilled",
+    )
+    .flatMap((r) => r.value);
 
-    let url: string;
-    if (isAtom) {
-      // <link href="..." />  — prefer rel="alternate"
-      const link =
-        block.match(/<link[^>]*rel=["']alternate["'][^>]*href=["']([^"']+)["']/i) ||
-        block.match(/<link[^>]*href=["']([^"']+)["']/i);
-      url = link ? link[1] : "";
-    } else {
-      url = decode(matchTag(block, "link") ?? "").trim();
+  console.log(`Total raw articles: ${allArticles.length}`);
+
+  // Deduplicate by normalized title prefix (first 50 chars).
+  const seen = new Set<string>();
+  const unique = allArticles.filter((a) => {
+    const key = a.title.toLowerCase().slice(0, 50);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  // Sort newest first.
+  unique.sort((a, b) => {
+    const da = new Date(a.date).getTime();
+    const db = new Date(b.date).getTime();
+    return db - da;
+  });
+
+  console.log(`Unique articles after dedup: ${unique.length}`);
+  return unique.slice(0, 40);
+}
+
+/* -------------------- Parse -------------------- */
+
+function parseRSS(xml: string, feed: FeedSource): NewsArticle[] {
+  const articles: NewsArticle[] = [];
+  try {
+    const isAtom = xml.includes("<entry>");
+
+    // Regex-based item extraction is more forgiving than XML parsers when
+    // feeds emit slightly malformed markup (very common in the wild).
+    const itemPattern = isAtom
+      ? /<entry>([\s\S]*?)<\/entry>/g
+      : /<item>([\s\S]*?)<\/item>/g;
+
+    const matches = [...xml.matchAll(itemPattern)];
+    for (const match of matches.slice(0, 8)) {
+      const item = match[1];
+
+      const title = decodeEntities(extractTag(item, "title")).trim();
+      if (!title || title.length < 5) continue;
+
+      // For general-tech outlets, only keep AI-adjacent articles.
+      const titleLower = title.toLowerCase();
+      const isAISpecific = AI_SPECIFIC_SOURCES.has(feed.source);
+      const hasAIKeyword = AI_KEYWORDS.some((kw) => titleLower.includes(kw));
+      if (!isAISpecific && !hasAIKeyword) continue;
+
+      // Link: RSS uses <link>url</link>, Atom uses <link href="url" />.
+      let url = "";
+      const linkText = item.match(/<link[^>]*>([^<]+)<\/link>/);
+      if (linkText) {
+        url = linkText[1].trim();
+      } else {
+        const linkAttr = item.match(/<link[^>]*href="([^"]+)"/);
+        if (linkAttr) url = linkAttr[1].trim();
+      }
+      if (!url || !url.startsWith("http")) continue;
+
+      // Description / summary.
+      let description =
+        extractTag(item, "description") ||
+        extractTag(item, "summary") ||
+        extractTag(item, "content");
+      description = stripHtml(decodeEntities(description)).slice(0, 200);
+
+      // Date.
+      const rawDate =
+        extractTag(item, "pubDate") ||
+        extractTag(item, "published") ||
+        extractTag(item, "updated") ||
+        extractTag(item, "dc:date");
+      const date = parseDate(rawDate);
+
+      const category = inferCategory(titleLower);
+
+      articles.push({
+        title,
+        summary: description || `Latest AI news from ${feed.source}`,
+        source: feed.source,
+        sourceColor: feed.color,
+        url,
+        date,
+        category,
+      });
     }
-    if (!url) continue;
-
-    const dateRaw =
-      matchTag(block, "pubDate") ??
-      matchTag(block, "published") ??
-      matchTag(block, "updated") ??
-      matchTag(block, "dc:date") ??
-      "";
-    const date = parseDate(dateRaw) || new Date().toISOString();
-
-    const rawSummary =
-      matchTag(block, "description") ??
-      matchTag(block, "summary") ??
-      matchTag(block, "content:encoded") ??
-      matchTag(block, "content") ??
-      "";
-    const summary = truncate(stripTags(decode(rawSummary)).replace(/\s+/g, " ").trim(), 200);
-
-    const category = inferCategory(`${title} ${summary}`);
-
-    items.push({
-      title,
-      summary,
-      url,
-      date,
-      source: feed.source,
-      sourceColor: feed.color,
-      category,
-    });
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "unknown";
+    console.warn(`Parse error for ${feed.source}: ${msg}`);
   }
-  return items;
+  return articles;
 }
 
-function matchTag(block: string, tag: string): string | null {
-  // <tag ...>content</tag> — handle CDATA inside.
-  const re = new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)</${tag.split(":")[0]}(?::${tag.split(":")[1] ?? ""})?>`, "i");
-  const simple = new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)</${tag}>`, "i");
-  const m = block.match(simple) ?? block.match(re);
-  if (!m) return null;
-  let val = m[1];
-  // Unwrap CDATA
-  const cdata = val.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
-  if (cdata) val = cdata[1];
-  return val;
+/* -------------------- Tag/HTML helpers -------------------- */
+
+function extractTag(item: string, tag: string): string {
+  // Handles <tag>X</tag>, <tag attr="...">X</tag>, and <tag><![CDATA[X]]></tag>.
+  const escaped = tag.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(
+    `<${escaped}(?:\\s[^>]*)?>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${escaped}>`,
+    "i",
+  );
+  const m = item.match(re);
+  return m ? m[1].trim() : "";
 }
 
-function stripTags(s: string): string {
-  return s.replace(/<[^>]*>/g, "");
+function stripHtml(s: string): string {
+  return s.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
-function decode(s: string): string {
+function decodeEntities(s: string): string {
   return s
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
+    .replace(/&#39;/g, "'")
     .replace(/&apos;/g, "'")
     .replace(/&nbsp;/g, " ")
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+    .replace(/&#(\d+);/g, (_, n: string) => String.fromCharCode(Number(n)));
 }
 
-function truncate(s: string, max: number): string {
-  if (s.length <= max) return s;
-  // Trim at last word boundary before max.
-  const cut = s.slice(0, max);
-  const idx = cut.lastIndexOf(" ");
-  return (idx > max - 30 ? cut.slice(0, idx) : cut) + "…";
-}
-
-function parseDate(raw: string): string | null {
-  if (!raw) return null;
+function parseDate(raw: string): string {
+  if (!raw) return new Date().toISOString();
   const d = new Date(raw);
-  return Number.isNaN(d.getTime()) ? null : d.toISOString();
+  return Number.isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
 }
 
-/* -------------------- Dedupe + categorise -------------------- */
+/* -------------------- Category inference -------------------- */
 
-function dedupe(articles: NewsArticle[]): NewsArticle[] {
-  // Bucket by normalized first-50-chars of title.
-  const byKey = new Map<string, NewsArticle>();
-  for (const a of articles) {
-    const key = normalize(a.title).slice(0, 50);
-    const prior = byKey.get(key);
-    if (!prior) {
-      byKey.set(key, a);
-      continue;
-    }
-    // Keep the more reputable source's version.
-    const priorRank = SOURCE_RANK[prior.source] ?? 0;
-    const thisRank = SOURCE_RANK[a.source] ?? 0;
-    if (thisRank > priorRank) byKey.set(key, a);
-  }
-  return Array.from(byKey.values());
-}
-
-function normalize(s: string): string {
-  return s.toLowerCase().replace(/[^a-z0-9 ]+/g, "").trim();
-}
-
-function inferCategory(text: string): string {
-  const t = text.toLowerCase();
-  if (/\b(image|art|visual|photo|illustration)\b/.test(t)) return "Image & Art";
-  if (/\b(video|film|cinem|streaming)\b/.test(t)) return "Video";
-  if (/\b(audio|voice|music|podcast|sound)\b/.test(t)) return "Audio & Music";
-  if (/\b(code|coding|developer|programming|sdk|api)\b/.test(t)) return "Coding";
-  if (/\b(research|paper|study|university|academ)\b/.test(t)) return "Research";
-  if (/\b(gpt|llm|model|chatbot|assistant)\b/.test(t)) return "Text & Writing";
+function inferCategory(titleLower: string): string {
+  if (/(video|film|animation|runway|pika|sora)/.test(titleLower)) return "Video";
+  if (
+    /(image|art|photo|visual|midjourney|dall-e|stable diffusion)/.test(titleLower)
+  )
+    return "Image & Art";
+  if (
+    /(audio|voice|music|sound|speech|elevenlabs|suno)/.test(titleLower)
+  )
+    return "Audio & Music";
+  if (/(code|coding|developer|programming|github|cursor)/.test(titleLower))
+    return "Coding";
+  if (/(research|paper|study|benchmark|model release)/.test(titleLower))
+    return "Research";
+  if (/(gpt|claude|gemini|llm|language model|chatbot)/.test(titleLower))
+    return "Text & Writing";
+  if (/(data|analytics|database|search)/.test(titleLower))
+    return "Data & Analytics";
   return "Productivity";
+}
+
+/* -------------------- Static fallback -------------------- */
+
+async function getStaticFallback(): Promise<NewsArticle[]> {
+  try {
+    const fs = await import("fs");
+    const path = await import("path");
+    const filePath = path.join(process.cwd(), "data", "news.json");
+    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const items: unknown = Array.isArray(data) ? data : (data as { articles?: unknown[] }).articles ?? [];
+    if (!Array.isArray(items)) return [];
+    return items.map((raw): NewsArticle => {
+      const r = raw as Partial<NewsArticle>;
+      return {
+        title: r.title ?? "",
+        summary: r.summary ?? "",
+        url: r.url ?? "",
+        date: r.date ?? new Date().toISOString(),
+        source: r.source ?? "",
+        sourceColor: r.sourceColor ?? "gray",
+        category: r.category ?? "Productivity",
+      };
+    });
+  } catch {
+    return [];
+  }
 }
