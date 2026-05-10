@@ -9,31 +9,28 @@ const SUMMARY_PATH = path.join(
   __dirname, 'last-update-summary.txt'
 )
 
-async function callOpenAI(prompt) {
+async function callClaude(prompt) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
-      model: 'gpt-4o-mini',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 3000,
-      temperature: 0.7,
       messages: [
-        {
-          role: 'system',
-          content: 'You are an AI tools researcher. You only respond with valid JSON. No markdown, no backticks, no explanation. Just raw JSON.'
-        },
         {
           role: 'user',
           content: prompt
         }
-      ]
+      ],
+      system: 'You are an AI tools researcher. You only respond with valid JSON. No markdown, no backticks, no explanation. Just raw JSON.'
     })
 
     const options = {
-      hostname: 'api.openai.com',
-      path: '/v1/chat/completions',
+      hostname: 'api.anthropic.com',
+      path: '/v1/messages',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
         'Content-Length': Buffer.byteLength(body)
       }
     }
@@ -45,12 +42,22 @@ async function callOpenAI(prompt) {
         try {
           const parsed = JSON.parse(data)
           if (parsed.error) {
-            reject(new Error(parsed.error.message))
+            reject(new Error(
+              parsed.error.message ||
+              JSON.stringify(parsed.error)
+            ))
           } else {
-            resolve(parsed.choices[0].message.content)
+            // Claude returns a content array of typed blocks; concatenate the text ones.
+            const text = parsed.content
+              .filter(c => c.type === 'text')
+              .map(c => c.text)
+              .join('')
+            resolve(text)
           }
         } catch (e) {
-          reject(new Error('Failed to parse OpenAI response'))
+          reject(new Error(
+            'Failed to parse Claude response'
+          ))
         }
       })
     })
@@ -65,10 +72,10 @@ async function main() {
   console.log('🤖 Starting catalog update...')
 
   // Check API key
-  if (!process.env.OPENAI_API_KEY) {
-    console.log('❌ No OPENAI_API_KEY found. Exiting.')
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.log('❌ No ANTHROPIC_API_KEY found. Exiting.')
     fs.writeFileSync(SUMMARY_PATH,
-      'note: No OPENAI_API_KEY configured')
+      'note: No ANTHROPIC_API_KEY configured')
     process.exit(0)
   }
 
@@ -88,7 +95,7 @@ async function main() {
     .join(', ')
 
   console.log(`📚 Current catalog: ${existingApps.length} apps`)
-  console.log('🔍 Asking OpenAI for new apps...')
+  console.log('🔍 Asking Claude for new apps...')
 
   const today = new Date().toISOString().split('T')[0]
 
@@ -164,12 +171,12 @@ Return ONLY this exact JSON structure with no other text:
 
   let rawResponse
   try {
-    rawResponse = await callOpenAI(prompt)
-    console.log('✅ OpenAI responded successfully')
+    rawResponse = await callClaude(prompt)
+    console.log('✅ Claude responded successfully')
   } catch (err) {
-    console.log(`❌ OpenAI call failed: ${err.message}`)
+    console.log(`❌ Claude call failed: ${err.message}`)
     fs.writeFileSync(SUMMARY_PATH,
-      `note: OpenAI call failed - ${err.message}`)
+      `note: Claude call failed - ${err.message}`)
     process.exit(0)
   }
 
@@ -186,12 +193,12 @@ Return ONLY this exact JSON structure with no other text:
     console.log('❌ Failed to parse JSON response')
     console.log('Raw response:', rawResponse)
     fs.writeFileSync(SUMMARY_PATH,
-      'note: Failed to parse OpenAI JSON response')
+      'note: Failed to parse Claude JSON response')
     process.exit(0)
   }
 
   const suggestions = parsed.newApps || []
-  console.log(`🔍 OpenAI suggested ${suggestions.length} apps`)
+  console.log(`🔍 Claude suggested ${suggestions.length} apps`)
 
   // Filter out duplicates
   const newApps = suggestions.filter(app => {
