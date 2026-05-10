@@ -7,39 +7,125 @@ export const revalidate = 3600;
 interface FeedSource {
   url: string;
   source: string;
-  color: "orange" | "purple" | "blue" | "green";
+  color: string;
+  /** 1 = official AI lab blogs (always included), 2 = top tech news, 3 = product blogs. */
+  priority: 1 | 2 | 3;
 }
 
 const FEEDS: FeedSource[] = [
+  // TIER 1 — Official AI Company Blogs
+  {
+    url: "https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_news_rss.xml",
+    source: "Anthropic",
+    color: "orange",
+    priority: 1,
+  },
+  {
+    url: "https://openai.com/news/rss.xml",
+    source: "OpenAI",
+    color: "green",
+    priority: 1,
+  },
+  {
+    url: "https://deepmind.google/blog/rss/feed/",
+    source: "Google DeepMind",
+    color: "blue",
+    priority: 1,
+  },
+  {
+    url: "https://ai.meta.com/blog/rss/",
+    source: "Meta AI",
+    color: "blue",
+    priority: 1,
+  },
+  {
+    url: "https://huggingface.co/blog/feed.xml",
+    source: "Hugging Face",
+    color: "yellow",
+    priority: 1,
+  },
+  {
+    url: "https://mistral.ai/news/rss",
+    source: "Mistral AI",
+    color: "purple",
+    priority: 1,
+  },
+
+  // TIER 2 — Top Tech News
   {
     url: "https://techcrunch.com/category/artificial-intelligence/feed/",
     source: "TechCrunch",
     color: "orange",
+    priority: 2,
   },
   {
     url: "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml",
     source: "The Verge",
     color: "purple",
+    priority: 2,
   },
   {
     url: "https://venturebeat.com/category/ai/feed/",
     source: "VentureBeat",
     color: "blue",
+    priority: 2,
   },
   {
     url: "https://www.technologyreview.com/topic/artificial-intelligence/feed",
     source: "MIT Tech Review",
     color: "green",
+    priority: 2,
+  },
+  {
+    url: "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss",
+    source: "Wired",
+    color: "gray",
+    priority: 2,
+  },
+
+  // TIER 3 — AI Tool and Product News
+  {
+    url: "https://research.google/blog/rss/",
+    source: "Google Research",
+    color: "blue",
+    priority: 3,
+  },
+  {
+    url: "https://blogs.microsoft.com/ai/feed/",
+    source: "Microsoft AI",
+    color: "blue",
+    priority: 3,
+  },
+  {
+    url: "https://stability.ai/news/rss.xml",
+    source: "Stability AI",
+    color: "purple",
+    priority: 3,
   },
 ];
 
-// Source reputation order — used to keep the best version when titles dupe.
+// When two sources publish near-identical headlines, prefer the higher-rank one.
 const SOURCE_RANK: Record<string, number> = {
-  "MIT Tech Review": 4,
-  TechCrunch: 3,
-  "The Verge": 2,
-  VentureBeat: 1,
+  Anthropic: 10,
+  OpenAI: 10,
+  "Google DeepMind": 10,
+  "Meta AI": 9,
+  "Hugging Face": 9,
+  "Mistral AI": 9,
+  "MIT Tech Review": 7,
+  TechCrunch: 6,
+  "The Verge": 5,
+  VentureBeat: 4,
+  Wired: 4,
+  "Google Research": 3,
+  "Microsoft AI": 3,
+  "Stability AI": 3,
 };
+
+// Quick lookup of priority by source name (used for tier-1-first ordering).
+const PRIORITY_BY_SOURCE: Record<string, 1 | 2 | 3> = Object.fromEntries(
+  FEEDS.map((f) => [f.source, f.priority]),
+);
 
 interface NewsArticle {
   title: string;
@@ -52,17 +138,31 @@ interface NewsArticle {
 }
 
 export async function GET() {
+  // Fetch every feed in parallel — one failure never blocks the rest.
   const results = await Promise.allSettled(FEEDS.map(fetchFeed));
   const articles: NewsArticle[] = [];
   for (const r of results) {
     if (r.status === "fulfilled") articles.push(...r.value);
   }
+
+  // Dedupe by normalized title prefix, then sort newest first.
   const deduped = dedupe(articles);
   deduped.sort((a, b) => b.date.localeCompare(a.date));
+
+  // Tier-1 sources (official AI lab blogs) always come first, then fill with
+  // tier-2+ (general tech news) up to a 30-article cap.
+  const tier1 = deduped.filter(
+    (a) => PRIORITY_BY_SOURCE[a.source] === 1,
+  );
+  const tier2plus = deduped.filter(
+    (a) => PRIORITY_BY_SOURCE[a.source] !== 1,
+  );
+  const final = [...tier1, ...tier2plus].slice(0, 30);
+
   return NextResponse.json(
     {
       ok: true,
-      articles: deduped.slice(0, 20),
+      articles: final,
       fetchedAt: new Date().toISOString(),
     },
     { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } },

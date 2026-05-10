@@ -261,6 +261,16 @@ body {
     min-height: 0;
   }
 
+  /* Minimum-stack role badges (Write, Research, Cover, Edit, etc.) are hidden
+     on mobile so the workflow nodes stay narrow enough to fit. */
+  .role-badge,
+  .node-role-badge,
+  [class*="role-badge"],
+  [class*="roleBadge"],
+  [class*="RoleBadge"] {
+    display: none !important;
+  }
+
   /* App library is now a flex sibling — no fixed positioning. */
   .app-library-panel {
     position: static !important;

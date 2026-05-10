@@ -79,24 +79,25 @@ function decodeNodes(raw: string | null, apps: AIApp[]): Node[] {
 
 /* ----- Mobile auto-fit grid layout ---------------------------------------- */
 
-/** Pick the grid (cols × rows) that fits all nodes nicely. */
+/** Pick the grid (cols × rows) for N nodes — used by mobile auto-fit. */
 function pickGrid(n: number): { cols: number; rows: number } {
-  if (n <= 1) return { cols: 1, rows: 1 };
-  if (n === 2) return { cols: 2, rows: 1 };
-  if (n === 3) return { cols: 3, rows: 1 };
-  if (n === 4) return { cols: 2, rows: 2 };
-  if (n === 5 || n === 6) return { cols: 3, rows: 2 };
-  if (n <= 8) return { cols: 4, rows: 2 };
-  if (n === 9) return { cols: 3, rows: 3 };
-  if (n <= 12) return { cols: 4, rows: 3 };
-  const cols = Math.ceil(Math.sqrt(n));
-  return { cols, rows: Math.ceil(n / cols) };
+  // Per spec — covers all node types including minimum stack.
+  const cols =
+    n <= 1 ? 1 :
+    n <= 2 ? 2 :
+    n <= 4 ? 2 :
+    n <= 6 ? 3 :
+    n <= 9 ? 3 :
+              4;
+  const rows = Math.ceil(Math.max(n, 1) / cols);
+  return { cols, rows };
 }
 
 /**
- * Compute auto-fit positions + node size for a list of nodes inside the given canvas.
- * Distributes nodes evenly in the grid; centers any short final row.
- * Returns positions in the same node order plus the chosen node size.
+ * Compute mobile auto-fit positions + node size for the given canvas dimensions.
+ * Square nodes (height = width) so role-badge-less mobile cards stay readable.
+ * Uses fixed 16px padding + 10px gap (per spec) and clamps every node to stay
+ * inside the canvas as a final safety pass.
  */
 export function autoFitLayout(
   nodes: Node[],
@@ -104,48 +105,56 @@ export function autoFitLayout(
   canvasH: number,
 ): { nodes: Node[]; nodeW: number; nodeH: number } {
   const n = nodes.length;
-  if (n === 0) return { nodes: [], nodeW: 110, nodeH: 82 };
+  if (n === 0) return { nodes: [], nodeW: 110, nodeH: 110 };
 
   const { cols, rows } = pickGrid(n);
-  // 10% padding each edge; cells share 80% of canvas.
-  const padX = canvasW * 0.1;
-  const padY = canvasH * 0.1;
-  const usableW = Math.max(canvasW - 2 * padX, 240);
-  const usableH = Math.max(canvasH - 2 * padY, 200);
+  const PADDING = 16;
+  const GAP = 10;
 
-  const gapX = 14;
-  const gapY = 18;
-  const cellW = (usableW - gapX * (cols - 1)) / cols;
-  const cellH = (usableH - gapY * (rows - 1)) / rows;
-
-  // Node = ~92% of cell; constrained to the [80, 140] band per spec.
-  let nodeW = Math.max(80, Math.min(140, cellW * 0.92));
-  let nodeH = nodeW * 0.75;
-  if (nodeH > cellH) {
-    nodeH = cellH;
-    nodeW = Math.max(80, Math.min(140, nodeH / 0.75));
+  let nodeW = Math.floor(
+    (canvasW - PADDING * 2 - GAP * (cols - 1)) / Math.max(cols, 1),
+  );
+  // Cap to keep nodes from being absurd on very wide canvases.
+  if (nodeW > 140) nodeW = 140;
+  if (nodeW < 64) nodeW = 64;
+  let nodeH = Math.floor(nodeW * 1.0); // square
+  // If the chosen size doesn't fit vertically, shrink to fit and re-square.
+  const maxRowH = Math.floor(
+    (canvasH - PADDING * 2 - GAP * (rows - 1)) / Math.max(rows, 1),
+  );
+  if (nodeH > maxRowH) {
+    nodeH = Math.max(64, maxRowH);
+    nodeW = nodeH;
   }
 
-  // Total grid bounding box (uniform cell width including gap).
-  const gridStartY = padY + (cellH - nodeH) / 2;
+  const totalW = cols * nodeW + (cols - 1) * GAP;
+  const totalH = rows * nodeH + (rows - 1) * GAP;
+  const startX = Math.floor((canvasW - totalW) / 2);
+  const startY = Math.floor((canvasH - totalH) / 2);
 
-  const out: Node[] = [];
-  for (let r = 0; r < rows; r++) {
-    const itemsInRow = Math.min(cols, n - r * cols);
-    if (itemsInRow <= 0) break;
-    // Center each row independently so a partial last row looks balanced.
-    const rowW = itemsInRow * nodeW + (itemsInRow - 1) * gapX;
-    const rowStartX = (canvasW - rowW) / 2;
-    for (let c = 0; c < itemsInRow; c++) {
-      const idx = r * cols + c;
-      out.push({
-        ...nodes[idx],
-        x: rowStartX + c * (nodeW + gapX),
-        y: gridStartY + r * (cellH + gapY),
-      });
-    }
+  const out: Node[] = nodes.map((node, i) => {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    return {
+      ...node,
+      x: startX + col * (nodeW + GAP),
+      y: startY + row * (nodeH + GAP),
+    };
+  });
+
+  // Safety clamp — no node may exit the canvas bounds.
+  for (const node of out) {
+    node.x = Math.max(
+      PADDING,
+      Math.min(node.x, canvasW - PADDING - nodeW),
+    );
+    node.y = Math.max(
+      PADDING,
+      Math.min(node.y, canvasH - PADDING - nodeH),
+    );
   }
-  return { nodes: out, nodeW: Math.round(nodeW), nodeH: Math.round(nodeH) };
+
+  return { nodes: out, nodeW, nodeH };
 }
 
 function defaultLayout(appIds: string[]): Node[] {
@@ -407,7 +416,7 @@ export function WorkflowCanvas({ apps }: Props) {
       return;
     }
     runAutoFit();
-  }, [runAutoFit, nodes.length]);
+  }, [runAutoFit, nodes.length, minStackMode]);
 
   // Effective node size on mobile uses the auto-fit values; desktop unchanged.
   const effectiveNodeW = isMobile ? autoFitSize.w : nodeW;
@@ -971,12 +980,12 @@ function CanvasNode({
           </span>
         )}
         {minMode && badges && badges.length > 0 && (
-          <div className="mt-2 flex flex-wrap justify-center gap-1">
+          <div className="role-badges mt-2 flex flex-wrap justify-center gap-1">
             {badges.map((b, i) => (
               <span
                 key={i}
                 className={clsx(
-                  "inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-[10px] font-medium",
+                  "role-badge inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-[10px] font-medium",
                   m.badge,
                 )}
               >

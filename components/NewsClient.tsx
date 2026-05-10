@@ -11,7 +11,7 @@ interface LiveArticle {
   url: string;
   date: string;
   source: string;
-  sourceColor: "orange" | "purple" | "blue" | "green";
+  sourceColor: string;
   category: string;
 }
 
@@ -21,12 +21,36 @@ interface ApiResponse {
   fetchedAt: string;
 }
 
+// Source-name → Tailwind class map. Per-source colors so each AI lab / outlet
+// has a distinct identity in the feed. Falls back to gray for unknown sources.
 const SOURCE_STYLE: Record<string, string> = {
-  orange: "border-orange-400/40 bg-orange-500/15 text-orange-200",
-  purple: "border-purple-400/40 bg-purple-500/15 text-purple-200",
-  blue: "border-blue-400/40 bg-blue-500/15 text-blue-200",
-  green: "border-emerald-400/40 bg-emerald-500/15 text-emerald-200",
+  Anthropic:
+    "bg-orange-500/20 text-orange-300 border border-orange-500/30",
+  OpenAI: "bg-green-500/20 text-green-300 border border-green-500/30",
+  "Google DeepMind":
+    "bg-blue-500/20 text-blue-300 border border-blue-500/30",
+  "Google Research":
+    "bg-blue-400/20 text-blue-200 border border-blue-400/30",
+  "Meta AI": "bg-blue-600/20 text-blue-300 border border-blue-600/30",
+  "Hugging Face":
+    "bg-yellow-500/20 text-yellow-300 border border-yellow-500/30",
+  "Mistral AI":
+    "bg-purple-500/20 text-purple-300 border border-purple-500/30",
+  "Microsoft AI":
+    "bg-blue-500/20 text-blue-300 border border-blue-500/30",
+  "Stability AI":
+    "bg-purple-400/20 text-purple-200 border border-purple-400/30",
+  TechCrunch:
+    "bg-orange-600/20 text-orange-300 border border-orange-600/30",
+  "The Verge":
+    "bg-violet-500/20 text-violet-300 border border-violet-500/30",
+  VentureBeat: "bg-blue-700/20 text-blue-300 border border-blue-700/30",
+  "MIT Tech Review":
+    "bg-green-600/20 text-green-300 border border-green-600/30",
+  Wired: "bg-gray-500/20 text-gray-300 border border-gray-500/30",
 };
+const DEFAULT_SOURCE_STYLE =
+  "bg-gray-500/20 text-gray-300 border border-gray-500/30";
 
 export function NewsClient({ fallback }: { fallback: NewsItem[] }) {
   const [articles, setArticles] = useState<LiveArticle[] | null>(null);
@@ -117,7 +141,7 @@ export function NewsClient({ fallback }: { fallback: NewsItem[] }) {
 /* -------------------- Card + skeleton + fallback -------------------- */
 
 function ArticleCard({ article }: { article: LiveArticle }) {
-  const sourceCls = SOURCE_STYLE[article.sourceColor] ?? SOURCE_STYLE.blue;
+  const sourceCls = SOURCE_STYLE[article.source] ?? DEFAULT_SOURCE_STYLE;
   return (
     <li className="rounded-xl border border-border bg-bg-card p-4 transition hover:border-accent/40 sm:p-5">
       <div className="mb-2 flex flex-wrap items-center gap-2 text-[11px]">

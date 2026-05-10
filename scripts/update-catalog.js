@@ -1,240 +1,151 @@
-#!/usr/bin/env node
-/**
- * Auto-update script for the AI app catalog.
- *
- * Calls the OpenAI API once, asks for 3-5 new app suggestions,
- * validates them carefully, and appends the survivors to data/apps.json.
- * Writes a markdown summary to scripts/last-update-summary.txt for the
- * GitHub Action to embed in the Pull Request body.
- *
- * Safety rules (see PART 3 of the spec):
- *   - Never adds more than MAX_NEW_APPS apps per run
- *   - Never modifies or removes existing apps
- *   - Exits cleanly (code 0) on any OpenAI / parse error so the workflow
- *     just produces no PR rather than failing red
- *   - Logs every accept/skip with a reason
- */
+const fs = require('fs')
+const path = require('path')
+const https = require('https')
 
-const fs = require("fs");
-const path = require("path");
+const APPS_JSON_PATH = path.join(
+  __dirname, '..', 'data', 'apps.json'
+)
+const SUMMARY_PATH = path.join(
+  __dirname, 'last-update-summary.txt'
+)
 
-/* -------------------- Config -------------------- */
+async function callOpenAI(prompt) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      model: 'gpt-4o-mini',
+      max_tokens: 3000,
+      temperature: 0.7,
+      messages: [
+        {
+          role: 'system',
+          content: 'You are an AI tools researcher. You only respond with valid JSON. No markdown, no backticks, no explanation. Just raw JSON.'
+        },
+        {
+          role: 'user',
+          content: prompt
+        }
+      ]
+    })
 
-const APPS_PATH = path.join(__dirname, "..", "data", "apps.json");
-const PENDING_PATH = path.join(__dirname, "..", "data", "pending-apps.json");
-const LAST_RUN_PATH = path.join(__dirname, "..", "data", "last-run.json");
-const SUMMARY_PATH = path.join(__dirname, "last-update-summary.txt");
-const SITE_URL = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "";
+    const options = {
+      hostname: 'api.openai.com',
+      path: '/v1/chat/completions',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+        'Content-Length': Buffer.byteLength(body)
+      }
+    }
 
-const MAX_NEW_APPS = 5;
-const MODEL = "gpt-4o-mini";
-const MAX_TOKENS = 2000;
-const TEMPERATURE = 0.7;
+    const req = https.request(options, (res) => {
+      let data = ''
+      res.on('data', chunk => data += chunk)
+      res.on('end', () => {
+        try {
+          const parsed = JSON.parse(data)
+          if (parsed.error) {
+            reject(new Error(parsed.error.message))
+          } else {
+            resolve(parsed.choices[0].message.content)
+          }
+        } catch (e) {
+          reject(new Error('Failed to parse OpenAI response'))
+        }
+      })
+    })
 
-const ALLOWED_CATEGORIES = new Set([
-  "Text & Writing",
-  "Image & Art",
-  "Video",
-  "Audio & Music",
-  "Coding",
-  "Productivity",
-  "Research",
-  "Data & Analytics",
-  "Avatar & Meetings",
-  "3D & Design",
-]);
-const ALLOWED_PRICING = new Set(["Free", "Freemium", "Paid"]);
-const ALLOWED_WORKFLOW = new Set([
-  "create",
-  "edit",
-  "publish",
-  "analyze",
-  "automate",
-]);
-const ALLOWED_TREND = new Set(["up", "down", "stable"]);
-
-/* -------------------- Logging -------------------- */
-
-function log(msg) {
-  console.log(`[catalog-update] ${msg}`);
+    req.on('error', reject)
+    req.write(body)
+    req.end()
+  })
 }
 
-/** Exit cleanly without changes — used when OpenAI is unreachable / returns junk. */
-function bailClean(reason) {
-  log(`Bailing without changes: ${reason}`);
-  writeSummary({
-    accepted: [],
-    rejected: [],
-    note: `Run completed without changes: ${reason}`,
-  });
-  process.exit(0);
-}
+async function main() {
+  console.log('🤖 Starting catalog update...')
 
-/* -------------------- Main -------------------- */
-
-(async function main() {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    bailClean("OPENAI_API_KEY env var not set");
-    return;
+  // Check API key
+  if (!process.env.OPENAI_API_KEY) {
+    console.log('❌ No OPENAI_API_KEY found. Exiting.')
+    fs.writeFileSync(SUMMARY_PATH,
+      'note: No OPENAI_API_KEY configured')
+    process.exit(0)
   }
 
-  log(`Reading ${APPS_PATH}…`);
-  let apps;
-  try {
-    apps = JSON.parse(fs.readFileSync(APPS_PATH, "utf8"));
-  } catch (err) {
-    bailClean(`could not read apps.json: ${err.message}`);
-    return;
-  }
-  if (!Array.isArray(apps)) {
-    bailClean("apps.json is not an array");
-    return;
-  }
+  // Read existing apps
+  const appsData = JSON.parse(
+    fs.readFileSync(APPS_JSON_PATH, 'utf8')
+  )
+  const existingApps = Array.isArray(appsData)
+    ? appsData
+    : appsData.apps || []
 
-  // Pending apps already proposed but not yet approved — exclude from suggestions and
-  // from the IDs we'll consider duplicates.
-  let pending = [];
-  if (fs.existsSync(PENDING_PATH)) {
-    try {
-      const raw = fs.readFileSync(PENDING_PATH, "utf8");
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) pending = parsed;
-    } catch (err) {
-      log(`WARN: could not parse pending-apps.json (${err.message}). Treating as empty.`);
-    }
-  }
+  const existingIds = new Set(
+    existingApps.map(a => a.id)
+  )
+  const existingNames = existingApps
+    .map(a => a.name)
+    .join(', ')
 
-  const existingIds = new Set([
-    ...apps.map((a) => a.id),
-    ...pending.map((p) => p.id),
-  ]);
-  const existingNames = [
-    ...apps.map((a) => a.name),
-    ...pending.map((p) => p.name),
-  ];
-  log(`Catalog has ${apps.length} apps; ${pending.length} pending`);
+  console.log(`📚 Current catalog: ${existingApps.length} apps`)
+  console.log('🔍 Asking OpenAI for new apps...')
 
-  const today = new Date().toISOString().slice(0, 10);
-  const prompt = buildPrompt(existingNames, today);
+  const today = new Date().toISOString().split('T')[0]
 
-  log(`Calling OpenAI API (${MODEL})…`);
-  let raw;
-  try {
-    raw = await callOpenAI(apiKey, prompt);
-  } catch (err) {
-    bailClean(`OpenAI request failed: ${err.message}`);
-    return;
-  }
-  if (!raw) {
-    bailClean("OpenAI returned no content");
-    return;
-  }
+  const prompt = `
+The AI app catalog currently has ${existingApps.length} apps including: ${existingNames}.
 
-  let parsed;
-  try {
-    parsed = JSON.parse(raw);
-  } catch (err) {
-    log(`raw response (first 500 chars): ${String(raw).slice(0, 500)}`);
-    bailClean(`could not parse OpenAI JSON: ${err.message}`);
-    return;
-  }
+Find 4 AI apps that meet ALL these criteria:
+1. Launched or became widely known in 2025 or 2026
+2. NOT already in this list: ${existingNames}
+3. Has a real working website with https URL
+4. Genuinely useful for creative or professional work
+5. Not a research paper or API-only service
 
-  if (!parsed || !Array.isArray(parsed.newApps)) {
-    bailClean("response did not contain a newApps array");
-    return;
-  }
+Look specifically for NEW apps in these areas:
+- AI video generation (e.g. tools like Kling, Vidu, Haiper, MiniMax)
+- AI voice or music (e.g. tools like Neets, Voicenotes, Stable Audio)
+- AI coding (e.g. tools like Windsurf, Aide, Zed AI)
+- AI image (e.g. tools like Recraft, Ideogram v2, Flux)
+- AI productivity (e.g. tools like Granola, Limitless, Tana)
+- AI writing (e.g. tools like Fibery AI, Campsite, Craft AI)
 
-  const candidates = parsed.newApps.slice(0, MAX_NEW_APPS);
-  log(`Got ${parsed.newApps.length} candidates, capped at ${candidates.length}`);
+Do NOT suggest: ChatGPT, Claude, Gemini, Midjourney,
+Canva, Notion, Grammarly, GitHub Copilot, Cursor,
+Runway, ElevenLabs, or any app already in the list.
 
-  const accepted = [];
-  const rejected = [];
-  for (const cand of candidates) {
-    const issues = validate(cand, existingIds);
-    if (issues.length > 0) {
-      const label = (cand && (cand.name || cand.id)) || "(unknown)";
-      log(`SKIP "${label}": ${issues.join("; ")}`);
-      rejected.push({ name: label, issues });
-      continue;
-    }
-    accepted.push(cand);
-    existingIds.add(cand.id); // prevent dupes within this batch
-    log(`ACCEPT "${cand.name}" (${cand.id})`);
-  }
-
-  if (accepted.length === 0) {
-    log("No valid new apps to add.");
-    writeSummary({
-      accepted: [],
-      rejected,
-      note: "OpenAI suggested apps but none passed validation.",
-    });
-    writeLastRun({ addedCount: 0, rejectedCount: rejected.length });
-    process.exit(0);
-    return;
-  }
-
-  // SAFETY: append-only to pending. Nothing reaches the live catalog until the admin
-  // approves it via the /admin panel (or merges directly via PR).
-  const updatedPending = [...pending, ...accepted];
-  fs.writeFileSync(
-    PENDING_PATH,
-    JSON.stringify(updatedPending, null, 2) + "\n",
-    "utf8",
-  );
-  log(
-    `Wrote ${accepted.length} new app(s) to pending-apps.json (total pending now ${updatedPending.length})`,
-  );
-
-  writeSummary({ accepted, rejected });
-  writeLastRun({ addedCount: accepted.length, rejectedCount: rejected.length });
-})().catch((err) => {
-  // Catch any escaped error and exit cleanly
-  log(`FATAL (caught): ${err && err.stack ? err.stack : err}`);
-  process.exit(0);
-});
-
-/* -------------------- Prompt -------------------- */
-
-function buildPrompt(existingNames, today) {
-  const existingList = existingNames.join(", ");
-  return `You are a researcher helping maintain an AI app catalog. The catalog currently has these apps: ${existingList}.
-
-Research and suggest 3-5 NEW AI apps that have launched or gained significant attention recently that are NOT already in the catalog above.
-
-For each app return ONLY valid JSON in this exact format:
+Return ONLY this exact JSON structure with no other text:
 {
   "newApps": [
     {
-      "id": "unique-slug-lowercase",
-      "name": "App Name",
-      "description": "One sentence description",
+      "id": "lowercase-slug-no-spaces",
+      "name": "Exact App Name",
+      "description": "One clear sentence about what it does",
       "category": "one of: Text & Writing, Image & Art, Video, Audio & Music, Coding, Productivity, Research, Data & Analytics, Avatar & Meetings, 3D & Design",
-      "tags": ["tag1", "tag2"],
+      "tags": ["tag1", "tag2", "tag3"],
       "pricing": "Free or Freemium or Paid",
-      "url": "https://...",
-      "logoUrl": null,
+      "url": "https://real-url.com",
+      "logoUrl": "https://logo.clearbit.com/domain.com",
       "featured": false,
       "addedDate": "${today}",
       "isNew": true,
-      "weeklyViews": 0,
-      "savedCount": 0,
-      "trendingScore": 50,
+      "weeklyViews": 800,
+      "savedCount": 80,
+      "trendingScore": 78,
       "trendingDirection": "up",
-      "rating": 4.0,
+      "rating": 4.3,
       "reviewCount": 0,
       "reviews": [],
-      "bestFor": [],
+      "bestFor": ["use case 1", "use case 2"],
       "workflow": "create",
       "compatibleWith": [],
-      "pros": ["Pro 1", "Pro 2", "Pro 3"],
-      "cons": ["Con 1", "Con 2", "Con 3"],
-      "verdict": "Who this is best for",
+      "pros": ["Specific pro 1", "Specific pro 2", "Specific pro 3"],
+      "cons": ["Specific con 1", "Specific con 2"],
+      "verdict": "Best for who and what",
       "notGoodFor": "Who should avoid this",
       "pricing_details": {
         "free_tier": true,
-        "free_tier_limits": "description or null",
+        "free_tier_limits": "describe limits or null",
         "starting_price": "$X/month or null",
         "most_popular_plan": "$X/month or null",
         "annual_discount": "X% or null",
@@ -249,246 +160,108 @@ For each app return ONLY valid JSON in this exact format:
     }
   ]
 }
+`
 
-Rules:
-- Return ONLY the JSON object. No preamble, no markdown fences, no commentary.
-- Every "id" must be lowercase-with-hyphens, unique, and NOT match any existing app.
-- Every "url" must start with "https://".
-- "category" must be exactly one of the values listed above.
-- "pricing" must be exactly "Free", "Freemium", or "Paid".
-- "addedDate" must be "${today}".
-- "pros" and "cons" must each be a non-empty array of short, specific strings.`;
-}
-
-/* -------------------- OpenAI call -------------------- */
-
-async function callOpenAI(apiKey, prompt) {
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: MAX_TOKENS,
-      temperature: TEMPERATURE,
-      response_format: { type: "json_object" },
-      messages: [
-        {
-          role: "system",
-          content:
-            "You are a careful AI researcher. Always return strictly valid JSON matching the schema you're given.",
-        },
-        { role: "user", content: prompt },
-      ],
-    }),
-  });
-
-  if (!res.ok) {
-    const body = await safeText(res);
-    throw new Error(`HTTP ${res.status}: ${body.slice(0, 400)}`);
-  }
-  const data = await res.json();
-  return data && data.choices && data.choices[0]
-    ? data.choices[0].message && data.choices[0].message.content
-    : null;
-}
-
-async function safeText(res) {
+  let rawResponse
   try {
-    return await res.text();
-  } catch {
-    return "";
-  }
-}
-
-/* -------------------- Validation -------------------- */
-
-const REQUIRED_TOP_FIELDS = [
-  "id",
-  "name",
-  "description",
-  "category",
-  "tags",
-  "pricing",
-  "url",
-  "logoUrl",
-  "featured",
-  "addedDate",
-  "isNew",
-  "weeklyViews",
-  "savedCount",
-  "trendingScore",
-  "trendingDirection",
-  "rating",
-  "reviewCount",
-  "reviews",
-  "bestFor",
-  "workflow",
-  "compatibleWith",
-  "pros",
-  "cons",
-  "verdict",
-  "notGoodFor",
-  "pricing_details",
-];
-
-const REQUIRED_PRICING_FIELDS = [
-  "free_tier",
-  "free_tier_limits",
-  "starting_price",
-  "most_popular_plan",
-  "annual_discount",
-  "has_student_discount",
-  "free_trial",
-  "estimated_monthly_cost",
-];
-
-function validate(app, existingIds) {
-  const issues = [];
-  if (!app || typeof app !== "object" || Array.isArray(app)) {
-    return ["candidate is not an object"];
-  }
-
-  for (const k of REQUIRED_TOP_FIELDS) {
-    if (!(k in app)) issues.push(`missing field: ${k}`);
-  }
-
-  // ID
-  if (typeof app.id !== "string" || !/^[a-z0-9][a-z0-9-]*$/.test(app.id || "")) {
-    issues.push("id must be lowercase slug (a-z, 0-9, hyphens)");
-  } else if (existingIds.has(app.id)) {
-    issues.push(`duplicate id: ${app.id}`);
-  }
-
-  // Strings
-  if (typeof app.name !== "string" || !app.name.trim()) issues.push("name must be a non-empty string");
-  if (typeof app.description !== "string" || !app.description.trim()) issues.push("description must be a non-empty string");
-  if (typeof app.verdict !== "string" || !app.verdict.trim()) issues.push("verdict must be a non-empty string");
-  if (typeof app.notGoodFor !== "string") issues.push("notGoodFor must be a string");
-
-  // URL
-  if (typeof app.url !== "string" || !app.url.startsWith("https://")) {
-    issues.push("url must start with https://");
-  }
-
-  // Enums
-  if (!ALLOWED_CATEGORIES.has(app.category)) {
-    issues.push(`invalid category: ${app.category}`);
-  }
-  if (!ALLOWED_PRICING.has(app.pricing)) {
-    issues.push(`invalid pricing: ${app.pricing}`);
-  }
-  if (!ALLOWED_WORKFLOW.has(app.workflow)) {
-    issues.push(`invalid workflow: ${app.workflow}`);
-  }
-  if (!ALLOWED_TREND.has(app.trendingDirection)) {
-    issues.push(`invalid trendingDirection: ${app.trendingDirection}`);
-  }
-
-  // Arrays
-  if (!Array.isArray(app.tags)) issues.push("tags must be an array");
-  if (!Array.isArray(app.bestFor)) issues.push("bestFor must be an array");
-  if (!Array.isArray(app.compatibleWith)) issues.push("compatibleWith must be an array");
-  if (!Array.isArray(app.reviews)) issues.push("reviews must be an array");
-  if (!Array.isArray(app.pros) || app.pros.length === 0) issues.push("pros must be a non-empty array");
-  if (!Array.isArray(app.cons) || app.cons.length === 0) issues.push("cons must be a non-empty array");
-
-  // Numbers / booleans
-  if (typeof app.featured !== "boolean") issues.push("featured must be boolean");
-  if (typeof app.isNew !== "boolean") issues.push("isNew must be boolean");
-  if (typeof app.rating !== "number") issues.push("rating must be number");
-  if (typeof app.reviewCount !== "number") issues.push("reviewCount must be number");
-  if (typeof app.weeklyViews !== "number") issues.push("weeklyViews must be number");
-  if (typeof app.savedCount !== "number") issues.push("savedCount must be number");
-  if (typeof app.trendingScore !== "number") issues.push("trendingScore must be number");
-
-  // Date
-  if (typeof app.addedDate !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(app.addedDate)) {
-    issues.push("addedDate must be YYYY-MM-DD");
-  }
-
-  // Pricing details object
-  if (!app.pricing_details || typeof app.pricing_details !== "object") {
-    issues.push("pricing_details must be an object");
-  } else {
-    for (const k of REQUIRED_PRICING_FIELDS) {
-      if (!(k in app.pricing_details)) issues.push(`pricing_details.${k} missing`);
-    }
-    const emc = app.pricing_details.estimated_monthly_cost;
-    if (!emc || typeof emc !== "object") {
-      issues.push("pricing_details.estimated_monthly_cost must be an object");
-    } else {
-      for (const k of ["light_user", "regular_user", "power_user"]) {
-        if (typeof emc[k] !== "string") issues.push(`pricing_details.estimated_monthly_cost.${k} must be a string`);
-      }
-    }
-    if (typeof app.pricing_details.free_tier !== "boolean") {
-      issues.push("pricing_details.free_tier must be boolean");
-    }
-    if (typeof app.pricing_details.has_student_discount !== "boolean") {
-      issues.push("pricing_details.has_student_discount must be boolean");
-    }
-  }
-
-  return issues;
-}
-
-/* -------------------- Summary writer -------------------- */
-
-function writeSummary({ accepted, rejected, note }) {
-  const lines = [];
-
-  if (note) {
-    lines.push(`> ${note}`);
-    lines.push("");
-  }
-
-  if (accepted.length > 0) {
-    const reviewLine = SITE_URL
-      ? `**${accepted.length} new app${accepted.length === 1 ? "" : "s"} are waiting for your review at [${SITE_URL.replace(/\/$/, "")}/admin](${SITE_URL.replace(/\/$/, "")}/admin).**`
-      : `**${accepted.length} new app${accepted.length === 1 ? "" : "s"} are waiting for your review at \`/admin\` on the live site.**`;
-    lines.push(reviewLine);
-    lines.push("");
-    lines.push("Or review directly in this PR diff and merge to accept.");
-    lines.push("");
-    for (const a of accepted) {
-      lines.push(`- **${escapeMd(a.name)}** — _${escapeMd(a.category)}_ · ${escapeMd(a.pricing)}`);
-      lines.push(`  ${escapeMd(a.description)}`);
-      lines.push(`  [${escapeMd(a.url)}](${a.url})`);
-      lines.push("");
-    }
-  } else {
-    lines.push("_No new apps were added in this run._");
-  }
-
-  if (rejected.length > 0) {
-    lines.push("");
-    lines.push("### Skipped suggestions");
-    for (const r of rejected) {
-      lines.push(`- ${escapeMd(r.name)} — ${r.issues.map(escapeMd).join("; ")}`);
-    }
-  }
-
-  fs.writeFileSync(SUMMARY_PATH, lines.join("\n") + "\n", "utf8");
-  log(`Wrote summary → ${SUMMARY_PATH}`);
-}
-
-function writeLastRun({ addedCount, rejectedCount }) {
-  try {
-    const meta = {
-      ranAt: new Date().toISOString(),
-      addedCount: addedCount || 0,
-      rejectedCount: rejectedCount || 0,
-    };
-    fs.writeFileSync(LAST_RUN_PATH, JSON.stringify(meta, null, 2) + "\n", "utf8");
-    log(`Wrote last-run metadata → ${LAST_RUN_PATH}`);
+    rawResponse = await callOpenAI(prompt)
+    console.log('✅ OpenAI responded successfully')
   } catch (err) {
-    log(`WARN: could not write last-run.json: ${err.message}`);
+    console.log(`❌ OpenAI call failed: ${err.message}`)
+    fs.writeFileSync(SUMMARY_PATH,
+      `note: OpenAI call failed - ${err.message}`)
+    process.exit(0)
   }
+
+  // Parse response
+  let parsed
+  try {
+    // Clean response in case of any stray characters
+    const cleaned = rawResponse
+      .replace(/```json/g, '')
+      .replace(/```/g, '')
+      .trim()
+    parsed = JSON.parse(cleaned)
+  } catch (err) {
+    console.log('❌ Failed to parse JSON response')
+    console.log('Raw response:', rawResponse)
+    fs.writeFileSync(SUMMARY_PATH,
+      'note: Failed to parse OpenAI JSON response')
+    process.exit(0)
+  }
+
+  const suggestions = parsed.newApps || []
+  console.log(`🔍 OpenAI suggested ${suggestions.length} apps`)
+
+  // Filter out duplicates
+  const newApps = suggestions.filter(app => {
+    if (!app.id || !app.name || !app.url) {
+      console.log(`⚠️ Skipping ${app.name} - missing required fields`)
+      return false
+    }
+    if (existingIds.has(app.id)) {
+      console.log(`⚠️ Skipping ${app.name} - ID already exists`)
+      return false
+    }
+    if (!app.url.startsWith('https://')) {
+      console.log(`⚠️ Skipping ${app.name} - invalid URL`)
+      return false
+    }
+    // Check if name already exists
+    const nameLower = app.name.toLowerCase()
+    const nameExists = existingApps.some(
+      e => e.name.toLowerCase() === nameLower
+    )
+    if (nameExists) {
+      console.log(`⚠️ Skipping ${app.name} - name already exists`)
+      return false
+    }
+    return true
+  })
+
+  console.log(`✅ ${newApps.length} valid new apps after filtering`)
+
+  if (newApps.length === 0) {
+    console.log('ℹ️ No new apps to add this run')
+    fs.writeFileSync(SUMMARY_PATH,
+      `note: No new unique apps found on ${today}`)
+    process.exit(0)
+  }
+
+  // Add new apps to apps.json
+  const updatedApps = [...existingApps, ...newApps]
+
+  // Handle both array and object format
+  let updatedData
+  if (Array.isArray(appsData)) {
+    updatedData = updatedApps
+  } else {
+    updatedData = { ...appsData, apps: updatedApps }
+  }
+
+  fs.writeFileSync(
+    APPS_JSON_PATH,
+    JSON.stringify(updatedData, null, 2)
+  )
+
+  // Write summary
+  const summary = newApps
+    .map(a => `- ${a.name} (${a.category}) - ${a.url}`)
+    .join('\n')
+
+  fs.writeFileSync(
+    SUMMARY_PATH,
+    `Updated: ${today}\nAdded ${newApps.length} new apps:\n${summary}`
+  )
+
+  console.log(`💾 Successfully wrote ${newApps.length} new apps to apps.json`)
+  newApps.forEach(app => {
+    console.log(`  ✅ Added: ${app.name} (${app.category})`)
+  })
+  console.log('🎉 Update complete! PR will be created.')
 }
 
-function escapeMd(s) {
-  return String(s).replace(/[*_`<>]/g, (c) => `\\${c}`);
-}
+main().catch(err => {
+  console.error('❌ Script failed:', err.message)
+  process.exit(0) // exit 0 so workflow doesn't fail
+})
