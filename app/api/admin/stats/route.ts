@@ -1,12 +1,8 @@
 import { NextResponse } from "next/server";
 import path from "path";
 import { promises as fs } from "fs";
-import {
-  checkPassword,
-  nextScheduledRun,
-  readApps,
-  readPending,
-} from "@/lib/admin";
+import { checkPassword, nextScheduledRun, readApps } from "@/lib/admin";
+import { countOpenAutoUpdatePRs } from "@/lib/admin-github";
 
 export const runtime = "nodejs";
 
@@ -29,7 +25,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
   }
 
-  const [apps, pending] = await Promise.all([readApps(), readPending()]);
+  const [apps, pendingCount] = await Promise.all([
+    readApps(),
+    countOpenAutoUpdatePRs(),
+  ]);
 
   const now = new Date();
   const startOfMonth = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
@@ -55,7 +54,7 @@ export async function POST(req: Request) {
     ok: true,
     total: apps.length,
     addedThisMonth,
-    pendingCount: pending.length,
+    pendingCount,
     lastRun,
     lastRunAddedCount,
     nextRun: next.toISOString(),

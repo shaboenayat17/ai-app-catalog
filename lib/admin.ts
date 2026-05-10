@@ -56,11 +56,18 @@ export async function writePending(apps: AIApp[]): Promise<void> {
   await fs.writeFile(PENDING_PATH, JSON.stringify(apps, null, 2) + "\n", "utf8");
 }
 
-/** Quick read of pending count for UI badges. Never throws. */
+/**
+ * Quick read of pending count for UI badges. Never throws.
+ *
+ * Pending Review now reads from open GitHub Pull Requests (since the robot
+ * commits via PR rather than writing data/pending-apps.json). Results are
+ * cached for 60s inside the helper so a busy layout doesn't hammer the
+ * GitHub API.
+ */
 export async function readPendingCount(): Promise<number> {
   try {
-    const list = await readPending();
-    return list.length;
+    const { countOpenAutoUpdatePRs } = await import("./admin-github");
+    return await countOpenAutoUpdatePRs();
   } catch {
     return 0;
   }
