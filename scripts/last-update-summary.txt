@@ -1,0 +1,6 @@
+Updated: 2026-05-10
+Added 4 new apps:
+- Vidu (Video) - https://www.vidu.io
+- Recraft (Image & Art) - https://www.recraft.ai
+- Flux (Image & Art) - https://www.flux.ai
+- Neets (Audio & Music) - https://www.neets.ai
