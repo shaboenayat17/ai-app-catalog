@@ -537,7 +537,7 @@ export function WorkflowCanvas({ apps }: Props) {
       data-panel-state={panelState}
     >
       {/* Top toolbar */}
-      <div className="mb-4 flex flex-wrap items-center gap-3 rounded-xl border border-border bg-bg-card/70 px-3 py-3 backdrop-blur sm:px-4">
+      <div className="workflow-controls mb-4 flex flex-wrap items-center gap-3 rounded-xl border border-border bg-bg-card/70 px-3 py-3 backdrop-blur sm:px-4">
         <label className="flex items-center gap-2 text-xs text-muted">
           <span className="hidden sm:inline">Use case</span>
           <select
@@ -607,7 +607,7 @@ export function WorkflowCanvas({ apps }: Props) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
+      <div className="workflow-grid-mobile grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr]">
         {/* Palette — desktop/tablet only; mobile uses the bottom drawer instead. */}
         <aside className="hidden rounded-xl border border-border bg-bg-card/70 p-3 md:block">
           <input
@@ -653,7 +653,7 @@ export function WorkflowCanvas({ apps }: Props) {
         </aside>
 
         {/* Canvas */}
-        <div className="relative">
+        <div className="workflow-canvas-column relative">
           {minStackMode && minStack && selectedUseCase ? (
             <SavingsBanner
               minStack={minStack}
@@ -830,7 +830,7 @@ function CanvasDroppable({
 }) {
   const { setNodeRef, isOver } = useDroppable({ id: CANVAS_ID });
   return (
-    <div className="relative">
+    <div className="canvas-host relative">
       <div
         ref={(el) => {
           setNodeRef(el);
@@ -838,9 +838,9 @@ function CanvasDroppable({
         }}
         onClick={onBackgroundClick}
         className={clsx(
-          // Mobile: height comes from .workflow-canvas-mobile via CSS variables.
-          // Desktop: keep the existing fixed 640px viewport.
-          "workflow-canvas-mobile relative overflow-hidden rounded-xl border bg-bg/60 transition md:h-[640px]",
+          // Mobile: workflow-canvas-mobile fills its flex parent (height 100%).
+          // Desktop: fixed 640px height via md:h-[640px].
+          "workflow-canvas-mobile relative h-full overflow-hidden rounded-xl border bg-bg/60 transition md:h-[640px]",
           isOver ? "border-accent/60 shadow-glow" : "border-border",
         )}
       >
@@ -1161,7 +1161,7 @@ function SavingsBanner({
   const saved = Math.max(0, fullCount - minCount);
   const total = totalCostRange(minStack);
   return (
-    <div className="relative mb-3 flex flex-wrap items-start justify-between gap-3 rounded-xl border border-emerald-400/40 bg-gradient-to-br from-emerald-500/15 via-bg-card to-teal-500/10 px-4 py-3 animate-fade-in-up">
+    <div className="savings-banner relative mb-3 flex flex-wrap items-start justify-between gap-3 rounded-xl border border-emerald-400/40 bg-gradient-to-br from-emerald-500/15 via-bg-card to-teal-500/10 px-4 py-3 animate-fade-in-up">
       <div className="min-w-0">
         <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-emerald-100">
           <span aria-hidden>💰</span>

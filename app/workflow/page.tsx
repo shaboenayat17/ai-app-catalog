@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function WorkflowPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6 sm:py-10 lg:px-8">
+    <div className="mx-auto max-w-7xl px-0 sm:px-6 sm:py-10 lg:px-8">
       {/* Title hidden on mobile to maximize canvas room — desktop unchanged. */}
       <header className="mb-6 hidden md:block">
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

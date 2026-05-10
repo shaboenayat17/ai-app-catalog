@@ -194,39 +194,83 @@ body {
 }
 
 /* ----------------------------------------------------------------------------
-   Mobile workflow page layout — drawer never overlaps the canvas.
-   The container exposes CSS variables; the canvas + drawer read them so they
-   stay in sync as the panel toggles between collapsed/expanded.
-   Desktop styles are untouched (rules only apply at < 768px).
+   Mobile workflow page layout — true flex column.
+   The page itself is a column the height of the viewport (minus header + tab
+   bar). Controls / canvas / app library / are flex siblings: the App Library
+   is part of the flow, NOT position:fixed, so it can never overlap the canvas.
+   When the panel toggles between 56px and 280px, the canvas grows or shrinks
+   to absorb the difference.
+
+   Everything below is gated by @media (max-width: 767px) so desktop is
+   untouched.
    ---------------------------------------------------------------------------- */
 @media (max-width: 767px) {
   .workflow-page-mobile {
     --header-h: calc(52px + env(safe-area-inset-top, 0px));
-    --controls-h: 120px;
     --tabbar-h: calc(56px + env(safe-area-inset-bottom, 0px));
     --panel-collapsed-h: 56px;
     --panel-expanded-h: 280px;
     --panel-h: var(--panel-collapsed-h);
+
+    display: flex;
+    flex-direction: column;
+    height: calc(100dvh - var(--header-h) - var(--tabbar-h));
+    overflow: hidden;
   }
   .workflow-page-mobile[data-panel-state="expanded"] {
     --panel-h: var(--panel-expanded-h);
   }
-  .workflow-canvas-mobile {
-    height: calc(
-      100dvh - var(--header-h) - var(--controls-h) - var(--panel-h) -
-        var(--tabbar-h)
-    );
-    min-height: 220px;
-    transition: height 300ms ease;
+
+  /* Top controls — sits at top, shrinks/grows to its content but capped. */
+  .workflow-controls {
+    flex: 0 0 auto;
+    max-height: 130px;
+    overflow-y: auto;
+    /* Override Tailwind mb-4 in mobile flex flow. */
+    margin-bottom: 0 !important;
   }
+
+  /* The grid container in WorkflowCanvas turns into a column on mobile so the
+     canvas column gets all remaining height. */
+  .workflow-grid-mobile {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex !important;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+
+  /* Canvas column wraps step indicator + canvas viewport. */
+  .workflow-canvas-column {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .workflow-canvas-column > .step-indicator,
+  .workflow-canvas-column > .savings-banner {
+    flex: 0 0 auto;
+  }
+  .workflow-canvas-column > .canvas-host {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+  }
+  .workflow-canvas-mobile {
+    height: 100% !important;
+    min-height: 0;
+  }
+
+  /* App library is now a flex sibling — no fixed positioning. */
   .app-library-panel {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: var(--tabbar-h);
+    position: static !important;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    flex: 0 0 auto;
     height: var(--panel-h);
-    transition: height 300ms ease;
-    z-index: 35;
+    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
   }
 }
 
