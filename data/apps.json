@@ -8384,5 +8384,255 @@
         "power_user": "$50-100"
       }
     }
+  },
+  {
+    "id": "flux-ai",
+    "name": "Flux",
+    "description": "Advanced open-source AI image generation model with superior quality and speed, enabling fast, high-fidelity image creation from text prompts.",
+    "category": "Image & Art",
+    "tags": [
+      "image generation",
+      "text-to-image",
+      "open source",
+      "fast inference"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.flux.ai",
+    "logoUrl": "https://logo.clearbit.com/flux.ai",
+    "featured": false,
+    "addedDate": "2025-08-15",
+    "isNew": true,
+    "weeklyViews": 2100,
+    "savedCount": 240,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "professional image generation",
+      "creative design",
+      "marketing assets",
+      "concept art"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "Replicate",
+      "Hugging Face"
+    ],
+    "pros": [
+      "Exceptional image quality",
+      "Fast generation speed",
+      "Open-source flexibility",
+      "Multiple model variants",
+      "Better prompt understanding"
+    ],
+    "cons": [
+      "Requires computational resources for local use",
+      "API costs can accumulate"
+    ],
+    "verdict": "Best for designers, marketers, and artists needing high-quality AI images with fast turnaround",
+    "notGoodFor": "Users wanting completely free unlimited generation without account",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly credits for inference",
+      "starting_price": "$0.08 per image",
+      "most_popular_plan": "Pay-as-you-go",
+      "annual_discount": null,
+      "has_student_discount": false,
+      "free_trial": "Free credits on signup",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20-50",
+        "power_user": "$100-200"
+      }
+    }
+  },
+  {
+    "id": "haiper-ai",
+    "name": "Haiper",
+    "description": "Fast and intuitive AI video generation platform creating high-quality video content from text and image prompts with advanced motion control.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "text-to-video",
+      "motion control",
+      "fast rendering"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.haiper.ai",
+    "logoUrl": "https://logo.clearbit.com/haiper.ai",
+    "featured": false,
+    "addedDate": "2025-07-20",
+    "isNew": true,
+    "weeklyViews": 1800,
+    "savedCount": 210,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "marketing videos",
+      "social media content",
+      "product demos",
+      "creative storytelling"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Quick video generation",
+      "Excellent motion realism",
+      "Intuitive interface",
+      "Advanced editing tools",
+      "Affordable pricing"
+    ],
+    "cons": [
+      "Watermark on free tier",
+      "Video length limitations"
+    ],
+    "verdict": "Best for content creators and marketers who need fast, high-quality AI video production",
+    "notGoodFor": "Users requiring watermark-free output without paid subscription",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Watermarked videos, 10 second max, 5 videos/month",
+      "starting_price": "$5/month",
+      "most_popular_plan": "$15/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "7 days full access",
+      "estimated_monthly_cost": {
+        "light_user": "$0-5",
+        "regular_user": "$10-20",
+        "power_user": "$30-50"
+      }
+    }
+  },
+  {
+    "id": "aide-ai",
+    "name": "Aide",
+    "description": "AI-powered coding assistant integrated into development workflows for real-time code suggestions, refactoring, and bug detection with deep repository understanding.",
+    "category": "Coding",
+    "tags": [
+      "coding assistant",
+      "code generation",
+      "IDE integration",
+      "debugging"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.aide.dev",
+    "logoUrl": "https://logo.clearbit.com/aide.dev",
+    "featured": false,
+    "addedDate": "2025-09-10",
+    "isNew": true,
+    "weeklyViews": 1400,
+    "savedCount": 180,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "software development",
+      "debugging",
+      "code refactoring",
+      "learning to code"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "VS Code",
+      "JetBrains IDEs"
+    ],
+    "pros": [
+      "Deep codebase understanding",
+      "Accurate suggestions",
+      "Fast performance",
+      "Privacy-focused",
+      "Multi-language support"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Requires IDE integration setup"
+    ],
+    "verdict": "Best for professional developers wanting intelligent AI coding assistance with strong privacy guarantees",
+    "notGoodFor": "Users needing standalone chat-based coding assistance",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10 requests/day, limited features",
+      "starting_price": "$12/month",
+      "most_popular_plan": "$20/month",
+      "annual_discount": "15%",
+      "has_student_discount": true,
+      "free_trial": "14 days full access",
+      "estimated_monthly_cost": {
+        "light_user": "$0-12",
+        "regular_user": "$20-30",
+        "power_user": "$40-60"
+      }
+    }
+  },
+  {
+    "id": "voicenotes-ai",
+    "name": "Voicenotes",
+    "description": "AI-powered voice note platform that transcribes, organizes, and transforms voice recordings into structured notes with intelligent summarization and search.",
+    "category": "Audio & Music",
+    "tags": [
+      "voice notes",
+      "transcription",
+      "note taking",
+      "voice processing"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.voicenotes.ai",
+    "logoUrl": "https://logo.clearbit.com/voicenotes.ai",
+    "featured": false,
+    "addedDate": "2025-08-05",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 140,
+    "trendingScore": 76,
+    "trendingDirection": "up",
+    "rating": 4.3,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "quick note taking",
+      "meeting recordings",
+      "idea capture",
+      "productivity"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "iOS",
+      "Android",
+      "Web"
+    ],
+    "pros": [
+      "Lightning-fast transcription",
+      "Excellent accuracy",
+      "Smart organization",
+      "Cloud sync",
+      "Privacy-respecting"
+    ],
+    "cons": [
+      "Free tier has limited monthly minutes",
+      "Some language limitations"
+    ],
+    "verdict": "Best for busy professionals and students wanting to capture ideas and meetings through voice with instant transcription",
+    "notGoodFor": "Users requiring unlimited free transcription",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "20 minutes/month transcription, limited features",
+      "starting_price": "$4.99/month",
+      "most_popular_plan": "$9.99/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "7 days full access",
+      "estimated_monthly_cost": {
+        "light_user": "$0-5",
+        "regular_user": "$10-15",
+        "power_user": "$20-30"
+      }
+    }
   }
 ]
