@@ -1,6 +1,6 @@
-Updated: 2026-05-10
+Updated: 2026-05-12
 Added 4 new apps:
-- Vidu (Video) - https://www.vidu.ai
-- Recraft (Image & Art) - https://www.recraft.ai
-- Neets (Audio & Music) - https://www.neets.ai
-- Granola (Productivity) - https://www.granola.ai
+- Haiper (Video) - https://haiper.ai
+- Flux (Image & Art) - https://flux.dev
+- Stable Audio (Audio & Music) - https://stableaudio.com
+- Aide (Coding) - https://aide.dev
