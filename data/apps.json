@@ -8384,5 +8384,245 @@
         "power_user": "$50-100"
       }
     }
+  },
+  {
+    "id": "haiper",
+    "name": "Haiper",
+    "description": "AI video generation platform that creates high-quality, physics-based videos from text prompts with real-time rendering capabilities.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "AI video",
+      "physics-based",
+      "text-to-video"
+    ],
+    "pricing": "Freemium",
+    "url": "https://haiper.ai",
+    "logoUrl": "https://logo.clearbit.com/haiper.ai",
+    "featured": false,
+    "addedDate": "2025-03-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 145,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "product demos",
+      "marketing videos",
+      "creative animations",
+      "physics simulations"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Realistic physics simulation",
+      "Fast generation speed",
+      "High quality output",
+      "Intuitive interface"
+    ],
+    "cons": [
+      "Limited free credits",
+      "Requires API key for bulk use"
+    ],
+    "verdict": "Best for marketers and creators needing physics-accurate video generation with fast turnaround",
+    "notGoodFor": "Users needing unlimited free video generation",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Monthly free credits for video generation",
+      "starting_price": "$10/month",
+      "most_popular_plan": "$30/month",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20-40",
+        "power_user": "$50-100"
+      }
+    }
+  },
+  {
+    "id": "flux-ai",
+    "name": "Flux",
+    "description": "Open-source AI image generation model delivering photorealistic and artistic images with superior quality and speed compared to previous models.",
+    "category": "Image & Art",
+    "tags": [
+      "image generation",
+      "AI art",
+      "photorealistic",
+      "open-source"
+    ],
+    "pricing": "Freemium",
+    "url": "https://flux.dev",
+    "logoUrl": "https://logo.clearbit.com/flux.dev",
+    "featured": false,
+    "addedDate": "2025-02-20",
+    "isNew": true,
+    "weeklyViews": 1500,
+    "savedCount": 210,
+    "trendingScore": 88,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "photorealistic images",
+      "artistic design",
+      "product visualization",
+      "concept art"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Exceptional image quality",
+      "Fast generation",
+      "Open-source availability",
+      "Flexible API access"
+    ],
+    "cons": [
+      "Requires technical setup for self-hosting",
+      "Rate limits on free tier"
+    ],
+    "verdict": "Best for designers and artists seeking high-quality image generation with technical flexibility",
+    "notGoodFor": "Users avoiding setup complexity or needing unlimited generations",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly generations",
+      "starting_price": "$5/month",
+      "most_popular_plan": "$20/month",
+      "annual_discount": "15%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-5",
+        "regular_user": "$15-30",
+        "power_user": "$40-80"
+      }
+    }
+  },
+  {
+    "id": "stable-audio-open",
+    "name": "Stable Audio",
+    "description": "AI music and sound generation platform that creates original audio tracks and sound effects from text descriptions with professional quality.",
+    "category": "Audio & Music",
+    "tags": [
+      "music generation",
+      "sound effects",
+      "audio AI",
+      "text-to-audio"
+    ],
+    "pricing": "Freemium",
+    "url": "https://stableaudio.com",
+    "logoUrl": "https://logo.clearbit.com/stableaudio.com",
+    "featured": false,
+    "addedDate": "2025-01-30",
+    "isNew": true,
+    "weeklyViews": 950,
+    "savedCount": 125,
+    "trendingScore": 75,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "background music",
+      "podcast intros",
+      "video soundtracks",
+      "sound design"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "High-quality audio output",
+      "Diverse music styles",
+      "Fast generation",
+      "Commercial license options"
+    ],
+    "cons": [
+      "Limited free tier monthly output",
+      "Subscription required for premium features"
+    ],
+    "verdict": "Best for content creators and video producers needing AI-generated background music and sound effects",
+    "notGoodFor": "Musicians seeking unlimited free music generation",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited credits per month for audio generation",
+      "starting_price": "$15/month",
+      "most_popular_plan": "$25/month",
+      "annual_discount": "25%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-15",
+        "regular_user": "$20-35",
+        "power_user": "$50-100"
+      }
+    }
+  },
+  {
+    "id": "aide",
+    "name": "Aide",
+    "description": "AI-powered code editor and development environment providing intelligent code completion, refactoring, and debugging assistance for full-stack development.",
+    "category": "Coding",
+    "tags": [
+      "code completion",
+      "AI coding",
+      "development tools",
+      "IDE"
+    ],
+    "pricing": "Freemium",
+    "url": "https://aide.dev",
+    "logoUrl": "https://logo.clearbit.com/aide.dev",
+    "featured": false,
+    "addedDate": "2025-02-10",
+    "isNew": true,
+    "weeklyViews": 1100,
+    "savedCount": 165,
+    "trendingScore": 80,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "web development",
+      "debugging assistance",
+      "code refactoring",
+      "learning to code"
+    ],
+    "workflow": "develop",
+    "compatibleWith": [
+      "VS Code",
+      "JetBrains",
+      "Web browsers"
+    ],
+    "pros": [
+      "Intelligent code suggestions",
+      "Context-aware assistance",
+      "No external API needed",
+      "Privacy-focused"
+    ],
+    "cons": [
+      "Limited free features",
+      "Steep learning curve for advanced features"
+    ],
+    "verdict": "Best for developers seeking privacy-first AI coding assistance with local processing",
+    "notGoodFor": "Users requiring unlimited free code generation",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Basic code completion with limited suggestions",
+      "starting_price": "$12/month",
+      "most_popular_plan": "$25/month",
+      "annual_discount": "30%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-12",
+        "regular_user": "$20-30",
+        "power_user": "$40-60"
+      }
+    }
   }
 ]
