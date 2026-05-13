@@ -8624,5 +8624,255 @@
         "power_user": "$40-60"
       }
     }
+  },
+  {
+    "id": "minimax-hailuo",
+    "name": "Hailuo AI Video",
+    "description": "Advanced AI video generation tool that creates high-quality cinematic videos from text prompts with superior motion and detail control.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "AI video",
+      "text-to-video",
+      "motion control"
+    ],
+    "pricing": "Freemium",
+    "url": "https://hailuo.ai",
+    "logoUrl": "https://logo.clearbit.com/hailuo.ai",
+    "featured": false,
+    "addedDate": "2025-11-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 150,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "commercial video production",
+      "cinematic content",
+      "marketing videos",
+      "social media"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Exceptional motion realism",
+      "Fine-grained control over scenes",
+      "Fast generation speeds",
+      "Affordable compared to competitors"
+    ],
+    "cons": [
+      "Limited free tier credits",
+      "Emerging platform with smaller community"
+    ],
+    "verdict": "Best for creators who need production-quality video generation with precise control.",
+    "notGoodFor": "Teams requiring extensive customer support or established platform stability.",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly credits",
+      "starting_price": "$9.99/month",
+      "most_popular_plan": "$29.99/month",
+      "annual_discount": null,
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-9.99",
+        "regular_user": "$29.99",
+        "power_user": "$99+"
+      }
+    }
+  },
+  {
+    "id": "zed-ai-editor",
+    "name": "Zed AI",
+    "description": "High-performance code editor with integrated AI assistant for intelligent code completion, refactoring, and collaborative programming.",
+    "category": "Coding",
+    "tags": [
+      "code editor",
+      "AI assistant",
+      "collaborative coding",
+      "terminal integration"
+    ],
+    "pricing": "Free",
+    "url": "https://zed.dev",
+    "logoUrl": "https://logo.clearbit.com/zed.dev",
+    "featured": false,
+    "addedDate": "2025-08-20",
+    "isNew": true,
+    "weeklyViews": 2500,
+    "savedCount": 340,
+    "trendingScore": 88,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "pair programming",
+      "rapid development",
+      "code refactoring",
+      "team collaboration"
+    ],
+    "workflow": "develop",
+    "compatibleWith": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "pros": [
+      "Blazing fast performance",
+      "Native collaborative editing",
+      "Integrated terminal",
+      "No subscription required"
+    ],
+    "cons": [
+      "Newer platform with smaller ecosystem",
+      "Limited language server plugins compared to VS Code"
+    ],
+    "verdict": "Best for developers seeking ultra-responsive coding environment with built-in AI and collaboration.",
+    "notGoodFor": "Developers heavily invested in VS Code extensions ecosystem.",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Full feature access with AI",
+      "starting_price": null,
+      "most_popular_plan": null,
+      "annual_discount": null,
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0",
+        "power_user": "$0"
+      }
+    }
+  },
+  {
+    "id": "limitless-ai",
+    "name": "Limitless AI",
+    "description": "Personal AI memory device that records, transcribes, and intelligently organizes conversations, meetings, and ideas for instant recall.",
+    "category": "Productivity",
+    "tags": [
+      "memory",
+      "transcription",
+      "meeting notes",
+      "knowledge capture",
+      "AI assistant"
+    ],
+    "pricing": "Freemium",
+    "url": "https://limitless.ai",
+    "logoUrl": "https://logo.clearbit.com/limitless.ai",
+    "featured": false,
+    "addedDate": "2025-10-01",
+    "isNew": true,
+    "weeklyViews": 1800,
+    "savedCount": 220,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "knowledge workers",
+      "meeting management",
+      "research organization",
+      "personal knowledge base"
+    ],
+    "workflow": "organize",
+    "compatibleWith": [
+      "macOS",
+      "iOS",
+      "Windows",
+      "browser"
+    ],
+    "pros": [
+      "Effortless capture",
+      "Intelligent summaries",
+      "Instant search and recall",
+      "Privacy-focused architecture"
+    ],
+    "cons": [
+      "Hardware requirement for optimal use",
+      "Learning curve for best practices"
+    ],
+    "verdict": "Best for professionals who need to capture and recall information without manual note-taking.",
+    "notGoodFor": "Users without supporting hardware devices.",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Basic memory capture with limited storage",
+      "starting_price": "$20/month",
+      "most_popular_plan": "$20/month",
+      "annual_discount": null,
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$20",
+        "power_user": "$20"
+      }
+    }
+  },
+  {
+    "id": "campsite-ai",
+    "name": "Campsite",
+    "description": "Collaborative AI writing platform designed for teams to brainstorm, draft, edit, and publish content together with real-time feedback.",
+    "category": "Text & Writing",
+    "tags": [
+      "collaborative writing",
+      "content creation",
+      "team editor",
+      "AI suggestions",
+      "publishing"
+    ],
+    "pricing": "Freemium",
+    "url": "https://campsite.com",
+    "logoUrl": "https://logo.clearbit.com/campsite.com",
+    "featured": false,
+    "addedDate": "2025-09-10",
+    "isNew": true,
+    "weeklyViews": 950,
+    "savedCount": 110,
+    "trendingScore": 76,
+    "trendingDirection": "up",
+    "rating": 4.2,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "content teams",
+      "marketing departments",
+      "editorial workflows",
+      "collaborative projects"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "web",
+      "browser"
+    ],
+    "pros": [
+      "True collaborative editing",
+      "AI-powered suggestions",
+      "Version history and comments",
+      "Export to multiple formats"
+    ],
+    "cons": [
+      "Limited integrations compared to larger platforms",
+      "Smaller user community for templates"
+    ],
+    "verdict": "Best for teams requiring seamless collaborative writing with intelligent AI assistance.",
+    "notGoodFor": "Solo writers or those needing extensive template libraries.",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "1 shared workspace, basic features",
+      "starting_price": "$29/month",
+      "most_popular_plan": "$79/month",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-29",
+        "regular_user": "$79",
+        "power_user": "$129+"
+      }
+    }
   }
 ]
