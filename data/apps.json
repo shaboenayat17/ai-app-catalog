@@ -8624,5 +8624,254 @@
         "power_user": "$40-60"
       }
     }
+  },
+  {
+    "id": "minimax-hailuo",
+    "name": "MiniMax Hailuo",
+    "description": "Advanced AI video generation tool that creates high-quality videos from text prompts with superior motion and coherence.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "text-to-video",
+      "AI video",
+      "motion synthesis"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.minimaxi.com",
+    "logoUrl": "https://logo.clearbit.com/minimaxi.com",
+    "featured": false,
+    "addedDate": "2025-03-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 150,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "professional video creation",
+      "marketing content",
+      "animated storytelling"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Realistic motion dynamics",
+      "Fast generation speed",
+      "Consistent character behavior",
+      "Good for commercial use"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Learning curve for advanced features"
+    ],
+    "verdict": "Best for creators and marketers who need production-quality video from text prompts",
+    "notGoodFor": "Budget-conscious hobbyists with minimal free credits",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly video generation credits",
+      "starting_price": "$9.99/month",
+      "most_popular_plan": "$29.99/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20-40",
+        "power_user": "$50-100"
+      }
+    }
+  },
+  {
+    "id": "notebooklm-plus",
+    "name": "NotebookLM Plus",
+    "description": "AI research and note-taking assistant that transforms documents into interactive knowledge bases with audio summaries and insights.",
+    "category": "Productivity",
+    "tags": [
+      "research",
+      "note-taking",
+      "knowledge management",
+      "AI assistant",
+      "audio summaries"
+    ],
+    "pricing": "Freemium",
+    "url": "https://notebooklm.google.com",
+    "logoUrl": "https://logo.clearbit.com/google.com",
+    "featured": false,
+    "addedDate": "2025-02-20",
+    "isNew": true,
+    "weeklyViews": 2000,
+    "savedCount": 280,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "academic research",
+      "professional documentation",
+      "learning complex topics",
+      "content synthesis"
+    ],
+    "workflow": "analyze",
+    "compatibleWith": [
+      "Google Drive",
+      "PDF"
+    ],
+    "pros": [
+      "AI-generated audio podcasts from documents",
+      "Smart search across sources",
+      "Clean interface",
+      "Free tier is generous"
+    ],
+    "cons": [
+      "Limited to Google ecosystem initially",
+      "Audio quality varies by topic"
+    ],
+    "verdict": "Best for researchers, students, and professionals who need to process and understand large document collections",
+    "notGoodFor": "Teams requiring offline-only solutions",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited notebook capacity and features",
+      "starting_price": null,
+      "most_popular_plan": null,
+      "annual_discount": null,
+      "has_student_discount": false,
+      "free_trial": "Full free tier available",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$0-15",
+        "power_user": "$15-30"
+      }
+    }
+  },
+  {
+    "id": "zed-ai",
+    "name": "Zed AI",
+    "description": "High-performance code editor with integrated AI-powered code completion, refactoring, and collaborative coding features.",
+    "category": "Coding",
+    "tags": [
+      "code editor",
+      "AI completion",
+      "developer tools",
+      "collaboration",
+      "real-time"
+    ],
+    "pricing": "Freemium",
+    "url": "https://zed.dev",
+    "logoUrl": "https://logo.clearbit.com/zed.dev",
+    "featured": false,
+    "addedDate": "2025-01-10",
+    "isNew": true,
+    "weeklyViews": 1800,
+    "savedCount": 220,
+    "trendingScore": 81,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "software development",
+      "pair programming",
+      "rapid prototyping",
+      "team collaboration"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "VS Code extensions",
+      "GitHub",
+      "Cloud sync"
+    ],
+    "pros": [
+      "Blazing fast performance",
+      "Native AI integration",
+      "Real-time collaboration",
+      "Minimal overhead"
+    ],
+    "cons": [
+      "Smaller ecosystem than VS Code",
+      "Still building feature parity"
+    ],
+    "verdict": "Best for developers who want speed and modern AI capabilities without heavyweight IDE overhead",
+    "notGoodFor": "Teams heavily invested in VS Code extensions ecosystem",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Core editing and basic AI features",
+      "starting_price": "$10/month",
+      "most_popular_plan": "$25/month",
+      "annual_discount": "15%",
+      "has_student_discount": true,
+      "free_trial": "Unlimited free tier",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$15-25",
+        "power_user": "$30-50"
+      }
+    }
+  },
+  {
+    "id": "limitless-ai",
+    "name": "Limitless AI",
+    "description": "Personal AI memory and knowledge assistant that records, transcribes, and organizes conversations and meetings for instant recall.",
+    "category": "Productivity",
+    "tags": [
+      "memory assistant",
+      "transcription",
+      "knowledge capture",
+      "productivity",
+      "wearable AI"
+    ],
+    "pricing": "Freemium",
+    "url": "https://limitless.ai",
+    "logoUrl": "https://logo.clearbit.com/limitless.ai",
+    "featured": false,
+    "addedDate": "2025-03-01",
+    "isNew": true,
+    "weeklyViews": 1500,
+    "savedCount": 190,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.3,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "knowledge workers",
+      "sales professionals",
+      "researchers",
+      "daily life organization"
+    ],
+    "workflow": "analyze",
+    "compatibleWith": [
+      "Slack",
+      "Calendar",
+      "Email"
+    ],
+    "pros": [
+      "Ambient recording for easy capture",
+      "Smart search with semantic understanding",
+      "Privacy-focused local processing",
+      "Reduces note-taking burden"
+    ],
+    "cons": [
+      "Privacy concerns for some use cases",
+      "Requires consistent device usage"
+    ],
+    "verdict": "Best for busy professionals who want AI to automatically capture and recall important information",
+    "notGoodFor": "Privacy-conscious users in regulated industries",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Basic recording and search capabilities",
+      "starting_price": "$19/month",
+      "most_popular_plan": "$39/month",
+      "annual_discount": "25%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-15",
+        "regular_user": "$25-40",
+        "power_user": "$40-60"
+      }
+    }
   }
 ]
