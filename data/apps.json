@@ -8624,5 +8624,251 @@
         "power_user": "$40-60"
       }
     }
+  },
+  {
+    "id": "minimax-hailuo",
+    "name": "MiniMax Hailuo",
+    "description": "Advanced AI video generation model creating high-quality videos from text and images with superior motion and detail.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "text-to-video",
+      "image-to-video",
+      "ai video"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.minimaxi.com",
+    "logoUrl": "https://logo.clearbit.com/minimaxi.com",
+    "featured": false,
+    "addedDate": "2025-06-20",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 150,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "professional video production",
+      "creative storytelling",
+      "product demos",
+      "marketing content"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Superior motion quality compared to competitors",
+      "Fast generation speed",
+      "Flexible input options"
+    ],
+    "cons": [
+      "Learning curve for optimal prompts",
+      "API credits required for extensive use"
+    ],
+    "verdict": "Best for creative professionals and marketers needing high-quality AI video without watermarks",
+    "notGoodFor": "Users wanting completely free unlimited video generation",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly video generation credits",
+      "starting_price": "$9.99/month",
+      "most_popular_plan": "$29.99/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-9.99",
+        "regular_user": "$29.99-49.99",
+        "power_user": "$99.99+"
+      }
+    }
+  },
+  {
+    "id": "limitless-ai",
+    "name": "Limitless AI",
+    "description": "Ambient AI meeting recorder and note-taking tool that captures, transcribes and summarizes meetings with automatic context.",
+    "category": "Productivity",
+    "tags": [
+      "meeting recording",
+      "transcription",
+      "note-taking",
+      "productivity",
+      "ai assistant"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.limitless.ai",
+    "logoUrl": "https://logo.clearbit.com/limitless.ai",
+    "featured": false,
+    "addedDate": "2025-08-10",
+    "isNew": true,
+    "weeklyViews": 1500,
+    "savedCount": 200,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "sales teams",
+      "product managers",
+      "remote workers",
+      "enterprise teams"
+    ],
+    "workflow": "capture",
+    "compatibleWith": [
+      "Zoom",
+      "Google Meet",
+      "Microsoft Teams"
+    ],
+    "pros": [
+      "Automatic meeting capture across platforms",
+      "AI-powered actionable summaries",
+      "Easy searchable transcripts"
+    ],
+    "cons": [
+      "Privacy concerns for some users",
+      "Requires permission setup"
+    ],
+    "verdict": "Best for busy professionals who want automated meeting documentation without manual note-taking",
+    "notGoodFor": "Users who need on-premise-only solutions or have strict data residency requirements",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly recordings",
+      "starting_price": "$19/month",
+      "most_popular_plan": "$49/month",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-19",
+        "regular_user": "$49",
+        "power_user": "$99+"
+      }
+    }
+  },
+  {
+    "id": "zed-ai",
+    "name": "Zed AI",
+    "description": "Next-generation collaborative code editor with integrated AI-powered code completion and multi-player editing capabilities.",
+    "category": "Coding",
+    "tags": [
+      "code editor",
+      "ai coding",
+      "collaboration",
+      "developer tools",
+      "programming"
+    ],
+    "pricing": "Freemium",
+    "url": "https://zed.dev",
+    "logoUrl": "https://logo.clearbit.com/zed.dev",
+    "featured": false,
+    "addedDate": "2025-07-15",
+    "isNew": true,
+    "weeklyViews": 2000,
+    "savedCount": 250,
+    "trendingScore": 88,
+    "trendingDirection": "up",
+    "rating": 4.7,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "software developers",
+      "remote development teams",
+      "open source contributors",
+      "pair programmers"
+    ],
+    "workflow": "code",
+    "compatibleWith": [
+      "GitHub",
+      "GitLab",
+      "LSP servers"
+    ],
+    "pros": [
+      "Lightning-fast performance",
+      "Real-time collaborative editing",
+      "Integrated AI assistance"
+    ],
+    "cons": [
+      "Newer tool with smaller ecosystem",
+      "Still building some features"
+    ],
+    "verdict": "Best for modern developers wanting a fast, collaborative editor with native AI capabilities",
+    "notGoodFor": "Legacy system maintenance or developers needing extensive extension ecosystems",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Full access with limited AI credits",
+      "starting_price": "$10/month",
+      "most_popular_plan": "$20/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20",
+        "power_user": "$50+"
+      }
+    }
+  },
+  {
+    "id": "tana",
+    "name": "Tana",
+    "description": "Structured note-taking and knowledge management platform with AI-powered organization and context-aware assistance.",
+    "category": "Productivity",
+    "tags": [
+      "note-taking",
+      "knowledge management",
+      "organization",
+      "productivity",
+      "ai assistant"
+    ],
+    "pricing": "Freemium",
+    "url": "https://tana.inc",
+    "logoUrl": "https://logo.clearbit.com/tana.inc",
+    "featured": false,
+    "addedDate": "2025-06-01",
+    "isNew": true,
+    "weeklyViews": 900,
+    "savedCount": 120,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "researchers",
+      "writers",
+      "project managers",
+      "knowledge workers"
+    ],
+    "workflow": "organize",
+    "compatibleWith": [
+      "Web clipper",
+      "Email integration"
+    ],
+    "pros": [
+      "Flexible hierarchical organization",
+      "AI-powered insights",
+      "Powerful search capabilities"
+    ],
+    "cons": [
+      "Steeper learning curve than simpler tools",
+      "Premium required for full features"
+    ],
+    "verdict": "Best for power users who need sophisticated knowledge management with AI-powered organization",
+    "notGoodFor": "Casual note-takers or users seeking simplicity",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Basic note-taking with limited storage",
+      "starting_price": "$10/month",
+      "most_popular_plan": "$30/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$30",
+        "power_user": "$60+"
+      }
+    }
   }
 ]
