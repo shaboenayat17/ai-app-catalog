@@ -8624,5 +8624,248 @@
         "power_user": "$40-60"
       }
     }
+  },
+  {
+    "id": "minimax-hailuo",
+    "name": "Hailuo AI",
+    "description": "Advanced AI video generation platform that creates high-quality videos from text prompts with natural motion and realistic physics.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "text-to-video",
+      "AI video",
+      "content creation"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.hailuoai.video",
+    "logoUrl": "https://logo.clearbit.com/hailuoai.video",
+    "featured": false,
+    "addedDate": "2025-06-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 145,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "marketing videos",
+      "product demos",
+      "social media content",
+      "storytelling"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Fast video generation",
+      "Natural motion physics",
+      "High output quality",
+      "Affordable pricing"
+    ],
+    "cons": [
+      "Limited customization options",
+      "Can take time for complex scenes"
+    ],
+    "verdict": "Best for creators and marketers who need quick, high-quality video content without expensive production costs",
+    "notGoodFor": "Professional broadcast-quality productions requiring extreme precision",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly video credits",
+      "starting_price": "$9.99/month",
+      "most_popular_plan": "$29.99/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20-30",
+        "power_user": "$50-100"
+      }
+    }
+  },
+  {
+    "id": "zed-ai",
+    "name": "Zed AI",
+    "description": "Lightweight code editor with integrated AI-powered code completion and refactoring built for speed and collaborative development.",
+    "category": "Coding",
+    "tags": [
+      "code editor",
+      "AI coding",
+      "pair programming",
+      "developer tools"
+    ],
+    "pricing": "Freemium",
+    "url": "https://zed.dev",
+    "logoUrl": "https://logo.clearbit.com/zed.dev",
+    "featured": false,
+    "addedDate": "2025-08-20",
+    "isNew": true,
+    "weeklyViews": 950,
+    "savedCount": 120,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "software development",
+      "code collaboration",
+      "AI-assisted coding",
+      "remote pair programming"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "Anthropic API",
+      "OpenAI API"
+    ],
+    "pros": [
+      "Extremely fast performance",
+      "Native AI collaboration features",
+      "Lightweight and minimal",
+      "Real-time pair programming"
+    ],
+    "cons": [
+      "Smaller ecosystem of extensions",
+      "Newer platform with less community content"
+    ],
+    "verdict": "Best for developers who want a modern, AI-first editor with excellent performance and collaboration capabilities",
+    "notGoodFor": "Teams heavily invested in VS Code extensions and custom workflows",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Basic editing with limited AI features",
+      "starting_price": "$10/month",
+      "most_popular_plan": "$20/month",
+      "annual_discount": "15%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$15-25",
+        "power_user": "$40-60"
+      }
+    }
+  },
+  {
+    "id": "limitless-ai",
+    "name": "Limitless AI",
+    "description": "Personal AI note-taking and memory system that automatically captures and organizes conversations, meetings, and ideas for instant recall.",
+    "category": "Productivity",
+    "tags": [
+      "note-taking",
+      "AI memory",
+      "productivity",
+      "knowledge management"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.limitless.ai",
+    "logoUrl": "https://logo.clearbit.com/limitless.ai",
+    "featured": false,
+    "addedDate": "2025-07-10",
+    "isNew": true,
+    "weeklyViews": 1100,
+    "savedCount": 165,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "knowledge workers",
+      "students",
+      "researchers",
+      "busy professionals"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "Zoom",
+      "Slack",
+      "Microsoft Teams"
+    ],
+    "pros": [
+      "Automatic capture from calls",
+      "Powerful search and recall",
+      "Privacy-focused",
+      "Beautiful interface"
+    ],
+    "cons": [
+      "Requires setup for integrations",
+      "Premium features can be pricey"
+    ],
+    "verdict": "Best for professionals and students who struggle to keep organized notes and want AI-powered memory assistance",
+    "notGoodFor": "Users with minimal meetings or those preferring manual note-taking workflows",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited memory captures per month",
+      "starting_price": "$19/month",
+      "most_popular_plan": "$39/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$25-40",
+        "power_user": "$60-100"
+      }
+    }
+  },
+  {
+    "id": "neets-ai",
+    "name": "Neets AI",
+    "description": "AI voice cloning and text-to-speech platform that creates natural-sounding, customizable voices for videos, podcasts, and interactive content.",
+    "category": "Audio & Music",
+    "tags": [
+      "voice generation",
+      "text-to-speech",
+      "voice cloning",
+      "audio production"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.neets.ai",
+    "logoUrl": "https://logo.clearbit.com/neets.ai",
+    "featured": false,
+    "addedDate": "2025-05-22",
+    "isNew": true,
+    "weeklyViews": 1350,
+    "savedCount": 190,
+    "trendingScore": 88,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "video voiceovers",
+      "podcast production",
+      "audiobook creation",
+      "interactive voice experiences"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Ultra-realistic voice quality",
+      "Fast voice cloning",
+      "Multiple language support",
+      "Affordable pricing"
+    ],
+    "cons": [
+      "Limited free tier",
+      "Voice cloning requires good quality samples"
+    ],
+    "verdict": "Best for content creators and producers needing high-quality AI voices without ElevenLabs premium costs",
+    "notGoodFor": "Projects requiring extreme customization or specific voice training",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited characters per month",
+      "starting_price": "$8/month",
+      "most_popular_plan": "$24/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-15",
+        "regular_user": "$20-30",
+        "power_user": "$50-80"
+      }
+    }
   }
 ]

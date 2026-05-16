@@ -1,6 +1,6 @@
-Updated: 2026-05-12
+Updated: 2026-05-16
 Added 4 new apps:
-- Haiper (Video) - https://haiper.ai
-- Flux (Image & Art) - https://flux.dev
-- Stable Audio (Audio & Music) - https://stableaudio.com
-- Aide (Coding) - https://aide.dev
+- Hailuo AI (Video) - https://www.hailuoai.video
+- Zed AI (Coding) - https://zed.dev
+- Limitless AI (Productivity) - https://www.limitless.ai
+- Neets AI (Audio & Music) - https://www.neets.ai
