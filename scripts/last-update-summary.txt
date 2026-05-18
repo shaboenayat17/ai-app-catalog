@@ -1,6 +1,6 @@
-Updated: 2026-05-17
+Updated: 2026-05-18
 Added 4 new apps:
-- MiniMax Hailuo (Video) - https://www.hailuo.com
-- Limitless AI (Productivity) - https://www.limitless.ai
-- Zed AI (Coding) - https://zed.dev
-- Voicenotes AI (Audio & Music) - https://www.voicenotes.ai
+- Hyperbolic (Coding) - https://hyperbolic.ai
+- Together AI (Coding) - https://together.ai
+- Blockade (Productivity) - https://blockade.ai
+- Unreal MetaHuman Creator AI (Avatar & Meetings) - https://metahuman.unrealengine.com
