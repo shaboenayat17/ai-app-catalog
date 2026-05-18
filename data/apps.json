@@ -8624,5 +8624,255 @@
         "power_user": "$40-60"
       }
     }
+  },
+  {
+    "id": "minimax-hailuo",
+    "name": "MiniMax Hailuo",
+    "description": "Advanced AI video generation platform creating high-quality videos from text prompts with realistic motion and cinematography.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "text-to-video",
+      "AI video",
+      "content creation"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.hailuo.com",
+    "logoUrl": "https://logo.clearbit.com/hailuo.com",
+    "featured": false,
+    "addedDate": "2025-06-15",
+    "isNew": true,
+    "weeklyViews": 2400,
+    "savedCount": 320,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "marketing videos",
+      "product demos",
+      "creative storytelling",
+      "social media content"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Exceptional motion quality",
+      "Fast generation times",
+      "Cinematic output",
+      "Competitive pricing"
+    ],
+    "cons": [
+      "Limited free credits",
+      "Learning curve for advanced features"
+    ],
+    "verdict": "Best for content creators and marketers needing production-quality videos without expensive equipment",
+    "notGoodFor": "Real-time video editing or live streaming applications",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Monthly video credits for testing",
+      "starting_price": "$9/month",
+      "most_popular_plan": "$29/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-9",
+        "regular_user": "$20-29",
+        "power_user": "$50-99"
+      }
+    }
+  },
+  {
+    "id": "limitless-ai",
+    "name": "Limitless AI",
+    "description": "Personal AI memory and recall assistant that captures conversations and information automatically for instant retrieval.",
+    "category": "Productivity",
+    "tags": [
+      "memory",
+      "recall",
+      "productivity",
+      "knowledge management",
+      "AI assistant"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.limitless.ai",
+    "logoUrl": "https://logo.clearbit.com/limitless.ai",
+    "featured": false,
+    "addedDate": "2025-05-20",
+    "isNew": true,
+    "weeklyViews": 1800,
+    "savedCount": 280,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "knowledge workers",
+      "researchers",
+      "professionals",
+      "meeting notes"
+    ],
+    "workflow": "organize",
+    "compatibleWith": [
+      "Slack",
+      "Gmail",
+      "Teams"
+    ],
+    "pros": [
+      "Automatic capture without manual input",
+      "Instant context retrieval",
+      "Privacy-focused",
+      "Multi-device sync"
+    ],
+    "cons": [
+      "Subscription required for full features",
+      "Privacy settings need careful review"
+    ],
+    "verdict": "Best for professionals drowning in information who need intelligent recall without constant manual logging",
+    "notGoodFor": "Users uncomfortable with AI analyzing their data",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited memory storage and retrieval",
+      "starting_price": "$19/month",
+      "most_popular_plan": "$29/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-19",
+        "regular_user": "$29-39",
+        "power_user": "$49-69"
+      }
+    }
+  },
+  {
+    "id": "zed-ai",
+    "name": "Zed AI",
+    "description": "Next-generation AI-powered code editor with real-time collaboration and intelligent code completion for developers.",
+    "category": "Coding",
+    "tags": [
+      "code editor",
+      "AI coding",
+      "collaboration",
+      "programming",
+      "developer tools"
+    ],
+    "pricing": "Freemium",
+    "url": "https://zed.dev",
+    "logoUrl": "https://logo.clearbit.com/zed.dev",
+    "featured": false,
+    "addedDate": "2025-07-10",
+    "isNew": true,
+    "weeklyViews": 3200,
+    "savedCount": 520,
+    "trendingScore": 88,
+    "trendingDirection": "up",
+    "rating": 4.7,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "software developers",
+      "remote teams",
+      "pair programming",
+      "full-stack development"
+    ],
+    "workflow": "develop",
+    "compatibleWith": [
+      "GitHub",
+      "GitLab"
+    ],
+    "pros": [
+      "Lightning-fast performance",
+      "Built-in AI assistance",
+      "Seamless collaboration",
+      "Modern UX"
+    ],
+    "cons": [
+      "Relatively new ecosystem",
+      "Smaller extension library than VS Code"
+    ],
+    "verdict": "Best for developers seeking a modern, fast alternative to VS Code with native AI and collaboration",
+    "notGoodFor": "Users requiring extensive legacy plugin compatibility",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Core editor with limited AI features",
+      "starting_price": "$10/month",
+      "most_popular_plan": "$20/month",
+      "annual_discount": "15%",
+      "has_student_discount": true,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$15-20",
+        "power_user": "$30-40"
+      }
+    }
+  },
+  {
+    "id": "voicenotes-ai",
+    "name": "Voicenotes AI",
+    "description": "AI voice note transcription and processing tool that converts spoken thoughts into structured notes and summaries.",
+    "category": "Audio & Music",
+    "tags": [
+      "voice transcription",
+      "note-taking",
+      "AI audio",
+      "productivity",
+      "speech-to-text"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.voicenotes.ai",
+    "logoUrl": "https://logo.clearbit.com/voicenotes.ai",
+    "featured": false,
+    "addedDate": "2025-06-05",
+    "isNew": true,
+    "weeklyViews": 1600,
+    "savedCount": 210,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.3,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "quick note capture",
+      "brainstorming",
+      "podcast transcription",
+      "voice memos"
+    ],
+    "workflow": "capture",
+    "compatibleWith": [
+      "Notion",
+      "Obsidian",
+      "Apple Notes"
+    ],
+    "pros": [
+      "Fast accurate transcription",
+      "Intelligent summarization",
+      "Multiple export formats",
+      "Offline capability"
+    ],
+    "cons": [
+      "Limited language support outside English",
+      "Mobile app still in beta"
+    ],
+    "verdict": "Best for busy professionals and creators who think faster than they type",
+    "notGoodFor": "Users needing support for 50+ languages",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 voice notes per month with basic transcription",
+      "starting_price": "$6/month",
+      "most_popular_plan": "$12/month",
+      "annual_discount": "30%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-6",
+        "regular_user": "$12-18",
+        "power_user": "$25-35"
+      }
+    }
   }
 ]
