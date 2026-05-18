@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 // ISR: cache for 30 minutes.
-export const revalidate = 1800;
+export const revalidate = 604800;
 
 interface FeedSource {
   url: string;
