@@ -8874,5 +8874,235 @@
         "power_user": "$25-35"
       }
     }
+  },
+  {
+    "id": "hyperbolic-ai",
+    "name": "Hyperbolic",
+    "description": "Open-source AI inference platform enabling fast, affordable access to multiple cutting-edge AI models for developers and creators.",
+    "category": "Coding",
+    "tags": [
+      "ai-inference",
+      "open-source",
+      "developer-tools",
+      "model-access"
+    ],
+    "pricing": "Freemium",
+    "url": "https://hyperbolic.ai",
+    "logoUrl": "https://logo.clearbit.com/hyperbolic.ai",
+    "featured": false,
+    "addedDate": "2025-06-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 150,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "API-free model access",
+      "cost-effective inference",
+      "developer workflows"
+    ],
+    "workflow": "integrate",
+    "compatibleWith": [],
+    "pros": [
+      "Significantly cheaper than major providers",
+      "Open-source model support",
+      "Easy API integration"
+    ],
+    "cons": [
+      "Smaller community than established platforms",
+      "Limited documentation in early stages"
+    ],
+    "verdict": "Best for developers seeking affordable, open-source AI model inference at scale",
+    "notGoodFor": "Enterprise users requiring dedicated support",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited API calls monthly",
+      "starting_price": "$10/month",
+      "most_popular_plan": "$50/month",
+      "annual_discount": "15%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20-50",
+        "power_user": "$100-300"
+      }
+    }
+  },
+  {
+    "id": "together-ai",
+    "name": "Together AI",
+    "description": "Unified platform for running, fine-tuning, and deploying open-source and proprietary AI models with enterprise-grade infrastructure.",
+    "category": "Coding",
+    "tags": [
+      "model-deployment",
+      "fine-tuning",
+      "inference",
+      "enterprise-ai"
+    ],
+    "pricing": "Freemium",
+    "url": "https://together.ai",
+    "logoUrl": "https://logo.clearbit.com/together.ai",
+    "featured": false,
+    "addedDate": "2025-07-22",
+    "isNew": true,
+    "weeklyViews": 1400,
+    "savedCount": 180,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "model fine-tuning",
+      "custom AI applications",
+      "production deployments"
+    ],
+    "workflow": "integrate",
+    "compatibleWith": [],
+    "pros": [
+      "Simple model fine-tuning interface",
+      "Production-ready infrastructure",
+      "Competitive pricing vs competitors"
+    ],
+    "cons": [
+      "Steeper learning curve for beginners",
+      "Limited free tier access"
+    ],
+    "verdict": "Best for teams building custom AI applications with fine-tuned open-source models",
+    "notGoodFor": "Casual users or no-code builders",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "500K tokens/month",
+      "starting_price": "$25/month",
+      "most_popular_plan": "$100/month",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-25",
+        "regular_user": "$50-150",
+        "power_user": "$300-1000"
+      }
+    }
+  },
+  {
+    "id": "blockade-ai",
+    "name": "Blockade",
+    "description": "Advanced AI safety and content moderation platform for detecting and filtering harmful outputs from language models in real-time.",
+    "category": "Productivity",
+    "tags": [
+      "content-moderation",
+      "ai-safety",
+      "content-filtering",
+      "compliance"
+    ],
+    "pricing": "Paid",
+    "url": "https://blockade.ai",
+    "logoUrl": "https://logo.clearbit.com/blockade.ai",
+    "featured": false,
+    "addedDate": "2025-08-10",
+    "isNew": true,
+    "weeklyViews": 900,
+    "savedCount": 120,
+    "trendingScore": 76,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "enterprise safety compliance",
+      "content moderation at scale",
+      "risk mitigation"
+    ],
+    "workflow": "integrate",
+    "compatibleWith": [],
+    "pros": [
+      "Enterprise-grade safety filtering",
+      "Customizable detection rules",
+      "Real-time API protection"
+    ],
+    "cons": [
+      "Higher pricing for smaller teams",
+      "Requires technical integration"
+    ],
+    "verdict": "Best for enterprises deploying AI systems at scale requiring robust safety and compliance controls",
+    "notGoodFor": "Individual creators or small projects",
+    "pricing_details": {
+      "free_tier": false,
+      "free_tier_limits": null,
+      "starting_price": "$500/month",
+      "most_popular_plan": "$2000/month",
+      "annual_discount": "25%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "N/A",
+        "regular_user": "$1000-3000",
+        "power_user": "$5000-15000"
+      }
+    }
+  },
+  {
+    "id": "unreal-engine-metahuman",
+    "name": "Unreal MetaHuman Creator AI",
+    "description": "AI-powered platform for creating photorealistic digital humans with instant animation and lip-sync for video production and games.",
+    "category": "Avatar & Meetings",
+    "tags": [
+      "digital-avatars",
+      "video-production",
+      "photorealistic",
+      "animation"
+    ],
+    "pricing": "Freemium",
+    "url": "https://metahuman.unrealengine.com",
+    "logoUrl": "https://logo.clearbit.com/unrealengine.com",
+    "featured": false,
+    "addedDate": "2025-09-05",
+    "isNew": true,
+    "weeklyViews": 2100,
+    "savedCount": 290,
+    "trendingScore": 88,
+    "trendingDirection": "up",
+    "rating": 4.7,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "video marketing",
+      "digital characters",
+      "cinematic production",
+      "game development"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Photorealistic quality",
+      "Fast character generation",
+      "Built-in animation and lip-sync",
+      "Enterprise-grade tools"
+    ],
+    "cons": [
+      "Requires some 3D knowledge for advanced use",
+      "Subscription required for commercial use"
+    ],
+    "verdict": "Best for video creators and studios needing photorealistic digital humans for marketing and production",
+    "notGoodFor": "Users without video production background seeking ultra-simple solutions",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited character creation and exports",
+      "starting_price": "$25/month",
+      "most_popular_plan": "$75/month",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "30 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-25",
+        "regular_user": "$50-100",
+        "power_user": "$150-300"
+      }
+    }
   }
 ]
