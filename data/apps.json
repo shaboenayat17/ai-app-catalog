@@ -8874,5 +8874,259 @@
         "power_user": "$25-35"
       }
     }
+  },
+  {
+    "id": "grok-video",
+    "name": "Grok Video",
+    "description": "Real-time AI video generation tool that creates dynamic videos from text prompts with advanced motion control and scene composition.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "text-to-video",
+      "ai video",
+      "real-time"
+    ],
+    "pricing": "Freemium",
+    "url": "https://grok.x.ai/video",
+    "logoUrl": "https://logo.clearbit.com/x.ai",
+    "featured": false,
+    "addedDate": "2025-11-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 145,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.2,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "social media content",
+      "marketing videos",
+      "creative storytelling",
+      "product demos"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "X/Twitter",
+      "TikTok",
+      "YouTube"
+    ],
+    "pros": [
+      "Fast generation speeds",
+      "High quality output",
+      "Intuitive prompt interface",
+      "Real-time preview"
+    ],
+    "cons": [
+      "Limited free tier tokens",
+      "Queue times during peak hours"
+    ],
+    "verdict": "Best for content creators and marketers needing quick, high-quality video generation with X/Twitter integration.",
+    "notGoodFor": "Users requiring strict privacy without X account connection",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "50 video generations per month",
+      "starting_price": "$9.99/month",
+      "most_popular_plan": "$19.99/month",
+      "annual_discount": "15%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$20-30",
+        "power_user": "$40-60"
+      }
+    }
+  },
+  {
+    "id": "deepseek-coder",
+    "name": "DeepSeek Coder",
+    "description": "Advanced AI coding assistant with real-time code completion, refactoring, and debugging across multiple programming languages.",
+    "category": "Coding",
+    "tags": [
+      "code generation",
+      "ai assistant",
+      "debugging",
+      "autocomplete"
+    ],
+    "pricing": "Freemium",
+    "url": "https://coder.deepseek.com",
+    "logoUrl": "https://logo.clearbit.com/deepseek.com",
+    "featured": false,
+    "addedDate": "2025-08-20",
+    "isNew": true,
+    "weeklyViews": 950,
+    "savedCount": 120,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "Python development",
+      "JavaScript/TypeScript",
+      "system design",
+      "code optimization"
+    ],
+    "workflow": "code",
+    "compatibleWith": [
+      "VS Code",
+      "JetBrains IDEs",
+      "Vim",
+      "Neovim"
+    ],
+    "pros": [
+      "Excellent code understanding",
+      "Fast inference",
+      "Multi-language support",
+      "Open-source friendly"
+    ],
+    "cons": [
+      "Smaller community compared to GitHub Copilot",
+      "Limited IDE integrations"
+    ],
+    "verdict": "Best for developers seeking a fast, reliable coding assistant with strong language model performance.",
+    "notGoodFor": "Enterprise teams requiring extensive support contracts",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "500 completions per day",
+      "starting_price": "$8/month",
+      "most_popular_plan": "$16/month",
+      "annual_discount": "20%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-8",
+        "regular_user": "$16-24",
+        "power_user": "$32-50"
+      }
+    }
+  },
+  {
+    "id": "udio-pro",
+    "name": "Udio Pro Studio",
+    "description": "Professional AI music production platform enabling creation of full-length songs with vocals, instruments, and advanced mixing controls.",
+    "category": "Audio & Music",
+    "tags": [
+      "music generation",
+      "ai music",
+      "song creation",
+      "vocals"
+    ],
+    "pricing": "Freemium",
+    "url": "https://studioproduction.udio.com",
+    "logoUrl": "https://logo.clearbit.com/udio.com",
+    "featured": false,
+    "addedDate": "2025-10-08",
+    "isNew": true,
+    "weeklyViews": 1100,
+    "savedCount": 165,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.3,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "podcast backgrounds",
+      "music production",
+      "game soundtracks",
+      "commercial licensing"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "Ableton Live",
+      "Logic Pro",
+      "DAWs"
+    ],
+    "pros": [
+      "Vocal generation capability",
+      "Commercial licensing available",
+      "Fine-grained controls",
+      "High fidelity output"
+    ],
+    "cons": [
+      "Longer generation times for complex arrangements",
+      "Learning curve for advanced features"
+    ],
+    "verdict": "Best for musicians and content creators needing professional-grade AI music with commercial rights.",
+    "notGoodFor": "Users seeking instant results without waiting for rendering",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10 song generations per month",
+      "starting_price": "$12/month",
+      "most_popular_plan": "$25/month",
+      "annual_discount": "18%",
+      "has_student_discount": true,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0-12",
+        "regular_user": "$25-35",
+        "power_user": "$50-100"
+      }
+    }
+  },
+  {
+    "id": "relume-ai",
+    "name": "Relume AI Design System",
+    "description": "AI-powered design system and component generator that creates production-ready design tokens and component libraries from natural language descriptions.",
+    "category": "3D & Design",
+    "tags": [
+      "design system",
+      "ui components",
+      "code generation",
+      "design automation"
+    ],
+    "pricing": "Freemium",
+    "url": "https://relume.io/ai-design",
+    "logoUrl": "https://logo.clearbit.com/relume.io",
+    "featured": false,
+    "addedDate": "2025-09-12",
+    "isNew": true,
+    "weeklyViews": 680,
+    "savedCount": 95,
+    "trendingScore": 74,
+    "trendingDirection": "up",
+    "rating": 4.1,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "design system creation",
+      "UI kit generation",
+      "component libraries",
+      "design-to-code"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "Figma",
+      "React",
+      "Tailwind CSS",
+      "Storybook"
+    ],
+    "pros": [
+      "Generates Figma components and code",
+      "Design token generation",
+      "Consistency enforcement",
+      "Time-saving automation"
+    ],
+    "cons": [
+      "Requires design system knowledge to leverage fully",
+      "Limited customization in free tier"
+    ],
+    "verdict": "Best for design teams and developers building scalable design systems without manual component creation.",
+    "notGoodFor": "Beginners without design system experience",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 design system projects",
+      "starting_price": "$29/month",
+      "most_popular_plan": "$79/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-29",
+        "regular_user": "$79-99",
+        "power_user": "$150-250"
+      }
+    }
   }
 ]
