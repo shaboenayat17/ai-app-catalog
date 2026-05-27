@@ -1,6 +1,6 @@
-Updated: 2026-05-17
+Updated: 2026-05-25
 Added 4 new apps:
-- MiniMax Hailuo (Video) - https://www.hailuo.com
-- Limitless AI (Productivity) - https://www.limitless.ai
-- Zed AI (Coding) - https://zed.dev
-- Voicenotes AI (Audio & Music) - https://www.voicenotes.ai
+- Grok Video (Video) - https://grok.x.ai/video
+- DeepSeek Coder (Coding) - https://coder.deepseek.com
+- Udio Pro Studio (Audio & Music) - https://studioproduction.udio.com
+- Relume AI Design System (3D & Design) - https://relume.io/ai-design
