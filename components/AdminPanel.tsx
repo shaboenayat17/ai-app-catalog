@@ -224,7 +224,9 @@ function Authed({
 
   const showToast = useCallback((t: Toast) => {
     setToast(t);
-    window.setTimeout(() => setToast(null), 2200);
+    // Errors stick around long enough to actually read; success/info fade fast.
+    const ttl = t.kind === "error" ? 6000 : 2400;
+    window.setTimeout(() => setToast(null), ttl);
   }, []);
 
   const refresh = useCallback(async () => {
@@ -265,22 +267,42 @@ function Authed({
 
   const approve = useCallback(
     async (prNumber: number) => {
-      const res = await fetch("/api/admin/approve", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password: pwd, prNumber }),
-      });
-      const data = await res.json();
-      if (data.ok) {
-        setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
-        haptic("success");
-        showToast({
-          kind: "success",
-          text: "Merged! Site will rebuild shortly.",
+      try {
+        const res = await fetch("/api/admin/approve", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password: pwd, prNumber }),
         });
-      } else {
+        let data: { ok?: boolean; error?: string; method?: string };
+        try {
+          data = await res.json();
+        } catch {
+          data = { ok: false, error: `Server returned ${res.status} (non-JSON)` };
+        }
+        if (data.ok) {
+          setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
+          haptic("success");
+          showToast({
+            kind: "success",
+            text: data.method
+              ? `Merged via ${data.method}. Site will rebuild shortly.`
+              : "Merged! Site will rebuild shortly.",
+          });
+        } else {
+          haptic("error");
+          showToast({ kind: "error", text: data.error || "Merge failed" });
+        }
+      } catch (err) {
+        // Network failures land here. Surface to the toast AND console.
+        console.error("Admin: approve PR failed", err);
         haptic("error");
-        showToast({ kind: "error", text: data.error || "Merge failed" });
+        showToast({
+          kind: "error",
+          text:
+            err instanceof Error
+              ? `Network error: ${err.message}`
+              : "Network error while merging PR",
+        });
       }
     },
     [pwd, showToast],
@@ -288,19 +310,36 @@ function Authed({
 
   const reject = useCallback(
     async (prNumber: number) => {
-      const res = await fetch("/api/admin/reject", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password: pwd, prNumber }),
-      });
-      const data = await res.json();
-      if (data.ok) {
-        setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
+      try {
+        const res = await fetch("/api/admin/reject", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password: pwd, prNumber }),
+        });
+        let data: { ok?: boolean; error?: string };
+        try {
+          data = await res.json();
+        } catch {
+          data = { ok: false, error: `Server returned ${res.status} (non-JSON)` };
+        }
+        if (data.ok) {
+          setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
+          haptic("error");
+          showToast({ kind: "info", text: "Pull request closed" });
+        } else {
+          haptic("error");
+          showToast({ kind: "error", text: data.error || "Failed to close PR" });
+        }
+      } catch (err) {
+        console.error("Admin: reject PR failed", err);
         haptic("error");
-        showToast({ kind: "info", text: "Pull request closed" });
-      } else {
-        haptic("error");
-        showToast({ kind: "error", text: data.error || "Failed to close PR" });
+        showToast({
+          kind: "error",
+          text:
+            err instanceof Error
+              ? `Network error: ${err.message}`
+              : "Network error while closing PR",
+        });
       }
     },
     [pwd, showToast],
@@ -621,13 +660,25 @@ function PendingTab({
                 type="button"
                 onClick={async () => {
                   setBusyPR(pr.number);
-                  await onApprove(pr.number);
-                  setBusyPR(null);
+                  try {
+                    await onApprove(pr.number);
+                  } finally {
+                    // Always clear busy state, even if the handler threw —
+                    // otherwise the button stays disabled with no feedback.
+                    setBusyPR(null);
+                  }
                 }}
                 disabled={isBusy}
-                className="press flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-md bg-emerald-500/20 px-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-500/30 disabled:opacity-50"
+                aria-busy={isBusy}
+                className="press flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-md bg-emerald-500/20 px-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-500/30 disabled:opacity-60"
               >
-                ✅ Approve &amp; merge PR
+                {isBusy ? (
+                  <>
+                    <Spinner /> Merging…
+                  </>
+                ) : (
+                  <>✅ Approve &amp; merge PR</>
+                )}
               </button>
               {isConfirming ? (
                 <div className="flex flex-1 gap-2">
@@ -635,14 +686,24 @@ function PendingTab({
                     type="button"
                     onClick={async () => {
                       setBusyPR(pr.number);
-                      await onReject(pr.number);
-                      setConfirmPR(null);
-                      setBusyPR(null);
+                      try {
+                        await onReject(pr.number);
+                      } finally {
+                        setConfirmPR(null);
+                        setBusyPR(null);
+                      }
                     }}
                     disabled={isBusy}
-                    className="press flex min-h-[44px] flex-1 items-center justify-center rounded-md bg-rose-500/30 px-3 text-sm font-semibold text-rose-100 disabled:opacity-50"
+                    aria-busy={isBusy}
+                    className="press flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-md bg-rose-500/30 px-3 text-sm font-semibold text-rose-100 disabled:opacity-60"
                   >
-                    Confirm close
+                    {isBusy ? (
+                      <>
+                        <Spinner /> Closing…
+                      </>
+                    ) : (
+                      <>Confirm close</>
+                    )}
                   </button>
                   <button
                     type="button"
@@ -671,6 +732,30 @@ function PendingTab({
         );
       })}
     </ul>
+  );
+}
+
+function Spinner() {
+  return (
+    <svg
+      aria-hidden
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      className="animate-spin"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="9"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeDasharray="40 60"
+        fill="none"
+        opacity="0.85"
+      />
+    </svg>
   );
 }
 

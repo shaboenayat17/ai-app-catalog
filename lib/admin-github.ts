@@ -154,32 +154,87 @@ async function computeNewApps(
 
 /* -------------------- Mutations -------------------- */
 
+/**
+ * Merge a PR, trying merge methods in order so branch-protection rules don't
+ * fail us silently. Returns the method that succeeded for telemetry/logs.
+ */
 export async function mergePR(
   prNumber: number,
-): Promise<{ ok: boolean; error?: string }> {
+): Promise<{ ok: boolean; error?: string; method?: string }> {
   const cfg = getConfig();
   if (!cfg) {
     return {
       ok: false,
-      error: "GITHUB_TOKEN or GITHUB_REPOSITORY is not configured",
+      error:
+        "GITHUB_TOKEN or GITHUB_REPOSITORY is not configured on this deployment",
     };
   }
-  try {
-    await gh(cfg, `/repos/${cfg.repo}/pulls/${prNumber}/merge`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        commit_title: `Approve PR #${prNumber}: AI catalog auto-update`,
-        merge_method: "squash",
-      }),
-    });
-    return { ok: true };
-  } catch (err) {
+
+  const methods = ["merge", "squash", "rebase"] as const;
+  let lastError = "Could not merge. Check that your GitHub token has repo write access.";
+
+  for (const method of methods) {
+    let res: Response;
+    try {
+      res = await fetch(
+        `https://api.github.com/repos/${cfg.repo}/pulls/${prNumber}/merge`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${cfg.token}`,
+            Accept: "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            merge_method: method,
+            commit_title: `🤖 Add new AI apps (approved via admin panel)`,
+          }),
+          cache: "no-store",
+        },
+      );
+    } catch (err) {
+      lastError =
+        err instanceof Error ? `Network error: ${err.message}` : "Network error";
+      continue;
+    }
+
+    if (res.status === 200 || res.status === 201) {
+      return { ok: true, method };
+    }
+
+    // 405 = this method blocked by branch protection — try the next one.
+    if (res.status === 405) {
+      continue;
+    }
+
+    // Map other common errors to clear user-facing strings.
+    let apiMessage = "";
+    try {
+      const json = (await res.json()) as { message?: string };
+      apiMessage = json.message ?? "";
+    } catch {
+      // Body wasn't JSON; fall through to status-based message.
+    }
+
+    if (res.status === 404) {
+      return { ok: false, error: "Pull request not found" };
+    }
+    if (res.status === 422) {
+      return {
+        ok: false,
+        error:
+          "Pull request has conflicts and cannot be merged automatically",
+      };
+    }
     return {
       ok: false,
-      error: err instanceof Error ? err.message : "Unknown error",
+      error: apiMessage || `GitHub returned ${res.status}`,
     };
   }
+
+  // All three methods returned 405 (or network-erred): give a helpful nudge.
+  return { ok: false, error: lastError };
 }
 
 export async function closePR(
@@ -189,22 +244,55 @@ export async function closePR(
   if (!cfg) {
     return {
       ok: false,
-      error: "GITHUB_TOKEN or GITHUB_REPOSITORY is not configured",
+      error:
+        "GITHUB_TOKEN or GITHUB_REPOSITORY is not configured on this deployment",
     };
   }
+
+  let res: Response;
   try {
-    await gh(cfg, `/repos/${cfg.repo}/pulls/${prNumber}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ state: "closed" }),
-    });
-    return { ok: true };
+    res = await fetch(
+      `https://api.github.com/repos/${cfg.repo}/pulls/${prNumber}`,
+      {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${cfg.token}`,
+          Accept: "application/vnd.github+json",
+          "X-GitHub-Api-Version": "2022-11-28",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ state: "closed" }),
+        cache: "no-store",
+      },
+    );
   } catch (err) {
     return {
       ok: false,
-      error: err instanceof Error ? err.message : "Unknown error",
+      error:
+        err instanceof Error ? `Network error: ${err.message}` : "Network error",
     };
   }
+
+  if (res.status === 200) return { ok: true };
+
+  let apiMessage = "";
+  try {
+    const json = (await res.json()) as { message?: string };
+    apiMessage = json.message ?? "";
+  } catch {
+    /* ignore */
+  }
+  if (res.status === 404) return { ok: false, error: "Pull request not found" };
+  if (res.status === 403) {
+    return {
+      ok: false,
+      error: "Could not close PR. Check that your GitHub token has repo write access.",
+    };
+  }
+  return {
+    ok: false,
+    error: apiMessage || `GitHub returned ${res.status}`,
+  };
 }
 
 /* -------------------- Cached count for the header badge -------------------- */
