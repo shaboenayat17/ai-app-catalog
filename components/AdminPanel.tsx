@@ -221,6 +221,20 @@ function Authed({
   const [apps, setApps] = useState<AIApp[]>(initialApps);
   const [toast, setToast] = useState<Toast | null>(null);
   const [loading, setLoading] = useState(true);
+  // Per-PR error messages, displayed inline under the action buttons. This is
+  // a belt-and-suspenders backup to the toast: the toast can be missed (it
+  // fades, can be off-screen, or hidden by an overlay) but this banner stays
+  // until the user dismisses it or retries successfully.
+  const [errorByPR, setErrorByPR] = useState<Record<number, string>>({});
+
+  const clearPRError = useCallback((prNumber: number) => {
+    setErrorByPR((prev) => {
+      if (!(prNumber in prev)) return prev;
+      const next = { ...prev };
+      delete next[prNumber];
+      return next;
+    });
+  }, []);
 
   const showToast = useCallback((t: Toast) => {
     setToast(t);
@@ -267,7 +281,10 @@ function Authed({
 
   const approve = useCallback(
     async (prNumber: number) => {
+      // Clear any stale error from a previous attempt before starting.
+      clearPRError(prNumber);
       try {
+        console.log("Admin approve: sending", { prNumber });
         const res = await fetch("/api/admin/approve", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -279,6 +296,7 @@ function Authed({
         } catch {
           data = { ok: false, error: `Server returned ${res.status} (non-JSON)` };
         }
+        console.log("Admin approve: response", { status: res.status, data });
         if (data.ok) {
           setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
           haptic("success");
@@ -290,27 +308,30 @@ function Authed({
           });
         } else {
           haptic("error");
-          showToast({ kind: "error", text: data.error || "Merge failed" });
+          const msg = data.error || "Merge failed";
+          setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+          showToast({ kind: "error", text: msg });
         }
       } catch (err) {
-        // Network failures land here. Surface to the toast AND console.
+        // Network failures land here. Surface to the toast, inline banner, AND console.
         console.error("Admin: approve PR failed", err);
         haptic("error");
-        showToast({
-          kind: "error",
-          text:
-            err instanceof Error
-              ? `Network error: ${err.message}`
-              : "Network error while merging PR",
-        });
+        const msg =
+          err instanceof Error
+            ? `Network error: ${err.message}`
+            : "Network error while merging PR";
+        setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+        showToast({ kind: "error", text: msg });
       }
     },
-    [pwd, showToast],
+    [pwd, showToast, clearPRError],
   );
 
   const reject = useCallback(
     async (prNumber: number) => {
+      clearPRError(prNumber);
       try {
+        console.log("Admin reject: sending", { prNumber });
         const res = await fetch("/api/admin/reject", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -322,27 +343,29 @@ function Authed({
         } catch {
           data = { ok: false, error: `Server returned ${res.status} (non-JSON)` };
         }
+        console.log("Admin reject: response", { status: res.status, data });
         if (data.ok) {
           setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
           haptic("error");
           showToast({ kind: "info", text: "Pull request closed" });
         } else {
           haptic("error");
-          showToast({ kind: "error", text: data.error || "Failed to close PR" });
+          const msg = data.error || "Failed to close PR";
+          setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+          showToast({ kind: "error", text: msg });
         }
       } catch (err) {
         console.error("Admin: reject PR failed", err);
         haptic("error");
-        showToast({
-          kind: "error",
-          text:
-            err instanceof Error
-              ? `Network error: ${err.message}`
-              : "Network error while closing PR",
-        });
+        const msg =
+          err instanceof Error
+            ? `Network error: ${err.message}`
+            : "Network error while closing PR";
+        setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+        showToast({ kind: "error", text: msg });
       }
     },
-    [pwd, showToast],
+    [pwd, showToast, clearPRError],
   );
 
   const remove = useCallback(
@@ -429,6 +452,8 @@ function Authed({
             loading={loading}
             onApprove={approve}
             onReject={reject}
+            errors={errorByPR}
+            onDismissError={clearPRError}
             nextRun={stats?.nextRun ?? null}
             githubRepo={githubRepo}
           />
@@ -450,11 +475,11 @@ function Authed({
         <div
           role="status"
           className={clsx(
-            "fixed bottom-24 left-1/2 z-50 -translate-x-1/2 rounded-full border px-4 py-2 text-sm shadow-lift animate-fade-in-up md:bottom-8",
+            "fixed bottom-24 left-1/2 z-[100] w-[min(92vw,560px)] -translate-x-1/2 rounded-xl border px-4 py-3 text-sm leading-snug shadow-lift animate-fade-in-up md:bottom-8",
             toast.kind === "success" &&
-              "border-emerald-400/40 bg-emerald-500/15 text-emerald-100",
+              "border-emerald-400/50 bg-emerald-500/20 text-emerald-100",
             toast.kind === "error" &&
-              "border-rose-400/40 bg-rose-500/15 text-rose-100",
+              "border-rose-400/50 bg-rose-500/20 text-rose-100",
             toast.kind === "info" && "border-border bg-bg-elevated text-white",
           )}
         >
@@ -510,6 +535,8 @@ function PendingTab({
   loading,
   onApprove,
   onReject,
+  errors,
+  onDismissError,
   nextRun,
   githubRepo,
 }: {
@@ -518,6 +545,8 @@ function PendingTab({
   loading: boolean;
   onApprove: (prNumber: number) => void | Promise<void>;
   onReject: (prNumber: number) => void | Promise<void>;
+  errors: Record<number, string>;
+  onDismissError: (prNumber: number) => void;
   nextRun: string | null;
   githubRepo?: string;
 }) {
@@ -565,6 +594,7 @@ function PendingTab({
       {prs.map((pr) => {
         const isConfirming = confirmPR === pr.number;
         const isBusy = busyPR === pr.number;
+        const errorMsg = errors[pr.number];
         return (
           <li
             key={pr.number}
@@ -727,6 +757,27 @@ function PendingTab({
               <p className="mt-2 text-[11px] text-rose-200">
                 Closes the PR on GitHub without merging. The branch is preserved unless deleted by the workflow.
               </p>
+            )}
+
+            {errorMsg && (
+              <div
+                role="alert"
+                className="mt-3 flex items-start gap-2 rounded-lg border border-rose-400/50 bg-rose-500/15 px-3 py-2 text-sm text-rose-100"
+              >
+                <span aria-hidden className="mt-0.5 shrink-0">⚠️</span>
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold">Action failed</p>
+                  <p className="mt-0.5 break-words text-rose-100/90">{errorMsg}</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => onDismissError(pr.number)}
+                  aria-label="Dismiss error"
+                  className="press shrink-0 rounded-md border border-rose-400/40 px-2 py-0.5 text-[11px] font-medium text-rose-100 hover:bg-rose-500/20"
+                >
+                  Dismiss
+                </button>
+              </div>
             )}
           </li>
         );
