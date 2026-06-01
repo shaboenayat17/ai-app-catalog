@@ -9128,5 +9128,254 @@
         "power_user": "$150-250"
       }
     }
+  },
+  {
+    "id": "descript-studio",
+    "name": "Descript Studio",
+    "description": "AI-powered video editor that lets you edit video by editing the transcript, with built-in screen recording and automated captions.",
+    "category": "Video",
+    "tags": [
+      "video-editing",
+      "transcript-based",
+      "ai-editing",
+      "screen-recording"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.descript.com",
+    "logoUrl": "https://logo.clearbit.com/descript.com",
+    "featured": false,
+    "addedDate": "2025-03-15",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 150,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.6,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "YouTube creators",
+      "podcast producers",
+      "content creators",
+      "social media videos"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "YouTube",
+      "TikTok",
+      "Instagram"
+    ],
+    "pros": [
+      "Edit video by editing text",
+      "Automatic speaker detection",
+      "One-click captions",
+      "Built-in screen recording"
+    ],
+    "cons": [
+      "Steep learning curve for advanced features",
+      "Export can be slow for long videos"
+    ],
+    "verdict": "Best for content creators who want to edit video like editing a document",
+    "notGoodFor": "Professional filmmakers needing frame-level precision",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited to 1 hour of video per month",
+      "starting_price": "$12/month",
+      "most_popular_plan": "$24/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$12-24",
+        "power_user": "$24-50"
+      }
+    }
+  },
+  {
+    "id": "opus-clip-pro",
+    "name": "Opus Clip Pro",
+    "description": "AI-powered tool that automatically extracts viral short-form clips from long-form videos with captions and optimization for TikTok, Instagram, and YouTube Shorts.",
+    "category": "Video",
+    "tags": [
+      "short-form-video",
+      "clip-generation",
+      "viral-clips",
+      "auto-captions"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.opusclip.com",
+    "logoUrl": "https://logo.clearbit.com/opusclip.com",
+    "featured": false,
+    "addedDate": "2025-04-20",
+    "isNew": true,
+    "weeklyViews": 950,
+    "savedCount": 120,
+    "trendingScore": 79,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "podcasters",
+      "streamers",
+      "YouTube creators",
+      "content repurposing"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "YouTube",
+      "TikTok",
+      "Instagram",
+      "Twitch"
+    ],
+    "pros": [
+      "Automatic viral clip detection",
+      "Multi-platform optimization",
+      "Instant captions",
+      "Saves hours of editing"
+    ],
+    "cons": [
+      "Limited customization options",
+      "Quality depends on source material"
+    ],
+    "verdict": "Best for podcasters and long-form creators looking to maximize reach on short-form platforms",
+    "notGoodFor": "Users needing manual creative control",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "1 clip per week",
+      "starting_price": "$9/month",
+      "most_popular_plan": "$25/month",
+      "annual_discount": "30%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$9-25",
+        "power_user": "$25-60"
+      }
+    }
+  },
+  {
+    "id": "rewrite-ai",
+    "name": "Rewrite AI",
+    "description": "AI writing assistant that rewrites and improves content while maintaining your unique voice, with tools for blogs, emails, social media, and marketing copy.",
+    "category": "Text & Writing",
+    "tags": [
+      "writing-assistant",
+      "content-rewriting",
+      "tone-control",
+      "seo-optimization"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.rewrite.ai",
+    "logoUrl": "https://logo.clearbit.com/rewrite.ai",
+    "featured": false,
+    "addedDate": "2025-05-10",
+    "isNew": true,
+    "weeklyViews": 680,
+    "savedCount": 95,
+    "trendingScore": 72,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "copywriters",
+      "content marketers",
+      "bloggers",
+      "email marketing"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Preserves original voice",
+      "Multiple rewrite styles",
+      "SEO optimization",
+      "Batch processing"
+    ],
+    "cons": [
+      "Sometimes needs manual adjustments",
+      "Tone detection not always accurate"
+    ],
+    "verdict": "Best for marketers and writers who want AI help without losing their authentic voice",
+    "notGoodFor": "Academic or technical writing requiring strict formality",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "10 rewrites per month",
+      "starting_price": "$15/month",
+      "most_popular_plan": "$39/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$15-39",
+        "power_user": "$39-80"
+      }
+    }
+  },
+  {
+    "id": "beam-music-ai",
+    "name": "Beam Music AI",
+    "description": "AI music composition tool that generates original background music and soundtracks for videos, podcasts, and content creators with customizable mood and genre.",
+    "category": "Audio & Music",
+    "tags": [
+      "music-generation",
+      "ai-composition",
+      "background-music",
+      "content-creators"
+    ],
+    "pricing": "Freemium",
+    "url": "https://www.beammusic.ai",
+    "logoUrl": "https://logo.clearbit.com/beammusic.ai",
+    "featured": false,
+    "addedDate": "2025-06-05",
+    "isNew": true,
+    "weeklyViews": 750,
+    "savedCount": 110,
+    "trendingScore": 75,
+    "trendingDirection": "up",
+    "rating": 4.3,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "video creators",
+      "podcasters",
+      "indie filmmakers",
+      "content creators"
+    ],
+    "workflow": "create",
+    "compatibleWith": [
+      "YouTube",
+      "TikTok",
+      "Vimeo"
+    ],
+    "pros": [
+      "Royalty-free music",
+      "Customizable by mood and genre",
+      "Fast generation",
+      "No licensing fees"
+    ],
+    "cons": [
+      "Limited musical variety",
+      "Can sound generic at times"
+    ],
+    "verdict": "Best for content creators needing quick, affordable, royalty-free background music",
+    "notGoodFor": "Professional musicians or those needing highly original compositions",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 tracks per month",
+      "starting_price": "$8/month",
+      "most_popular_plan": "$20/month",
+      "annual_discount": "35%",
+      "has_student_discount": false,
+      "free_trial": "none",
+      "estimated_monthly_cost": {
+        "light_user": "$0",
+        "regular_user": "$8-20",
+        "power_user": "$20-50"
+      }
+    }
   }
 ]
