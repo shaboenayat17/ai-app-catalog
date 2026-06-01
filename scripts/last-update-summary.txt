@@ -1,6 +1,6 @@
-Updated: 2026-05-25
+Updated: 2026-06-01
 Added 4 new apps:
-- Grok Video (Video) - https://grok.x.ai/video
-- DeepSeek Coder (Coding) - https://coder.deepseek.com
-- Udio Pro Studio (Audio & Music) - https://studioproduction.udio.com
-- Relume AI Design System (3D & Design) - https://relume.io/ai-design
+- Descript Studio (Video) - https://www.descript.com
+- Opus Clip Pro (Video) - https://www.opusclip.com
+- Rewrite AI (Text & Writing) - https://www.rewrite.ai
+- Beam Music AI (Audio & Music) - https://www.beammusic.ai
