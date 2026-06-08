@@ -9128,5 +9128,249 @@
         "power_user": "$150-250"
       }
     }
+  },
+  {
+    "id": "hyperbolic-ai",
+    "name": "Hyperbolic AI",
+    "description": "Open-source AI infrastructure platform enabling fast, affordable video and image generation with distributed computing.",
+    "category": "Video",
+    "tags": [
+      "video generation",
+      "image generation",
+      "open source",
+      "distributed AI",
+      "2025"
+    ],
+    "pricing": "Freemium",
+    "url": "https://hyperbolic.ai",
+    "logoUrl": "https://logo.clearbit.com/hyperbolic.ai",
+    "featured": false,
+    "addedDate": "2025-06-08",
+    "isNew": true,
+    "weeklyViews": 1200,
+    "savedCount": 150,
+    "trendingScore": 82,
+    "trendingDirection": "up",
+    "rating": 4.4,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "video generation",
+      "image synthesis",
+      "cost-effective AI",
+      "developers"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "Significantly cheaper than competitors",
+      "Open-source infrastructure",
+      "Fast processing speeds",
+      "Supports multiple models"
+    ],
+    "cons": [
+      "Newer platform with fewer examples",
+      "Community-driven support",
+      "Learning curve for setup"
+    ],
+    "verdict": "Best for budget-conscious creators and developers wanting affordable video/image generation",
+    "notGoodFor": "Users requiring premium support or enterprise SLAs",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited monthly credits",
+      "starting_price": "$0.001/image generation",
+      "most_popular_plan": null,
+      "annual_discount": null,
+      "has_student_discount": false,
+      "free_trial": "Immediate credits with signup",
+      "estimated_monthly_cost": {
+        "light_user": "$0-5",
+        "regular_user": "$10-30",
+        "power_user": "$50-150"
+      }
+    }
+  },
+  {
+    "id": "captions-by-jovi",
+    "name": "Captions by Jovi",
+    "description": "Real-time video caption generation and editing tool powered by AI for creators and content producers.",
+    "category": "Video",
+    "tags": [
+      "captions",
+      "video editing",
+      "subtitles",
+      "content creation",
+      "2025"
+    ],
+    "pricing": "Freemium",
+    "url": "https://captionsbyjovi.com",
+    "logoUrl": "https://logo.clearbit.com/captionsbyjovi.com",
+    "featured": false,
+    "addedDate": "2025-06-08",
+    "isNew": true,
+    "weeklyViews": 950,
+    "savedCount": 110,
+    "trendingScore": 76,
+    "trendingDirection": "up",
+    "rating": 4.2,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "video content creators",
+      "social media videos",
+      "accessibility",
+      "YouTube content"
+    ],
+    "workflow": "edit",
+    "compatibleWith": [],
+    "pros": [
+      "Automatic caption generation",
+      "Real-time editing interface",
+      "Multiple language support",
+      "Easy export options"
+    ],
+    "cons": [
+      "Occasional accuracy issues in noisy audio",
+      "Limited free tier",
+      "Premium features required for advanced editing"
+    ],
+    "verdict": "Best for content creators needing quick, accessible captions for multi-platform videos",
+    "notGoodFor": "Professional subtitle production requiring perfect accuracy",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "5 videos/month with watermark",
+      "starting_price": "$9.99/month",
+      "most_popular_plan": "$19.99/month",
+      "annual_discount": "20%",
+      "has_student_discount": false,
+      "free_trial": "7 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-10",
+        "regular_user": "$15-25",
+        "power_user": "$30-50"
+      }
+    }
+  },
+  {
+    "id": "deepseek-reasoner",
+    "name": "DeepSeek Reasoner",
+    "description": "Advanced reasoning AI model specializing in complex problem-solving, mathematics, and logical analysis tasks.",
+    "category": "Coding",
+    "tags": [
+      "reasoning AI",
+      "problem solving",
+      "mathematics",
+      "logic",
+      "2025"
+    ],
+    "pricing": "Freemium",
+    "url": "https://reasoner.deepseek.com",
+    "logoUrl": "https://logo.clearbit.com/reasoner.deepseek.com",
+    "featured": false,
+    "addedDate": "2025-06-08",
+    "isNew": true,
+    "weeklyViews": 1400,
+    "savedCount": 200,
+    "trendingScore": 85,
+    "trendingDirection": "up",
+    "rating": 4.5,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "mathematical problem solving",
+      "code debugging",
+      "complex reasoning",
+      "research"
+    ],
+    "workflow": "analyze",
+    "compatibleWith": [],
+    "pros": [
+      "Superior reasoning capabilities",
+      "Cost-effective API pricing",
+      "Fast inference",
+      "Excellent for technical tasks"
+    ],
+    "cons": [
+      "Newer model with limited case studies",
+      "May be slower on very long contexts",
+      "API-rate limiting on free tier"
+    ],
+    "verdict": "Best for developers and researchers needing advanced reasoning without premium language model costs",
+    "notGoodFor": "General creative writing or conversational use cases",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "Limited API calls/month",
+      "starting_price": "$0.01/1K tokens",
+      "most_popular_plan": null,
+      "annual_discount": null,
+      "has_student_discount": true,
+      "free_trial": "Immediate credits",
+      "estimated_monthly_cost": {
+        "light_user": "$0-5",
+        "regular_user": "$20-50",
+        "power_user": "$100-300"
+      }
+    }
+  },
+  {
+    "id": "opus-studio",
+    "name": "Opus Studio",
+    "description": "Collaborative AI-powered design and animation studio for creating professional visual content without coding.",
+    "category": "3D & Design",
+    "tags": [
+      "design",
+      "animation",
+      "collaboration",
+      "studio",
+      "2025"
+    ],
+    "pricing": "Freemium",
+    "url": "https://opusstudio.ai",
+    "logoUrl": "https://logo.clearbit.com/opusstudio.ai",
+    "featured": false,
+    "addedDate": "2025-06-08",
+    "isNew": true,
+    "weeklyViews": 850,
+    "savedCount": 95,
+    "trendingScore": 74,
+    "trendingDirection": "up",
+    "rating": 4.1,
+    "reviewCount": 0,
+    "reviews": [],
+    "bestFor": [
+      "motion design",
+      "brand animation",
+      "marketing content",
+      "team collaboration"
+    ],
+    "workflow": "create",
+    "compatibleWith": [],
+    "pros": [
+      "AI-assisted design suggestions",
+      "Real-time team collaboration",
+      "Pre-built templates",
+      "Easy animation workflows"
+    ],
+    "cons": [
+      "Steeper learning curve than alternatives",
+      "Limited 3D capabilities compared to dedicated software",
+      "Rendering times can be slow"
+    ],
+    "verdict": "Best for design teams wanting AI-assisted creation with seamless collaboration features",
+    "notGoodFor": "High-end professional 3D animation or CAD work",
+    "pricing_details": {
+      "free_tier": true,
+      "free_tier_limits": "3 projects, basic features",
+      "starting_price": "$15/month",
+      "most_popular_plan": "$39/month",
+      "annual_discount": "25%",
+      "has_student_discount": true,
+      "free_trial": "14 days",
+      "estimated_monthly_cost": {
+        "light_user": "$0-15",
+        "regular_user": "$30-50",
+        "power_user": "$80-120"
+      }
+    }
   }
 ]

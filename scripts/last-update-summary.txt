@@ -1,6 +1,6 @@
-Updated: 2026-05-25
+Updated: 2026-06-08
 Added 4 new apps:
-- Grok Video (Video) - https://grok.x.ai/video
-- DeepSeek Coder (Coding) - https://coder.deepseek.com
-- Udio Pro Studio (Audio & Music) - https://studioproduction.udio.com
-- Relume AI Design System (3D & Design) - https://relume.io/ai-design
+- Hyperbolic AI (Video) - https://hyperbolic.ai
+- Captions by Jovi (Video) - https://captionsbyjovi.com
+- DeepSeek Reasoner (Coding) - https://reasoner.deepseek.com
+- Opus Studio (3D & Design) - https://opusstudio.ai
