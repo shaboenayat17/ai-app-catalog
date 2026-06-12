@@ -1,14 +1,23 @@
 import { Suspense } from "react";
 import { HomeClient } from "@/components/HomeClient";
-import { apps, getAllTags, getLastUpdated, trending } from "@/lib/data";
+import { getApps, getAllTagsFrom, getLastUpdatedFrom } from "@/lib/db";
+import trendingData from "@/data/trending.json";
+import type { TrendingData } from "@/lib/types";
 
-export default function HomePage() {
+// Revalidate the home page every 60s so newly approved apps appear without
+// a full redeploy.
+export const revalidate = 60;
+
+const trending = trendingData as TrendingData;
+
+export default async function HomePage() {
+  const apps = await getApps();
   return (
     <Suspense fallback={null}>
       <HomeClient
         apps={apps}
-        allTags={getAllTags()}
-        lastUpdated={getLastUpdated()}
+        allTags={getAllTagsFrom(apps)}
+        lastUpdated={getLastUpdatedFrom(apps, [])}
         trending={trending}
       />
     </Suspense>

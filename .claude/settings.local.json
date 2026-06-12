@@ -9,7 +9,11 @@
       "Bash(ls .github)",
       "Bash(ls scripts *)",
       "Bash(python3 /tmp/expand-comparisons.py)",
-      "Bash(python3)"
+      "Bash(python3)",
+      "Bash(npm install *)",
+      "Bash(rm -f app/api/admin/approve/route.ts app/api/admin/reject/route.ts)",
+      "Bash(rmdir app/api/admin/approve app/api/admin/reject)",
+      "Bash(npm run *)"
     ]
   }
 }

@@ -1,13 +1,16 @@
 import { Suspense } from "react";
 import { WorkflowCanvas } from "@/components/WorkflowCanvas";
-import { apps } from "@/lib/data";
+import { getApps } from "@/lib/db";
+
+export const revalidate = 60;
 
 export const metadata = {
   title: "Workflow — Build your AI stack",
   description: "Drag AI apps onto a canvas and see which ones pair well.",
 };
 
-export default function WorkflowPage() {
+export default async function WorkflowPage() {
+  const apps = await getApps();
   return (
     <div className="mx-auto max-w-7xl px-0 sm:px-6 sm:py-10 lg:px-8">
       {/* Title hidden on mobile to maximize canvas room — desktop unchanged. */}

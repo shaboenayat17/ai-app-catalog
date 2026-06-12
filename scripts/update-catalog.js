@@ -1,106 +1,141 @@
-const fs = require('fs')
-const path = require('path')
-const https = require('https')
+// Weekly catalog robot.
+//
+// Asks Claude for a handful of newly-launched AI apps, filters out duplicates
+// against the live `apps` table in Supabase, then inserts the survivors into
+// the `pending_apps` table (status = 'pending') for an admin to approve in
+// the Pending Review tab.
+//
+// No git commands — Supabase is the source of truth after the migration.
+//
+// Required env vars:
+//   ANTHROPIC_API_KEY
+//   NEXT_PUBLIC_SUPABASE_URL
+//   SUPABASE_SERVICE_ROLE_KEY
 
-const APPS_JSON_PATH = path.join(
-  __dirname, '..', 'data', 'apps.json'
-)
-const SUMMARY_PATH = path.join(
-  __dirname, 'last-update-summary.txt'
-)
+const https = require("https");
+const { createClient } = require("@supabase/supabase-js");
+
+/* -------------------- env + clients -------------------- */
+
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!ANTHROPIC_API_KEY) {
+  console.log("❌ No ANTHROPIC_API_KEY found. Exiting cleanly.");
+  process.exit(0);
+}
+if (!SUPABASE_URL || !SERVICE_KEY) {
+  console.log(
+    "❌ Missing Supabase env vars (NEXT_PUBLIC_SUPABASE_URL and/or SUPABASE_SERVICE_ROLE_KEY). Exiting cleanly.",
+  );
+  process.exit(0);
+}
+
+const supabase = createClient(SUPABASE_URL, SERVICE_KEY, {
+  auth: { persistSession: false },
+});
+
+/* -------------------- Claude wrapper -------------------- */
 
 async function callClaude(prompt) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: "claude-haiku-4-5-20251001",
       max_tokens: 3000,
-      messages: [
-        {
-          role: 'user',
-          content: prompt
-        }
-      ],
-      system: 'You are an AI tools researcher. You only respond with valid JSON. No markdown, no backticks, no explanation. Just raw JSON.'
-    })
+      messages: [{ role: "user", content: prompt }],
+      system:
+        "You are an AI tools researcher. You only respond with valid JSON. No markdown, no backticks, no explanation. Just raw JSON.",
+    });
 
     const options = {
-      hostname: 'api.anthropic.com',
-      path: '/v1/messages',
-      method: 'POST',
+      hostname: "api.anthropic.com",
+      path: "/v1/messages",
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
-        'Content-Length': Buffer.byteLength(body)
-      }
-    }
+        "Content-Type": "application/json",
+        "x-api-key": ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "Content-Length": Buffer.byteLength(body),
+      },
+    };
 
     const req = https.request(options, (res) => {
-      let data = ''
-      res.on('data', chunk => data += chunk)
-      res.on('end', () => {
+      let data = "";
+      res.on("data", (chunk) => (data += chunk));
+      res.on("end", () => {
         try {
-          const parsed = JSON.parse(data)
+          const parsed = JSON.parse(data);
           if (parsed.error) {
-            reject(new Error(
-              parsed.error.message ||
-              JSON.stringify(parsed.error)
-            ))
+            reject(
+              new Error(parsed.error.message || JSON.stringify(parsed.error)),
+            );
           } else {
-            // Claude returns a content array of typed blocks; concatenate the text ones.
+            // Claude returns content[] of typed blocks; join the text ones.
             const text = parsed.content
-              .filter(c => c.type === 'text')
-              .map(c => c.text)
-              .join('')
-            resolve(text)
+              .filter((c) => c.type === "text")
+              .map((c) => c.text)
+              .join("");
+            resolve(text);
           }
         } catch (e) {
-          reject(new Error(
-            'Failed to parse Claude response'
-          ))
+          reject(new Error("Failed to parse Claude response"));
         }
-      })
-    })
+      });
+    });
 
-    req.on('error', reject)
-    req.write(body)
-    req.end()
-  })
+    req.on("error", reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+/* -------------------- main -------------------- */
+
+async function loadExistingApps() {
+  // 1) Live catalog rows.
+  const { data: appsRows, error: appsErr } = await supabase
+    .from("apps")
+    .select("id, name");
+  if (appsErr) {
+    throw new Error(`Failed to list existing apps: ${appsErr.message}`);
+  }
+  const existing = appsRows ?? [];
+
+  // 2) Already-suggested pending rows — we don't want to re-suggest those
+  //    either, otherwise the same app shows up every weekly run until an
+  //    admin acts on it.
+  const { data: pendingRows, error: pendingErr } = await supabase
+    .from("pending_apps")
+    .select("app_data")
+    .eq("status", "pending");
+  if (pendingErr) {
+    console.warn(`⚠️ Could not list pending apps: ${pendingErr.message}`);
+  }
+  const pendingApps = (pendingRows ?? [])
+    .map((r) => r.app_data)
+    .filter(Boolean);
+
+  return { existing, pendingApps };
 }
 
 async function main() {
-  console.log('🤖 Starting catalog update...')
+  console.log("🤖 Starting catalog update (Supabase mode)...");
 
-  // Check API key
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.log('❌ No ANTHROPIC_API_KEY found. Exiting.')
-    fs.writeFileSync(SUMMARY_PATH,
-      'note: No ANTHROPIC_API_KEY configured')
-    process.exit(0)
-  }
+  const { existing, pendingApps } = await loadExistingApps();
+  const existingIds = new Set([
+    ...existing.map((a) => a.id),
+    ...pendingApps.map((a) => a.id).filter(Boolean),
+  ]);
+  const existingNames = existing.map((a) => a.name).join(", ");
+  console.log(
+    `📚 Current catalog: ${existing.length} apps (+ ${pendingApps.length} pending).`,
+  );
 
-  // Read existing apps
-  const appsData = JSON.parse(
-    fs.readFileSync(APPS_JSON_PATH, 'utf8')
-  )
-  const existingApps = Array.isArray(appsData)
-    ? appsData
-    : appsData.apps || []
-
-  const existingIds = new Set(
-    existingApps.map(a => a.id)
-  )
-  const existingNames = existingApps
-    .map(a => a.name)
-    .join(', ')
-
-  console.log(`📚 Current catalog: ${existingApps.length} apps`)
-  console.log('🔍 Asking Claude for new apps...')
-
-  const today = new Date().toISOString().split('T')[0]
+  const today = new Date().toISOString().split("T")[0];
 
   const prompt = `
-The AI app catalog currently has ${existingApps.length} apps including: ${existingNames}.
+The AI app catalog currently has ${existing.length} apps including: ${existingNames}.
 
 Find 4 AI apps that meet ALL these criteria:
 1. Launched or became widely known in 2025 or 2026
@@ -167,108 +202,84 @@ Return ONLY this exact JSON structure with no other text:
     }
   ]
 }
-`
+`;
 
-  let rawResponse
+  let rawResponse;
   try {
-    rawResponse = await callClaude(prompt)
-    console.log('✅ Claude responded successfully')
+    rawResponse = await callClaude(prompt);
+    console.log("✅ Claude responded.");
   } catch (err) {
-    console.log(`❌ Claude call failed: ${err.message}`)
-    fs.writeFileSync(SUMMARY_PATH,
-      `note: Claude call failed - ${err.message}`)
-    process.exit(0)
+    console.log(`❌ Claude call failed: ${err.message}`);
+    process.exit(0);
   }
 
-  // Parse response
-  let parsed
+  // Parse response — be forgiving about stray markdown fences.
+  let parsed;
   try {
-    // Clean response in case of any stray characters
     const cleaned = rawResponse
-      .replace(/```json/g, '')
-      .replace(/```/g, '')
-      .trim()
-    parsed = JSON.parse(cleaned)
+      .replace(/```json/g, "")
+      .replace(/```/g, "")
+      .trim();
+    parsed = JSON.parse(cleaned);
   } catch (err) {
-    console.log('❌ Failed to parse JSON response')
-    console.log('Raw response:', rawResponse)
-    fs.writeFileSync(SUMMARY_PATH,
-      'note: Failed to parse Claude JSON response')
-    process.exit(0)
+    console.log("❌ Failed to parse JSON response");
+    console.log("Raw response:", rawResponse);
+    process.exit(0);
   }
 
-  const suggestions = parsed.newApps || []
-  console.log(`🔍 Claude suggested ${suggestions.length} apps`)
+  const suggestions = parsed.newApps || [];
+  console.log(`🔍 Claude suggested ${suggestions.length} apps.`);
 
-  // Filter out duplicates
-  const newApps = suggestions.filter(app => {
+  // Filter out duplicates / invalid entries.
+  const existingNameSet = new Set(
+    existing.map((a) => a.name.toLowerCase()),
+  );
+  const newApps = suggestions.filter((app) => {
     if (!app.id || !app.name || !app.url) {
-      console.log(`⚠️ Skipping ${app.name} - missing required fields`)
-      return false
+      console.log(`⚠️ Skipping ${app.name || "(no name)"} — missing fields`);
+      return false;
     }
     if (existingIds.has(app.id)) {
-      console.log(`⚠️ Skipping ${app.name} - ID already exists`)
-      return false
+      console.log(`⚠️ Skipping ${app.name} — id already exists`);
+      return false;
     }
-    if (!app.url.startsWith('https://')) {
-      console.log(`⚠️ Skipping ${app.name} - invalid URL`)
-      return false
+    if (!app.url.startsWith("https://")) {
+      console.log(`⚠️ Skipping ${app.name} — invalid URL`);
+      return false;
     }
-    // Check if name already exists
-    const nameLower = app.name.toLowerCase()
-    const nameExists = existingApps.some(
-      e => e.name.toLowerCase() === nameLower
-    )
-    if (nameExists) {
-      console.log(`⚠️ Skipping ${app.name} - name already exists`)
-      return false
+    if (existingNameSet.has(app.name.toLowerCase())) {
+      console.log(`⚠️ Skipping ${app.name} — name already exists`);
+      return false;
     }
-    return true
-  })
+    return true;
+  });
 
-  console.log(`✅ ${newApps.length} valid new apps after filtering`)
+  console.log(`✅ ${newApps.length} valid new apps after filtering.`);
 
   if (newApps.length === 0) {
-    console.log('ℹ️ No new apps to add this run')
-    fs.writeFileSync(SUMMARY_PATH,
-      `note: No new unique apps found on ${today}`)
-    process.exit(0)
+    console.log("ℹ️ No new apps to add this run.");
+    process.exit(0);
   }
 
-  // Add new apps to apps.json
-  const updatedApps = [...existingApps, ...newApps]
+  // Save to Supabase pending_apps table.
+  const { error } = await supabase
+    .from("pending_apps")
+    .insert(newApps.map((app) => ({ app_data: app, status: "pending" })));
 
-  // Handle both array and object format
-  let updatedData
-  if (Array.isArray(appsData)) {
-    updatedData = updatedApps
-  } else {
-    updatedData = { ...appsData, apps: updatedApps }
+  if (error) {
+    console.log(`❌ Error saving to Supabase: ${error.message}`);
+    process.exit(0);
   }
 
-  fs.writeFileSync(
-    APPS_JSON_PATH,
-    JSON.stringify(updatedData, null, 2)
-  )
-
-  // Write summary
-  const summary = newApps
-    .map(a => `- ${a.name} (${a.category}) - ${a.url}`)
-    .join('\n')
-
-  fs.writeFileSync(
-    SUMMARY_PATH,
-    `Updated: ${today}\nAdded ${newApps.length} new apps:\n${summary}`
-  )
-
-  console.log(`💾 Successfully wrote ${newApps.length} new apps to apps.json`)
-  newApps.forEach(app => {
-    console.log(`  ✅ Added: ${app.name} (${app.category})`)
-  })
-  console.log('🎉 Update complete! PR will be created.')
+  console.log(`✅ Saved ${newApps.length} apps to Supabase pending_apps.`);
+  newApps.forEach((app) => {
+    console.log(`   • ${app.name} (${app.category})`);
+  });
+  console.log("🎉 Done! Check the admin Pending Review tab.");
 }
 
-main().catch(err => {
-  console.error('❌ Script failed:', err.message)
-  process.exit(0) // exit 0 so workflow doesn't fail
-})
+main().catch((err) => {
+  console.error("❌ Script failed:", err.message);
+  // Exit 0 so the GitHub workflow doesn't go red on transient failures.
+  process.exit(0);
+});

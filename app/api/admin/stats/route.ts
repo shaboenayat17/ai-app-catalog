@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import path from "path";
 import { promises as fs } from "fs";
-import { checkPassword, nextScheduledRun, readApps } from "@/lib/admin";
-import { countOpenAutoUpdatePRs } from "@/lib/admin-github";
+import { checkPassword, nextScheduledRun } from "@/lib/admin";
+import { countPendingApps, getApps } from "@/lib/db";
 
 export const runtime = "nodejs";
 
@@ -26,8 +26,8 @@ export async function POST(req: Request) {
   }
 
   const [apps, pendingCount] = await Promise.all([
-    readApps(),
-    countOpenAutoUpdatePRs(),
+    getApps(),
+    countPendingApps(),
   ]);
 
   const now = new Date();

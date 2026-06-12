@@ -10,7 +10,7 @@ import { BottomNav } from "@/components/BottomNav";
 import { FAB } from "@/components/FAB";
 import { InstallBanner } from "@/components/InstallBanner";
 import { HamburgerMenu } from "@/components/HamburgerMenu";
-import { apps } from "@/lib/data";
+import { getApps } from "@/lib/db";
 import { CATEGORIES } from "@/lib/types";
 import { adminEnabled, readPendingCount } from "@/lib/admin";
 
@@ -68,7 +68,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const showAdmin = adminEnabled();
-  const pendingCount = showAdmin ? await readPendingCount() : 0;
+  // Pull apps + pending count in parallel — single round trip per request.
+  const [apps, pendingCount] = await Promise.all([
+    getApps(),
+    showAdmin ? readPendingCount() : Promise.resolve(0),
+  ]);
 
   return (
     <html lang="en" className="dark">
@@ -80,7 +84,7 @@ export default async function RootLayout({
             <Footer />
             <CompareDock apps={apps} />
             <KeyboardShortcuts />
-            <FAB />
+            <FAB apps={apps} />
             <BottomNav />
             <HamburgerMenu
               appCount={apps.length}

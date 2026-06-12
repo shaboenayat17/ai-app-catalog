@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { getNewsFromDB, saveNewsToDB } from "@/lib/db";
 
 export const runtime = "nodejs";
-// ISR: cache for 30 minutes.
+// ISR: revalidate weekly.
 export const revalidate = 604800;
 
 interface FeedSource {
@@ -144,26 +145,50 @@ const AI_KEYWORDS = [
 export async function GET() {
   const articles = await fetchAllFeeds();
 
-  if (articles.length === 0) {
-    // Every live feed failed — serve the static fallback so users never see
-    // an empty page.
-    const fallback = await getStaticFallback();
+  if (articles.length > 0) {
+    // Fire-and-forget cache to Supabase so we have a fresh DB snapshot for
+    // the next request even if live feeds go down. We don't await it.
+    void saveNewsToDB(articles);
     return NextResponse.json(
       {
         ok: true,
-        articles: fallback,
-        source: "fallback",
+        articles,
+        source: "live",
         fetchedAt: new Date().toISOString(),
       },
       { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=86400" } },
     );
   }
 
+  // Every live feed failed — try Supabase first, then fall back to JSON.
+  const dbNews = await getNewsFromDB();
+  if (dbNews.length > 0) {
+    const mapped: NewsArticle[] = dbNews.map((n) => ({
+      title: n.title,
+      summary: n.summary,
+      url: n.url,
+      date: n.date,
+      source: n.source,
+      sourceColor: n.sourceColor ?? "gray",
+      category: n.category,
+    }));
+    return NextResponse.json(
+      {
+        ok: true,
+        articles: mapped,
+        source: "database",
+        fetchedAt: new Date().toISOString(),
+      },
+      { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=86400" } },
+    );
+  }
+
+  const fallback = await getStaticFallback();
   return NextResponse.json(
     {
       ok: true,
-      articles,
-      source: "live",
+      articles: fallback,
+      source: "fallback",
       fetchedAt: new Date().toISOString(),
     },
     { headers: { "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=86400" } },

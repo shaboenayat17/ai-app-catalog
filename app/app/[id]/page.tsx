@@ -1,14 +1,22 @@
 import { notFound } from "next/navigation";
 import { AppDetailClient, type CompareSuggestion } from "@/components/AppDetailClient";
-import { apps, getAppById, getComparisonsForApp } from "@/lib/data";
+import {
+  getAppById,
+  getApps,
+  getComparisonsForApp,
+  getReviewsByAppId,
+} from "@/lib/db";
 import { suggestComparisonsForApp, pairSlug } from "@/lib/build-comparison";
 
-export function generateStaticParams() {
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const apps = await getApps();
   return apps.map((a) => ({ id: a.id }));
 }
 
-export function generateMetadata({ params }: { params: { id: string } }) {
-  const app = getAppById(params.id);
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const app = await getAppById(params.id);
   if (!app) return { title: "App not found" };
   return {
     title: `${app.name} — AI App Catalog`,
@@ -16,15 +24,27 @@ export function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default function AppDetailPage({ params }: { params: { id: string } }) {
-  const app = getAppById(params.id);
+export default async function AppDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const [app, apps] = await Promise.all([
+    getAppById(params.id),
+    getApps(),
+  ]);
   if (!app) notFound();
+
+  // Refresh reviews from the live table so newly-submitted ones show up
+  // without waiting for the next app upsert.
+  const reviews = await getReviewsByAppId(app.id);
+  if (reviews.length > 0) app.reviews = reviews;
 
   // Build a unified suggestion list:
   // 1) Pre-built comparisons (Expert badge)
   // 2) Same-category competitors (auto)
   // 3) Compatible-with apps (auto)
-  const expert = getComparisonsForApp(app.id);
+  const expert = await getComparisonsForApp(app.id);
   const seen = new Set<string>();
   const suggestions: CompareSuggestion[] = [];
 

@@ -11,7 +11,7 @@ import {
   PRICING_COLORS,
   type AIApp,
 } from "@/lib/types";
-import type { PRSummary } from "@/lib/admin-github";
+import type { PendingApp } from "@/lib/transformers";
 import { AppLogo } from "./AppLogo";
 
 const ADMIN_TOKEN_KEY = "ai-catalog:admin-pwd";
@@ -216,22 +216,22 @@ function Authed({
 }) {
   const [tab, setTab] = useState<TabKey>("pending");
   const [stats, setStats] = useState<Stats | null>(null);
-  const [pendingPRs, setPendingPRs] = useState<PRSummary[]>([]);
+  const [pendingApps, setPendingApps] = useState<PendingApp[]>([]);
   const [pendingWarning, setPendingWarning] = useState<string | null>(null);
   const [apps, setApps] = useState<AIApp[]>(initialApps);
   const [toast, setToast] = useState<Toast | null>(null);
   const [loading, setLoading] = useState(true);
-  // Per-PR error messages, displayed inline under the action buttons. This is
-  // a belt-and-suspenders backup to the toast: the toast can be missed (it
+  // Per-pending-id error messages, displayed inline under the action buttons.
+  // Belt-and-suspenders backup to the toast: the toast can be missed (it
   // fades, can be off-screen, or hidden by an overlay) but this banner stays
   // until the user dismisses it or retries successfully.
-  const [errorByPR, setErrorByPR] = useState<Record<number, string>>({});
+  const [errorById, setErrorById] = useState<Record<string, string>>({});
 
-  const clearPRError = useCallback((prNumber: number) => {
-    setErrorByPR((prev) => {
-      if (!(prNumber in prev)) return prev;
+  const clearError = useCallback((pendingId: string) => {
+    setErrorById((prev) => {
+      if (!(pendingId in prev)) return prev;
       const next = { ...prev };
-      delete next[prNumber];
+      delete next[pendingId];
       return next;
     });
   }, []);
@@ -255,17 +255,19 @@ function Authed({
         fetch("/api/admin/pending", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ password: pwd }),
+          body: JSON.stringify({ password: pwd, action: "list" }),
         }),
       ]);
       const statsData = await statsRes.json();
       const pendingData = await pendingRes.json();
       if (statsData.ok) setStats(statsData);
       if (pendingData.ok) {
-        setPendingPRs(Array.isArray(pendingData.prs) ? pendingData.prs : []);
+        setPendingApps(
+          Array.isArray(pendingData.pending) ? pendingData.pending : [],
+        );
         setPendingWarning(pendingData.warning ?? null);
       } else {
-        setPendingPRs([]);
+        setPendingApps([]);
         setPendingWarning(pendingData.error ?? null);
       }
     } catch (err) {
@@ -280,17 +282,21 @@ function Authed({
   }, [refresh]);
 
   const approve = useCallback(
-    async (prNumber: number) => {
+    async (pendingId: string) => {
       // Clear any stale error from a previous attempt before starting.
-      clearPRError(prNumber);
+      clearError(pendingId);
       try {
-        console.log("Admin approve: sending", { prNumber });
-        const res = await fetch("/api/admin/approve", {
+        console.log("Admin approve: sending", { pendingId });
+        const res = await fetch("/api/admin/pending", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ password: pwd, prNumber }),
+          body: JSON.stringify({
+            password: pwd,
+            action: "approve",
+            pendingId,
+          }),
         });
-        let data: { ok?: boolean; error?: string; method?: string };
+        let data: { ok?: boolean; error?: string };
         try {
           data = await res.json();
         } catch {
@@ -298,44 +304,57 @@ function Authed({
         }
         console.log("Admin approve: response", { status: res.status, data });
         if (data.ok) {
-          setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
+          // Pop the approved row off the list and add the new app to the
+          // catalog so the "Recently approved" tab updates immediately.
+          setPendingApps((prev) => {
+            const approved = prev.find((p) => p.id === pendingId);
+            if (approved) {
+              setApps((current) =>
+                current.some((a) => a.id === approved.app.id)
+                  ? current
+                  : [approved.app, ...current],
+              );
+            }
+            return prev.filter((p) => p.id !== pendingId);
+          });
           haptic("success");
           showToast({
             kind: "success",
-            text: data.method
-              ? `Merged via ${data.method}. Site will rebuild shortly.`
-              : "Merged! Site will rebuild shortly.",
+            text: "Approved! App added to the catalog.",
           });
         } else {
           haptic("error");
-          const msg = data.error || "Merge failed";
-          setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+          const msg = data.error || "Approval failed";
+          setErrorById((prev) => ({ ...prev, [pendingId]: msg }));
           showToast({ kind: "error", text: msg });
         }
       } catch (err) {
-        // Network failures land here. Surface to the toast, inline banner, AND console.
-        console.error("Admin: approve PR failed", err);
+        console.error("Admin: approve failed", err);
         haptic("error");
         const msg =
           err instanceof Error
             ? `Network error: ${err.message}`
-            : "Network error while merging PR";
-        setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+            : "Network error while approving";
+        setErrorById((prev) => ({ ...prev, [pendingId]: msg }));
         showToast({ kind: "error", text: msg });
       }
     },
-    [pwd, showToast, clearPRError],
+    [pwd, showToast, clearError],
   );
 
   const reject = useCallback(
-    async (prNumber: number) => {
-      clearPRError(prNumber);
+    async (pendingId: string) => {
+      clearError(pendingId);
       try {
-        console.log("Admin reject: sending", { prNumber });
-        const res = await fetch("/api/admin/reject", {
+        console.log("Admin reject: sending", { pendingId });
+        const res = await fetch("/api/admin/pending", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ password: pwd, prNumber }),
+          body: JSON.stringify({
+            password: pwd,
+            action: "reject",
+            pendingId,
+          }),
         });
         let data: { ok?: boolean; error?: string };
         try {
@@ -345,27 +364,27 @@ function Authed({
         }
         console.log("Admin reject: response", { status: res.status, data });
         if (data.ok) {
-          setPendingPRs((prev) => prev.filter((p) => p.number !== prNumber));
+          setPendingApps((prev) => prev.filter((p) => p.id !== pendingId));
           haptic("error");
-          showToast({ kind: "info", text: "Pull request closed" });
+          showToast({ kind: "info", text: "Suggestion rejected" });
         } else {
           haptic("error");
-          const msg = data.error || "Failed to close PR";
-          setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+          const msg = data.error || "Reject failed";
+          setErrorById((prev) => ({ ...prev, [pendingId]: msg }));
           showToast({ kind: "error", text: msg });
         }
       } catch (err) {
-        console.error("Admin: reject PR failed", err);
+        console.error("Admin: reject failed", err);
         haptic("error");
         const msg =
           err instanceof Error
             ? `Network error: ${err.message}`
-            : "Network error while closing PR";
-        setErrorByPR((prev) => ({ ...prev, [prNumber]: msg }));
+            : "Network error while rejecting";
+        setErrorById((prev) => ({ ...prev, [pendingId]: msg }));
         showToast({ kind: "error", text: msg });
       }
     },
-    [pwd, showToast, clearPRError],
+    [pwd, showToast, clearError],
   );
 
   const remove = useCallback(
@@ -430,7 +449,7 @@ function Authed({
         role="tablist"
         className="-mx-4 flex gap-1 overflow-x-auto border-b border-border/60 px-4 pb-px sm:mx-0 sm:px-0"
       >
-        <TabButton k="pending" active={tab} onClick={setTab} count={pendingPRs.length}>
+        <TabButton k="pending" active={tab} onClick={setTab} count={pendingApps.length}>
           📬 Pending Review
         </TabButton>
         <TabButton k="approved" active={tab} onClick={setTab}>
@@ -447,13 +466,13 @@ function Authed({
       <div className="mt-6">
         {tab === "pending" && (
           <PendingTab
-            prs={pendingPRs}
+            pending={pendingApps}
             warning={pendingWarning}
             loading={loading}
             onApprove={approve}
             onReject={reject}
-            errors={errorByPR}
-            onDismissError={clearPRError}
+            errors={errorById}
+            onDismissError={clearError}
             nextRun={stats?.nextRun ?? null}
             githubRepo={githubRepo}
           />
@@ -530,7 +549,7 @@ function TabButton({
 }
 
 function PendingTab({
-  prs,
+  pending,
   warning,
   loading,
   onApprove,
@@ -540,21 +559,25 @@ function PendingTab({
   nextRun,
   githubRepo,
 }: {
-  prs: PRSummary[];
+  pending: PendingApp[];
   warning: string | null;
   loading: boolean;
-  onApprove: (prNumber: number) => void | Promise<void>;
-  onReject: (prNumber: number) => void | Promise<void>;
-  errors: Record<number, string>;
-  onDismissError: (prNumber: number) => void;
+  onApprove: (pendingId: string) => void | Promise<void>;
+  onReject: (pendingId: string) => void | Promise<void>;
+  errors: Record<string, string>;
+  onDismissError: (pendingId: string) => void;
   nextRun: string | null;
   githubRepo?: string;
 }) {
-  const [confirmPR, setConfirmPR] = useState<number | null>(null);
-  const [busyPR, setBusyPR] = useState<number | null>(null);
+  const [confirmId, setConfirmId] = useState<string | null>(null);
+  const [busyId, setBusyId] = useState<string | null>(null);
 
   if (loading) {
-    return <p className="py-8 text-center text-sm text-muted">Loading suggestions…</p>;
+    return (
+      <p className="py-8 text-center text-sm text-muted">
+        Loading suggestions…
+      </p>
+    );
   }
 
   if (warning) {
@@ -566,14 +589,17 @@ function PendingTab({
     );
   }
 
-  if (prs.length === 0) {
+  if (pending.length === 0) {
     return (
       <div className="rounded-2xl border border-dashed border-border bg-bg-card/40 p-8 text-center">
         <p className="text-2xl" aria-hidden>✨</p>
         <p className="mt-2 text-base font-semibold text-white">All caught up!</p>
         <p className="mt-1 text-sm text-muted-strong">
-          No open robot PRs to review. The next run is scheduled for{" "}
-          <span className="text-white">{nextRun ? formatDate(nextRun) : "tomorrow at 09:00 UTC"}</span>.
+          No pending robot suggestions to review. The next run is scheduled for{" "}
+          <span className="text-white">
+            {nextRun ? formatDate(nextRun) : "next Monday at 09:00 UTC"}
+          </span>
+          .
         </p>
         {githubRepo && (
           <a
@@ -591,111 +617,138 @@ function PendingTab({
 
   return (
     <ul className="grid grid-cols-1 gap-4">
-      {prs.map((pr) => {
-        const isConfirming = confirmPR === pr.number;
-        const isBusy = busyPR === pr.number;
-        const errorMsg = errors[pr.number];
+      {pending.map((p) => {
+        const app = p.app;
+        const isConfirming = confirmId === p.id;
+        const isBusy = busyId === p.id;
+        const errorMsg = errors[p.id];
+        const meta = CATEGORY_META[app.category];
         return (
           <li
-            key={pr.number}
+            key={p.id}
             className="rounded-2xl border border-border bg-bg-card p-4 sm:p-5"
           >
-            {/* PR header */}
-            <div className="flex flex-wrap items-start justify-between gap-2">
-              <div className="min-w-0">
+            {/* App header */}
+            <div className="flex items-start gap-3">
+              <AppLogo
+                logoUrl={app.logoUrl}
+                appName={app.name}
+                category={app.category}
+                size="md"
+              />
+              <div className="min-w-0 flex-1">
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-accent">
-                  PR #{pr.number}
+                  Suggested {formatDate(p.suggestedAt)}
                 </p>
-                <h3 className="mt-0.5 text-base font-semibold text-white">
-                  {pr.title}
+                <h3 className="mt-0.5 text-base font-semibold text-white sm:text-lg">
+                  {app.name}
                 </h3>
-                <p className="mt-0.5 text-[11px] text-muted">
-                  by {pr.author} · branch <code className="text-muted-strong">{pr.branch}</code> · opened {formatDate(pr.createdAt)}
-                </p>
+                <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                  <span
+                    className={clsx(
+                      "inline-flex rounded-md border px-1.5 py-0.5 text-[10px]",
+                      meta.badge,
+                    )}
+                  >
+                    {app.category}
+                  </span>
+                  <span
+                    className={clsx(
+                      "inline-flex rounded-full border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide",
+                      PRICING_COLORS[app.pricing],
+                    )}
+                  >
+                    {app.pricing}
+                  </span>
+                  {app.url && (
+                    <a
+                      href={app.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="press inline-flex min-h-[24px] items-center gap-1 text-[11px] text-accent hover:text-accent-hover"
+                    >
+                      {trimUrl(app.url)} ↗
+                    </a>
+                  )}
+                </div>
               </div>
-              <a
-                href={pr.url}
-                target="_blank"
-                rel="noreferrer"
-                className="press inline-flex min-h-[36px] items-center gap-1 rounded-md border border-border bg-bg/60 px-2 text-xs text-muted-strong hover:border-accent/40 hover:text-white"
-              >
-                View on GitHub ↗
-              </a>
             </div>
 
-            {/* New apps in this PR */}
-            {pr.newApps.length > 0 ? (
-              <ul className="mt-4 space-y-2">
-                {pr.newApps.map((app) => {
-                  const m = CATEGORY_META[app.category];
-                  return (
-                    <li
-                      key={app.id}
-                      className="rounded-xl border border-border bg-bg/40 p-3"
-                    >
-                      <div className="flex items-start gap-3">
-                        <AppLogo
-                          logoUrl={app.logoUrl}
-                          appName={app.name}
-                          category={app.category}
-                          size="sm"
-                        />
-                        <div className="min-w-0 flex-1">
-                          <p className="truncate text-sm font-semibold text-white">
-                            {app.name}
-                          </p>
-                          <div className="mt-1 flex flex-wrap items-center gap-1.5">
-                            <span className={clsx("inline-flex rounded-md border px-1.5 py-0.5 text-[10px]", m.badge)}>
-                              {app.category}
-                            </span>
-                            <span
-                              className={clsx(
-                                "inline-flex rounded-full border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide",
-                                PRICING_COLORS[app.pricing],
-                              )}
-                            >
-                              {app.pricing}
-                            </span>
-                            {app.url && (
-                              <a
-                                href={app.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="press inline-flex min-h-[24px] items-center gap-1 text-[10px] text-accent hover:text-accent-hover"
-                              >
-                                {trimUrl(app.url)} ↗
-                              </a>
-                            )}
-                          </div>
-                          {app.description && (
-                            <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-muted-strong">
-                              {app.description}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : (
-              <p className="mt-4 rounded-md border border-dashed border-border bg-bg/40 px-3 py-2 text-xs text-muted">
-                Couldn't parse new apps from this PR's diff. Review it on GitHub before merging.
+            {/* Description */}
+            {app.description && (
+              <p className="mt-3 text-sm leading-relaxed text-muted-strong">
+                {app.description}
               </p>
             )}
 
-            {/* PR-level actions */}
+            {/* Pros / Cons */}
+            {(app.pros.length > 0 || app.cons.length > 0) && (
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                {app.pros.length > 0 && (
+                  <div className="rounded-xl border border-emerald-400/30 bg-emerald-500/5 p-3">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
+                      Pros
+                    </p>
+                    <ul className="mt-1.5 space-y-1 text-xs text-emerald-100/90">
+                      {app.pros.map((pro, i) => (
+                        <li key={i} className="flex gap-1.5">
+                          <span aria-hidden className="shrink-0">+</span>
+                          <span>{pro}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {app.cons.length > 0 && (
+                  <div className="rounded-xl border border-rose-400/30 bg-rose-500/5 p-3">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-rose-300">
+                      Cons
+                    </p>
+                    <ul className="mt-1.5 space-y-1 text-xs text-rose-100/90">
+                      {app.cons.map((con, i) => (
+                        <li key={i} className="flex gap-1.5">
+                          <span aria-hidden className="shrink-0">−</span>
+                          <span>{con}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Verdict / best-for */}
+            {(app.verdict || app.bestFor.length > 0) && (
+              <div className="mt-3 rounded-xl border border-border bg-bg/40 p-3 text-xs">
+                {app.verdict && (
+                  <p className="text-muted-strong">
+                    <span className="font-semibold text-white">Verdict:</span>{" "}
+                    {app.verdict}
+                  </p>
+                )}
+                {app.bestFor.length > 0 && (
+                  <p className="mt-1 text-muted">
+                    <span className="font-semibold text-muted-strong">
+                      Best for:
+                    </span>{" "}
+                    {app.bestFor.join(", ")}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Actions */}
             <div className="mt-4 flex flex-col gap-2 sm:flex-row">
               <button
                 type="button"
                 onClick={async () => {
-                  setBusyPR(pr.number);
+                  setBusyId(p.id);
                   try {
-                    await onApprove(pr.number);
+                    await onApprove(p.id);
                   } finally {
                     // Always clear busy state, even if the handler threw —
                     // otherwise the button stays disabled with no feedback.
-                    setBusyPR(null);
+                    setBusyId(null);
                   }
                 }}
                 disabled={isBusy}
@@ -704,10 +757,10 @@ function PendingTab({
               >
                 {isBusy ? (
                   <>
-                    <Spinner /> Merging…
+                    <Spinner /> Approving…
                   </>
                 ) : (
-                  <>✅ Approve &amp; merge PR</>
+                  <>✅ Approve &amp; add to catalog</>
                 )}
               </button>
               {isConfirming ? (
@@ -715,12 +768,12 @@ function PendingTab({
                   <button
                     type="button"
                     onClick={async () => {
-                      setBusyPR(pr.number);
+                      setBusyId(p.id);
                       try {
-                        await onReject(pr.number);
+                        await onReject(p.id);
                       } finally {
-                        setConfirmPR(null);
-                        setBusyPR(null);
+                        setConfirmId(null);
+                        setBusyId(null);
                       }
                     }}
                     disabled={isBusy}
@@ -729,15 +782,15 @@ function PendingTab({
                   >
                     {isBusy ? (
                       <>
-                        <Spinner /> Closing…
+                        <Spinner /> Rejecting…
                       </>
                     ) : (
-                      <>Confirm close</>
+                      <>Confirm reject</>
                     )}
                   </button>
                   <button
                     type="button"
-                    onClick={() => setConfirmPR(null)}
+                    onClick={() => setConfirmId(null)}
                     className="press min-h-[44px] rounded-md border border-border bg-bg-card px-3 text-sm text-muted-strong"
                   >
                     Cancel
@@ -746,16 +799,17 @@ function PendingTab({
               ) : (
                 <button
                   type="button"
-                  onClick={() => setConfirmPR(pr.number)}
+                  onClick={() => setConfirmId(p.id)}
                   className="press flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-md border border-rose-400/40 bg-rose-500/10 px-3 text-sm font-semibold text-rose-200 transition hover:bg-rose-500/20"
                 >
-                  ❌ Reject &amp; close PR
+                  ❌ Reject
                 </button>
               )}
             </div>
             {isConfirming && (
               <p className="mt-2 text-[11px] text-rose-200">
-                Closes the PR on GitHub without merging. The branch is preserved unless deleted by the workflow.
+                Marks the suggestion as rejected. It stays in the database for
+                audit but won't show up in this list again.
               </p>
             )}
 
@@ -767,11 +821,13 @@ function PendingTab({
                 <span aria-hidden className="mt-0.5 shrink-0">⚠️</span>
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold">Action failed</p>
-                  <p className="mt-0.5 break-words text-rose-100/90">{errorMsg}</p>
+                  <p className="mt-0.5 break-words text-rose-100/90">
+                    {errorMsg}
+                  </p>
                 </div>
                 <button
                   type="button"
-                  onClick={() => onDismissError(pr.number)}
+                  onClick={() => onDismissError(p.id)}
                   aria-label="Dismiss error"
                   className="press shrink-0 rounded-md border border-rose-400/40 px-2 py-0.5 text-[11px] font-medium text-rose-100 hover:bg-rose-500/20"
                 >

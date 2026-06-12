@@ -2,11 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import clsx from "clsx";
-import { apps } from "@/lib/data";
+import type { AIApp } from "@/lib/types";
 import { AppLogo } from "./AppLogo";
 
-export function FAB() {
+interface FABProps {
+  /** Catalog passed from the (server) layout — Supabase-backed via db.ts. */
+  apps: AIApp[];
+}
+
+export function FAB({ apps }: FABProps) {
   const router = useRouter();
   const pathname = usePathname() ?? "/";
   const [open, setOpen] = useState(false);

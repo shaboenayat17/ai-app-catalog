@@ -1,5 +1,5 @@
 import { AdminPanel } from "@/components/AdminPanel";
-import { apps } from "@/lib/data";
+import { getApps } from "@/lib/db";
 
 export const metadata = {
   title: "Admin — AI App Catalog",
@@ -7,10 +7,11 @@ export const metadata = {
   robots: { index: false, follow: false },
 };
 
-// Always render fresh — admin actions mutate JSON we read on first paint.
+// Always render fresh — admin actions mutate Supabase rows we read on first paint.
 export const dynamic = "force-dynamic";
 
-export default function AdminPage() {
+export default async function AdminPage() {
+  const apps = await getApps();
   const githubRepo =
     process.env.GITHUB_REPOSITORY ||
     process.env.NEXT_PUBLIC_GITHUB_REPOSITORY ||

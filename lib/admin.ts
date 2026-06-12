@@ -59,15 +59,14 @@ export async function writePending(apps: AIApp[]): Promise<void> {
 /**
  * Quick read of pending count for UI badges. Never throws.
  *
- * Pending Review now reads from open GitHub Pull Requests (since the robot
- * commits via PR rather than writing data/pending-apps.json). Results are
- * cached for 60s inside the helper so a busy layout doesn't hammer the
- * GitHub API.
+ * After the Supabase migration, pending suggestions live in the `pending_apps`
+ * table (status = 'pending'). Dynamic-imported so we don't pull the Supabase
+ * client into the bundle when this isn't called.
  */
 export async function readPendingCount(): Promise<number> {
   try {
-    const { countOpenAutoUpdatePRs } = await import("./admin-github");
-    return await countOpenAutoUpdatePRs();
+    const { countPendingApps } = await import("./db");
+    return await countPendingApps();
   } catch {
     return 0;
   }

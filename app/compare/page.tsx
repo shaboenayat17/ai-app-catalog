@@ -3,7 +3,9 @@ import { CompareClient } from "@/components/CompareClient";
 import { PairBuilder } from "@/components/PairBuilder";
 import { PopularComparisonsSection } from "@/components/PopularComparisonsSection";
 import { PopularComparisonsByCategory } from "@/components/PopularComparisonsByCategory";
-import { apps, comparisons } from "@/lib/data";
+import { getApps, getComparisons } from "@/lib/db";
+
+export const revalidate = 60;
 
 export const metadata = {
   title: "Compare AI apps — AI App Catalog",
@@ -11,7 +13,8 @@ export const metadata = {
     "Side-by-side comparisons for any two AI apps — pricing, output quality, pros and cons, and a verdict.",
 };
 
-export default function ComparePage() {
+export default async function ComparePage() {
+  const [apps, comparisons] = await Promise.all([getApps(), getComparisons()]);
   const sorted = [...apps].sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div className="mx-auto max-w-6xl px-4 pb-28 pt-10 sm:px-6 sm:pb-16 lg:px-8">

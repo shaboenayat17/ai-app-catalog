@@ -1,11 +1,15 @@
 import { NewsClient } from "@/components/NewsClient";
-import { news } from "@/lib/data";
+import { getNewsFromDB } from "@/lib/db";
+
+export const revalidate = 60;
 
 export const metadata = {
   title: "News — AI App Catalog",
-  description: "Live AI news pulled hourly from TechCrunch, The Verge, VentureBeat, and MIT Tech Review.",
+  description:
+    "Live AI news pulled weekly from TechCrunch, The Verge, VentureBeat, and MIT Tech Review.",
 };
 
-export default function NewsPage() {
-  return <NewsClient fallback={news} />;
+export default async function NewsPage() {
+  const fallback = await getNewsFromDB();
+  return <NewsClient fallback={fallback} />;
 }
